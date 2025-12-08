@@ -1,6 +1,6 @@
 <template>
   <div class="home-slogan">
-    <tiny-carousel :height="isMobile ? '200px' : '550px'" arrow="never" :interval="4000" autoplay>
+    <tiny-carousel :height="carouselHeight" arrow="never" :interval="4000" autoplay :key="isMobile" id="home-slogan-carousel">
       <tiny-carousel-item class="carousel-item-demo" @click="onDocs">
         <div
           class="banner-item-wrap home-slogan-top-wrap"
@@ -88,7 +88,6 @@
     </div>
   </div>
 </template>
-
 <script setup>
 import { TinyButton, TinyLink, TinyCarousel, TinyCarouselItem } from '@opentiny/vue'
 import { $pub } from '../../../tools/utils'
@@ -97,8 +96,9 @@ import { computed, onMounted, ref, watchEffect } from 'vue'
 import { iconArrowRight } from '@opentiny/vue-icon'
 import { bannerList, firstBanner } from './config'
 
-const { isMobile } = useWindowSize()
+const { isMobile, width } = useWindowSize()
 
+const carouselHeight = computed(() => isMobile.value ? '200px' : `${Math.max(width.value * 0.286, 300)}px`)
 const mobileOrPc = computed(() => isMobile.value ? 'mobile' : 'pc')
 
 const bannerListData = ref(bannerList[mobileOrPc.value])
@@ -123,7 +123,7 @@ onMounted(() => {
 watchEffect(() => {
   bannerListData.value = bannerList[mobileOrPc.value]
   firstBannerData.value = firstBanner[mobileOrPc.value]
-  videoRef.value.classList?.[isMobile.value ? 'remove' : 'add']('video-player')
+  videoRef.value?.classList[isMobile.value ? 'remove' : 'add']('video-player')
 })
 </script>
 
@@ -133,7 +133,7 @@ watchEffect(() => {
 .home-slogan {
   & > .home-slogan-content {
     .pcPadding(86, 150, 100);
-    background: no-repeat bottom/cover url(@/assets/images/home_slogan_bg.webp);
+    background: no-repeat center/cover url(@/assets/images/home_slogan_bg.webp);
   }
   .home-slogan-top-wrap {
     .home-slogan-top {
