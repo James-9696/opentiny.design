@@ -19,7 +19,7 @@
       <!-- 贡献者 -->
       <contributor></contributor>
     </div>
-    <div class="anchor-nav" v-if="!isMobile">
+    <div class="anchor-nav" v-if="!isMobile && isShowAnchorNav">
       <div
         v-for="anchor in anchors"
         :key="anchor.id"
@@ -58,6 +58,8 @@ const anchors = ref([
 ])
 const currentAnchorId = ref('home-1')
 
+const isShowAnchorNav = ref(false)
+
 const scrollToAnchor = (target) => {
   const el = document.querySelector(target)
   if (el) {
@@ -68,9 +70,20 @@ const scrollToAnchor = (target) => {
   }
 }
 
+const checkAnchorNav = () => {
+  const carouselRect = document.querySelector('#home-slogan-carousel')?.getBoundingClientRect()
+  const viewportHeight = window.innerHeight // 视口高度
+
+  if (!carouselRect) return
+  // 锚点导航栏显示条件：轮播图底部距离视口顶部小于等于视口高度的一半减去102px
+  // 102px为锚点导航栏的高度的1/2
+  isShowAnchorNav.value = carouselRect.bottom <= viewportHeight / 2 - 102
+}
+
 const handleScroll = debounce(() => {
   const viewportHeight = window.innerHeight // 视口高度
 
+  checkAnchorNav()
   // 遍历所有锚点，判断目标元素是否在视口内（优先高亮最上方的锚点）
   for (let i = anchors.value.length - 1; i >= 0; i--) {
     const anchor = anchors.value[i]
