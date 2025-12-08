@@ -116,14 +116,14 @@ onMounted(() => {
   const posterImg = new Image()
   posterImg.src = postUrl
   posterImg.onload = () => {
-    videoRef.value.classList.add('video--fade-in')
+    videoRef.value.classList?.add('video--fade-in')
   }
 })
 
 watchEffect(() => {
   bannerListData.value = bannerList[mobileOrPc.value]
   firstBannerData.value = firstBanner[mobileOrPc.value]
-  videoRef.value?.classList[isMobile.value ? 'remove' : 'add']('video-player')
+  videoRef.value.classList?.[isMobile.value ? 'remove' : 'add']('video-player')
 })
 </script>
 
