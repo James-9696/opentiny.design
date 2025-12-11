@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 输入您将要发布的版本号，例如：`0.1.0`。
+        description: 输入您将要发布的版本号（默认使用 packages/opentiny-docs/package.json 中的版本号），例如：`0.1.0`。
         required: false
         type: string
 
