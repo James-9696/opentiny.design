@@ -319,7 +319,7 @@ const toggleTheme = (event: MouseEvent) => {
           <div v-show="level1.children?.length" class="dropdown-menu">
             <div class="dropdown-content flex-center">
               <div class="dropdown-app hand" v-for="app in level1.children.filter(lv => !lv.hide)" :key="app.title">
-                <a class="dropdown-app" :href="app.href" target="_blank" rel="noopener noreferrer">
+                <a class="dropdown-app" :href="app.href" rel="noopener noreferrer">
                   <img class="app-logo" :src="app.logo"></img>
                   <div>
                     <div class="app-title"> {{ app.title }} </div>
