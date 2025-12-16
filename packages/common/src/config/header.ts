@@ -19,7 +19,7 @@ export default [
   },
   {
     name: 'TinyEngine',
-    url: 'https://opentiny.design/tiny-engine',
+    url: '/tiny-engine',
     children: [],
     logo: tinyEngine,
     github: 'https://github.com/opentiny/tiny-engine',
@@ -63,11 +63,10 @@ export default [
       {
         title: 'NEXT-SDKs',
         desc: '前端智能应用开发工具包',
-        url: '/opentiny-design/next-sdks',
-        children: [],
+        href: '/opentiny-design/next-sdks',
         logo: tinyRobot,
         hide: false,
-        github: 'https://github.com/opentiny/tiny-robot'
+        github: 'https://github.com/opentiny/next-sdk'
       },
       {
         title: 'AI-Extension',
