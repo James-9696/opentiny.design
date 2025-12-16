@@ -58,7 +58,7 @@ jobs:
         run: pnpm build
         env:
           VITE_CONTEXT: /
-          VITE_BASE: //opentiny-assets.obs.cn-north-4.myhuaweicloud.com/tinyui-design/${{ steps.ver.outputs.value }}/home/
+          VITE_BASE: //res-static.opentiny.design/tinyui-design/${{ steps.ver.outputs.value }}/home/
       - name: Copy files
         run: |
           cp dist/common/tinyui-design-common.iife.js dist/home

@@ -35,13 +35,14 @@ export default [
     isUnderline: () => location.pathname === '/opentiny-design/tiny-robot'
   },
   {
-    name: 'NEXT-SDKs',
-    url: '/opentiny-design/next-sdks',
-    children: [],
-    logo: tinyRobot,
-    hide: false,
-    github: 'https://github.com/opentiny/tiny-robot',
-    isUnderline: () => location.pathname === '/opentiny-design/next-sdks'
+    name: '演练场',
+    url: 'https://opentiny.github.io/playground',
+    children: []
+  },
+  {
+    name: '开发文档',
+    url: 'https://docs.opentiny.design',
+    children: []
   },
   {
     name: '技术学院',
@@ -49,7 +50,6 @@ export default [
     children: [],
     isUnderline: () => location.pathname.startsWith('/opentiny-design/tech')
   },
-
   {
     name: '关于我们',
     url: '/opentiny-design/about',
@@ -60,6 +60,15 @@ export default [
     name: '生态产品',
     url: '',
     children: [
+      {
+        title: 'NEXT-SDKs',
+        desc: '前端智能应用开发工具包',
+        url: '/opentiny-design/next-sdks',
+        children: [],
+        logo: tinyRobot,
+        hide: false,
+        github: 'https://github.com/opentiny/tiny-robot'
+      },
       {
         title: 'AI-Extension',
         desc: 'AI 扩展插件',
