@@ -88,6 +88,7 @@ export default defineConfig(({ command, mode }) => {
     resolve: {
       alias: {
         'vue-i18n': 'vue-i18n/dist/vue-i18n.cjs.js',
+        '@/demo-vite': _resolve('../../demo-vite/src'),
         '@': _resolve('src'),
         '@/components': _resolve('src/components'),
         'flexsearch': 'flexsearch/dist/flexsearch.bundle.js'

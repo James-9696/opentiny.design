@@ -35,6 +35,13 @@ export default [
     isUnderline: () => location.pathname === '/opentiny-design/tiny-robot'
   },
   {
+    name: 'DemoVite',
+    url: '/opentiny-design/demo-vite',
+    children: [],
+    hide: false,
+    isUnderline: () => location.pathname === '/opentiny-design/demo-vite'
+  },
+  {
     name: '演练场',
     url: 'https://opentiny.github.io/playground',
     children: []

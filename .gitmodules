@@ -1,0 +1,3 @@
+[submodule "demo-vite"]
+	path = demo-vite
+	url = https://github.com/kagol/demo-vite.git

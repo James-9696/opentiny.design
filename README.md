@@ -14,3 +14,9 @@ pnpm dev
 # 启动文档
 pnpm dev:docs
 ```
+
+## 增加子模块
+
+```shell
+git submodule add https://github.com/OWNER/REPO.git
+```

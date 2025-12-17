@@ -22,6 +22,8 @@ const tinyVueHome = () => import('@/views/tiny-vue-home/index.vue')
 const tinyRobotHome = () => import('@/views/tiny-robot-home/index.vue')
 const aiExtensionHome = () => import('@/views/ai-extension-home/index.vue')
 const nextSdksHome = () => import('@/views/next-sdks-home/index.vue')
+const demoViteHome = () => import('@/demo-vite/components/HelloWorld.vue')
+
 const langKey = computed(() => $t2('zh-CN', 'en-US'))
 
 export const rootRoutes = [
@@ -66,6 +68,12 @@ export const rootRoutes = [
             path: 'next-sdks',
             component: nextSdksHome,
             name: 'next-sdks',
+            meta: { title: geneTitle('') }
+          },
+          {
+            path: 'demo-vite',
+            component: demoViteHome,
+            name: 'demo-vite',
             meta: { title: geneTitle('') }
           },
           {
