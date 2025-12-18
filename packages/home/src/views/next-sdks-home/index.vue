@@ -14,7 +14,7 @@ import mcpBgWhite from '@/assets/images/home/mcp_bg_white.png'
   <div class="container">
     <header class="hero section" :style="{ backgroundImage: `url(${heroBgWhite})` }">
       <div class="hero-content">
-        <h1 class="title">OpenTiny NEXT-SDKs</h1>
+        <h1 class="title">NEXT-SDKs 前端智能应用开发工具包</h1>
         <p class="subtitle">
           让你的前端应用变成智能应用<br />
           只需四步，即可接入 AI 能力
