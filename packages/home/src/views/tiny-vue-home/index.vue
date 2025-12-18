@@ -14,9 +14,9 @@ import mcpBgWhite from '@/assets/images/home/mcp_bg_white.png'
   <div class="container">
     <header class="hero section" :style="{ backgroundImage: `url(${heroBgWhite})` }">
       <div class="hero-content">
-        <h1 class="title">OpenTiny Vue</h1>
+        <h1 class="title">TinyVue 企业级UI组件库</h1>
         <p class="subtitle">
-          企业级 Vue 组件库<br />
+          一套代码同时支持 Vue2 和 Vue3<br />
           轻量、高性能、智能化
         </p>
         <div class="cta-group">
@@ -50,7 +50,7 @@ import mcpBgWhite from '@/assets/images/home/mcp_bg_white.png'
         <div class="feature-text">
           <h2 class="section-title light">丰富的组件</h2>
           <p class="feature-desc">
-            包含 80+ 个高质量组件，覆盖各类业务场景。<br />
+            包含 130+ 个高质量组件，覆盖各类业务场景。<br />
             持续更新迭代，满足企业级应用需求。
           </p>
         </div>
@@ -226,7 +226,7 @@ import mcpBgWhite from '@/assets/images/home/mcp_bg_white.png'
 .hero-content {
   position: relative;
   z-index: 1;
-  max-width: 1000px;
+  max-width: 1200px;
   padding: 20px;
   padding-top: 0;
   animation: fadeInUp 1s ease-out;

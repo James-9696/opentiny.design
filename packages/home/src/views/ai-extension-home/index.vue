@@ -14,7 +14,7 @@ import mcpBgWhite from '@/assets/images/home/mcp_bg_white.png'
   <div class="container">
     <header class="hero section" :style="{ backgroundImage: `url(${heroBgWhite})` }">
       <div class="hero-content">
-        <h1 class="title">AI Extension</h1>
+        <h1 class="title">AI Extension AI扩展插件</h1>
         <p class="subtitle">
           基于 WXT 的浏览器扩展插件<br />
           让 AI 助手与网页智能交互
@@ -324,7 +324,7 @@ import mcpBgWhite from '@/assets/images/home/mcp_bg_white.png'
 .hero-content {
   position: relative;
   z-index: 1;
-  max-width: 1000px;
+  max-width: 1200px;
   padding: 20px;
   animation: fadeInUp 1s ease-out;
 }
