@@ -36,7 +36,7 @@ import mcpBgWhite from '@/assets/images/home/mcp_bg_white.png'
         <div class="feature-text">
           <h2 class="section-title light">丰富的 AI 交互组件</h2>
           <p class="feature-desc">
-            提供 Bubble（气泡）、Carousel（轮播）、Markdown 等多种组件。<br />
+            提供 Bubble（气泡）、Sender（消息输入框）、Markdown 等多种组件。<br />
             支持流式输出、代码高亮、数学公式渲染等高级特性。<br />
             满足各类 AI 应用场景的交互需求。
           </p>
