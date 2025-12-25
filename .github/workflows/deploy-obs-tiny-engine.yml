@@ -66,7 +66,7 @@ jobs:
         run: pnpm build:engine
         env:
           VITE_APP_ORIGIN: https://opentiny.design
-          VITE_APP_STATIC_PATH: //res-static.opentiny.design/tiny-engine-portal/${{ steps.ver.outputs.value }}/
+          VITE_APP_STATIC_PATH: //res-static.opentiny.design/lowcode-portal/${{ steps.ver.outputs.value }}/
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
@@ -104,4 +104,4 @@ jobs:
           # 把本地 packages/tiny-engine-portal/dist/ 目录整站同步到桶根目录
           echo "needs.build.outputs.version: ${{ needs.build.outputs.version }}"
           mv packages/tiny-engine-portal/dist ${{ needs.build.outputs.version }}
-          obsutil cp ${{ needs.build.outputs.version }} obs://${{ env.HUAWEI_CLOUD_BUCKET }}/tiny-engine-portal/ -r -f
+          obsutil cp ${{ needs.build.outputs.version }} obs://${{ env.HUAWEI_CLOUD_BUCKET }}/lowcode-portal/ -r -f
