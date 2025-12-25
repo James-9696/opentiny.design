@@ -71,7 +71,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: dist-artifact
-          path: packages/tiny-engine-portal/dist/
+          path: packages/lowcode-portal/dist/
   # Deploy job
   deploy:
     needs: build
@@ -81,7 +81,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: dist-artifact
-          path: packages/tiny-engine-portal/dist/
+          path: packages/lowcode-portal/dist/
       - name: Show version
         run: |
           echo "Deploying version: ${{ needs.build.outputs.version }}"
