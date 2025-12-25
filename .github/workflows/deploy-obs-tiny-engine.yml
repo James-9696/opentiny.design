@@ -5,12 +5,12 @@ on:
     tags:
       - 'v*'
     paths:
-      - 'packages/lowcode-portal/**'
+      - 'packages/tiny-engine-portal/**'
 
   workflow_dispatch:
     inputs:
       version:
-        description: 输入您将要发布的版本号（默认使用 packages/lowcode-portal/package.json 中的版本号），例如：`0.1.0`。
+        description: 输入您将要发布的版本号（默认使用 packages/tiny-engine-portal/package.json 中的版本号），例如：`0.1.0`。
         required: false
         type: string
 
@@ -58,7 +58,7 @@ jobs:
           if [ -n "${{ inputs.version }}" ]; then
             VERSION="${{ inputs.version }}"
           else
-            VERSION="$(node -p "require('./packages/lowcode-portal/package.json').version")"
+            VERSION="$(node -p "require('./packages/tiny-engine-portal/package.json').version")"
           fi
           echo "TinyEngine version: $VERSION"
           echo "value=$VERSION" >> $GITHUB_OUTPUT
@@ -66,12 +66,12 @@ jobs:
         run: pnpm build:engine
         env:
           VITE_APP_ORIGIN: https://opentiny.design
-          VITE_APP_STATIC_PATH: //res-static.opentiny.design/lowcode-portal/${{ steps.ver.outputs.value }}/
+          VITE_APP_STATIC_PATH: //res-static.opentiny.design/tiny-engine-portal/${{ steps.ver.outputs.value }}/
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
           name: dist-artifact
-          path: packages/lowcode-portal/dist/
+          path: packages/tiny-engine-portal/dist/
   # Deploy job
   deploy:
     needs: build
@@ -81,7 +81,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: dist-artifact
-          path: packages/lowcode-portal/dist/
+          path: packages/tiny-engine-portal/dist/
       - name: Show version
         run: |
           echo "Deploying version: ${{ needs.build.outputs.version }}"
@@ -101,7 +101,7 @@ jobs:
                          -k=${{ env.HUAWEI_CLOUD_SK }} \
                          -e=${{ env.HUAWEI_CLOUD_ENDPOINT }}
 
-          # 把本地 packages/lowcode-portal/dist/ 目录整站同步到桶根目录
+          # 把本地 packages/tiny-engine-portal/dist/ 目录整站同步到桶根目录
           echo "needs.build.outputs.version: ${{ needs.build.outputs.version }}"
-          mv packages/lowcode-portal/dist ${{ needs.build.outputs.version }}
-          obsutil cp ${{ needs.build.outputs.version }} obs://${{ env.HUAWEI_CLOUD_BUCKET }}/lowcode-portal/ -r -f
+          mv packages/tiny-engine-portal/dist ${{ needs.build.outputs.version }}
+          obsutil cp ${{ needs.build.outputs.version }} obs://${{ env.HUAWEI_CLOUD_BUCKET }}/tiny-engine-portal/ -r -f
