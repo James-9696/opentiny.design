@@ -4,6 +4,8 @@ import type { PropType } from 'vue'
 import type { ICommonOption } from '../index'
 
 import headerInfo from '../config/header.ts'
+console.log('headerInfo', headerInfo)
+window.__headerInfo__ = headerInfo // 方便调试
 import MenuCollapse from '../assets/menu-collapse.svg'
 
 // 4个副标题，通过分析path, 自动匹配上

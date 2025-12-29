@@ -10,36 +10,6 @@ import tinyRobot from '../assets/appIcon/tiny-robot.svg'
 
 export default [
   {
-    name: 'TinyVue',
-    url: '/opentiny-design/tiny-vue',
-    children: [],
-    logo: tinyVue,
-    github: 'https://github.com/opentiny/tiny-vue',
-    isUnderline: () => location.pathname === '/opentiny-design/tiny-vue'
-  },
-  {
-    name: 'TinyEngine',
-    url: '/tiny-engine',
-    children: [],
-    logo: tinyEngine,
-    github: 'https://github.com/opentiny/tiny-engine',
-    isUnderline: () => location.pathname === '/tiny-engine'
-  },
-  {
-    name: 'TinyRobot',
-    url: '/opentiny-design/tiny-robot',
-    children: [],
-    logo: tinyRobot,
-    hide: false,
-    github: 'https://github.com/opentiny/tiny-robot',
-    isUnderline: () => location.pathname === '/opentiny-design/tiny-robot'
-  },
-  {
-    name: '演练场',
-    url: 'https://opentiny.github.io/playground',
-    children: []
-  },
-  {
     name: '开发文档',
     url: 'https://docs.opentiny.design',
     children: []
@@ -61,11 +31,34 @@ export default [
     url: '',
     children: [
       {
+        title: 'TinyRobot',
+        desc: 'AI智能助手',
+        href: 'https://chat.opentiny.design',
+        logo: tinyRobot,
+        github: 'https://github.com/opentiny/tiny-robot',
+      },
+      {
+        title: 'TinyVue',
+        desc: '智能组件库',
+        href: '/tiny-vue',
+        logo: tinyVue,
+        github: 'https://github.com/opentiny/tiny-vue',
+        isUnderline: () => location.pathname === '/tiny-vue'
+      },
+      {
+        title: 'TinyEngine',
+        desc: '低代码引擎',
+        href: '/tiny-engine',
+        logo: tinyEngine,
+        github: 'https://github.com/opentiny/tiny-engine',
+        isUnderline: () => location.pathname === '/tiny-engine'
+      },
+      {
         title: 'NEXT-SDKs',
         desc: '前端智能应用开发工具包',
         href: '/opentiny-design/next-sdks',
         logo: tinyRobot,
-        hide: false,
+        hide: true,
         github: 'https://github.com/opentiny/next-sdk'
       },
       {
@@ -73,7 +66,7 @@ export default [
         desc: 'AI 扩展插件',
         href: '/opentiny-design/ai-extension',
         logo: tinyRobot,
-        hide: false,
+        hide: true,
         github: 'https://github.com/opentiny/tiny-robot'
       },
       {
