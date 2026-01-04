@@ -107,6 +107,14 @@ const menuItems = [
         github: 'https://github.com/opentiny/playground'
       },
       {
+        title: 'GenUI-SDK',
+        desc: 'GenUI-SDK',
+        href: '/opentiny-design/genui-sdk',
+        logo: tinyRobot,
+        hide: false,
+        github: 'https://github.com/opentiny/genui-sdk.git'
+      },
+      {
         title: 'TinyPro',
         desc: '中后台解决方案',
         href: 'https://opentiny.design/vue-pro/pages',
