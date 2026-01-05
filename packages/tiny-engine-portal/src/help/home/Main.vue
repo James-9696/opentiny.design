@@ -122,7 +122,8 @@ export default {
       ],
       videoVisibility: false,
       videoData: {},
-      imgPre: `${import.meta.env.BASE_URL}`
+      imgPre: `${import.meta.env.BASE_URL}`,
+      docsUrl: 'https://docs.opentiny.design/tiny-engine/'
     })
 
     const getData = () => {
@@ -143,15 +144,18 @@ export default {
       if (item.value === TYPE_MAP.video) {
         window.open(item.moreLink)
       } else {
-        router.push(item.moreLink)
+        import.meta.env.MODE?.includes('open')
+          ? window.open(state.docsUrl)
+          : router.push(item.moreLink)
       }
     }
 
     const navItemClick = (item) => {
       if (item.type && item.name) {
         const data = docsTimeData.find((i) => i.subName === item.name.replace(/\.md$/, ''))
-
-        router.push(`/help-center/course/${data.type}/${data.subName.replace(/\.md$/, '')}`)
+        import.meta.env.MODE?.includes('open')
+          ? window.open(`${state.docsUrl}${data.type}/${data.subName.replace(/\.md$/, '')}`) 
+          : router.push(`/help-center/course/${data.type}/${data.subName.replace(/\.md$/, '')}`)
       }
     }
 
