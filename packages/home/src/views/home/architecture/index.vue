@@ -7,9 +7,9 @@
         <div class="archi-content-core">
           <component :is="renderLogo(core.icon, core.title)" />
           <div>{{ core.content }}</div>
-          <img :src="core.img" @click="showZoom = true" />
+          <img :src="core.img" @click="showZoom = true" loading="lazy" alt="core" />
           <div v-if="showZoom" class="zoom-overlay" @click="showZoom = false">
-            <img :src="core.img" alt="放大预览" class="zoom-preview-img" />
+            <img :src="core.img" alt="放大预览" class="zoom-preview-img" loading="lazy" />
           </div>
         </div>
         <div class="archi-content-steps">
@@ -18,12 +18,12 @@
               <component :is="step.extraImg ? renderLogo(step.extraImg, '整体步骤') : 'span'" />
               <p>
                 {{ step.step }}
-                <img :src="step.icon" />
+                <img :src="step.icon" loading="lazy" alt="step" />
               </p>
             </div>
             <img :src="step.img" class="archi-content-steps-item-img" />
             <h3 class="archi-content-steps-item-title">
-              <img :src="step.stepIcon" />
+              <img :src="step.stepIcon" alt="step" loading="lazy" />
               {{ step.name }}
             </h3>
             <p>{{ step.description }}</p>
@@ -34,7 +34,7 @@
           <div class="archi-content-advance-wrap">
             <div class="archi-content-advance-item" v-for="advance in advances.content" :key="advance.title">
               <p>
-                <img :src="advance.icon" />
+                <img :src="advance.icon" loading="lazy" alt="advance" />
                 {{ advance.title }}
               </p>
               <div>
@@ -56,7 +56,7 @@ const showZoom = ref(false)
 const renderLogo = (icon, content) => {
   return (
     <div className="home-logo">
-      <img src={icon} />
+      <img src={icon} loading="lazy" alt="logo" />
       {content}
     </div>
   )

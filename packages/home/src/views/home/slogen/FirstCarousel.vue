@@ -35,8 +35,8 @@ const props = defineProps({
 })
 const { isMobile } = useWindowSize()
 
-const onDocs = () => window.open('https://docs.opentiny.design', '_blank', 'noopener')
-const handleExperience = () => window.open('https://ai.opentiny.design/tar/', '_blank', 'noopener')
+const onDocs = () => window.open('https://docs.opentiny.design', '_blank', 'noopener,noreferrer')
+const handleExperience = () => window.open('https://ai.opentiny.design/tar/', '_blank', 'noopener,noreferrer')
 </script>
 <style scoped lang="less">
 @import '@/mixin.less';

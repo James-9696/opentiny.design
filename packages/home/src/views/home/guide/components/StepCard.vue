@@ -4,7 +4,7 @@
     [`${state.wrapClass}-active`]: activated
   }">
     <div :class="`${state.wrapClass}-sub-title`">
-      <img :src="$pub(`images/home/guide/step${index + 1}${activated ? '_active' : ''}.svg`)" alt="" />
+      <img :src="$pub(`images/home/guide/step${index + 1}${activated ? '_active' : ''}.svg`)" alt="step" loading="lazy" />
       {{ title }}
     </div>
     <div :class="`${state.wrapClass}-description`" v-if="!isMobile">

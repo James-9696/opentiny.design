@@ -89,8 +89,8 @@ const IconArrowRight = iconArrowRight()
 const videoRef = ref(null)
 
 const postUrl = $pub('images/home/slogan/video_poster.webp')
-const onLinkClick = () => window.open('https://www.bilibili.com/video/BV1YnCKBLE4V', '_blank', 'noopener')
-const onLearnMore = (link) => window.open(link, '_blank', 'noopener')
+const onLinkClick = () => window.open('https://www.bilibili.com/video/BV1YnCKBLE4V', '_blank', 'noopener,noreferrer')
+const onLearnMore = (link) => window.open(link, '_blank', 'noopener,noreferrer')
 onMounted(() => {
   const posterImg = new Image()
   posterImg.src = postUrl
@@ -114,7 +114,7 @@ watchEffect(() => {
 .home-slogan {
   & > .home-slogan-content {
     .pcPadding(86, 150, 100);
-    background: no-repeat center/cover url(@/assets/images/home_slogen_bg1.webp);
+    background: no-repeat center/cover url(@/assets/images/home_slogan_bg.webp);
   }
 
   .banner-item-wrap {

@@ -1,8 +1,8 @@
 <template>
-<span class="link-button" @click="onClick" :class="{ 'link-button-light': ghost }">
-  {{ text }}
-  <img class="home-title-arrow-icon" :src="iconUrl" />
-</span>
+  <button class="link-button" @click="onClick" :class="{ 'link-button-light': ghost }">
+    {{ text }}
+    <img class="home-title-arrow-icon" :src="iconUrl" alt="arrow" loading="lazy" />
+  </button>
 </template>
 <script setup>
 import { computed } from 'vue'
@@ -56,6 +56,7 @@ const onClick = (event) => {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   &:not(:last-child) {
     margin-right: 16px;
   }
