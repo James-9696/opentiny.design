@@ -21,9 +21,9 @@
                 <img :src="step.icon" loading="lazy" alt="step" />
               </p>
             </div>
-            <img :src="step.img" class="archi-content-steps-item-img" />
+            <img :src="step.img" class="archi-content-steps-item-img" loading="lazy" alt="" />
             <h3 class="archi-content-steps-item-title">
-              <img :src="step.stepIcon" alt="step" loading="lazy" />
+              <img :src="step.stepIcon" alt="" loading="lazy" />
               {{ step.name }}
             </h3>
             <p>{{ step.description }}</p>

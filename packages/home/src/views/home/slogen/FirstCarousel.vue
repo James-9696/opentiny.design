@@ -5,7 +5,7 @@
       :style="{ background: `no-repeat center/cover url(${data.bg})` }"
     >
       <div class="home-slogan-top">
-        <img class="home-title-svg" :src="$pub('images/home-title.svg')" loading="lazy" />
+        <img class="home-title-svg" :src="$pub('images/home-title.svg')" loading="lazy" alt="标题" />
         <div class="home-title">{{ data.title }}</div>
         <div class="home-title-description">
           {{ data.descriptionA1 }}

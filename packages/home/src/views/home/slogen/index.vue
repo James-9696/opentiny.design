@@ -11,7 +11,7 @@
         >
           <div class="banner-item">
             <div class="banner-item-logo" :class="`banner-item-logo-${idx}`">
-              <img :src="item.icon" class="banner-item-logo-icon" loading="lazy" />
+              <img :src="item.icon" class="banner-item-logo-icon" loading="lazy" alt="banner" />
               <div :class="`banner-item-logo-title-${idx}`">{{ item.iconTitle }}</div>
             </div>
             <div class="banner-item-title" :class="`banner-item-title-${idx}`">{{ item.title }}</div>
@@ -24,7 +24,7 @@
     <div class="home-slogan-content">
       <div class="home-video-wrap">
         <div class="home-video-tag">
-          <img :src="$pub('images/home/slogan/example.svg')" />
+          <img :src="$pub('images/home/slogan/example.svg')" loading="lazy" alt="example" />
           以企业出差场景为例
         </div>
         <div class="home-video-content">
@@ -66,7 +66,7 @@
   </div>
 </template>
 <script setup>
-import { TinyButton, TinyLink, TinyCarousel, TinyCarouselItem } from '@opentiny/vue'
+import { TinyLink, TinyCarousel, TinyCarouselItem } from '@opentiny/vue'
 import { $pub } from '../../../tools/utils'
 import useWindowSize from '@/tools/useWindowSize.js'
 import { computed, onMounted, ref, watchEffect } from 'vue'

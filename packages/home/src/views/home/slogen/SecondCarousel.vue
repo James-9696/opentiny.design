@@ -3,7 +3,7 @@
     <div class="banner-item-wrap" :style="{ background: `no-repeat center/cover url(${data.bg})` }">
       <div class="banner-item">
         <div class="banner-item-logo" :class="`banner-item-logo-${1}`">
-          <img :src="data.icon" class="banner-item-logo-icon" loading="lazy" />
+          <img :src="data.icon" class="banner-item-logo-icon" loading="lazy" alt="banner" />
           <div :class="`banner-item-logo-title-${1}`">{{ data.iconTitle }}</div>
         </div>
         <div class="banner-item-title">
