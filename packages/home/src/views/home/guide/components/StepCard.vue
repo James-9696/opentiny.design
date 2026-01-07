@@ -4,7 +4,8 @@
     [`${state.wrapClass}-active`]: activated
   }">
     <div :class="`${state.wrapClass}-sub-title`">
-      {{ subTitle }}
+      <img :src="$pub(`images/home/guide/step${index + 1}${activated ? '_active' : ''}.svg`)" alt="" />
+      {{ title }}
     </div>
     <div :class="`${state.wrapClass}-description`" v-if="!isMobile">
       <div v-for="(description, index) in descriptions" :key="index">
@@ -17,16 +18,16 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
 import useWindowSize from '@/tools/useWindowSize.js'
+import { $pub } from '@/tools'
 
 
 const props = defineProps({
   title: { type: String, default: '' },
-  subTitle: { type: String, default: '' },
   descriptions: { type: Array, default: () => [] },
-  activated: { type: Boolean, default: false }
+  activated: { type: Boolean, default: false },
+  index: { type: Number, default: 1 }
 })
 const { isMobile } = useWindowSize()
-
 const state = reactive({
   wrapClass: 'step-card'
 })
@@ -55,6 +56,9 @@ const state = reactive({
     font-weight: 600;
     .pcRem(line-height, 36);
     .pcRem(font-size, 18);
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 
   &-description {
