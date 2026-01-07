@@ -1,0 +1,21 @@
+<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.000000" height="32.000000" fill="none" customFrame="#000000">
+	<defs>
+		<clipPath id="clipPath_0">
+			<rect width="24.000000" height="23.999990" x="4.000000" y="4.000000" fill="rgb(255,255,255)" />
+		</clipPath>
+	</defs>
+	<rect id="资源下载" width="31.999998" height="31.999996" x="0.000000" y="0.000000" />
+	<g id="编组 33">
+		<rect id="矩形备份 5" width="31.999998" height="31.999996" x="0.000000" y="0.000000" rx="4.000000" fill="rgb(245,245,245)" />
+		<rect id="矩形备份 5" width="31.333332" height="31.333330" x="0.333333" y="0.333333" rx="3.666667" stroke="rgb(210,45,38)" stroke-opacity="0" stroke-width="0.666666567" />
+		<g id="svg 47" clip-path="url(#clipPath_0)" customFrame="url(#clipPath_0)">
+			<rect id="svg 47" width="24.000000" height="23.999990" x="4.000000" y="4.000000" />
+			<path id="矢量 2517" d="M15.9999 26.2715L4.67188 13.0955L9.56787 6.42354L15.9999 5.72754L22.4319 6.42354L27.3279 13.0955L15.9999 26.2715Z" fill="rgb(255,174,0)" fill-rule="nonzero" />
+			<path id="矢量 2518" d="M15.9999 26.2717L4.67188 13.0957L27.3279 13.0957L15.9999 26.2717Z" fill="rgb(236,108,0)" fill-rule="nonzero" />
+			<path id="矢量 2519" d="M15.9999 26.2717L9.25586 13.0957L22.7439 13.0957L15.9999 26.2717Z" fill="rgb(255,174,0)" fill-rule="nonzero" />
+			<path id="矢量 2520" d="M15.9999 5.72754L9.25586 13.0955L22.7439 13.0955L15.9999 5.72754Z" fill="rgb(255,239,180)" fill-rule="nonzero" />
+			<path id="矢量 2521" d="M9.56787 6.42383L7.04788 9.78383L4.67188 13.0958L9.30387 13.0958L9.56787 6.42383ZM22.4319 6.42383L24.9519 9.78383L27.3279 13.0958L22.6959 13.0958L22.4319 6.42383Z" fill="rgb(255,174,0)" fill-rule="nonzero" />
+			<path id="矢量 2522" d="M9.56786 6.42354L9.25586 13.0955L15.9999 5.72754L9.56786 6.42354ZM22.4319 6.42354L22.7439 13.0955L15.9999 5.72754L22.4319 6.42354Z" fill="rgb(254,211,5)" fill-rule="nonzero" />
+		</g>
+	</g>
+</svg>
