@@ -9,21 +9,21 @@
       </div>
       <div v-if="!isMobile" class="descriptions">
         <div class="description">
-          <img :src="$pub('images/platform/engine_1.svg')" alt=""></img>
+          <img :src="$pub('images/platform/engine_1.svg')" alt="" loading="lazy" />
           <div>跨端、跨框架，支持自定义主题和交互逻辑</div>
         </div>
         <div class="description">
-          <img :src="$pub('images/platform/engine_1.svg')" alt=""></img>
+          <img :src="$pub('images/platform/engine_1.svg')" alt="" loading="lazy" />
           <div>丰富的组件MCP工具</div>
         </div>
         <div class="description">
-          <img :src="$pub('images/platform/engine_1.svg')" alt=""></img>
+          <img :src="$pub('images/platform/engine_1.svg')" alt="" loading="lazy" />
           <div>
             支持配置业务逻辑，精确操作Web应用
           </div>
         </div>
         <div class="description">
-          <img :src="$pub('images/platform/engine_1.svg')" alt=""></img>
+          <img :src="$pub('images/platform/engine_1.svg')" alt="" loading="lazy" />
           <div>
             支持 AI 对话框、MCP Host 和智能体搭建平台
           </div>
@@ -38,7 +38,7 @@
         </div>
       </div>
     </div>
-    <img :src="$pub(`images/platform/vue.svg`)"></img>
+    <img :src="$pub(`images/platform/vue.svg`)" loading="lazy" />
   </div>
 </template>
 
@@ -59,7 +59,6 @@ const onTinyVue = () => {
 .platform-vue {
   display: flex;
   align-items: center;
-  .pcRem(padding-top, 60);
 
   .content {
     .pcRem(width, 616);

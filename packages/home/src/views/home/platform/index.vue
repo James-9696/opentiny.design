@@ -13,7 +13,7 @@
                 </div>
                 <div class="tab-desc">
                   <div class="tab-desc-title">
-                    {{ c.title }} <TinyTag v-if="c.tag" color="orange" size="small">{{ c.tag }}</TinyTag>
+                    {{ c.title }} <TinyTag class="tab-desc-tag" v-if="c.tag" color="orange" size="small">{{ c.tag }}</TinyTag>
                   </div>
                   <div class="tab-desc-sub-title" v-if="!isMobile">{{ c.desc }}</div>
                 </div>
@@ -114,7 +114,7 @@ onMounted(() => {
     box-sizing: border-box;
   }
   .plat-content {
-    height: 685px;
+    height: 660px;
     display: flex;
     align-items: center;
   }
@@ -164,7 +164,7 @@ onMounted(() => {
   }
 
   .platform-tab-line {
-    width: 120%;
+    width: 100%;
     position: absolute;
     height: 2px;
     border-radius: 6px;
@@ -291,12 +291,17 @@ onMounted(() => {
       transform: rotate(360deg);
     }
   }
+  @media screen and (max-width: 1718px) {
+    .tab-desc-tag {
+      display: none;
+    }
+  }
   @media screen and (max-width: 1540px) {
     .tab-desc-title {
       font-size: 14px;
     }
   }
-  @media screen and (max-width: 1455px) {
+  @media screen and (max-width: 1476px) {
     .tab-icon {
       display: none;
     }

@@ -13,25 +13,25 @@ export const advances = {
   title: 'OpenTiny NEXT 的独特优势',
   content: [
     {
-      icon: $pub('images/home/architecture/advance1.webp'),
+      icon: $pub('images/home/architecture/advance1.svg'),
       title: '扩大 MCP 工具范围',
       description:
         '为 Agent 智能体提供更多的 MCP 工具，实现当前现有的本地/云服务 MCP 工具所不具备的能力，即操控前端应用的能力。这种能力比 RPA 方案（Browser Use / Computer Use）更快更准更经济'
     },
     {
-      icon: $pub('images/home/architecture/advance2.webp'),
+      icon: $pub('images/home/architecture/advance2.svg'),
       title: '完全兼容 MCP 生态',
       description:
         '所有的前端应用都采用标准的 MCP 协议声明 MCP Server，并且基于标准的 MCP 通讯方式进行连接，比如 Streamable HTTP，意味着能完全融入现有的 MCP 生态，兼容现有乃至未来的 MCP Host 应用'
     },
     {
-      icon: $pub('images/home/architecture/advance3.webp'),
+      icon: $pub('images/home/architecture/advance3.svg'),
       title: '支持智能体交互范式',
       description:
         '当前的前端应用主要还是人机交互，即人手动操作前端界面上的 UI 组件。引入 OpenTiny 后 Agent 智能体可以借助 MCP 工具读取前端界面的信息、调用前端界面的功能，配合生成式 UI 实现新的智能体交互范式'
     },
     {
-      icon: $pub('images/home/architecture/advance4.webp'),
+      icon: $pub('images/home/architecture/advance4.svg'),
       title: '多样的前端智能化方案',
       description:
         '不仅支持 Web 应用、桌面应用、移动应用的前端智能化改造，还支持 AI 应用（对话框）部署在浏览器扩展，集成到 Web 页面、内置在各终端的 AI 助手等，都可以直接或间接调用前端应用里的 MCP 工具'
@@ -43,7 +43,7 @@ export const steps = [
   {
     img: $pub('images/home/architecture/stepImg1.webp'),
     icon: $pub('images/home/architecture/step1.svg'),
-
+    stepIcon: $pub('images/home/architecture/stepIcon1.svg'),
     extraImg: $pub('images/home/architecture/logo3.svg'),
     name: '在企业前端应用里添加 MCP 工具',
     step: '第一步',
@@ -53,6 +53,7 @@ export const steps = [
   {
     img: $pub('images/home/architecture/stepImg2.webp'),
     icon: $pub('images/home/architecture/step2.svg'),
+    stepIcon: $pub('images/home/architecture/stepIcon2.svg'),
     name: 'Agent 智能体获取 MCP 工具授权',
     step: '第二步',
     description:
@@ -61,6 +62,7 @@ export const steps = [
   {
     img: $pub('images/home/architecture/stepImg3.webp'),
     icon: $pub('images/home/architecture/step1.svg'),
+    stepIcon: $pub('images/home/architecture/stepIcon3.svg'),
     name: 'Agent 智能体识别意图自主调用 MCP 工具',
     step: '第三步',
     description:
@@ -69,6 +71,7 @@ export const steps = [
   {
     img: $pub('images/home/architecture/stepImg4.webp'),
     icon: $pub('images/home/architecture/step4.svg'),
+    stepIcon: $pub('images/home/architecture/stepIcon4.svg'),
     name: '使用三方 AI 应用实现智能体调用前端 MCP 工具',
     step: '第四步',
     description:

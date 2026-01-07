@@ -6,23 +6,14 @@
         <div class="sub-title">支持多种编程语言和前端框架，帮助开发者快速实现智能化功能</div>
       </div>
       <div v-if="!isMobile" class="guide-content">
-        <tiny-steps
-          v-if="!isMobile"
-          class="guide-steps"
-          line
-          vertical
-          :data="state.data"
-          :active="state.active"
-          @click="onActiveStep"
-        ></tiny-steps>
         <div class="guide-step-cards">
           <step-card
             v-for="(step, index) in stepSettings"
             :key="step.title"
             :title="step.title"
-            :subTitle="step.subTitle"
             :descriptions="step.descriptions"
             :activated="index === state.active"
+            :index="index"
             @click="onActiveStep(index)"
           ></step-card>
         </div>
@@ -71,7 +62,6 @@
 
 <script setup>
 import { reactive, computed, onMounted, onUnmounted } from 'vue'
-import { TinySteps } from '@opentiny/vue'
 import useWindowSize from '@/tools/useWindowSize.js'
 import { stepSettings } from './config'
 import StepCard from './components/StepCard.vue'
@@ -79,20 +69,6 @@ import CodeCard from './components/CodeCard.vue'
 
 const SCROLL_STEP_LEN = 360 // 滚动步长，滚动360px触发步骤更改
 const state = reactive({
-  data: [
-    {
-      name: ''
-    },
-    {
-      name: ''
-    },
-    {
-      name: ''
-    },
-    {
-      name: ''
-    }
-  ],
   active: 0,
   observer: null,
   scrollDelta: 0,

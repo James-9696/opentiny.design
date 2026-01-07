@@ -1,55 +1,32 @@
 <template>
   <div class="home-slogan">
     <tiny-carousel :height="carouselHeight" arrow="never" :interval="4000" autoplay :key="isMobile" id="home-slogan-carousel">
-      <tiny-carousel-item class="carousel-item-demo" @click="onDocs">
-        <div
-          class="banner-item-wrap home-slogan-top-wrap"
-          :style="{ background: `no-repeat center/cover url(${firstBannerData.bg})` }"
-        >
-          <div class="home-slogan-top">
-            <img class="home-title-svg" :src="$pub('images/home-title.svg')" loading="lazy"/>
-            <div class="home-title">{{ firstBannerData.title }}</div>
-            <div class="home-title-description" >
-              {{ firstBannerData.descriptionA1 }}
-            </div>
-            <div class="home-title-description1">
-              {{ firstBannerData.descriptionA2 }}
-            </div>
-            <div class="home-title-buttons" v-if="!isMobile">
-              <tiny-button size="medium" type="primary" class="link-button" @click.stop="onDocs">
-                开发文档 <img class="home-title-arrow-icon" :src="$pub('images/home/slogan/arrow.svg')" />
-              </tiny-button>
-              <tiny-button ghost size="medium" class="link-button" @click.stop="handleExperience">
-                立即体验 <img class="home-title-arrow-icon" :src="$pub('images/home/slogan/arrow-black.svg')" />
-              </tiny-button>
-            </div>
-          </div>
-        </div>
-      </tiny-carousel-item>
+      <FirstCarousel :data="bannerData1" />
+      <SecondCarousel :data="bannerData2" />
       <tiny-carousel-item v-for="(item, idx) in bannerListData" :key="item.title">
         <div
           class="banner-item-wrap"
           :style="{ background: `no-repeat center/cover url(${item.bg})` }"
-          @click="onLearnMore(item.link)"
+          @click.stop="onLearnMore(item.link)"
         >
           <div class="banner-item">
             <div class="banner-item-logo" :class="`banner-item-logo-${idx}`">
-              <img :src="item.icon" class="banner-item-logo-icon" loading="lazy"/>
+              <img :src="item.icon" class="banner-item-logo-icon" loading="lazy" />
               <div :class="`banner-item-logo-title-${idx}`">{{ item.iconTitle }}</div>
             </div>
             <div class="banner-item-title" :class="`banner-item-title-${idx}`">{{ item.title }}</div>
             <div class="banner-item-description">{{ item.description }}</div>
-            <tiny-button v-if="!isMobile" ghost size="medium" class="link-button" @click.stop="onLearnMore(item.link)">
-              了解更多
-              <img class="home-title-arrow-icon" :src="$pub('images/home/slogan/arrow-black.svg')" />
-            </tiny-button>
+            <CustomAniButton v-if="!isMobile" text="了解更多" ghost @click.stop="onLearnMore(item.link)" />
           </div>
         </div>
       </tiny-carousel-item>
     </tiny-carousel>
     <div class="home-slogan-content">
       <div class="home-video-wrap">
-        <div class="home-video-tag">以企业出差场景为例</div>
+        <div class="home-video-tag">
+          <img :src="$pub('images/home/slogan/example.svg')" />
+          以企业出差场景为例
+        </div>
         <div class="home-video-content">
           <div class="home-video-item">
             <h3>应用智能化改造前</h3>
@@ -94,21 +71,23 @@ import { $pub } from '../../../tools/utils'
 import useWindowSize from '@/tools/useWindowSize.js'
 import { computed, onMounted, ref, watchEffect } from 'vue'
 import { iconArrowRight } from '@opentiny/vue-icon'
-import { bannerList, firstBanner } from './config'
+import { bannerList, firstBanner, secondBanner } from './config'
+import CustomAniButton from './CustomAniButton.vue'
+import FirstCarousel from './FirstCarousel.vue'
+import SecondCarousel from './SecondCarousel.vue'
 
 const { isMobile, width } = useWindowSize()
 
-const carouselHeight = computed(() => isMobile.value ? '200px' : `${Math.max(width.value * 0.286, 300)}px`)
-const mobileOrPc = computed(() => isMobile.value ? 'mobile' : 'pc')
+const carouselHeight = computed(() => (isMobile.value ? '200px' : `${Math.max(width.value * 0.286, 300)}px`))
+const mobileOrPc = computed(() => (isMobile.value ? 'mobile' : 'pc'))
 
 const bannerListData = ref(bannerList[mobileOrPc.value])
 
-const firstBannerData = ref(firstBanner[mobileOrPc.value])
-
+const bannerData1 = ref(firstBanner[mobileOrPc.value])
+const bannerData2 = ref(secondBanner[mobileOrPc.value])
 const IconArrowRight = iconArrowRight()
 const videoRef = ref(null)
-const onDocs = () => window.open('https://docs.opentiny.design', '_blank', 'noopener')
-const handleExperience = () => window.open('https://ai.opentiny.design/tar/', '_blank', 'noopener')
+
 const postUrl = $pub('images/home/slogan/video_poster.webp')
 const onLinkClick = () => window.open('https://www.bilibili.com/video/BV1YnCKBLE4V', '_blank', 'noopener')
 const onLearnMore = (link) => window.open(link, '_blank', 'noopener')
@@ -122,74 +101,24 @@ onMounted(() => {
 
 watchEffect(() => {
   bannerListData.value = bannerList[mobileOrPc.value]
-  firstBannerData.value = firstBanner[mobileOrPc.value]
+  bannerData1.value = firstBanner[mobileOrPc.value]
+  bannerData2.value = secondBanner[mobileOrPc.value]
   videoRef.value?.classList[isMobile.value ? 'remove' : 'add']('video-player')
 })
 </script>
 
 <style scoped lang="less">
 @import '@/mixin.less';
+@import './banner.less';
 
 .home-slogan {
   & > .home-slogan-content {
     .pcPadding(86, 150, 100);
-    background: no-repeat center/cover url(@/assets/images/home_slogan_bg.webp);
-  }
-  .home-slogan-top-wrap {
-    .home-slogan-top {
-      max-width: 1280px;
-      width: 100%;
-      .home-title {
-        .pcRem(font-size, 52);
-        font-weight: 600;
-        background: linear-gradient(90deg, rgba(203, 67, 168, 1), rgba(44, 95, 239, 1) 56%);
-        color: transparent;
-        background-clip: text;
-      }
-
-      .home-title-svg {
-        .pcRem(width, 532);
-        padding-bottom: 28px;
-      }
-
-      .home-title-description {
-        .pcRem(font-size, 24);
-        line-height: 32px;
-        .pcMargin(20, auto, 10);
-        > span {
-          color: #1476ff;
-        }
-      }
-      .home-title-description1 {
-        color: rgba(128, 128, 128, 1);
-        .pcRem(font-size, 18);
-        .pcRem(margin-bottom, 32);
-        font-weight: 300;
-        line-height: 28px;
-      }
-    }
+    background: no-repeat center/cover url(@/assets/images/home_slogen_bg1.webp);
   }
 
   .banner-item-wrap {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    .pcPadding(0, 150);
-    .banner-item {
-      max-width: 1280px;
-      width: 100%;
-    }
     .banner-item-logo {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      .pcRem(font-size, 36);
-      .pcRem(line-height, 45);
-      font-weight: 600;
       .banner-item-logo-title-0,
       .banner-item-logo-title-1 {
         margin-top: -20px;
@@ -201,22 +130,16 @@ watchEffect(() => {
         background-clip: text;
       }
     }
-    .banner-item-title {
-      .pcRem(font-size, 60);
-      .pcRem(line-height, 70);
-      font-weight: 900;
-      margin: 45px 0 20px;
+    .banner-item-logo-0,
+    .banner-item-logo-1 {
+      > img {
+        width: 65px;
+      }
     }
+
     .banner-item-title-0,
     .banner-item-title-1 {
       margin: 20px 0 20px;
-    }
-    .banner-item-description {
-      .pcRem(font-size, 28);
-      .pcRem(line-height, 32);
-      font-weight: 400;
-      color: rgba(89, 89, 89, 1);
-      .pcRem(margin-bottom, 28);
     }
   }
 
@@ -248,14 +171,16 @@ watchEffect(() => {
     box-sizing: border-box;
     border-radius: 24.03px;
     .home-video-tag {
+      display: flex;
+      align-items: center;
+      gap: 8px;
       margin-bottom: 10px;
-      padding: 6px 18px 6px 18px;
+      padding: 6px 16px;
       border-radius: 105px;
+      border: 1px solid #191919;
       width: fit-content;
-      background: rgba(93, 24, 255, 0.1);
-      color: rgba(131, 47, 214, 1);
-      font-size: 12px;
-      line-height: 17px;
+      font-size: 14px;
+      line-height: 20px;
     }
     .home-video-content {
       display: flex;
@@ -284,7 +209,7 @@ watchEffect(() => {
       .video {
         width: 100%;
         box-sizing: border-box;
-        border: 4px solid rgba(25, 25, 25, 0.6);
+        border: 8px solid rgba(100, 129, 172, 0.3);
         border-radius: 40px;
         box-shadow: 0px 11px 38px 0px rgba(129, 154, 188, 0.36);
         background: rgba(255, 255, 255, 0.3);
@@ -319,39 +244,25 @@ watchEffect(() => {
   }
 
   @media screen and (max-width: @break-point) {
-    .home-slogan-top-wrap {
-      .home-slogan-top {
-        .home-title {
-          font-size: 20px;
-        }
-
-        .home-title-svg {
-          width: 124px;
-          padding-bottom: 16px;
-        }
-
-        .home-title-description,
-        .home-title-description1 {
-          font-size: 14px;
-          line-height: 20px;
-          color: rgba(128, 128, 128, 1);
-        }
-      }
-    }
-
     .banner-item-wrap {
-      .pcPadding(0, 150);
-
       .banner-item-logo {
-        > img {
-          width: 40px;
-        }
-        gap: 2px;
-        font-size: 16px;
-        line-height: 22px;
         .banner-item-logo-title-0,
         .banner-item-logo-title-1 {
           margin-top: -10px;
+        }
+
+        .banner-item-title-0,
+        .banner-item-title-1 {
+          margin: 4px 0 12px;
+        }
+        .banner-item-title-3 {
+          max-width: 175px;
+        }
+      }
+      .banner-item-logo-0,
+      .banner-item-logo-1 {
+        > img {
+          width: 35px;
         }
       }
       .banner-item-logo-2,
@@ -361,24 +272,7 @@ watchEffect(() => {
           width: 20px;
         }
       }
-      .banner-item-title {
-        font-size: 20px;
-        line-height: 28px;
-        margin: 12px 0;
-      }
-      .banner-item-title-0,
-      .banner-item-title-1 {
-        margin: 4px 0 12px;
-      }
-      .banner-item-title-3 {
-        max-width: 175px;
-      }
-      .banner-item-description {
-        font-size: 14px;
-        line-height: 20px;
-      }
     }
-
     .home-video-wrap {
       .home-video-tag {
         margin: 0 0 10px;

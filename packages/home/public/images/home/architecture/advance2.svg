@@ -1,0 +1,20 @@
+<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20.000000" height="20.000000" fill="none" clip-path="url(#clipPath_1)" customFrame="url(#clipPath_1)">
+	<defs>
+		<linearGradient id="paint_linear_1" x1="10" x2="10" y1="0" y2="20" gradientUnits="userSpaceOnUse">
+			<stop stop-color="rgb(20,118,255)" offset="0" stop-opacity="1" />
+			<stop stop-color="rgb(65,145,250)" offset="1" stop-opacity="1" />
+		</linearGradient>
+		<clipPath id="clipPath_1">
+			<rect width="20.000000" height="20.000000" x="0.000000" y="0.000000" rx="4.000000" fill="rgb(255,255,255)" />
+		</clipPath>
+	</defs>
+	<rect id="ic_ict_api" width="20.000000" height="20.000000" x="0.000000" y="0.000000" rx="4.000000" fill="url(#paint_linear_1)" />
+	<rect id="矩形 18466" width="20.000000" height="20.000000" x="0.000000" y="0.000000" fill="rgb(255,255,255)" fill-opacity="0" />
+	<g id="组合 16648">
+		<path id="path4" d="M8.83782 15.9999L10.4616 9.58325M9.38574 13.5203L7.69232 10.8755" stroke="rgb(255,255,255)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" />
+		<path id="path6" d="M16 5.03503C13.679 4.89192 12.1458 5.18729 11.4005 5.92114C10.2824 7.02192 10.2718 8.42062 10.8018 9.15812C11.3319 9.89563 13.1705 9.65527 13.8005 8.5807C14.4305 7.50613 14.5386 6.80404 14.8926 6.29461C15.1286 5.95499 15.4978 5.53513 16 5.03503Z" fill="rgb(255,255,255)" fill-rule="evenodd" />
+		<path id="path6" d="M11.4005 5.92114C10.2824 7.02192 10.2718 8.42062 10.8018 9.15812C11.3319 9.89563 13.1705 9.65527 13.8005 8.5807C14.4305 7.50613 14.5386 6.80404 14.8926 6.29461C15.1286 5.95499 15.4978 5.53513 16 5.03503C13.679 4.89192 12.1458 5.18729 11.4005 5.92114Z" fill-rule="evenodd" stroke="rgb(255,255,255)" stroke-linejoin="round" stroke-width="1" />
+		<path id="path7" d="M4.61538 0.0280246C2.68121 -0.0864634 1.40355 0.149833 0.782421 0.736915C-0.149278 1.61754 -0.158098 2.7365 0.28358 3.3265C0.725258 3.9165 2.25743 3.72421 2.78247 2.86456C3.3075 2.00491 3.39754 1.44323 3.69255 1.03569C3.88922 0.763988 4.19684 0.428101 4.61538 0.0280246Z" fill="rgb(255,255,255)" fill-rule="evenodd" transform="matrix(-1,0,0,1,8.61536,7.75)" />
+		<path id="path7" d="M0.782421 0.736915C-0.149278 1.61754 -0.158098 2.7365 0.28358 3.3265C0.725258 3.9165 2.25743 3.72421 2.78247 2.86456C3.3075 2.00491 3.39754 1.44323 3.69255 1.03569C3.88922 0.763988 4.19684 0.428101 4.61538 0.0280246C2.68121 -0.0864634 1.40355 0.149833 0.782421 0.736915Z" fill-rule="evenodd" stroke="rgb(255,255,255)" stroke-linejoin="round" stroke-width="1" transform="matrix(-1,0,0,1,8.61536,7.75)" />
+	</g>
+</svg>

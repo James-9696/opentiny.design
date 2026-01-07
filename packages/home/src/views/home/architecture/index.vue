@@ -22,7 +22,10 @@
               </p>
             </div>
             <img :src="step.img" class="archi-content-steps-item-img" />
-            <h3>{{ step.name }}</h3>
+            <h3 class="archi-content-steps-item-title">
+              <img :src="step.stepIcon" />
+              {{ step.name }}
+            </h3>
             <p>{{ step.description }}</p>
           </div>
         </div>
@@ -87,10 +90,6 @@ onUnmounted(() => {
     margin: 0 auto;
   }
   .title {
-    background: linear-gradient(90deg, rgba(203, 67, 168, 1), rgba(44, 95, 239, 1) 56%);
-    width: fit-content;
-    color: transparent;
-    background-clip: text;
     margin: 0 auto 16px;
   }
 
@@ -193,6 +192,11 @@ onUnmounted(() => {
           color: #191919;
           margin: 24px 0 16px;
         }
+        .archi-content-steps-item-title {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
         .archi-content-steps-item-img {
           width: 100%;
         }
@@ -235,7 +239,7 @@ onUnmounted(() => {
     border: 1px solid rgba(20, 118, 255, 0.3);
     border-radius: 110px;
     background: rgba(20, 118, 255, 0.1);
-    padding: 4px 16px 4px 16px;
+    padding: 6px 16px;
     width: fit-content;
   }
   .home-step {

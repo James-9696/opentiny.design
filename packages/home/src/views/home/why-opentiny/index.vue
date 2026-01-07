@@ -62,7 +62,7 @@ const renderLogo = (icon, content, idx) => {
     .why-opentiny-content-item {
       position: relative;
       border-radius: 20px;
-      background: linear-gradient(180.58deg, rgba(241, 245, 254, 1), rgba(255, 255, 255, 1) 100%);
+      background: linear-gradient(180.58deg, rgba(244, 248, 255, 1), rgba(249, 247, 252, 1) 100%);
       padding: 32px 40px 24px 40px;
       > h2 {
         font-size: 20px;
@@ -149,7 +149,7 @@ const renderLogo = (icon, content, idx) => {
     border: 1px solid rgba(20, 118, 255, 0.3);
     border-radius: 110px;
     background: rgba(20, 118, 255, 0.1);
-    padding: 4px 16px 4px 16px;
+    padding: 6px 16px;
     width: fit-content;
   }
   .home-logo-1 {
