@@ -2,7 +2,7 @@ name: Deploy home to github.io
 
 on:
   push:
-    branches: [main]
+    branches: [dev,main]
     paths:
       - 'packages/common/**'
       - 'packages/home/**'
@@ -25,7 +25,9 @@ jobs:
         with:
           version: 9
       - name: Install deps
-        run: pnpm i
+        run: |
+          pnpm -F opentiny-design-common i
+          pnpm -F opentiny-design-home i
       - name: Build common
         run: pnpm build:common
       - name: Build home

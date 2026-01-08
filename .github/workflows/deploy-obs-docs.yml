@@ -2,7 +2,8 @@ name: Deploy docs to Huawei OBS
 
 on:
   push:
-    branches: [main]
+    tags:
+      - 'v*'
     paths:
       - 'packages/opentiny-docs/**'
 
@@ -39,7 +40,7 @@ jobs:
         with:
           version: 9
       - name: Install deps
-        run: pnpm i
+        run: pnpm -F opentiny-docs install
       - name: Get docs version
         id: ver
         run: |
