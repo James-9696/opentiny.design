@@ -91,3 +91,21 @@ export const firstBanner = {
     link: 'https://mp.weixin.qq.com/s/xMx5sfKGh2R-oZPGUwv70A'
   }
 }
+export const secondBanner = {
+  pc: {
+    title: 'GenUI SDK',
+    title1: '生成式 UI',
+    icon: $pub('images/genui-sdk.svg'),
+    iconTitle: 'GenUI SDK',
+    description: '扩展大模型交互方式 打造极致顺滑的智能体验',
+    bg: $pub('images/home/slogan/bg6.webp'),
+  },
+  mobile: {
+    title: 'GenUI SDK',
+    title1: '生成式 UI',
+    icon: $pub('images/genui-sdk.svg'),
+    iconTitle: 'GenUI SDK',
+    description: '打造极致智能体验',
+    bg: $pub('images/home/slogan/mobile_bg6.webp'),
+  }
+}

@@ -154,7 +154,7 @@ onUnmounted(() => {
 
 :deep(.sub-title) {
   color: rgb(128, 128, 128);
-  .pcRem(font-size, 24);
+  .pcRem(font-size, 20);
   max-width: 1300px;
   margin: 0 auto;
   text-align: center;

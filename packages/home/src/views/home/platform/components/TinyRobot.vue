@@ -46,7 +46,7 @@ const cardList = [
       </div>
       <div v-if="!isMobile" class="card-wrap">
         <div class="card" v-for="item in cardList" :key="item.title">
-          <img class="card-icon" :src="$pub(`images/platform/icon-airplane.png`)" alt="" />
+          <img class="card-icon" :src="$pub(`images/platform/icon-airplane.png`)" alt="" loading="lazy" />
           <div class="card-title">
             {{ item.title }}
           </div>
@@ -67,7 +67,7 @@ const cardList = [
         </div>
       </div>
     </div>
-    <img :src="$pub(`images/platform/tiny-robot.png`)" />
+    <img :src="$pub(`images/platform/tiny-robot.png`)" loading="lazy" />
   </div>
 </template>
 
@@ -77,7 +77,7 @@ const cardList = [
 .platform-engine {
   display: flex;
   align-items: center;
-  .pcRem(padding-top, 60);
+  .pcRem(padding-top, 35);
 
   .content {
     .pcRem(width, 616);
@@ -103,7 +103,7 @@ const cardList = [
       background-color: #fff;
       display: flex;
       flex-direction: column;
-      .pcRem(padding, 32);
+      .pcRem(padding, 24);
       .pcRem(border-radius, 8);
 
       &-icon {
