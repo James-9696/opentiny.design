@@ -1,0 +1,67 @@
+@import '@/mixin.less';
+
+.banner-item-wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  .pcPadding(0, 150);
+
+  .banner-item {
+    width: 100%;
+  }
+
+  .banner-item-logo {
+    > img {
+      width: 36px;
+    }
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    .pcRem(font-size, 32);
+    .pcRem(line-height, 45);
+    font-weight: 600;
+  }
+
+  .banner-item-title {
+    .pcRem(font-size, 60);
+    .pcRem(line-height, 70);
+    font-weight: 900;
+    margin: 45px 0 20px;
+  }
+  .banner-item-description {
+    .pcRem(font-size, 28);
+    .pcRem(line-height, 32);
+    font-weight: 400;
+    color: rgba(89, 89, 89, 1);
+    .pcRem(margin-bottom, 28);
+  }
+}
+
+@media screen and (max-width: @break-point) {
+  .banner-item-wrap {
+    .pcPadding(0, 150);
+
+    .banner-item-logo {
+      > img {
+        width: 40px;
+      }
+      gap: 2px;
+      font-size: 16px;
+      line-height: 22px;
+     
+    }
+    .banner-item-title {
+      font-size: 20px;
+      line-height: 28px;
+      margin: 12px 0;
+    }
+    .banner-item-description {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}

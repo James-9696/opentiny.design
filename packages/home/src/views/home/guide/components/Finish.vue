@@ -2,28 +2,22 @@
   <div class="step-five">
     <div class="step-five-content">
       <div class="step-five-content-top">
-        <img :src="IntegratedGuide4" alt="" />
+        <img :src="IntegratedGuide4" alt="guide" loading="lazy" />
         <span> OK,完成啦~就这么简单~ </span>
         <span> 快去试试吧 </span>
-        <!-- <tiny-button class="to-use" type="primary" round @click="goToGuide">立即使用</tiny-button> -->
       </div>
       <div class="step-five-content-bottom">
         <span>我们即将推出专属 SDK，敬请等待</span>
-        <img :src="IntegratedGuide3" alt=""></img>
+        <img :src="IntegratedGuide3" alt="guide" loading="lazy"></img>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { TinyButton } from '@opentiny/vue'
 import IntegratedGuide3 from '@/assets/images/integrated-guide-3.png'
 import IntegratedGuide4 from '@/assets/images/integrated-guide-4.svg'
-import { nextSdkGuideUrl } from '../config'
 
-function goToGuide() {
-  window.open(nextSdkGuideUrl, '_blank', 'noopener')
-}
 </script>
 
 <style lang="less" scoped>

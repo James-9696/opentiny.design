@@ -7,9 +7,9 @@
         <div class="archi-content-core">
           <component :is="renderLogo(core.icon, core.title)" />
           <div>{{ core.content }}</div>
-          <img :src="core.img" @click="showZoom = true" />
+          <img :src="core.img" @click="showZoom = true" loading="lazy" alt="core" />
           <div v-if="showZoom" class="zoom-overlay" @click="showZoom = false">
-            <img :src="core.img" alt="放大预览" class="zoom-preview-img" />
+            <img :src="core.img" alt="放大预览" class="zoom-preview-img" loading="lazy" />
           </div>
         </div>
         <div class="archi-content-steps">
@@ -18,11 +18,14 @@
               <component :is="step.extraImg ? renderLogo(step.extraImg, '整体步骤') : 'span'" />
               <p>
                 {{ step.step }}
-                <img :src="step.icon" />
+                <img :src="step.icon" loading="lazy" alt="step" />
               </p>
             </div>
-            <img :src="step.img" class="archi-content-steps-item-img" />
-            <h3>{{ step.name }}</h3>
+            <img :src="step.img" class="archi-content-steps-item-img" loading="lazy" alt="" />
+            <h3 class="archi-content-steps-item-title">
+              <img :src="step.stepIcon" alt="" loading="lazy" />
+              {{ step.name }}
+            </h3>
             <p>{{ step.description }}</p>
           </div>
         </div>
@@ -31,7 +34,7 @@
           <div class="archi-content-advance-wrap">
             <div class="archi-content-advance-item" v-for="advance in advances.content" :key="advance.title">
               <p>
-                <img :src="advance.icon" />
+                <img :src="advance.icon" loading="lazy" alt="advance" />
                 {{ advance.title }}
               </p>
               <div>
@@ -53,7 +56,7 @@ const showZoom = ref(false)
 const renderLogo = (icon, content) => {
   return (
     <div className="home-logo">
-      <img src={icon} />
+      <img src={icon} loading="lazy" alt="logo" />
       {content}
     </div>
   )
@@ -87,10 +90,6 @@ onUnmounted(() => {
     margin: 0 auto;
   }
   .title {
-    background: linear-gradient(90deg, rgba(203, 67, 168, 1), rgba(44, 95, 239, 1) 56%);
-    width: fit-content;
-    color: transparent;
-    background-clip: text;
     margin: 0 auto 16px;
   }
 
@@ -193,6 +192,11 @@ onUnmounted(() => {
           color: #191919;
           margin: 24px 0 16px;
         }
+        .archi-content-steps-item-title {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
         .archi-content-steps-item-img {
           width: 100%;
         }
@@ -235,7 +239,7 @@ onUnmounted(() => {
     border: 1px solid rgba(20, 118, 255, 0.3);
     border-radius: 110px;
     background: rgba(20, 118, 255, 0.1);
-    padding: 4px 16px 4px 16px;
+    padding: 6px 16px;
     width: fit-content;
   }
   .home-step {

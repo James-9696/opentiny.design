@@ -9,15 +9,15 @@
       </div>
       <div v-if="!isMobile" class="descriptions">
         <div class="description">
-          <img :src="$pub('images/platform/engine_1.svg')" alt=""></img>
+          <img :src="$pub('images/platform/engine_1.svg')" alt="" loading="lazy" />
           <div>自然语言 / 图片秒生成页面代码，可视化手动改、AI 接着改都灵活</div>
         </div>
         <div class="description">
-          <img :src="$pub('images/platform/engine_1.svg')" alt=""></img>
+          <img :src="$pub('images/platform/engine_1.svg')" alt="" loading="lazy" />
           <div>模型任选不受限，多模态大模型轻松适配</div>
         </div>
         <div class="description">
-          <img :src="$pub('images/platform/engine_1.svg')" alt=""></img>
+          <img :src="$pub('images/platform/engine_1.svg')" alt="" loading="lazy" />
           <div class="line">
             <div>集成 TinyEngine MCP 工具，AI 对话直调内置能力，</div>
             <div>自定义工具还能扩 AI 边界</div>
@@ -60,7 +60,6 @@ const onTinyEngine = () => {
 .platform-engine {
   display: flex;
   align-items: center;
-  .pcRem(padding-top, 60);
 
   .content {
     .pcRem(width, 616);
