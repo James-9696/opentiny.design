@@ -52,14 +52,14 @@ const menuItems = [
     isUnderline: createIsUnderline('/opentiny-design/tiny-robot')
   },
   {
-    name: 'Next-SDKs',
+    name: 'NEXT-SDKs',
     desc: '开发套件',
-    url: '/opentiny-design/next-sdks',
+    url: '/opentiny-design/next-sdk',
     logo: tinySdks,
     hide: false,
     github: 'https://github.com/opentiny/next-sdk',
     children: [],
-    isUnderline: createIsUnderline('/opentiny-design/next-sdks')
+    isUnderline: createIsUnderline('/opentiny-design/next-sdk')
   },
   {
     name: 'AI-Extension',
