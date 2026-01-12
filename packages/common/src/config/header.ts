@@ -3,6 +3,7 @@ import tinyAi from '../../../home/public/images/logo-ai-extension.svg'
 import tinyTech from '../../../home/public/images/logo-tech.svg'
 import tinyEngine from '../assets/appIcon/tiny-engine.svg'
 import tinySdks from '../assets/appIcon/next-sdk.svg'
+import tinyPro from '../assets/appIcon/tiny-pro.svg'
 import tinyVue from '../assets/appIcon/tiny-vue.svg'
 import tinyRobot from '../assets/appIcon/tiny-robot.svg'
 import sketch from '../../../home/public/images/logo-sketch.svg'
@@ -103,6 +104,13 @@ const menuItems = [
         hide: true,
         logo: tinySdks,
         github: 'https://github.com/opentiny/playground'
+      },
+      {
+        title: 'TinyPro',
+        desc: '中后台解决方案',
+        href: 'https://opentiny.design/vue-pro/pages',
+        logo: tinyPro,
+        github: 'https://github.com/opentiny/tiny-pro'
       }
     ]
   },
@@ -133,11 +141,25 @@ const menuItems = [
         github: 'https://github.com/opentiny/docs'
       },
       {
-        title: 'Next-SDKs',
+        title: 'NEXT-SDKs',
         desc: '开发套件',
         href: 'https://docs.opentiny.design/next-sdk/guide/',
         logo: tinySdks,
         github: 'https://github.com/opentiny/docs'
+      },
+      {
+        title: 'TinyPro',
+        desc: '中后台解决方案',
+        href: 'https://opentiny.design/vue-pro',
+        logo: tinyPro,
+        github: 'https://github.com/opentiny/tiny-pro'
+      },
+      {
+        title: 'TinyEditor',
+        desc: '富文本编辑器',
+        href: 'https://opentiny.github.io/tiny-editor',
+        logo: tinyRobot,
+        github: 'https://github.com/opentiny/tiny-editor'
       }
     ]
   },
