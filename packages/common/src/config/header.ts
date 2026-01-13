@@ -6,6 +6,7 @@ import tinySdks from '../assets/appIcon/next-sdk.svg'
 import tinyPro from '../assets/appIcon/tiny-pro.svg'
 import tinyVue from '../assets/appIcon/tiny-vue.svg'
 import tinyRobot from '../assets/appIcon/tiny-robot.svg'
+import tinyEditor from '../assets/appIcon/tiny-editor.svg'
 import sketch from '../../../home/public/images/logo-sketch.svg'
 
 const createIsUnderline = (path) => () => location.pathname.startsWith(path)
@@ -158,7 +159,7 @@ const menuItems = [
         title: 'TinyEditor',
         desc: '富文本编辑器',
         href: 'https://opentiny.github.io/tiny-editor',
-        logo: tinyRobot,
+        logo: tinyEditor,
         github: 'https://github.com/opentiny/tiny-editor'
       }
     ]
