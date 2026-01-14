@@ -1,2 +1,6 @@
 packages:
   - packages/*
+  - poc-ai-agent/*
+  - poc-ai-agent/packages/*
+  - poc-ai-agent/packages/schema-card-renderer/genui-sdk/*
+  - poc-ai-agent/tiny-agent/packages/mcp/mcp-client-chat

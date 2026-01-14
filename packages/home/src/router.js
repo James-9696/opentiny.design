@@ -22,7 +22,7 @@ const tinyVueHome = () => import('@/views/tiny-vue-home/index.vue')
 const tinyRobotHome = () => import('@/views/tiny-robot-home/index.vue')
 const aiExtensionHome = () => import('@/views/ai-extension-home/index.vue')
 const nextSdksHome = () => import('@/views/next-sdks-home/index.vue')
-const genuiSdkHome = () => import('@/genui-sdk/app.vue')
+const genuiSdkHome = () => import('@/views/genui-sdk-home/index.vue')
 const langKey = computed(() => $t2('zh-CN', 'en-US'))
 
 export const rootRoutes = [
