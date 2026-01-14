@@ -36,7 +36,7 @@ const menuItems = [
   },
   {
     name: 'TinyEngine',
-    url: '/opentiny-design/tiny-engine',
+    url: 'https://opentiny.design/tiny-engine',
     children: [],
     logo: tinyEngine,
     desc: '智能搭建平台',
@@ -79,29 +79,29 @@ const menuItems = [
     children: [
       {
         title: 'TinyVue',
-        desc: 'Vue组件库',
-        href: 'https://playground.opentiny.design/tiny-vue.html',
+        desc: '智能组件库',
+        href: 'https://playground.opentiny.design/tiny-vue',
         logo: tinyVue,
         github: 'https://github.com/opentiny/playground'
       },
       {
         title: 'TinyEngine',
-        desc: '低代码引擎',
-        href: 'https://playground.opentiny.design/tiny-engine.html',
+        desc: '智能搭建平台',
+        href: 'https://playground.opentiny.design/tiny-engine',
         logo: tinyEngine,
         github: 'https://github.com/opentiny/playground'
       },
       {
         title: 'TinyRobot',
-        desc: 'AI智能助手',
-        href: 'https://playground.opentiny.design/tiny-robot.html',
+        desc: '智能助手',
+        href: 'https://playground.opentiny.design/tiny-robot',
         logo: tinyRobot,
         github: 'https://github.com/opentiny/playground'
       },
       {
         title: 'NEXT-SDKs',
-        desc: '智能应用开发工具包',
-        href: '',
+        desc: '开发套件',
+        href: 'https://playground.opentiny.design/next-sdk',
         hide: true,
         logo: tinySdks,
         github: 'https://github.com/opentiny/playground'
@@ -123,28 +123,28 @@ const menuItems = [
       {
         title: 'TinyVue',
         desc: '智能组件库',
-        href: 'https://docs.opentiny.design/tiny-vue/guide/introduce.html',
+        href: 'https://docs.opentiny.design/tiny-vue/guide/introduce',
         logo: tinyVue,
         github: 'https://github.com/opentiny/docs'
       },
       {
         title: 'TinyEngine',
         desc: '智能搭建平台',
-        href: 'https://docs.opentiny.design/tiny-engine/guide/introduction.html',
+        href: 'https://docs.opentiny.design/tiny-engine/guide/introduction',
         logo: tinyEngine,
         github: 'https://github.com/opentiny/docs'
       },
       {
         title: 'TinyRobot',
         desc: '智能助手',
-        href: 'https://docs.opentiny.design/tiny-robot/guide/quick-start.html',
+        href: 'https://docs.opentiny.design/tiny-robot/guide/quick-start',
         logo: tinyRobot,
         github: 'https://github.com/opentiny/docs'
       },
       {
         title: 'NEXT-SDKs',
         desc: '开发套件',
-        href: 'https://docs.opentiny.design/next-sdk/guide/',
+        href: 'https://docs.opentiny.design/next-sdk/guide',
         logo: tinySdks,
         github: 'https://github.com/opentiny/docs'
       },
@@ -166,7 +166,7 @@ const menuItems = [
   },
   {
     type: 'other',
-    name: '开发资源',
+    name: '资源',
     url: '',
     children: [
       {
