@@ -2,11 +2,13 @@
   <iframe class="tiny-engine-iframe" :src="tinyEngineUrl"></iframe>
 </template>
 <script>
-import { TINY_ENGINE_DEFAULT_URL } from '../controller/utils'
+import { TINY_ENGINE_DEFAULT_URL, TINY_ENGINE_DESIGNER_URL } from '../controller/utils'
+import { useRoute } from 'vue-router'
 export default {
   setup() {
+    const route = useRoute()
     return {
-      tinyEngineUrl: TINY_ENGINE_DEFAULT_URL
+      tinyEngineUrl: route.name === 'applicationVisit' ? TINY_ENGINE_DEFAULT_URL : TINY_ENGINE_DESIGNER_URL
     }
   }
 }
