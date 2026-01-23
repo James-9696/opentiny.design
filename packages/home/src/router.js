@@ -3,6 +3,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Layout from '@/views/layout/layout.vue'
 import { VITE_CONTEXT, isTinyCloud, menuPathMap } from './shared'
 import { $t, $t2, geneTitle, getI18n, pathJoin } from './tools'
+
+import '@/genui-sdk/index.css'
+
 const Resource = () => import('@/views/resource/index.vue')
 const Guide = () => import('@/views/guide/index.vue')
 const ComponentOverview = () => import('@/views/overview/overview.vue')
@@ -22,7 +25,7 @@ const tinyVueHome = () => import('@/views/tiny-vue-home/index.vue')
 const tinyRobotHome = () => import('@/views/tiny-robot-home/index.vue')
 const aiExtensionHome = () => import('@/views/ai-extension-home/index.vue')
 const nextSdksHome = () => import('@/views/next-sdks-home/index.vue')
-const genuiSdkHome = () => import('@/views/genui-sdk-home/index.vue')
+const genuiSdkHome = () => import('@/genui-sdk/index.js')
 const langKey = computed(() => $t2('zh-CN', 'en-US'))
 
 export const rootRoutes = [

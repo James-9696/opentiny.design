@@ -4,6 +4,3 @@
 [submodule "genui-sdk"]
 	path = genui-sdk
 	url = https://github.com/opentiny/genui-sdk.git
-[submodule "poc-ai-agent"]
-	path = poc-ai-agent
-	url = https://github.com/opentiny/poc-ai-agent.git

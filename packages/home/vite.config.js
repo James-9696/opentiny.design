@@ -88,7 +88,8 @@ export default defineConfig(({ command, mode }) => {
     resolve: {
       alias: {
         'vue-i18n': 'vue-i18n/dist/vue-i18n.cjs.js',
-        '@/genui-sdk': _resolve('../../genui-sdk/packages/home/src'),
+        // 引用 GenUI SDK 首页站点以库模式打包后的产物（dist/index.js）
+        '@/genui-sdk': _resolve('../../genui-sdk/sites/homepage/web/dist'),
         '@': _resolve('src'),
         '@/components': _resolve('src/components'),
         'flexsearch': 'flexsearch/dist/flexsearch.bundle.js'
