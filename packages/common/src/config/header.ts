@@ -7,6 +7,7 @@ import tinyPro from '../assets/appIcon/tiny-pro.svg'
 import tinyVue from '../assets/appIcon/tiny-vue.svg'
 import tinyRobot from '../assets/appIcon/tiny-robot.svg'
 import tinyEditor from '../assets/appIcon/tiny-editor.svg'
+import GenuiSdk from '../assets/appIcon/genui-sdk.svg'
 import sketch from '../../../home/public/images/logo-sketch.svg'
 
 const createIsUnderline = (path) => () => location.pathname.startsWith(path)
@@ -64,6 +65,16 @@ const menuItems = [
     isUnderline: createIsUnderline('/opentiny-design/next-sdk')
   },
   {
+    name: 'GenUI-SDK',
+    desc: '生成式UI',
+    url: '/opentiny-design/genui-sdk',
+    logo: GenuiSdk,
+    hide: false,
+    github: 'https://github.com/opentiny/genui-sdk',
+    children: [],
+    isUnderline: createIsUnderline('/opentiny-design/genui-sdk')
+  },
+  {
     name: 'AI-Extension',
     desc: 'AI 浏览器扩展插件',
     url: '/opentiny-design/ai-extension',
@@ -105,14 +116,6 @@ const menuItems = [
         hide: true,
         logo: tinySdks,
         github: 'https://github.com/opentiny/playground'
-      },
-      {
-        title: 'GenUI-SDK',
-        desc: 'GenUI-SDK',
-        href: '/opentiny-design/genui-sdk',
-        logo: tinyRobot,
-        hide: false,
-        github: 'https://github.com/opentiny/genui-sdk.git'
       },
       {
         title: 'TinyPro',

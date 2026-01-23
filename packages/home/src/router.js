@@ -79,12 +79,6 @@ export const rootRoutes = [
             meta: { title: geneTitle('') }
           },
           {
-            path: 'genui-sdk',
-            component: genuiSdkHome,
-            name: 'genui-sdk',
-            meta: { title: geneTitle('') }
-          },
-          {
             path: 'guide',
             children: [
               {
