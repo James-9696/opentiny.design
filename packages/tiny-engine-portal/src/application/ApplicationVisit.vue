@@ -12,7 +12,7 @@ export default {
     const tinyEngineUrl = route.name === 'applicationVisit' ? TINY_ENGINE_DEFAULT_URL : TINY_ENGINE_DESIGNER_URL
     //回调函数
     const openAppNewTab = ( event ) => {
-      if(event.data.type === 'openAppNewTab') {
+      if(event.data.type === 'openNewTab') {
         const href = window.location.href.split('?')[0]
         const searchParams = event.data.url.split('?')[1]
         window.open(`${href}?${searchParams}`)
