@@ -14,7 +14,8 @@ export default {
     const openAppNewTab = ( event ) => {
       if(event.data.type === 'openAppNewTab') {
         const href = window.location.href.split('?')[0]
-        window.open(`${href}?type=app&id=${event.data.data.id}&tenant=${event.data.data.tenantId}`)
+        const searchParams = event.data.url.split('?')[1]
+        window.open(`${href}?${searchParams}`)
       }
     }
     window.addEventListener("message", openAppNewTab, false)
