@@ -22,7 +22,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          submodules: recursive
+          fetch-depth: 0
+          submodules: false
       - name: Setup pnpm
         uses: pnpm/action-setup@v3
         with:
@@ -35,6 +36,7 @@ jobs:
         run: |
           git submodule sync --recursive
           git submodule update --init --recursive
+          git submodule update --remote --merge --recursive
           git submodule status --recursive
       - name: Install genui-sdk deps
         run: |
