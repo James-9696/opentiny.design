@@ -25,8 +25,8 @@ export default defineConfig(({ command, mode }) => {
         include: [/\.vue$/, /\.md$/],
         exclude: [/node_module/]
       }),
-      importPlugin(
-        [
+      importPlugin({
+        options: [
           {
             libraryName: '@opentiny/vue'
           },
@@ -37,8 +37,8 @@ export default defineConfig(({ command, mode }) => {
             }
           }
         ],
-        'pc' // 此配置非必选，按需配置(pc|mobile|mobile-first)
-      ),
+        exclude: [/genui-sdk/]
+      }),
       Inspect(),
       vueJsx({
         include: [/\.js$/, /\.jsx$/, /\.ts$/, /\.tsx$/],
