@@ -3,4 +3,4 @@
 	url = https://github.com/opentiny/tiny-engine.git
 [submodule "genui-sdk"]
 	path = genui-sdk
-	url = https://github.com/opentiny/genui-sdk.git
+	url = git@github.com:opentiny/genui-sdk.git
