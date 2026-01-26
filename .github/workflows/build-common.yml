@@ -35,6 +35,7 @@ jobs:
         run: |
           git submodule sync --recursive
           git submodule update --init --recursive
+          git submodule update --remote --merge --recursive
           git submodule status --recursive
       - name: Install genui-sdk deps
         run: |
