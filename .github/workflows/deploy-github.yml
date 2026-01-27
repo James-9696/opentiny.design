@@ -48,7 +48,6 @@ jobs:
       - name: Build genui-sdk homepage
         run: |
           cd genui-sdk
-          pnpm prebuild:homepage
           pnpm build:homepage
       - name: Install deps
         run: |
