@@ -1,3 +1,4 @@
 packages:
   - packages/*
   - genui-sdk/*/**
+  - '!genui-sdk/packages/frameworks/vue/output/**'
