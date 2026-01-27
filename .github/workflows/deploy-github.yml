@@ -40,6 +40,8 @@ jobs:
           git submodule update --init --recursive
           git submodule update --remote --merge --recursive
           git submodule status --recursive
+      - name: Install tsx globally
+        run: pnpm add -g tsx
       - name: Install genui-sdk deps
         run: |
           cd genui-sdk && pnpm install --no-frozen-lockfile
