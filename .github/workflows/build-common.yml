@@ -40,10 +40,6 @@ jobs:
       - name: Install genui-sdk deps
         run: |
           cd genui-sdk && pnpm install
-      - name: Genui-sdk homepage Build
-        run: |
-          cd genui-sdk
-          pnpm build:homepage
       - name: Install deps
         run: pnpm -F opentiny-design-common i --no-frozen-lockfile
       - name: Build common
