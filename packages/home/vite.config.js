@@ -83,7 +83,18 @@ export default defineConfig(({ command, mode }) => {
       commonjsOptions: {
         transformMixedEsModules: true
       },
-      emptyOutDir: false
+      emptyOutDir: false,
+      rollupOptions: {
+        output: {
+          manualChunks(id) {
+            if (id.includes('/genui-sdk/sites/homepage/web/')) {
+              return 'genui-sdk-page'
+            }
+
+            return undefined
+          }
+        }
+      }
     },
     resolve: {
       alias: {
