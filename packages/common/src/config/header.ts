@@ -7,6 +7,7 @@ import tinyPro from '../assets/appIcon/tiny-pro.svg'
 import tinyVue from '../assets/appIcon/tiny-vue.svg'
 import tinyRobot from '../assets/appIcon/tiny-robot.svg'
 import tinyEditor from '../assets/appIcon/tiny-editor.svg'
+import GenuiSdk from '../assets/appIcon/genui-sdk.svg'
 import sketch from '../../../home/public/images/logo-sketch.svg'
 
 const createIsUnderline = (path) => () => location.pathname.startsWith(path)
@@ -62,6 +63,16 @@ const menuItems = [
     github: 'https://github.com/opentiny/next-sdk',
     children: [],
     isUnderline: createIsUnderline('/opentiny-design/next-sdk')
+  },
+  {
+    name: 'GenUI-SDK',
+    desc: '生成式UI',
+    url: '/opentiny-design/genui-sdk',
+    logo: GenuiSdk,
+    hide: false,
+    github: 'https://github.com/opentiny/genui-sdk',
+    children: [],
+    isUnderline: createIsUnderline('/opentiny-design/genui-sdk')
   },
   {
     name: 'AI-Extension',
