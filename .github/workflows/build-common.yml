@@ -40,7 +40,7 @@ jobs:
       - name: Install genui-sdk deps
         run: |
           cd genui-sdk && pnpm install
-      - name: Build genui-sdk homepage
+      - name: Genui-sdk homepage Build
         run: |
           cd genui-sdk
           pnpm build:homepage
