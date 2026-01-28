@@ -87,10 +87,11 @@ export default defineConfig(({ command, mode }) => {
       rollupOptions: {
         output: {
           manualChunks(id) {
-            if (id.includes('/genui-sdk/sites/homepage/web/')) {
-              return 'genui-sdk-page'
+            if (id.includes('/genui-sdk/sites/homepage/web/dist/')) {
+              const rel = id.split('/genui-sdk/sites/homepage/web/dist/')[1]
+              const normalized = rel.replace(/[^a-zA-Z0-9]/g, '-').replace(/^-+|-+$/g, '')
+              return `genui-sdk-${normalized}`
             }
-
             return undefined
           }
         }
