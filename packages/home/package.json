@@ -42,7 +42,7 @@
     "@opentiny/vue-option": "~3.25.0",
     "@opentiny/vue-pager": "~3.25.0",
     "@opentiny/vue-progress": "~3.25.0",
-    "@opentiny/vue-renderless": "~3.20.3",
+    "@opentiny/vue-renderless": "~3.25.0",
     "@opentiny/vue-search": "~3.25.0",
     "@opentiny/vue-select": "~3.25.0",
     "@opentiny/vue-steps": "~3.25.0",
