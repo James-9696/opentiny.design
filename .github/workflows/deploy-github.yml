@@ -52,6 +52,8 @@ jobs:
           pnpm -F opentiny-design-home i --no-frozen-lockfile
       - name: Build common
         run: pnpm build:common
+        env:
+          VITE_CONTEXT: /opentiny.design/
       - name: Build home
         run: pnpm build
         env:

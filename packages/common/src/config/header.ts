@@ -192,12 +192,12 @@ const menuItems = [
       {
         title: 'Sketch 资源下载',
         desc: 'Sketch 组件资源包',
-        href: `${fileBaseUrl || ''}${basePath}downloadFile/TinyVue3.0_UI.KIT_202508.sketch`,
+        href: '#',
         logo: sketch,
         github: '',
         onClick: (event: MouseEvent) => { 
           event.preventDefault();
-          downloadFile(`/downloadFile/TinyVue3\.0_UI\.KIT_202508\.sketch`, 'sketch')
+          downloadFile(`${import.meta.env.VITE_CONTEXT}opentiny-design/downloadFile/TinyVue3.0_UI.KIT_202508.sketch`, 'TinyVue3.0_UI.KIT_202508.sketch')
         }
       }
     ]
