@@ -69,7 +69,7 @@ export default defineConfig(({ command, mode }) => {
         targets: [
           {
             src: '../home/public/downloadFile/*',
-            dest: `dist/home/downloadFile`
+            dest: `opentiny-design/downloadFile`
           }
         ]
       })
