@@ -63,10 +63,6 @@ jobs:
         run: |
           pnpm -F opentiny-design-common i --no-frozen-lockfile
           pnpm -F opentiny-design-home i --no-frozen-lockfile
-      - name: Build common
-        run: pnpm build:common
-        env:
-          VITE_CONTEXT: /
       - name: Get home version
         id: ver
         run: |
@@ -78,6 +74,11 @@ jobs:
           fi
           echo "Home version: $VERSION"
           echo "value=$VERSION" >> $GITHUB_OUTPUT
+      - name: Build common
+        run: pnpm build:common
+        env:
+          VITE_CONTEXT: /
+          VITE_BASE: //res-static.opentiny.design/tinyui-design/${{ steps.ver.outputs.value }}/home/
       - name: Build home
         run: pnpm build
         env:
