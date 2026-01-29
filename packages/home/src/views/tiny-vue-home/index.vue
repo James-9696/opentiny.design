@@ -130,13 +130,11 @@ const crossPlatformFeatures = reactive([
     title: "一套代码同时支持PC和移动端",
     description:
       "我们支持PC和移动端，同一个组件在不同终端表现不同在多端场景下组件的使用方式完全相同。",
-    icon: "/@fs/D:/opentiny.design/packages/common/src/assets/appIcon/tiny-vue.svg",
   },
   {
     title: "一套代码同时支持Vue 2 / Vue 3",
     description:
       "针对Vue2 和 Vue3 实现了相应的版本适配器，抹平Vue2 和 Vue3 的差异，实现了一套代码同时支持Vue2 和 Vue3。",
-    icon: "/@fs/D:/opentiny.design/packages/common/src/assets/appIcon/tiny-vue.svg",
   },
 ]);
 
@@ -297,9 +295,9 @@ watch(isMobile, () => {
     <div class="hero section" :style="{ backgroundImage: `url(${heroBgWhite})` }">
       <div class="hero-content">
         <h1 class="title pad-b40">TinyVue 智能组件库</h1>
-        <p class="subtitle pad-b40">轻量 高性能 智能化</p>
+        <p class="subtitle pad-b40">跨端、跨框架、智能化</p>
         <p class="description pad-b40">
-          一款支持主流前端框架、AI对话框、MCP Host 和智能体搭建平台
+          一款跨端、跨框架的企业级 UI 组件库，支持 Vue 2 和 Vue 3，支持 PC 端和移动端
         </p>
         <div class="cta-group">
           <a href="https://opentiny.design/tiny-vue" target="_blank" class="btn primary"
@@ -333,7 +331,6 @@ watch(isMobile, () => {
           class="feature-text"
         >
           <div class="title-logo">
-            <img data-v-d881ea2c="" class="app-logo" :src="item.icon" />
             <h2 class="title feature-sub-title">{{ item.title }}</h2>
           </div>
           <p class="description">
@@ -699,7 +696,7 @@ watch(isMobile, () => {
     </section>
 
     <!-- MCP Section -->
-    <section class="mcp-section section">
+    <section class="mcp-section section" v-if="false">
       <div class="feature-header pad-t40 fade-in-up">
         <h2 class="title feature-title">智能化生成式 UI</h2>
         <p class="description">
