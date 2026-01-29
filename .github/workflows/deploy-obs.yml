@@ -67,6 +67,7 @@ jobs:
         run: pnpm build:common
         env:
           VITE_CONTEXT: /
+          VITE_BASE: //res-static.opentiny.design/tinyui-design/${{ steps.ver.outputs.value }}/home/
       - name: Get home version
         id: ver
         run: |

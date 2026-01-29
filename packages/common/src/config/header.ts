@@ -197,7 +197,7 @@ const menuItems = [
         github: '',
         onClick: (event: MouseEvent) => { 
           event.preventDefault();
-          downloadFile(`${import.meta.env.VITE_CONTEXT}opentiny-design/downloadFile/TinyVue3.0_UI.KIT_202508.sketch`, 'TinyVue3.0_UI.KIT_202508.sketch')
+          downloadFile(`${import.meta.env.VITE_BASE}opentiny-design/downloadFile/TinyVue3.0_UI.KIT_202508.sketch`, 'TinyVue3.0_UI.KIT_202508.sketch')
         }
       }
     ]
