@@ -54,6 +54,7 @@ jobs:
         run: pnpm build:common
         env:
           VITE_CONTEXT: /opentiny.design/
+          VITE_BASE: /opentiny.design/
       - name: Build home
         run: pnpm build
         env:
