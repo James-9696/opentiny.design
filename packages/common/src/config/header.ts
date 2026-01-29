@@ -9,16 +9,7 @@ import tinyRobot from '../assets/appIcon/tiny-robot.svg'
 import tinyEditor from '../assets/appIcon/tiny-editor.svg'
 import GenuiSdk from '../assets/appIcon/genui-sdk.svg'
 import sketch from '../../../home/public/images/logo-sketch.svg'
-import { createIsUnderline, downloadFile } from './common.ts'
-
-const isGitHubBuild = import.meta.env.MODE === 'github'
-
-const isGitHubRuntime = typeof window !== 'undefined' && window.location.hostname.includes('opentiny.github.io')
-
-const isGitHub = isGitHubRuntime || isGitHubBuild
-
-const basePath = isGitHub ? '/opentiny.design/' : '/'
-const fileBaseUrl = isGitHub ? 'https://opentiny.design' : ''
+import { createIsUnderline } from './common.ts'
 
 const menuItems = [
   {
@@ -192,13 +183,10 @@ const menuItems = [
       {
         title: 'Sketch 资源下载',
         desc: 'Sketch 组件资源包',
-        href: `${fileBaseUrl || ''}${basePath}downloadFile/TinyVue3.0_UI.KIT_202508.sketch`,
+        href: `${import.meta.env.VITE_CONTEXT}downloadFile/TinyVue3.0_UI.KIT_202508.sketch`,
+        download: true,
         logo: sketch,
         github: '',
-        onClick: (event: MouseEvent) => { 
-          event.preventDefault();
-          downloadFile(`/downloadFile/TinyVue3\.0_UI\.KIT_202508\.sketch`, 'sketch')
-        }
       }
     ]
   }
