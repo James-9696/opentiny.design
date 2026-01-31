@@ -3,23 +3,14 @@ import { resolve } from 'path'
 import vue from '@vitejs/plugin-vue'
 import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js'
 import { visualizer } from 'rollup-plugin-visualizer'
-import { viteStaticCopy } from 'vite-plugin-static-copy'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   base: mode === 'github' || process.env.VITE_EnvName === 'github' ? '/opentiny.design/' : '/',
   plugins: [
-    mode === 'analyze' ? visualizer({ open: true }) : undefined,  
-    vue(), 
-    cssInjectedByJsPlugin(),   
-    viteStaticCopy({
-      targets: [
-        {
-          src: '../home/public/downloadFile/*',
-          dest: `dist/home/downloadFile`
-        }
-      ]
-    })
+    mode === 'analyze' ? visualizer({ open: true }) : undefined,
+    vue(),
+    cssInjectedByJsPlugin()
   ],
   envDir: './env',
   resolve: {
