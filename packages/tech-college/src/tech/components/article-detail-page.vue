@@ -161,7 +161,7 @@ const getMdText = async () => {
   try {
     if (nav.value.active || route.query.type) {
       const module = await import(
-        `@/views/tech/components/mark-down/${nav.value['tab'] || route.query.type}/${
+        `./mark-down/${nav.value['tab'] || route.query.type}/${
           nav.value['id'] || route.params.serial
         }.md`
       )
@@ -173,7 +173,7 @@ const getMdText = async () => {
       }
     } else {
       const module = await import(
-        `@/views/tech/components/mark-down/${nav.value['tab'] || route.params.mode}/${
+        `./mark-down/${nav.value['tab'] || route.params.mode}/${
           nav.value['subTab'] || route.params.type
         }/${nav.value['id'] || route.params.serial}.md`
       )

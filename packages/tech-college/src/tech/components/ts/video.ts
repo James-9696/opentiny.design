@@ -1,4 +1,3 @@
-import { $pub } from '@/tools'
 import video1 from '@/assets/tech/video-1.svg'
 import lowcode from '@/assets/tech/lowcode.svg'
 import cloud from '@/assets/tech/cloud.svg'
@@ -22,6 +21,7 @@ import vueMini from '@/assets/tech/vue-mini.svg'
 import vueBattle from '@/assets/tech/vue-battle.svg'
 import askEngine from '@/assets/tech/ask-engine.svg'
 import aiMcp from '@/assets/tech/ai-mcp.jpg'
+import { $pub } from '../../utils'
 
 export function moreData() {
   const data = [
