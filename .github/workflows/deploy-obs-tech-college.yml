@@ -80,12 +80,12 @@ jobs:
           VITE_BASE: //res-static.opentiny.design/opentiny-tech-college/${{ steps.ver.outputs.value }}/
       - name: Copy files
         run: |
-          cp dist/index.html dist/404.html
+          cp packages/tech-college/dist/index.html packages/tech-college/dist/404.html
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
           name: dist-artifact
-          path: dist/
+          path: packages/tech-college/dist/
   # Deploy job
   deploy:
     needs: build
@@ -95,7 +95,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: dist-artifact
-          path: dist/
+          path: packages/tech-college/dist/
       - name: Show version
         run: |
           echo "Deploying version: ${{ needs.build.outputs.version }}"
@@ -117,5 +117,5 @@ jobs:
 
           # 把本地 dist/ 目录整站同步到桶根目录
           echo "needs.build.outputs.version: ${{ needs.build.outputs.version }}"
-          mv dist ${{ needs.build.outputs.version }}
+          mv packages/tech-college/dist ${{ needs.build.outputs.version }}
           obsutil cp ${{ needs.build.outputs.version }} obs://${{ env.HUAWEI_CLOUD_BUCKET }}/opentiny-tech-college/ -r -f
