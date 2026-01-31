@@ -14,61 +14,47 @@ const Events = () => import('./tech/components/activity-page.vue')
 export const rootRoutes = [
   {
     path: VITE_CONTEXT,
-    redirect: `${VITE_CONTEXT}/tech-college`,
+    name: 'home',
+    component: Tech,
     children: [
       {
-        path: '',
-        component: Tech,
-        name: 'home',
-        meta: { title: geneTitle('') }
+        path: 'write',
+        name: 'write',
+        component: Write,
+        meta: { title: geneTitle('技术文章') }
       },
       {
-        path: 'tech-college',
-        name: 'tech-college',
-        component: Tech,
-        children: [
-          {
-            path: 'write',
-            name: 'write',
-            component: Write,
-            meta: { title: geneTitle('技术文章') }
-          },
-          {
-            path: 'video',
-            name: 'video',
-            component: Video,
-            meta: { title: geneTitle('视频课程') }
-          },
-          {
-            path: 'events',
-            name: 'events',
-            component: Events,
-            meta: { title: geneTitle('热门活动') }
-          },
-          // TODO: 文章详情页无法渲染
-          {
-            path: `article/:mode/:type/:serial`,
-            name: 'article',
-            component: Article,
-            meta: { title: geneTitle('文章详情') }
-          },
-          {
-            path: `article/:mode/:serial`,
-            name: 'articleWithoutType',
-            component: Article,
-            meta: { title: geneTitle('文章详情') }
-          },
-        ],
-        meta: { title: geneTitle('技术学院') }
+        path: 'video',
+        name: 'video',
+        component: Video,
+        meta: { title: geneTitle('视频课程') }
       },
       {
-        name: 'not-found',
-        path: ':pathMatch(.*)*',
-        redirect: () => {
-          return { path: VITE_CONTEXT }
-        }
-      }
-    ]
+        path: 'events',
+        name: 'events',
+        component: Events,
+        meta: { title: geneTitle('热门活动') }
+      },
+      // TODO: 文章详情页无法渲染
+      {
+        path: `article/:mode/:type/:serial`,
+        name: 'article',
+        component: Article,
+        meta: { title: geneTitle('文章详情') }
+      },
+      {
+        path: `article/:mode/:serial`,
+        name: 'articleWithoutType',
+        component: Article,
+        meta: { title: geneTitle('文章详情') }
+      },
+    ],
+    meta: { title: geneTitle('技术学院') }
+  },
+  {
+    path: `${VITE_CONTEXT}:pathMatch(.*)*`,
+    name: 'not-found',
+    redirect: VITE_CONTEXT
   }
 ]
 

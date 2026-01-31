@@ -76,7 +76,7 @@ jobs:
       - name: Build
         run: pnpm -F opentiny-tech-college build
         env:
-          VITE_CONTEXT: /
+          VITE_CONTEXT: /tech-college/
           VITE_BASE: //res-static.opentiny.design/opentiny-tech-college/${{ steps.ver.outputs.value }}/
       - name: Copy files
         run: |
