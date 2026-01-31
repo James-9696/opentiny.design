@@ -6,6 +6,7 @@ import { MdExt, mdInstall } from './md.extend.config'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: process.env.VITE_BASE || '/',
   plugins: [
     vue({
       include: [/\.vue$/, /\.md$/],
