@@ -45,6 +45,7 @@ export const rootRoutes = [
             component: Events,
             meta: { title: geneTitle('热门活动') }
           },
+          // TODO: 文章详情页无法渲染
           {
             path: `article/:mode/:type/:serial`,
             name: 'article',
