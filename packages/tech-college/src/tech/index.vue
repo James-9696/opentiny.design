@@ -63,7 +63,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { nextTick, ref, watch, computed } from 'vue'
+import { nextTick, ref, watch } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import './style/index.less'
 import './style/adapter/index.less'

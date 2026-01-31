@@ -25,7 +25,7 @@ export function articleMdData() {
             date: '2025年7月1日',
             apply: ''
           },
-          link: '/opentiny-design/article/guide/tinyvue/1?name=使用指南&subName=Tinyvue'
+          link: '/tech-college/article/guide/tinyvue/1?name=使用指南&subName=Tinyvue'
         },
         {
           markId: '2', //与markdown文件同名
@@ -41,7 +41,7 @@ export function articleMdData() {
             date: '2025年6月21日',
             apply: ''
           },
-          link: '/opentiny-design/article/guide/tinyvue/2?name=使用指南&subName=Tinyvue'
+          link: '/tech-college/article/guide/tinyvue/2?name=使用指南&subName=Tinyvue'
         },
         {
           markId: '3', //与markdown文件同名
@@ -54,7 +54,7 @@ export function articleMdData() {
             date: '2025年5月13日',
             apply: ''
           },
-          link: '/opentiny-design/article/guide/tinyvue/3?name=使用指南&subName=Tinyvue'
+          link: '/tech-college/article/guide/tinyvue/3?name=使用指南&subName=Tinyvue'
         },
         {
           markId: '4', //与markdown文件同名
@@ -68,7 +68,7 @@ export function articleMdData() {
             date: '2025年3月12日',
             apply: ''
           },
-          link: '/opentiny-design/article/guide/tinyvue/4?name=使用指南&subName=Tinyvue'
+          link: '/tech-college/article/guide/tinyvue/4?name=使用指南&subName=Tinyvue'
         },
         {
           markId: '5', //与markdown文件同名
@@ -82,7 +82,7 @@ export function articleMdData() {
             date: '2024年11月19日',
             apply: ''
           },
-          link: '/opentiny-design/article/guide/tinyvue/5?name=使用指南&subName=Tinyvue'
+          link: '/tech-college/article/guide/tinyvue/5?name=使用指南&subName=Tinyvue'
         },
         {
           markId: '6', //与markdown文件同名
@@ -96,7 +96,7 @@ export function articleMdData() {
             date: '2024年6月13日',
             apply: ''
           },
-          link: '/opentiny-design/article/guide/tinyvue/6?name=使用指南&subName=Tinyvue'
+          link: '/tech-college/article/guide/tinyvue/6?name=使用指南&subName=Tinyvue'
         },
         {
           markId: '7', //与markdown文件同名
@@ -109,7 +109,7 @@ export function articleMdData() {
             date: '2024年2月22日',
             apply: ''
           },
-          link: '/opentiny-design/article/guide/tinyvue/7?name=使用指南&subName=Tinyvue'
+          link: '/tech-college/article/guide/tinyvue/7?name=使用指南&subName=Tinyvue'
         },
         {
           markId: '8', //与markdown文件同名
@@ -122,7 +122,7 @@ export function articleMdData() {
             date: '2024年7月25日',
             apply: ''
           },
-          link: '/opentiny-design/article/guide/tinyvue/8?name=使用指南&subName=Tinyvue'
+          link: '/tech-college/article/guide/tinyvue/8?name=使用指南&subName=Tinyvue'
         }
       ],
       tinyengine: [
@@ -138,7 +138,7 @@ export function articleMdData() {
             date: '2025年7月3日',
             apply: ''
           },
-          link: '/opentiny-design/article/guide/tinyengine/1?name=使用指南&subName=Tinyengine'
+          link: '/tech-college/article/guide/tinyengine/1?name=使用指南&subName=Tinyengine'
         },
         {
           markId: '2', //与markdown文件同名
@@ -152,7 +152,7 @@ export function articleMdData() {
             date: '2025年6月21日',
             apply: ''
           },
-          link: '/opentiny-design/article/guide/tinyengine/2?name=使用指南&subName=Tinyengine'
+          link: '/tech-college/article/guide/tinyengine/2?name=使用指南&subName=Tinyengine'
         },
         {
           markId: '3', //与markdown文件同名
@@ -166,7 +166,7 @@ export function articleMdData() {
             date: '2025年4月1日',
             apply: ''
           },
-          link: '/opentiny-design/article/guide/tinyengine/3?name=使用指南&subName=Tinyengine'
+          link: '/tech-college/article/guide/tinyengine/3?name=使用指南&subName=Tinyengine'
         },
         {
           markId: '4', //与markdown文件同名
@@ -180,7 +180,7 @@ export function articleMdData() {
             date: '2024年10月18日',
             apply: ''
           },
-          link: '/opentiny-design/article/guide/tinyengine/4?name=使用指南&subName=Tinyengine'
+          link: '/tech-college/article/guide/tinyengine/4?name=使用指南&subName=Tinyengine'
         },
         {
           markId: '5', //与markdown文件同名
@@ -194,7 +194,7 @@ export function articleMdData() {
             date: '2024年6月5日',
             apply: ''
           },
-          link: '/opentiny-design/article/guide/tinyengine/5?name=使用指南&subName=Tinyengine'
+          link: '/tech-college/article/guide/tinyengine/5?name=使用指南&subName=Tinyengine'
         },
         {
           markId: '6', //与markdown文件同名
@@ -208,7 +208,7 @@ export function articleMdData() {
             date: '2024年5月29日',
             apply: ''
           },
-          link: '/opentiny-design/article/guide/tinyengine/6?name=使用指南&subName=Tinyengine'
+          link: '/tech-college/article/guide/tinyengine/6?name=使用指南&subName=Tinyengine'
         },
         {
           markId: '7', //与markdown文件同名
@@ -222,7 +222,7 @@ export function articleMdData() {
             date: '2024年5月9日',
             apply: ''
           },
-          link: '/opentiny-design/article/guide/tinyengine/7?name=使用指南&subName=Tinyengine'
+          link: '/tech-college/article/guide/tinyengine/7?name=使用指南&subName=Tinyengine'
         }
       ],
       tinypro: [
@@ -238,7 +238,7 @@ export function articleMdData() {
             date: '2025年4月8日',
             apply: ''
           },
-          link: '/opentiny-design/article/guide/tinypro/1?name=使用指南&subName=Tinypro'
+          link: '/tech-college/article/guide/tinypro/1?name=使用指南&subName=Tinypro'
         }
       ],
       tinycli: [
@@ -254,7 +254,7 @@ export function articleMdData() {
             date: '2024年3月19日',
             apply: ''
           },
-          link: '/opentiny-design/article/guide/tinycli/1?name=使用指南&subName=Tinycli'
+          link: '/tech-college/article/guide/tinycli/1?name=使用指南&subName=Tinycli'
         }
       ],
       next: [
@@ -270,7 +270,7 @@ export function articleMdData() {
             date: '2025年9月12日',
             apply: ''
           },
-          link: '/opentiny-design/article/guide/next/1?name=使用指南&subName=Next'
+          link: '/tech-college/article/guide/next/1?name=使用指南&subName=Next'
         }
       ]
     }
@@ -296,7 +296,7 @@ export function articleMdData() {
             date: '2025年6月30日',
             apply: ''
           },
-          link: '/opentiny-design/article/analysis/tinyvue/1?name=原理解析&subName=Tinyvue'
+          link: '/tech-college/article/analysis/tinyvue/1?name=原理解析&subName=Tinyvue'
         },
         {
           markId: '2', //与markdown文件同名
@@ -310,7 +310,7 @@ export function articleMdData() {
             date: '2024年7月19日',
             apply: ''
           },
-          link: '/opentiny-design/article/analysis/tinyvue/2?name=原理解析&subName=Tinyvue'
+          link: '/tech-college/article/analysis/tinyvue/2?name=原理解析&subName=Tinyvue'
         },
         {
           markId: '3', //与markdown文件同名
@@ -323,7 +323,7 @@ export function articleMdData() {
             date: '2024年7月4日',
             apply: ''
           },
-          link: '/opentiny-design/article/analysis/tinyvue/3?name=原理解析&subName=Tinyvue'
+          link: '/tech-college/article/analysis/tinyvue/3?name=原理解析&subName=Tinyvue'
         },
         {
           markId: '4', //与markdown文件同名
@@ -337,7 +337,7 @@ export function articleMdData() {
             date: '2024年4月24日',
             apply: ''
           },
-          link: '/opentiny-design/article/analysis/tinyvue/4?name=原理解析&subName=Tinyvue'
+          link: '/tech-college/article/analysis/tinyvue/4?name=原理解析&subName=Tinyvue'
         }
       ],
       next: [
@@ -353,7 +353,7 @@ export function articleMdData() {
             date: '2025年9月18日',
             apply: ''
           },
-          link: '/opentiny-design/article/analysis/next/1?name=原理解析&subName=Next'
+          link: '/tech-college/article/analysis/next/1?name=原理解析&subName=Next'
         }
       ]
     }
@@ -383,7 +383,7 @@ export function articleMdData() {
             date: '2025年5月27日',
             apply: ''
           },
-          link: '/opentiny-design/article/feature/tinyvue/1?name=特性介绍&subName=Tinyvue'
+          link: '/tech-college/article/feature/tinyvue/1?name=特性介绍&subName=Tinyvue'
         },
         {
           markId: '2', //与markdown文件同名
@@ -397,7 +397,7 @@ export function articleMdData() {
             date: '2025年4月25日',
             apply: ''
           },
-          link: '/opentiny-design/article/feature/tinyvue/2?name=特性介绍&subName=Tinyvue'
+          link: '/tech-college/article/feature/tinyvue/2?name=特性介绍&subName=Tinyvue'
         },
         {
           markId: '3', //与markdown文件同名
@@ -411,7 +411,7 @@ export function articleMdData() {
             date: '2024年12月7日',
             apply: ''
           },
-          link: '/opentiny-design/article/feature/tinyvue/3?name=特性介绍&subName=Tinyvue'
+          link: '/tech-college/article/feature/tinyvue/3?name=特性介绍&subName=Tinyvue'
         },
         {
           markId: '4', //与markdown文件同名
@@ -424,7 +424,7 @@ export function articleMdData() {
             date: '2024年11月12日',
             apply: ''
           },
-          link: '/opentiny-design/article/feature/tinyvue/4?name=特性介绍&subName=Tinyvue'
+          link: '/tech-college/article/feature/tinyvue/4?name=特性介绍&subName=Tinyvue'
         },
         {
           markId: '5', //与markdown文件同名
@@ -438,7 +438,7 @@ export function articleMdData() {
             date: '2024年11月8日',
             apply: ''
           },
-          link: '/opentiny-design/article/feature/tinyvue/5?name=特性介绍&subName=Tinyvue'
+          link: '/tech-college/article/feature/tinyvue/5?name=特性介绍&subName=Tinyvue'
         },
         {
           markId: '6', //与markdown文件同名
@@ -451,7 +451,7 @@ export function articleMdData() {
             date: '2024年3月20日',
             apply: ''
           },
-          link: '/opentiny-design/article/feature/tinyvue/6?name=特性介绍&subName=Tinyvue'
+          link: '/tech-college/article/feature/tinyvue/6?name=特性介绍&subName=Tinyvue'
         }
       ],
       tinyengine: [
@@ -466,7 +466,7 @@ export function articleMdData() {
             date: '2025年8月28日',
             apply: ''
           },
-          link: '/opentiny-design/article/feature/tinyengine/13?name=特性介绍&subName=Tinyengine'
+          link: '/tech-college/article/feature/tinyengine/13?name=特性介绍&subName=Tinyengine'
         },
         {
           markId: '1', //与markdown文件同名
@@ -480,7 +480,7 @@ export function articleMdData() {
             date: '2025年7月24日',
             apply: ''
           },
-          link: '/opentiny-design/article/feature/tinyengine/1?name=特性介绍&subName=Tinyengine'
+          link: '/tech-college/article/feature/tinyengine/1?name=特性介绍&subName=Tinyengine'
         },
         {
           markId: '2', //与markdown文件同名
@@ -494,7 +494,7 @@ export function articleMdData() {
             date: '2025年6月26日',
             apply: ''
           },
-          link: '/opentiny-design/article/feature/tinyengine/2?name=特性介绍&subName=Tinyengine'
+          link: '/tech-college/article/feature/tinyengine/2?name=特性介绍&subName=Tinyengine'
         },
         {
           markId: '3', //与markdown文件同名
@@ -508,7 +508,7 @@ export function articleMdData() {
             date: '2025年5月20日',
             apply: ''
           },
-          link: '/opentiny-design/article/feature/tinyengine/3?name=特性介绍&subName=Tinyengine'
+          link: '/tech-college/article/feature/tinyengine/3?name=特性介绍&subName=Tinyengine'
         },
         {
           markId: '4', //与markdown文件同名
@@ -522,7 +522,7 @@ export function articleMdData() {
             date: '2025年4月17日',
             apply: ''
           },
-          link: '/opentiny-design/article/feature/tinyengine/4?name=特性介绍&subName=Tinyengine'
+          link: '/tech-college/article/feature/tinyengine/4?name=特性介绍&subName=Tinyengine'
         },
         {
           markId: '5', //与markdown文件同名
@@ -536,7 +536,7 @@ export function articleMdData() {
             date: '2025年3月18日',
             apply: ''
           },
-          link: '/opentiny-design/article/feature/tinyengine/5?name=特性介绍&subName=Tinyengine'
+          link: '/tech-college/article/feature/tinyengine/5?name=特性介绍&subName=Tinyengine'
         },
         {
           markId: '6', //与markdown文件同名
@@ -550,7 +550,7 @@ export function articleMdData() {
             date: '2025年2月27日',
             apply: ''
           },
-          link: '/opentiny-design/article/feature/tinyengine/6?name=特性介绍&subName=Tinyengine'
+          link: '/tech-college/article/feature/tinyengine/6?name=特性介绍&subName=Tinyengine'
         },
         {
           markId: '7', //与markdown文件同名
@@ -564,7 +564,7 @@ export function articleMdData() {
             date: '2025年2月7日',
             apply: ''
           },
-          link: '/opentiny-design/article/feature/tinyengine/7?name=特性介绍&subName=Tinyengine'
+          link: '/tech-college/article/feature/tinyengine/7?name=特性介绍&subName=Tinyengine'
         },
         {
           markId: '8', //与markdown文件同名
@@ -578,7 +578,7 @@ export function articleMdData() {
             date: '2025年1月17日',
             apply: ''
           },
-          link: '/opentiny-design/article/feature/tinyengine/8?name=特性介绍&subName=Tinyengine'
+          link: '/tech-college/article/feature/tinyengine/8?name=特性介绍&subName=Tinyengine'
         },
         {
           markId: '9', //与markdown文件同名
@@ -592,7 +592,7 @@ export function articleMdData() {
             date: '2024年11月27日',
             apply: ''
           },
-          link: '/opentiny-design/article/feature/tinyengine/9?name=特性介绍&subName=Tinyengine'
+          link: '/tech-college/article/feature/tinyengine/9?name=特性介绍&subName=Tinyengine'
         },
         {
           markId: '10', //与markdown文件同名
@@ -606,7 +606,7 @@ export function articleMdData() {
             date: '2024年3月21日',
             apply: ''
           },
-          link: '/opentiny-design/article/feature/tinyengine/10?name=特性介绍&subName=Tinyengine'
+          link: '/tech-college/article/feature/tinyengine/10?name=特性介绍&subName=Tinyengine'
         },
         {
           markId: '11', //与markdown文件同名
@@ -620,7 +620,7 @@ export function articleMdData() {
             date: '2024年1月3日',
             apply: ''
           },
-          link: '/opentiny-design/article/feature/tinyengine/11?name=特性介绍&subName=Tinyengine'
+          link: '/tech-college/article/feature/tinyengine/11?name=特性介绍&subName=Tinyengine'
         },
         {
           markId: '12', //与markdown文件同名
@@ -634,7 +634,7 @@ export function articleMdData() {
             date: '2023年9月21日',
             apply: ''
           },
-          link: '/opentiny-design/article/feature/tinyengine/12?name=特性介绍&subName=Tinyengine'
+          link: '/tech-college/article/feature/tinyengine/12?name=特性介绍&subName=Tinyengine'
         }
       ],
       tinypro: [
@@ -650,7 +650,7 @@ export function articleMdData() {
             date: '2025年4月16日',
             apply: ''
           },
-          link: '/opentiny-design/article/feature/tinypro/1?name=特性介绍&subName=Tinypro'
+          link: '/tech-college/article/feature/tinypro/1?name=特性介绍&subName=Tinypro'
         },
         {
           markId: '2', //与markdown文件同名
@@ -664,7 +664,7 @@ export function articleMdData() {
             date: '2024年12月3日',
             apply: ''
           },
-          link: '/opentiny-design/article/feature/tinypro/2?name=特性介绍&subName=Tinypro'
+          link: '/tech-college/article/feature/tinypro/2?name=特性介绍&subName=Tinypro'
         }
       ],
       tinyeditor: [
@@ -680,7 +680,7 @@ export function articleMdData() {
             date: '2025年7月18日',
             apply: ''
           },
-          link: '/opentiny-design/article/feature/tinyeditor/1?name=特性介绍&subName=Tinyeditor'
+          link: '/tech-college/article/feature/tinyeditor/1?name=特性介绍&subName=Tinyeditor'
         },
         {
           markId: '2', //与markdown文件同名
@@ -693,7 +693,7 @@ export function articleMdData() {
             date: '2024年11月15日',
             apply: ''
           },
-          link: '/opentiny-design/article/feature/tinyeditor/2?name=特性介绍&subName=Tinyeditor'
+          link: '/tech-college/article/feature/tinyeditor/2?name=特性介绍&subName=Tinyeditor'
         },
         {
           markId: '3', //与markdown文件同名
@@ -707,7 +707,7 @@ export function articleMdData() {
             date: '2024年10月29日',
             apply: ''
           },
-          link: '/opentiny-design/article/feature/tinyeditor/3?name=特性介绍&subName=Tinyeditor'
+          link: '/tech-college/article/feature/tinyeditor/3?name=特性介绍&subName=Tinyeditor'
         },
         {
           markId: '4', //与markdown文件同名
@@ -722,7 +722,7 @@ export function articleMdData() {
             date: '2024年8月22日',
             apply: ''
           },
-          link: '/opentiny-design/article/feature/tinyeditor/4?name=特性介绍&subName=Tinyeditor'
+          link: '/tech-college/article/feature/tinyeditor/4?name=特性介绍&subName=Tinyeditor'
         }
       ],
       tinycharts: [
@@ -738,7 +738,7 @@ export function articleMdData() {
             date: '2024年8月6日',
             apply: ''
           },
-          link: '/opentiny-design/article/feature/tinycharts/1?name=特性介绍&subName=Tinycharts'
+          link: '/tech-college/article/feature/tinycharts/1?name=特性介绍&subName=Tinycharts'
         }
       ],
       next: [
@@ -753,7 +753,7 @@ export function articleMdData() {
             date: '2025年9月17日',
             apply: ''
           },
-          link: '/opentiny-design/article/feature/next/1?name=特性介绍&subName=Next'
+          link: '/tech-college/article/feature/next/1?name=特性介绍&subName=Next'
         }
       ]
     }
@@ -781,7 +781,7 @@ export function articleMdData() {
             date: '2025年5月9日',
             apply: ''
           },
-          link: '/opentiny-design/article/technology/node/1?name=前端技术&subName=Node'
+          link: '/tech-college/article/technology/node/1?name=前端技术&subName=Node'
         },
         {
           markId: '2', //与markdown文件同名
@@ -795,7 +795,7 @@ export function articleMdData() {
             date: '2025年4月23日',
             apply: ''
           },
-          link: '/opentiny-design/article/technology/node/2?name=前端技术&subName=Node'
+          link: '/tech-college/article/technology/node/2?name=前端技术&subName=Node'
         },
         {
           markId: '3', //与markdown文件同名
@@ -809,7 +809,7 @@ export function articleMdData() {
             date: '2025年4月15日',
             apply: ''
           },
-          link: '/opentiny-design/article/technology/node/3?name=前端技术&subName=Node'
+          link: '/tech-college/article/technology/node/3?name=前端技术&subName=Node'
         },
         {
           markId: '4', //与markdown文件同名
@@ -823,7 +823,7 @@ export function articleMdData() {
             date: '2025年3月21日',
             apply: ''
           },
-          link: '/opentiny-design/article/technology/node/4?name=前端技术&subName=Node'
+          link: '/tech-college/article/technology/node/4?name=前端技术&subName=Node'
         },
         {
           markId: '5', //与markdown文件同名
@@ -837,7 +837,7 @@ export function articleMdData() {
             date: '2025年3月13日',
             apply: ''
           },
-          link: '/opentiny-design/article/technology/node/5?name=前端技术&subName=Node'
+          link: '/tech-college/article/technology/node/5?name=前端技术&subName=Node'
         },
         {
           markId: '6', //与markdown文件同名
@@ -851,7 +851,7 @@ export function articleMdData() {
             date: '2025年3月7日',
             apply: ''
           },
-          link: '/opentiny-design/article/technology/node/6?name=前端技术&subName=Node'
+          link: '/tech-college/article/technology/node/6?name=前端技术&subName=Node'
         },
         {
           markId: '7', //与markdown文件同名
@@ -865,7 +865,7 @@ export function articleMdData() {
             date: '2025年2月25日',
             apply: ''
           },
-          link: '/opentiny-design/article/technology/node/7?name=前端技术&subName=Node'
+          link: '/tech-college/article/technology/node/7?name=前端技术&subName=Node'
         },
         {
           markId: '8', //与markdown文件同名
@@ -879,7 +879,7 @@ export function articleMdData() {
             date: '2025年2月18日',
             apply: ''
           },
-          link: '/opentiny-design/article/technology/node/8?name=前端技术&subName=Node'
+          link: '/tech-college/article/technology/node/8?name=前端技术&subName=Node'
         },
         {
           markId: '9', //与markdown文件同名
@@ -893,7 +893,7 @@ export function articleMdData() {
             date: '2025年2月14日',
             apply: ''
           },
-          link: '/opentiny-design/article/technology/node/9?name=前端技术&subName=Node'
+          link: '/tech-college/article/technology/node/9?name=前端技术&subName=Node'
         }
       ],
       zone: [],

@@ -63,7 +63,7 @@ import { onMounted, ref, nextTick } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import { TinySelect, TinyOption, TinyTabs, TinyTabItem } from '@opentiny/vue'
 import { IconSearch } from '@opentiny/vue-icon'
-import * as FlexSearch from 'flexsearch'
+import FlexSearch from 'flexsearch'
 import { allData, useFlexSearch } from '../ts/utils'
 
 const router = useRouter()
@@ -138,7 +138,7 @@ const executedTag = ref(false)
 
 const emit = defineEmits(['tab-click', 'get-class', 'get-tag', 'change-data', 'change-video-data'])
 
-const searchIndex = new FlexSearch.Index({ tokenize: 'forward' })
+const searchIndex = new FlexSearch({ tokenize: 'forward' })
 const articles = allData()
 
 const addSearchIndex = (data) => {
