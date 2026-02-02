@@ -38,6 +38,30 @@ export const rootRoutes = [
         meta: { title: geneTitle('') }
       },
       {
+        path: 'tiny-robot',
+        component: tinyRobotHome,
+        name: 'tiny-robot',
+        meta: { title: geneTitle('') }
+      },
+      {
+        path: 'ai-extension',
+        component: aiExtensionHome,
+        name: 'ai-extension',
+        meta: { title: geneTitle('') }
+      },
+      {
+        path: 'next-sdk',
+        component: nextSdksHome,
+        name: 'next-sdk',
+        meta: { title: geneTitle('') }
+      },
+      {
+        path: 'genui-sdk',
+        component: genuiSdkHome,
+        name: 'genui-sdk',
+        meta: { title: geneTitle('') }
+      },
+      {
         path: 'opentiny-design',
         children: [
           {
@@ -50,30 +74,6 @@ export const rootRoutes = [
             path: 'tiny-vue',
             component: tinyVueHome,
             name: 'tiny-vue',
-            meta: { title: geneTitle('') }
-          },
-          {
-            path: 'tiny-robot',
-            component: tinyRobotHome,
-            name: 'tiny-robot',
-            meta: { title: geneTitle('') }
-          },
-          {
-            path: 'ai-extension',
-            component: aiExtensionHome,
-            name: 'ai-extension',
-            meta: { title: geneTitle('') }
-          },
-          {
-            path: 'next-sdk',
-            component: nextSdksHome,
-            name: 'next-sdk',
-            meta: { title: geneTitle('') }
-          },
-          {
-            path: 'genui-sdk',
-            component: genuiSdkHome,
-            name: 'genui-sdk',
             meta: { title: geneTitle('') }
           },
           {
