@@ -538,6 +538,9 @@ export default {
               width: 42px;
               height: 42px;
               display: block;
+              img {
+                animation: none;
+              }
             }
           }
         }
