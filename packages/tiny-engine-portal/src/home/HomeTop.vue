@@ -133,7 +133,7 @@ export default {
       }
       .description {
         margin-top: 28px;
-        font-size: 20px;
+        font-size: 18px;
         color: #808080;
         line-height: 32px;
       }
