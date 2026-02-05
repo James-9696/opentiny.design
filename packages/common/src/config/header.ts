@@ -9,6 +9,7 @@ import tinyRobot from '../assets/appIcon/tiny-robot.svg'
 import tinyEditor from '../assets/appIcon/tiny-editor.svg'
 import GenuiSdk from '../assets/appIcon/genui-sdk.svg'
 import sketch from '../../../home/public/images/logo-sketch.svg'
+import gitcodeLogo from '../assets/appIcon/gitcode-logo.svg'
 import { createIsUnderline, downloadFile } from './common.ts'
 
 const isGitHubBuild = import.meta.env.MODE === 'github'
@@ -199,6 +200,13 @@ const menuItems = [
           event.preventDefault();
           downloadFile(`${import.meta.env.VITE_BASE}opentiny-design/downloadFile/TinyVue3.0_UI.KIT_202508.sketch`, 'TinyVue3.0_UI.KIT_202508.sketch')
         }
+      },
+      {
+        title: 'GitCode 源码仓库',
+        desc: '国内代码仓库，访问速度更快',
+        href: 'https://gitcode.com/opentiny',
+        logo: gitcodeLogo,
+        target: '_blank'
       }
     ]
   }
