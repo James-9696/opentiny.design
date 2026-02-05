@@ -111,7 +111,7 @@ const routeChange = () => {
     navCmp.value.videoName = save.currentTab
     navCmp.value.currentData = activityData.value[`${save.currentTab}`]
     getCurrentTabs(save)
-    if (history.state.current === '/opentiny-design/tech/events') {
+    if (history.state.current === '/tech-college/tech/events') {
       scrollView(save)
     }
   }
@@ -119,7 +119,7 @@ const routeChange = () => {
 
 const scrollView = async (save) => {
   await nextTick()
-  scrollToView(save)
+  scrollToView(save, 64)
 }
 
 const linkTo = (item) => {

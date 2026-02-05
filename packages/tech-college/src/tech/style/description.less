@@ -1,6 +1,5 @@
 .tech-article {
   height: auto;
-  overflow: scroll;
   margin-bottom: 220px;
   &-desc-container {
     display: flex;
@@ -174,13 +173,14 @@
         justify-content: flex-start;
         flex-direction: column;
         &-wx {
-          width: 286px;
+          width: auto;
           height: 185px;
           display: flex;
+          border-radius: 8px;
           justify-content: flex-start;
           background-image: url(@/assets/tech/article-show.svg);
           &-left {
-            padding: 24px 12px 38px 26px;
+            padding: 24px 38px 38px 26px;
           }
           &-img {
             margin-top: 50px;
@@ -212,7 +212,7 @@
           background-color: rgb(245, 245, 245);
           border-radius: 16px;
           width: 286px;
-          height: 398px;
+          height: auto;
         }
         &-title {
           font-weight: 500;
@@ -249,9 +249,9 @@
           margin-top: 32px;
           padding: 24px;
           width: 286px;
-          height: 398px;
+          height: auto;
           border-radius: 16px;
-          background-color: #fafafa;
+          background-color: #f5f5f5;
         }
       }
     }
@@ -263,8 +263,59 @@ a {
   text-decoration: none; /* 移除默认下划线 */
 }
 
-@media (max-width: 1700px) {
+@media (max-width: 1890px) {
   .tech-article-detail {
-    padding: 24px 50px 100px;
+    padding: 24px 0 100px 0;
+  }
+}
+
+@media (min-width: 1890px) and (max-width: 3840px) {
+  .tech-article-detail {
+    padding: 60px 0 100px 0;
+  }
+}
+
+.markdown-body {
+  /* 确保容器宽度自适应 */
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  
+  /* 文本换行控制 */
+  word-wrap: break-word;      /* 允许长单词换行 */
+  word-break: break-word;     /* 中文+英文混合换行 */
+  overflow-wrap: break-word;  /* 现代浏览器标准属性 */
+  
+  /* 防止文本溢出 */
+  overflow-x: hidden;
+  
+  /* 段落和标题处理 */
+  p, h1, h2, h3, h4, h5, h6, li, td, th {
+    max-width: 100%;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  /* 代码块特殊处理 */
+  pre, code {
+    white-space: pre-wrap;      /* 保留换行但自动换行 */
+    word-wrap: break-word;
+    max-width: 100%;
+    overflow-x: auto;           /* 允许横向滚动而非溢出 */
+  }
+  
+  /* 表格处理 */
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;           /* 表格过宽时可滚动 */
+    max-width: 100%;
+  }
+  
+  /* 链接超长处理 */
+  a {
+    word-wrap: break-word;
+    word-break: break-all;      /* 链接允许任意位置换行 */
   }
 }

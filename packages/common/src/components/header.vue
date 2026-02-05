@@ -548,15 +548,15 @@ const toggleTheme = (event: MouseEvent) => {
   cursor: pointer;
 }
 
-@media screen and (max-width: 1670px) {
+@media screen and (max-width: 1890px) {
   .opentiny-design-header {
-      margin-top: 16px;
       display: grid;
       grid-template-columns: 1fr auto;  // 两列：左侧内容 + 右侧nav-right
       grid-template-rows: auto auto;      // 两行
       align-items: center;
 
     .nav-left {
+      margin-top: 16px;
       grid-column: 1;  // 第1列
       grid-row: 1;     // 第1行
     }
@@ -570,6 +570,7 @@ const toggleTheme = (event: MouseEvent) => {
     }
 
     .nav-right {
+      margin-top: 16px;
       grid-column: 2;  // 第2列
       grid-row: 1;     // 第1行
       margin-left: 0;  // 移除auto margin
@@ -587,7 +588,7 @@ const toggleTheme = (event: MouseEvent) => {
   }
 }
 
-@media screen and (min-width: 1671px) {
+@media screen and (min-width: 1855px) {
   .opentiny-design-header {
      display: flex;
      justify-content: space-between;

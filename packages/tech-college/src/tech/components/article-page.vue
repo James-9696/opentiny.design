@@ -65,7 +65,7 @@ import NavCmp from './other/nav.vue'
 import description from './common/description.vue'
 import { ArticleType } from './ts/desc.ts'
 import { articleMdData } from './ts/article'
-import { scrollToView, getLabel } from './ts/utils'
+import { scrollToView } from './ts/utils'
 import '../style/description.less'
 import '../style/adapter/description.less'
 
@@ -110,7 +110,7 @@ const routeChange = () => {
     navCmp.value.aboutData = navCmp.value.currentData['about']
     navCmp.value.getCurrentDefault(save.currentClass)
     currentTabsData.value = articleData.value[`${save.currentTab}`].data[`${save.currentClass}`]
-    if (history.state.current === '/opentiny-design/tech/write') {
+    if (history.state.current === '/tech-college/tech/write') {
       scrollView(save)
     }
   }
@@ -118,7 +118,7 @@ const routeChange = () => {
 
 const scrollView = async (save) => {
   await nextTick()
-  scrollToView(save)
+  scrollToView(save, 64)
 }
 
 const tabClick = (msg) => {

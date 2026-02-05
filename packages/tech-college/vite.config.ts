@@ -26,9 +26,11 @@ export default defineConfig({
       markdownItUses: MdExt
     }),
   ],
+
   resolve: {
     alias: {
       '@/assets': path.resolve(__dirname, 'src/assets'),
+      'flexsearch': 'flexsearch/dist/flexsearch.bundle.js'
     }
   },
 })

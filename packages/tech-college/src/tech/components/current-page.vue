@@ -13,7 +13,7 @@
       <div v-if="!isMobile" class="tech-homepage-info-separator">|</div>
       <div class="tech-homepage-info-content">
         <a
-          href="/opentiny-design/article/analysis/next/1?name=原理解析&subName=Next"
+          href="/tech-college/article/analysis/next/1?name=原理解析&subName=Next"
           target="_blank"
           rel="noopener noreferrer"
         >

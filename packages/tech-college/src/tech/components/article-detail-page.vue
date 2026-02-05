@@ -236,7 +236,9 @@ const getCurrentMD = (msg) => {
 
 const scrollToTop = () => {
   if (contentRef.value) {
-    contentRef.value.scrollIntoView({ block: 'start', behavior: 'smooth' })
+    // 64px为固定头高度
+    const elementTop = contentRef.value.getBoundingClientRect().top + window.pageYOffset
+    window.scrollTo({ top: elementTop - 64, behavior: 'smooth' })
   }
 }
 const upMd = () => {
@@ -424,5 +426,6 @@ onMounted(() => {
   getBreadNav()
   getValue()
   getMdText()
+  scrollToTop()
 })
 </script>

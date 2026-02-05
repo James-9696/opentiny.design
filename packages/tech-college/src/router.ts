@@ -1,6 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-// TODO: 待补充布局
-// import Layout from '@/views/layout/layout.vue'
 import { geneTitle } from './tech/utils'
 
 const VITE_CONTEXT = import.meta.env.VITE_CONTEXT;
@@ -14,28 +12,33 @@ const Events = () => import('./tech/components/activity-page.vue')
 export const rootRoutes = [
   {
     path: VITE_CONTEXT,
-    name: 'home',
-    component: Tech,
     children: [
       {
-        path: 'write',
-        name: 'write',
-        component: Write,
-        meta: { title: geneTitle('技术文章') }
+        path: 'tech',
+        name: 'tech',
+        component: Tech,
+        children: [
+          {
+            path: 'write',
+            name: 'write',
+            component: Write,
+            meta: { title: geneTitle('技术文章') }
+          },
+          {
+            path: 'video',
+            name: 'video',
+            component: Video,
+            meta: { title: geneTitle('视频课程') }
+          },
+          {
+            path: 'events',
+            name: 'events',
+            component: Events,
+            meta: { title: geneTitle('热门活动') }
+          }
+        ],
+        meta: { title: geneTitle('技术学院') }
       },
-      {
-        path: 'video',
-        name: 'video',
-        component: Video,
-        meta: { title: geneTitle('视频课程') }
-      },
-      {
-        path: 'events',
-        name: 'events',
-        component: Events,
-        meta: { title: geneTitle('热门活动') }
-      },
-      // TODO: 文章详情页无法渲染
       {
         path: `article/:mode/:type/:serial`,
         name: 'article',
@@ -52,8 +55,8 @@ export const rootRoutes = [
     meta: { title: geneTitle('技术学院') }
   },
   {
-    path: `${VITE_CONTEXT}:pathMatch(.*)*`,
-    name: 'not-found',
+    path: '/:pathMatch(.*)*',
+    name: 'global-not-found',
     redirect: VITE_CONTEXT
   }
 ]
