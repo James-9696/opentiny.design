@@ -39,49 +39,49 @@ export function carouselData() {
       image: mcp,
       img: one,
       info: '一场 MCP 生态的变革——详解 OpenTiny NEXT 逆向思维的技术创新',
-      link: '/opentiny-design/article/analysis/next/1?name=原理解析&subName=Next'
+      link: '/tech-college/article/analysis/next/1?name=原理解析&subName=Next'
     },
     {
       image: engine2,
       img: second,
       info: 'TinyEngine 2.8 正式上线：AI能力就位、Docker一键起飞！',
-      link: '/opentiny-design/article/feature/tinyengine/13?name=特性介绍&subName=Tinyengine'
+      link: '/tech-college/article/feature/tinyengine/13?name=特性介绍&subName=Tinyengine'
     },
     {
       image: next,
       img: third,
       info: 'OpenTiny NEXT 内核新生：生成式UI × MCP，重塑前端交互新范式！',
-      link: '/opentiny-design/article/feature/next/1?name=特性介绍&subName=Next'
+      link: '/tech-college/article/feature/next/1?name=特性介绍&subName=Next'
     },
     {
       image: summer,
       img: fourth,
       info: '15个项目，12000奖金！OpenTiny 开源之夏2025编程活动来袭！',
-      link: '/opentiny-design/article/news/2?name=最新活动&type=news'
+      link: '/tech-college/article/news/2?name=最新活动&type=news'
     },
     {
       image: discuss,
       img: fifth,
       info: '朋友你好，一起加入OpenTiny社区吧~',
-      link: '/opentiny-design/article/news/3?name=最新活动&type=news'
+      link: '/tech-college/article/news/3?name=最新活动&type=news'
     },
     {
       image: lowcode,
       img: sixth,
       info: '实操上手TinyEngine低代码引擎插件化开发',
-      link: '/opentiny-design/article/guide/tinyengine/4?name=使用指南&subName=Tinyengine'
+      link: '/tech-college/article/guide/tinyengine/4?name=使用指南&subName=Tinyengine'
     },
     {
       image: aiengine,
       img: seventh,
       info: 'OpenTiny训练营活动|使用TinyEngine低代码引擎AI能力搭建华为云官网首页',
-      link: '/opentiny-design/article/guide/tinyengine/2?name=使用指南&subName=Tinyengine'
+      link: '/tech-college/article/guide/tinyengine/2?name=使用指南&subName=Tinyengine'
     },
     {
       image: vuetree,
       img: eighth,
       info: '实操案例|TinyVue树表+动态行合并',
-      link: '/opentiny-design/article/guide/tinyvue/5?name=使用指南&subName=Tinyvue'
+      link: '/tech-college/article/guide/tinyvue/5?name=使用指南&subName=Tinyvue'
     }
   ]
   return data
@@ -95,27 +95,27 @@ export function cardData() {
       desc: [
         {
           info: 'OpenTiny训练营实操体验|轻松解锁TinyVue智能组件开发Web应用',
-          link: '/opentiny-design/article/guide/tinyvue/1?name=使用指南&subName=Tinyvue',
+          link: '/tech-college/article/guide/tinyvue/1?name=使用指南&subName=Tinyvue',
           suffix: true
         },
         {
           info: 'OpenTiny 体验官实操活动 | 快速体验 TinyVue 组件库的智能化交互能力',
-          link: '/opentiny-design/article/guide/tinyvue/2?name=使用指南&subName=Tinyvue',
+          link: '/tech-college/article/guide/tinyvue/2?name=使用指南&subName=Tinyvue',
           suffix: true
         },
         {
           info: 'OpenTiny icons——超轻量的CSS图标库，引领图标库新风向',
-          link: '/opentiny-design/article/guide/tinyvue/3?name=使用指南&subName=Tinyvue',
+          link: '/tech-college/article/guide/tinyvue/3?name=使用指南&subName=Tinyvue',
           suffix: true
         },
         {
           info: 'TinyVue的DatePicker 组件支持日期面板单独使用啦！',
-          link: '/opentiny-design/article/guide/tinyvue/4?name=使用指南&subName=Tinyvue',
+          link: '/tech-college/article/guide/tinyvue/4?name=使用指南&subName=Tinyvue',
           suffix: false
         },
         {
           info: '实操案例|TinyVue树表+动态行合并',
-          link: '/opentiny-design/article/guide/tinyvue/5?name=使用指南&subName=Tinyvue',
+          link: '/tech-college/article/guide/tinyvue/5?name=使用指南&subName=Tinyvue',
           suffix: false
         }
       ]
@@ -126,27 +126,27 @@ export function cardData() {
       desc: [
         {
           info: 'AI助力快速引入外部组件到TinyEngine低代码引擎',
-          link: '/opentiny-design/article/guide/tinyengine/1?name=使用指南&subName=Tinyengine',
+          link: '/tech-college/article/guide/tinyengine/1?name=使用指南&subName=Tinyengine',
           suffix: true
         },
         {
           info: 'OpenTiny训练营活动|使用TinyEngine低代码引擎AI能力搭建华为云官网首页',
-          link: '/opentiny-design/article/guide/tinyengine/2?name=使用指南&subName=Tinyengine',
+          link: '/tech-college/article/guide/tinyengine/2?name=使用指南&subName=Tinyengine',
           suffix: true
         },
         {
           info: '强烈推荐|新手从搭建到二开TinyEngine低代码引擎',
-          link: '/opentiny-design/article/guide/tinyengine/3?name=使用指南&subName=Tinyengine',
+          link: '/tech-college/article/guide/tinyengine/3?name=使用指南&subName=Tinyengine',
           suffix: true
         },
         {
           info: '实操上手TinyEngine低代码引擎插件化开发',
-          link: '/opentiny-design/article/guide/tinyengine/4?name=使用指南&subName=Tinyengine',
+          link: '/tech-college/article/guide/tinyengine/4?name=使用指南&subName=Tinyengine',
           suffix: false
         },
         {
           info: '使用 TinyEngine 低代码引擎实现三方物料集成',
-          link: '/opentiny-design/article/guide/tinyengine/5?name=使用指南&subName=Tinyengine',
+          link: '/tech-college/article/guide/tinyengine/5?name=使用指南&subName=Tinyengine',
           suffix: false
         }
       ]
@@ -157,27 +157,27 @@ export function cardData() {
       desc: [
         {
           info: 'TinyVue 智能组件库：基于 MCP 协议，实现 AI 代替人操作 Web 组件',
-          link: '/opentiny-design/article/analysis/tinyvue/1?name=原理解析&subName=Tinyvue',
+          link: '/tech-college/article/analysis/tinyvue/1?name=原理解析&subName=Tinyvue',
           suffix: true
         },
         {
           info: '将Node.js内置模块外置',
-          link: '/opentiny-design/article/technology/node/2?name=前端技术&subName=Node',
+          link: '/tech-college/article/technology/node/2?name=前端技术&subName=Node',
           suffix: true
         },
         {
           info: 'TinyEditor v4.0 alpha：表格更强大，表情更丰富，上传体验超乎想象！',
-          link: '/opentiny-design/article/feature/tinyeditor/1?name=特性介绍&subName=Tinyeditor',
+          link: '/tech-college/article/feature/tinyeditor/1?name=特性介绍&subName=Tinyeditor',
           suffix: false
         },
         {
           info: 'OpenTiny HUICharts 正式开源发布，一个简单、易上手的图表组件库',
-          link: '/opentiny-design/article/feature/tinycharts/1?name=特性介绍&subName=Tinycharts',
+          link: '/tech-college/article/feature/tinycharts/1?name=特性介绍&subName=Tinycharts',
           suffix: false
         },
         {
           info: 'Node.js addon一文通',
-          link: '/opentiny-design/article/technology/node/1?name=前端技术&subName=Node',
+          link: '/tech-college/article/technology/node/1?name=前端技术&subName=Node',
           suffix: false
         }
       ]
@@ -290,19 +290,19 @@ export function eventsData() {
   const data = [
     {
       info: 'HDC 2025|仰望星空，低头看路！OpenTiny再启航，持续打造前端智能化解决方案',
-      link: '/opentiny-design/article/hot/1?name=热门活动&type=hot'
+      link: '/tech-college/article/hot/1?name=热门活动&type=hot'
     },
     {
       info: '开源之夏·西安电子科技大学站精彩回顾：OpenTiny开源技术下沉校园，点燃高校开发者技术热情',
-      link: '/opentiny-design/article/hot/2?name=热门活动&type=hot'
+      link: '/tech-college/article/hot/2?name=热门活动&type=hot'
     },
     {
       info: '是观察者，也是实践者！|华为云开源开发者大前端技术论坛完满结束',
-      link: '/opentiny-design/article/hot/3?name=热门活动&type=hot'
+      link: '/tech-college/article/hot/3?name=热门活动&type=hot'
     },
     {
       info: 'OpenTiny 亮相 W3C 2024春季顾问委员会会议，共话行业新趋势。',
-      link: '/opentiny-design/article/hot/4?name=热门活动&type=hot'
+      link: '/tech-college/article/hot/4?name=热门活动&type=hot'
     }
   ]
   return data

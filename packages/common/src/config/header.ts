@@ -41,42 +41,42 @@ const menuItems = [
   },
   {
     name: 'TinyRobot',
-    url: '/opentiny-design/tiny-robot',
+    url: '/tiny-robot',
     children: [],
     logo: tinyRobot,
     desc: '智能助手',
     hide: false,
     github: 'https://github.com/opentiny/tiny-robot',
-    isUnderline: createIsUnderline('/opentiny-design/tiny-robot')
+    isUnderline: createIsUnderline('/tiny-robot')
   },
   {
     name: 'NEXT-SDKs',
     desc: '开发套件',
-    url: '/opentiny-design/next-sdk',
+    url: '/next-sdk',
     logo: tinySdks,
     hide: false,
     github: 'https://github.com/opentiny/next-sdk',
     children: [],
-    isUnderline: createIsUnderline('/opentiny-design/next-sdk')
+    isUnderline: createIsUnderline('/next-sdk')
   },
   {
     name: 'GenUI-SDK',
     desc: '生成式UI',
-    url: '/opentiny-design/genui-sdk',
+    url: '/genui-sdk',
     logo: GenuiSdk,
     hide: false,
     github: 'https://github.com/opentiny/genui-sdk',
     children: [],
-    isUnderline: createIsUnderline('/opentiny-design/genui-sdk')
+    isUnderline: createIsUnderline('/genui-sdk')
   },
   {
     name: 'AI-Extension',
     desc: 'AI 浏览器扩展插件',
-    url: '/opentiny-design/ai-extension',
+    url: '/ai-extension',
     logo: tinyAi,
     hide: false,
     github: 'https://github.com/opentiny/tiny-robot',
-    isUnderline: createIsUnderline('/opentiny-design/ai-extension')
+    isUnderline: createIsUnderline('/ai-extension')
   },
   {
     type: 'other',

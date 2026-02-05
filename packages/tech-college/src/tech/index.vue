@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-show="!isArticleDetail">
     <div class="tech-nav">
       <div>
         <div class="tech-banner">
@@ -22,7 +22,7 @@
                 </div>
                 <div
                   class="tech-banner-nav-item"
-                  :style="index === 2 ? 'background-color: rgba(255, 255, 255, 0.6)' : ''"
+                  :style="(index === 2 || isArticleDetail) ? 'background-color: rgba(255, 255, 255, 0.6)' : ''"
                   @click="toArticle"
                 >
                   <div class="tech-banner-nav-item-title">技术文章</div>
@@ -42,28 +42,32 @@
         </div>
       </div>
     </div>
-    <!-- TODO: 轮播模式 -->
-    <div class="tech-carousel-nav" v-if="false"></div>
     <!-- 当前主页 -->
-    <div class="tech-content" v-if="index === 0">
+    <div class="tech-content" v-show="index === 0">
       <current-page></current-page>
     </div>
     <!-- 视频课程 -->
-    <div class="tech-content" v-if="index === 1">
+    <div class="tech-content" v-show="index === 1">
       <video-page></video-page>
     </div>
     <!-- 技术文章 -->
-    <div class="tech-content" v-if="index === 2">
+    <div class="tech-content" v-show="index === 2">
       <article-page></article-page>
     </div>
     <!-- 热门活动 -->
-    <div class="tech-content" v-if="index === 3">
+    <div class="tech-content" v-show="index === 3">
       <activity-page></activity-page>
     </div>
   </div>
+  <!-- 文章详情页路由出口 -->
+  <div class="tech-content" v-show="isArticleDetail">
+    <router-view />
+  </div>
+   <back-to-top :visible="isShowBackTop" :click-event="backTop"></back-to-top>
 </template>
+
 <script lang="ts" setup>
-import { nextTick, ref, watch } from 'vue'
+import { ref, watch, onMounted } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import './style/index.less'
 import './style/adapter/index.less'
@@ -71,31 +75,49 @@ import CurrentPage from './components/current-page.vue'
 import VideoPage from './components/video-page.vue'
 import ArticlePage from './components/article-page.vue'
 import ActivityPage from './components/activity-page.vue'
+import BackToTop from '../../../home/src/views/layout/back-to-top.vue'
 import { isMobile } from './utils'
 
 const router = useRouter()
 const route = useRoute()
-watch(
-  route,
-  () => {
-    nextTick(() => {
-      rushPage()
-    })
-  },
-  { immediate: true }
-)
 
-const index = ref(0)
+router.afterEach(() => {
+  rushPage()
+})
 
-const toHome = () => {
-  index.value = 0
-  router.push({ name: 'tech' })
+const isArticleDetail = ref(true)
+const isShowBackTop = ref(false)
+
+// 更新函数
+const updateArticleDetail = () => {
+  isArticleDetail.value = route.name === 'article' || route.name === 'articleWithoutType'
+}
+
+const index = ref(-1)
+
+// 路由变化时自动更新
+watch(() => route.name, updateArticleDetail, { deep: true })
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll, { passive: true })
+  handleScroll()
+})
+
+// 滚动监听处理函数
+const handleScroll = () => {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
+  isShowBackTop.value = scrollTop >= 500
+}
+
+const backTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
 const toVideo = () => {
   index.value = 1
   router.push({ name: 'video' })
 }
+
 const toArticle = () => {
   index.value = 2
   router.push({
@@ -103,6 +125,7 @@ const toArticle = () => {
   })
   sessionStorage.removeItem('route-active-data')
 }
+
 const toEvents = () => {
   index.value = 3
   router.push({ name: 'events' })
@@ -110,17 +133,32 @@ const toEvents = () => {
 }
 
 const rushPage = () => {
-  if (route.path === '/opentiny-design/tech') {
-    toHome()
+  // 视频课程
+  isArticleDetail.value = false
+  if (route.path === '/tech-college/tech/video') {
+    index.value = 1
+    return
   }
-  if (route.path === '/opentiny-design/tech/video') {
-    toVideo()
+  // 技术文章列表
+  if (route.path === '/tech-college/tech/write') {
+    index.value = 2
+    return
   }
-  if (route.path === '/opentiny-design/tech/write') {
-    toArticle()
+  // 热门活动
+  if (route.path === '/tech-college/tech/events') {
+    index.value = 3
+    return
   }
-  if (route.path === '/opentiny-design/tech/events') {
-    toEvents()
+  // 文章详情
+  if (route.path.includes('/tech-college/article/')) {
+    index.value = -1
+    isArticleDetail.value = true
+    return
+  }
+  // 首页
+  if (route.path === '/' || /^\/tech-college\/?$/.test(route.path) || /^\/tech-college\/tech\/?$/.test(route.path)) {
+    index.value = 0
+    return
   }
 }
 </script>

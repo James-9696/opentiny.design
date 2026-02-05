@@ -3,8 +3,9 @@ import { createHead } from '@vueuse/head'
 import './style.css'
 import App from './App.vue'
 import { router } from './router'
+import 'prismjs/themes/prism.css'
+import 'github-markdown-css/github-markdown-light.css'
 
-// createApp(App).use(router).mount('#app')
 
 const mountApp = (TDCommon) => {
   window.tinycommon = new TDCommon(['#header', '#footer'])

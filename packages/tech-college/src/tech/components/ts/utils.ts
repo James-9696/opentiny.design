@@ -3,13 +3,16 @@ import { activeData } from './active'
 import { moreData, techData, enjoyData, engineData, vueData } from './video'
 import * as FlexSearch from 'flexsearch'
 
-export const scrollToView = async (save) => {
+export const scrollToView = async (save, height) => {
   const anchorElement = document.getElementById(save.serial)
   if (anchorElement) {
+    // 预留固定头部高度（根据你的 header 高度调整）
+    anchorElement.style.scrollMarginTop = `${height}px`
     anchorElement.style.background = '#f5f5f5'
     anchorElement.scrollIntoView({ behavior: 'smooth', block: 'start' })
     delay(() => {
       anchorElement.style.background = 'initial'
+      anchorElement.style.scrollMarginTop = '' // 清理
     }, 1000)
   }
 }

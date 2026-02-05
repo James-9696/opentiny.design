@@ -1,5 +1,4 @@
 <script setup>
-import { watch } from 'vue'
 const props = defineProps({
   visible: {
     type: Boolean,
@@ -19,7 +18,7 @@ const props = defineProps({
 </template>
 
 <style scoped lang="less">
-@import '@/mixin.less';
+@import '../../mixin.less';
 .back-top {
   width: 66px;
   height: 66px;
