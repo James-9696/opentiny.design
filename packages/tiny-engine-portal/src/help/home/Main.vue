@@ -57,7 +57,7 @@
               <div class="video-overlay-play">
                 <div class="video-overlay-title">{{ i.videoTitle }}</div>
                 <div class="video-overlay-bottom-start">
-                  <img :src="`/img/help/playing${(index % 3) + 1}.svg`" alt="" />
+                  <img :src="`${state.imgPre}img/help/playing${(index % 3) + 1}.svg`" alt="" />
                 </div>
               </div>
             </div>
