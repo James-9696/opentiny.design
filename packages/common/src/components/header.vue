@@ -348,7 +348,8 @@ const toggleTheme = (event: MouseEvent) => {
               <div class="dropdown-app hand" v-for="app in level1.children.filter(lv => !lv.hide)" :key="app.title">
                 <a 
                   class="dropdown-app" 
-                  :href="app.href" 
+                  :href="app.href"
+                  :target="app.target || _self"
                   rel="noopener noreferrer" 
                   @click="app.onClick ? app.onClick($event) : null"
                 >
