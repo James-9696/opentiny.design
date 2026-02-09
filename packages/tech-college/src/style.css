@@ -1,0 +1,19 @@
+
+@media (min-width: 815px) and (max-width: 1669px) {
+    #app {
+        position: relative;
+        top: 131px;
+    }
+}
+@media (min-width: 1670px) and (max-width: 1890px) {
+    #app {
+        position: relative;
+        top: 64px;
+    }
+}
+@media (max-width: 814px) {
+    #app {
+        position: relative;
+        top: 0;
+    }
+}
