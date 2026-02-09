@@ -230,6 +230,6 @@ const jumpEvents = () => {
 
 <style scoped lang="less">
 .tech-hot-events {
-  padding-bottom: 40px;
+  padding-bottom: 60px;
 }
 </style>
