@@ -179,7 +179,7 @@ const menuItems = [
       {
         title: '技术学院',
         desc: '轻松 get 开发技巧',
-        href: '/opentiny-design/tech',
+        href: 'https://opentiny.design/tech-college',
         logo: tinyTech,
         github: 'https://github.com/opentiny/opentiny.design'
       },
