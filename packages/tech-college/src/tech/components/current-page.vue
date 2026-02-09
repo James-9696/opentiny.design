@@ -169,85 +169,31 @@
         </div>
       </div>
     </div>
-    <div>
-      <!-- 设计资源 -->
-      <div class="tech-homepage-design">
-        <div class="tech-homepage-design-source">
-          <div class="tech-homepage-design-title">设计资源</div>
-          <hr />
-          <div class="tech-homepage-design-content">
-            <div class="tech-homepage-design-data" v-for="(item, index) in designData" :key="index">
-              <good
-                :card-container="`tech-homepage-design-data-container-${item.desc.type}`"
-                :card-left="`tech-homepage-design-data-container-left`"
-                :card-right="`tech-homepage-design-data-container-right`"
-                :card-content="`tech-homepage-design-data-container-content`"
-                :card-desc="`tech-homepage-design-data-container-desc`"
-                :card-info="`tech-homepage-design-data-container-info`"
-                :bg-img="{
-                  backgroundRepeat: 'no-repeat',
-                  backgroundSize: 'cover',
-                  width: '100%',
-                  backgroundPosition: 'right',
-                  borderRadius: '16px'
-                }"
-              >
-                <template #left>
-                  <img :src="item.header" />
-                </template>
-                <template #right-content>
-                  <div class="tech-homepage-design-data-container-right-content">{{ item.desc['title'] }}</div>
-                </template>
-                <template #right-desc>
-                  <div class="tech-homepage-design-data-container-right-desc">{{ item.desc['description'] }}</div>
-                </template>
-                <template #right-info>
-                  <div class="tech-homepage-design-data-container-right-info">
-                    <tiny-button round @click="downLoad(item.desc['type'])" :disabled="item.desc['disabled']">
-                      下载
-                    </tiny-button>
-                  </div>
-                </template>
-                <template #top v-if="item.desc['show']">
-                  <img class="tech-homepage-design-data-container-top" :src="item.desc['show']" />
-                </template>
-              </good>
-            </div>
-          </div>
-        </div>
-        <!-- 热门活动 -->
-        <div class="tech-homepage-design-events">
-          <div class="tech-homepage-design-events-container">
-            <div class="tech-homepage-design-title">热门活动</div>
-            <div class="tech-homepage-design-events-more" @click="jumpEvents">查看更多</div>
-          </div>
-          <hr />
-          <div>
-            <div class="tech-homepage-design-events-desc" v-for="(item, index) in eventInfo" :key="index">
-              <a :href="item.link" target="_blank" :title="item.info" rel="noopener noreferrer"> {{ item.info }}</a>
-            </div>
-          </div>
+    <!-- 热门活动 -->
+    <div class="tech-hot-events">
+      <div class="tech-homepage-design-events-container">
+        <div class="tech-homepage-design-title">热门活动</div>
+        <div class="tech-homepage-design-events-more" @click="jumpEvents">查看更多</div>
+      </div>
+      <div>
+        <div class="tech-homepage-design-events-desc" v-for="(item, index) in eventInfo" :key="index">
+          <a :href="item.link" target="_blank" :title="item.info" rel="noopener noreferrer"> {{ item.info }}</a>
         </div>
       </div>
     </div>
   </div>
 </template>
 <script setup lang="ts">
-import { ref } from 'vue'
 import { useRouter } from 'vue-router'
-import { TinyCarousel, TinyCarouselItem, TinyButton } from '@opentiny/vue'
+import { TinyCarousel, TinyCarouselItem } from '@opentiny/vue'
 import project from './common/project.vue'
 import good from './common/good.vue'
 import VideoClass from './other/video-class.vue'
 import { carouselData, cardData, videoData, techData, eventsData } from './ts/current'
-import { downloadFile } from './ts/utils'
 import '../style/current.less'
 import '../style/adapter/current.less'
 import '../style/video.less'
 import '../style/adapter/video.less'
-import sketch from '@/assets/tech/sketch.svg'
-import figma from '@/assets/tech/figma.svg'
-import tagShow from '@/assets/tech/tag-show.svg'
 import publish from '@/assets/tech/publish.svg'
 import info from '@/assets/tech/info.svg'
 import word from '@/assets/tech/word.svg'
@@ -267,25 +213,6 @@ const teacherData = techData()
 
 const eventInfo = eventsData()
 
-const designData = ref([
-  {
-    header: sketch,
-    desc: {
-      type: 'sketch',
-      title: 'Sketch 组件包',
-      description: '桌面组件 Sketch 模版包',
-      disabled: false
-    }
-  }
-])
-
-const downLoad = (msg) => {
-  if (msg === 'sketch') {
-    // public目录下downloadFile
-    downloadFile(`/downloadFile/TinyVue3\.0_UI\.KIT_202508\.sketch`, 'sketch')
-  }
-}
-
 const jumpArticle = () => {
   router.push({
     name: 'write'
@@ -300,3 +227,9 @@ const jumpEvents = () => {
   router.push({ name: 'events' })
 }
 </script>
+
+<style scoped lang="less">
+.tech-hot-events {
+  padding-bottom: 40px;
+}
+</style>
