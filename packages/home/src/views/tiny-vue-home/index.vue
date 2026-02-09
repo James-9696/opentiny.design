@@ -17,7 +17,7 @@ import ic_3 from "@/assets/images/home/tinyvue-home/web/ic_3.svg";
 import ic_4 from "@/assets/images/home/tinyvue-home/web/ic_4.svg";
 import icPhone from "@/assets/images/home/tinyvue-home/web/ic_mobilephone.svg"; // 移动端图标1 手机
 import icWindow from "@/assets/images/home/tinyvue-home/web/ic_tv.svg";
-import iconShare from "@/assets/tech/icon-share.svg";
+import iconShare from "@/assets/images/home/tinyvue-home/web/icon-share.svg";
 import mcpBg from "@/assets/images/home/tinyvue-home/web/welcome.webp";
 // 手机端静态资源
 import mcpBgMobile from "@/assets/images/home/tinyvue-home/mobile/welcome.webp";
