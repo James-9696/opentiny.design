@@ -10,11 +10,6 @@ const ComponentOverview = () => import('@/views/overview/overview.vue')
 const HomePage = () => import('@/views/home/index.vue')
 
 const Docs = () => import('@/views/docs/docs.vue')
-const Tech = () => import('@/views/tech/index.vue')
-const Article = () => import('@/views/tech/components/article-detail-page.vue')
-const Video = () => import('@/views/tech/components/video-page.vue')
-const Write = () => import('@/views/tech/components/article-page.vue')
-const Events = () => import('@/views/tech/components/activity-page.vue')
 const About = () => import('@/views/about/index.vue')
 const Developing = () => import('@/views/developing/index.vue')
 const Tools = () => import('@/views/tools/index.vue')
@@ -112,44 +107,6 @@ export const rootRoutes = [
                 mdPath: getI18n(mdPath)
               }
             }
-          },
-          {
-            path: 'tech',
-            name: 'tech',
-            component: Tech,
-            children: [
-              {
-                path: 'write',
-                name: 'write',
-                component: Write,
-                meta: { title: geneTitle('技术文章') }
-              },
-              {
-                path: 'video',
-                name: 'video',
-                component: Video,
-                meta: { title: geneTitle('视频课程') }
-              },
-              {
-                path: 'events',
-                name: 'events',
-                component: Events,
-                meta: { title: geneTitle('热门活动') }
-              }
-            ],
-            meta: { title: geneTitle('技术学院') }
-          },
-          {
-            path: `article/:mode/:type/:serial`,
-            name: 'article',
-            component: Article,
-            meta: { title: geneTitle('文章详情') }
-          },
-          {
-            path: `article/:mode/:serial`,
-            name: 'articleWithoutType',
-            component: Article,
-            meta: { title: geneTitle('文章详情') }
           },
           {
             path: 'about',
