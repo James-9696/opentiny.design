@@ -1,11 +1,10 @@
-<svg viewBox="0 0 121 66" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="121.000000" height="66.000000" fill="none">
+<svg viewBox="0 0 107.34 114.402" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="107.339844" height="114.402344" fill="none" customFrame="#000000">
 	<defs>
-		<linearGradient id="paint_linear_34" x1="132.279678" x2="-63" y1="15.6813889" y2="15.6814432" gradientUnits="userSpaceOnUse">
+		<linearGradient id="paint_linear_0" x1="104.443481" x2="11.0045013" y1="57.1249619" y2="57.1250496" gradientUnits="userSpaceOnUse">
 			<stop stop-color="rgb(210,224,255)" offset="0" stop-opacity="1" />
-			<stop stop-color="rgb(255,255,255)" offset="1" stop-opacity="0" />
+			<stop stop-color="rgb(210,224,255)" offset="1" stop-opacity="0" />
 		</linearGradient>
 	</defs>
-	<rect id="hx_箭头" width="121.000000" height="66.000000" x="0.000000" y="0.000000" />
-	<path id="矢量 650" d="M81.7665 6.0264L81.7665 22.3116C81.7665 22.3116 54.6904 21.9806 38.4988 17.6658C22.3072 13.3511 0 0 0 0L0 66C0 66 22.3091 49.1719 38.5007 44.6165C54.6924 40.0612 81.7665 40.7328 81.7665 40.7328L81.7665 57.8233L121 30.9166L81.7665 6.0264Z" fill="url(#paint_linear_34)" fill-rule="evenodd" />
-	<path id="矢量 650" d="M81.7665 6.0264L121 30.9166L81.7665 57.8233L81.7665 40.7328C81.7665 40.7328 54.6924 40.0612 38.5007 44.6165C22.3091 49.1719 0 66 0 66L0 0C0 0 22.3072 13.3511 38.4988 17.6658C54.6904 21.9806 81.7665 22.3116 81.7665 22.3116L81.7665 6.0264Z" fill-rule="evenodd" stroke="rgb(0,0,0)" stroke-opacity="0" stroke-width="1" />
+	<path id="箭头" d="M71.305 31.1238L71.305 47.0326C71.305 47.0326 56.137 49.0047 38.7007 41.4331C21.2645 33.8615 0.5 1.69531 0.5 1.69531L0.5 112.695C0.5 112.695 21.2644 80.3331 38.7007 72.7C56.1369 65.0669 71.305 67.1121 71.305 67.1121L71.305 83.162L106.5 57.0935L71.305 31.1238Z" fill="url(#paint_linear_0)" fill-rule="evenodd" />
+	<path id="箭头" d="M71.305 31.1238L106.5 57.0935L71.305 83.162L71.305 67.1121C71.305 67.1121 56.1369 65.0669 38.7007 72.7C21.2644 80.3331 0.5 112.695 0.5 112.695L0.5 1.69531C0.5 1.69531 21.2645 33.8615 38.7007 41.4331C56.137 49.0047 71.305 47.0326 71.305 47.0326L71.305 31.1238Z" fill-rule="evenodd" stroke="rgb(0,0,0)" stroke-opacity="0" stroke-width="1" />
 </svg>

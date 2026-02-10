@@ -104,8 +104,8 @@ export default {
   }
   .home-top-banner {
     width: 100%;
-    padding-top: 90px;
-    padding-bottom: 90px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     box-sizing: border-box;
     margin: 0 auto;
     position: relative;
