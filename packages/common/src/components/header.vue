@@ -742,7 +742,7 @@ const toggleTheme = (event: MouseEvent) => {
       left: 0;
       top: 64px;
       width: 100vw;
-      height: 208px;
+      height: auto;
       background-color: #fff;
       box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.08);
       overflow: hidden;
@@ -758,6 +758,7 @@ const toggleTheme = (event: MouseEvent) => {
       }
 
       .dropdown-content {
+          width: auto;
           padding: 32px 0;
           flex-wrap: wrap;
           justify-content: flex-start;
