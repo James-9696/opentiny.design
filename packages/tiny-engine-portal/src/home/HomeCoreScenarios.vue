@@ -175,7 +175,7 @@ export default {
         right: -50%;
         top: 40%;
         width: 120px;
-        height: 66px;
+        height: 85px;
       }
     }
   }

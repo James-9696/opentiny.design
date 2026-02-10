@@ -57,7 +57,7 @@
               <div class="video-overlay-play">
                 <div class="video-overlay-title">{{ i.videoTitle }}</div>
                 <div class="video-overlay-bottom-start">
-                  <img :src="`/img/help/playing${(index % 3) + 1}.svg`" alt="" />
+                  <img :src="`${state.imgPre}img/help/playing${(index % 3) + 1}.svg`" alt="" />
                 </div>
               </div>
             </div>
@@ -312,6 +312,7 @@ export default {
         width: 450px;
         height: 280px;
         cursor: pointer;
+        position: relative;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
@@ -326,7 +327,6 @@ export default {
         }
       }
       .video-overlay {
-        position: relative;
         border-radius: 16px;
         padding: 24px 32px;
         .video-overlay-type {
@@ -348,6 +348,10 @@ export default {
           }
           .video-overlay-bottom-start {
             display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             width: 60px;
             height: 60px;
             backdrop-filter: blur(20px);
@@ -521,7 +525,6 @@ export default {
           border-radius: 12px;
         }
         .video-overlay {
-          position: relative;
           border-radius: 16px;
           padding: 17px 22px;
           .video-overlay-play {
@@ -538,6 +541,9 @@ export default {
               width: 42px;
               height: 42px;
               display: block;
+              img {
+                animation: none;
+              }
             }
           }
         }
