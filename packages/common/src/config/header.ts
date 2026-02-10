@@ -114,11 +114,11 @@ const menuItems = [
         github: 'https://github.com/opentiny/playground'
       },
       {
-        title: 'TinyPro',
-        desc: '中后台解决方案',
-        href: 'https://opentiny.design/vue-pro/pages',
-        logo: tinyPro,
-        github: 'https://github.com/opentiny/tiny-pro'
+        title: 'NEXT-SDKs',
+        desc: '开发套件',
+        href: 'https://playground.opentiny.design/next-sdk',
+        logo: tinySdks,
+        github: 'https://github.com/opentiny/playground'
       },
       {
         title: 'GenUI-SDK',
@@ -127,6 +127,13 @@ const menuItems = [
         logo: GenuiSdk,
         github: 'https://github.com/opentiny/playground'
       },
+      {
+        title: 'TinyPro',
+        desc: '中后台解决方案',
+        href: 'https://opentiny.design/vue-pro/pages',
+        logo: tinyPro,
+        github: 'https://github.com/opentiny/tiny-pro'
+      }
     ]
   },
   {
@@ -163,6 +170,13 @@ const menuItems = [
         github: 'https://github.com/opentiny/docs'
       },
       {
+        title: 'GenUI-SDK',
+        desc: '生成式UI',
+        href: 'https://docs.opentiny.design/genui-sdk/guide/quick-start',
+        logo: GenuiSdk,
+        github: 'https://github.com/opentiny/docs'
+      },
+      {
         title: 'TinyPro',
         desc: '中后台解决方案',
         href: 'https://opentiny.design/vue-pro',
@@ -175,13 +189,6 @@ const menuItems = [
         href: 'https://opentiny.github.io/tiny-editor',
         logo: tinyEditor,
         github: 'https://github.com/opentiny/tiny-editor'
-      },
-      {
-        title: 'GenUI-SDK',
-        desc: '生成式UI',
-        href: 'https://docs.opentiny.design/genui-sdk/guide/quick-start',
-        logo: GenuiSdk,
-        github: 'https://github.com/opentiny/docs'
       }
     ]
   },
