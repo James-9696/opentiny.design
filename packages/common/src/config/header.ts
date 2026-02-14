@@ -42,42 +42,42 @@ const menuItems = [
   },
   {
     name: 'TinyRobot',
-    url: '/tiny-robot',
+    url: `${basePath}tiny-robot`,
     children: [],
     logo: tinyRobot,
     desc: '智能助手',
     hide: false,
     github: 'https://github.com/opentiny/tiny-robot',
-    isUnderline: createIsUnderline('/tiny-robot')
+    isUnderline: createIsUnderline(`${basePath}tiny-robot`)
   },
   {
     name: 'NEXT-SDKs',
     desc: '开发套件',
-    url: '/next-sdk',
+    url: `${basePath}next-sdk`,
     logo: tinySdks,
     hide: false,
     github: 'https://github.com/opentiny/next-sdk',
     children: [],
-    isUnderline: createIsUnderline('/next-sdk')
+    isUnderline: createIsUnderline(`${basePath}next-sdk`)
   },
   {
     name: 'GenUI-SDK',
     desc: '生成式UI',
-    url: '/genui-sdk',
+    url: `${basePath}genui-sdk`,
     logo: GenuiSdk,
     hide: false,
     github: 'https://github.com/opentiny/genui-sdk',
     children: [],
-    isUnderline: createIsUnderline('/genui-sdk')
+    isUnderline: createIsUnderline(`${basePath}genui-sdk`)
   },
   {
     name: 'AI-Extension',
     desc: 'AI 浏览器扩展插件',
-    url: '/ai-extension',
+    url: `${basePath}ai-extension`,
     logo: tinyAi,
     hide: false,
     github: 'https://github.com/opentiny/tiny-robot',
-    isUnderline: createIsUnderline('/ai-extension')
+    isUnderline: createIsUnderline(`${basePath}ai-extension`)
   },
   {
     type: 'other',
