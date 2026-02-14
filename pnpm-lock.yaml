@@ -544,6 +544,12 @@ importers:
       '@opentiny/vue-icon':
         specifier: ^3.28.3
         version: 3.28.3
+      github-markdown-css:
+        specifier: ~5.6.1
+        version: 5.6.1
+      prismjs:
+        specifier: ^1.28.0
+        version: 1.30.0
       vue:
         specifier: ^3.3.11
         version: 3.4.38(typescript@5.9.3)
@@ -553,7 +559,7 @@ importers:
     devDependencies:
       '@vitejs/plugin-vue':
         specifier: ^4.5.2
-        version: 4.6.2(vite@5.4.21(@types/node@17.0.45)(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1))(vue@3.4.38(typescript@5.9.3))
+        version: 4.6.2(vite@5.4.21(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1))(vue@3.4.38(typescript@5.9.3))
       '@vueuse/head':
         specifier: ~2.0.0
         version: 2.0.0(vue@3.4.38(typescript@5.9.3))
@@ -601,7 +607,7 @@ importers:
         version: 5.4.21(@types/node@17.0.45)(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1)
       vite-plugin-md:
         specifier: ^0.22.4
-        version: 0.22.5(@vitejs/plugin-vue@4.6.2(vite@5.4.21(@types/node@17.0.45)(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1))(vue@3.4.38(typescript@5.9.3)))(happy-dom@8.9.0)(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1)(vite@5.4.21(@types/node@17.0.45)(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1))
+        version: 0.22.5(@vitejs/plugin-vue@4.6.2(vite@5.4.21(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1))(vue@3.4.38(typescript@5.9.3)))(happy-dom@8.9.0)(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1)(vite@5.4.21(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1))
       vue-tsc:
         specifier: ^1.8.25
         version: 1.8.27(typescript@5.9.3)
@@ -665,7 +671,7 @@ importers:
     devDependencies:
       '@babel/eslint-parser':
         specifier: ^7.22.15
-        version: 7.28.5(@babel/core@7.18.13)(eslint@8.57.1)
+        version: 7.28.5(@babel/core@7.28.5)(eslint@8.57.1)
       '@esbuild-plugins/node-globals-polyfill':
         specifier: ^0.2.3
         version: 0.2.3(esbuild@0.21.5)
@@ -1090,8 +1096,8 @@ packages:
   '@docsearch/css@3.9.0':
     resolution: {integrity: sha512-cQbnVbq0rrBwNAKegIac/t6a8nWoUAn8frnkLFW6YARaRmAQr5/Eoe6Ln2fqkUCZ40KpdrKbpSAmgrkviOxuWA==}
 
-  '@docsearch/css@4.5.3':
-    resolution: {integrity: sha512-kUpHaxn0AgI3LQfyzTYkNUuaFY4uEz/Ym9/N/FvyDE+PzSgZsCyDH9jE49B6N6f1eLCm9Yp64J9wENd6vypdxA==}
+  '@docsearch/css@4.5.4':
+    resolution: {integrity: sha512-gzO4DJwyM9c4YEPHwaLV1nUCDC2N6yoh0QJj44dce2rcfN71mB+jpu3+F+Y/KMDF1EKV0C3m54leSWsraE94xg==}
 
   '@docsearch/js@3.9.0':
     resolution: {integrity: sha512-4bKHcye6EkLgRE8ze0vcdshmEqxeiJM77M0JXjef7lrYZfSlMunrDOCqyLjiZyo1+c0BhUqA2QpFartIjuHIjw==}
@@ -5177,56 +5183,67 @@ packages:
     resolution: {integrity: sha512-k9oD15soC/Ln6d2Wv/JOFPzZXIAIFLp6B+i14KhxAfnq76ajt0EhYc5YPeX6W1xJkAdItcVT+JhKl1QZh44/qw==}
     cpu: [arm]
     os: [linux]
+    libc: [glibc]
 
   '@rollup/rollup-linux-arm-musleabihf@4.53.3':
     resolution: {integrity: sha512-vTNlKq+N6CK/8UktsrFuc+/7NlEYVxgaEgRXVUVK258Z5ymho29skzW1sutgYjqNnquGwVUObAaxae8rZ6YMhg==}
     cpu: [arm]
     os: [linux]
+    libc: [musl]
 
   '@rollup/rollup-linux-arm64-gnu@4.53.3':
     resolution: {integrity: sha512-RGrFLWgMhSxRs/EWJMIFM1O5Mzuz3Xy3/mnxJp/5cVhZ2XoCAxJnmNsEyeMJtpK+wu0FJFWz+QF4mjCA7AUQ3w==}
     cpu: [arm64]
     os: [linux]
+    libc: [glibc]
 
   '@rollup/rollup-linux-arm64-musl@4.53.3':
     resolution: {integrity: sha512-kASyvfBEWYPEwe0Qv4nfu6pNkITLTb32p4yTgzFCocHnJLAHs+9LjUu9ONIhvfT/5lv4YS5muBHyuV84epBo/A==}
     cpu: [arm64]
     os: [linux]
+    libc: [musl]
 
   '@rollup/rollup-linux-loong64-gnu@4.53.3':
     resolution: {integrity: sha512-JiuKcp2teLJwQ7vkJ95EwESWkNRFJD7TQgYmCnrPtlu50b4XvT5MOmurWNrCj3IFdyjBQ5p9vnrX4JM6I8OE7g==}
     cpu: [loong64]
     os: [linux]
+    libc: [glibc]
 
   '@rollup/rollup-linux-ppc64-gnu@4.53.3':
     resolution: {integrity: sha512-EoGSa8nd6d3T7zLuqdojxC20oBfNT8nexBbB/rkxgKj5T5vhpAQKKnD+h3UkoMuTyXkP5jTjK/ccNRmQrPNDuw==}
     cpu: [ppc64]
     os: [linux]
+    libc: [glibc]
 
   '@rollup/rollup-linux-riscv64-gnu@4.53.3':
     resolution: {integrity: sha512-4s+Wped2IHXHPnAEbIB0YWBv7SDohqxobiiPA1FIWZpX+w9o2i4LezzH/NkFUl8LRci/8udci6cLq+jJQlh+0g==}
     cpu: [riscv64]
     os: [linux]
+    libc: [glibc]
 
   '@rollup/rollup-linux-riscv64-musl@4.53.3':
     resolution: {integrity: sha512-68k2g7+0vs2u9CxDt5ktXTngsxOQkSEV/xBbwlqYcUrAVh6P9EgMZvFsnHy4SEiUl46Xf0IObWVbMvPrr2gw8A==}
     cpu: [riscv64]
     os: [linux]
+    libc: [musl]
 
   '@rollup/rollup-linux-s390x-gnu@4.53.3':
     resolution: {integrity: sha512-VYsFMpULAz87ZW6BVYw3I6sWesGpsP9OPcyKe8ofdg9LHxSbRMd7zrVrr5xi/3kMZtpWL/wC+UIJWJYVX5uTKg==}
     cpu: [s390x]
     os: [linux]
+    libc: [glibc]
 
   '@rollup/rollup-linux-x64-gnu@4.53.3':
     resolution: {integrity: sha512-3EhFi1FU6YL8HTUJZ51imGJWEX//ajQPfqWLI3BQq4TlvHy4X0MOr5q3D2Zof/ka0d5FNdPwZXm3Yyib/UEd+w==}
     cpu: [x64]
     os: [linux]
+    libc: [glibc]
 
   '@rollup/rollup-linux-x64-musl@4.53.3':
     resolution: {integrity: sha512-eoROhjcc6HbZCJr+tvVT8X4fW3/5g/WkGvvmwz/88sDtSJzO7r/blvoBDgISDiCjDRZmHpwud7h+6Q9JxFwq1Q==}
     cpu: [x64]
     os: [linux]
+    libc: [musl]
 
   '@rollup/rollup-openharmony-arm64@4.53.3':
     resolution: {integrity: sha512-OueLAWgrNSPGAdUdIjSWXw+u/02BRTcnfw9PN41D2vq/JSEPnJnVuBgw18VkN8wcd4fjUs+jFHVM4t9+kBSNLw==}
@@ -11582,9 +11599,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@babel/eslint-parser@7.28.5(@babel/core@7.18.13)(eslint@8.57.1)':
+  '@babel/eslint-parser@7.28.5(@babel/core@7.28.5)(eslint@8.57.1)':
     dependencies:
-      '@babel/core': 7.18.13
+      '@babel/core': 7.28.5
       '@nicolo-ribaudo/eslint-scope-5-internals': 5.1.1-v1
       eslint: 8.57.1
       eslint-visitor-keys: 2.1.0
@@ -11904,7 +11921,7 @@ snapshots:
 
   '@docsearch/css@3.9.0': {}
 
-  '@docsearch/css@4.5.3': {}
+  '@docsearch/css@4.5.4': {}
 
   '@docsearch/js@3.9.0(@algolia/client-search@5.44.0)(search-insights@2.17.3)':
     dependencies:
@@ -15404,7 +15421,7 @@ snapshots:
     dependencies:
       '@docsearch/css': 3.9.0
       '@docsearch/js': 3.9.0(@algolia/client-search@5.44.0)(search-insights@2.17.3)
-      '@docsearch/react': '@docsearch/css@4.5.3'
+      '@docsearch/react': '@docsearch/css@4.5.4'
       '@opentiny/tiny-vue-mcp': 0.0.3
       '@opentiny/utils': 3.27.0
       '@opentiny/vue': 3.27.0
@@ -23238,14 +23255,14 @@ snapshots:
     dependencies:
       '@babel/core': 7.28.5
       postcss: 7.0.39
-      postcss-syntax: 0.36.2(postcss-html@0.36.0(postcss-syntax@0.36.2)(postcss@7.0.39))(postcss-jsx@0.36.4(postcss-syntax@0.36.2(postcss@7.0.39))(postcss@7.0.39))(postcss-less@3.1.4)(postcss-markdown@0.36.0)(postcss-scss@2.1.1)(postcss@7.0.39)
+      postcss-syntax: 0.36.2(postcss-html@0.36.0(postcss-syntax@0.36.2)(postcss@7.0.39))(postcss-jsx@0.36.4)(postcss-less@3.1.4)(postcss-markdown@0.36.0)(postcss-scss@2.1.1)(postcss@7.0.39)
     transitivePeerDependencies:
       - supports-color
 
   '@stylelint/postcss-markdown@0.36.2(postcss-syntax@0.36.2)(postcss@7.0.39)':
     dependencies:
       postcss: 7.0.39
-      postcss-syntax: 0.36.2(postcss-html@0.36.0(postcss-syntax@0.36.2)(postcss@7.0.39))(postcss-jsx@0.36.4(postcss-syntax@0.36.2(postcss@7.0.39))(postcss@7.0.39))(postcss-less@3.1.4)(postcss-markdown@0.36.0)(postcss-scss@2.1.1)(postcss@7.0.39)
+      postcss-syntax: 0.36.2(postcss-html@0.36.0(postcss-syntax@0.36.2)(postcss@7.0.39))(postcss-jsx@0.36.4)(postcss-less@3.1.4)(postcss-markdown@0.36.0)(postcss-scss@2.1.1)(postcss@7.0.39)
       remark: 13.0.0
       unist-util-find-all-after: 3.0.2
     transitivePeerDependencies:
@@ -23691,7 +23708,7 @@ snapshots:
       vite: 4.5.14(@types/node@17.0.45)(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1)
       vue: 3.4.21(typescript@5.9.3)
 
-  '@vitejs/plugin-vue@4.6.2(vite@5.4.21(@types/node@17.0.45)(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1))(vue@3.4.38(typescript@5.9.3))':
+  '@vitejs/plugin-vue@4.6.2(vite@5.4.21(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1))(vue@3.4.38(typescript@5.9.3))':
     dependencies:
       vite: 5.4.21(@types/node@17.0.45)(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1)
       vue: 3.4.38(typescript@5.9.3)
@@ -24222,14 +24239,14 @@ snapshots:
 
   '@xtuc/long@4.2.2': {}
 
-  '@yankeeinlondon/builder-api@1.4.1(@vitejs/plugin-vue@4.6.2(vite@5.4.21(@types/node@17.0.45)(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1))(vue@3.4.38(typescript@5.9.3)))(happy-dom@8.9.0)(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1)(vite@5.4.21(@types/node@17.0.45)(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1))':
+  '@yankeeinlondon/builder-api@1.4.1(@vitejs/plugin-vue@4.6.2(vite@5.4.21(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1))(vue@3.4.38(typescript@5.9.3)))(happy-dom@8.9.0)(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1)(vite@5.4.21(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1))':
     dependencies:
       '@types/markdown-it': 12.2.3
       '@yankeeinlondon/happy-wrapper': 2.10.1(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1)
       fp-ts: 2.16.11
       inferred-types: 0.37.6(happy-dom@8.9.0)(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1)
       markdown-it: 13.0.2
-      vite-plugin-md: 0.22.5(@vitejs/plugin-vue@4.6.2(vite@5.4.21(@types/node@17.0.45)(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1))(vue@3.4.38(typescript@5.9.3)))(happy-dom@8.9.0)(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1)(vite@5.4.21(@types/node@17.0.45)(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1))
+      vite-plugin-md: 0.22.5(@vitejs/plugin-vue@4.6.2(vite@5.4.21(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1))(vue@3.4.38(typescript@5.9.3)))(happy-dom@8.9.0)(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1)(vite@5.4.21(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1))
     transitivePeerDependencies:
       - '@edge-runtime/vm'
       - '@vitejs/plugin-vue'
@@ -28089,7 +28106,7 @@ snapshots:
     dependencies:
       htmlparser2: 3.10.1
       postcss: 7.0.39
-      postcss-syntax: 0.36.2(postcss-html@0.36.0(postcss-syntax@0.36.2)(postcss@7.0.39))(postcss-jsx@0.36.4(postcss-syntax@0.36.2(postcss@7.0.39))(postcss@7.0.39))(postcss-less@3.1.4)(postcss-markdown@0.36.0)(postcss-scss@2.1.1)(postcss@7.0.39)
+      postcss-syntax: 0.36.2(postcss-html@0.36.0(postcss-syntax@0.36.2)(postcss@7.0.39))(postcss-jsx@0.36.4)(postcss-less@3.1.4)(postcss-markdown@0.36.0)(postcss-scss@2.1.1)(postcss@7.0.39)
 
   postcss-import@15.1.0(postcss@8.5.6):
     dependencies:
@@ -28107,7 +28124,7 @@ snapshots:
     dependencies:
       '@babel/core': 7.28.5
       postcss: 7.0.39
-      postcss-syntax: 0.36.2(postcss-html@0.36.0(postcss-syntax@0.36.2)(postcss@7.0.39))(postcss-jsx@0.36.4(postcss-syntax@0.36.2(postcss@7.0.39))(postcss@7.0.39))(postcss-less@3.1.4)(postcss-markdown@0.36.0)(postcss-scss@2.1.1)(postcss@7.0.39)
+      postcss-syntax: 0.36.2(postcss-html@0.36.0(postcss-syntax@0.36.2)(postcss@7.0.39))(postcss-jsx@0.36.4)(postcss-less@3.1.4)(postcss-markdown@0.36.0)(postcss-scss@2.1.1)(postcss@7.0.39)
     transitivePeerDependencies:
       - supports-color
 
@@ -28125,7 +28142,7 @@ snapshots:
   postcss-markdown@0.36.0(postcss-syntax@0.36.2(postcss@7.0.39))(postcss@7.0.39):
     dependencies:
       postcss: 7.0.39
-      postcss-syntax: 0.36.2(postcss-html@0.36.0(postcss-syntax@0.36.2)(postcss@7.0.39))(postcss-jsx@0.36.4(postcss-syntax@0.36.2(postcss@7.0.39))(postcss@7.0.39))(postcss-less@3.1.4)(postcss-markdown@0.36.0)(postcss-scss@2.1.1)(postcss@7.0.39)
+      postcss-syntax: 0.36.2(postcss-html@0.36.0(postcss-syntax@0.36.2)(postcss@7.0.39))(postcss-jsx@0.36.4)(postcss-less@3.1.4)(postcss-markdown@0.36.0)(postcss-scss@2.1.1)(postcss@7.0.39)
       remark: 10.0.1
       unist-util-find-all-after: 1.0.5
 
@@ -28192,7 +28209,7 @@ snapshots:
       lodash: 4.17.21
       postcss: 7.0.39
 
-  postcss-syntax@0.36.2(postcss-html@0.36.0(postcss-syntax@0.36.2)(postcss@7.0.39))(postcss-jsx@0.36.4(postcss-syntax@0.36.2(postcss@7.0.39))(postcss@7.0.39))(postcss-less@3.1.4)(postcss-markdown@0.36.0)(postcss-scss@2.1.1)(postcss@7.0.39):
+  postcss-syntax@0.36.2(postcss-html@0.36.0(postcss-syntax@0.36.2)(postcss@7.0.39))(postcss-jsx@0.36.4)(postcss-less@3.1.4)(postcss-markdown@0.36.0)(postcss-scss@2.1.1)(postcss@7.0.39):
     dependencies:
       postcss: 7.0.39
     optionalDependencies:
@@ -29225,7 +29242,7 @@ snapshots:
       postcss-sass: 0.4.4
       postcss-scss: 2.1.1
       postcss-selector-parser: 6.1.2
-      postcss-syntax: 0.36.2(postcss-html@0.36.0(postcss-syntax@0.36.2)(postcss@7.0.39))(postcss-jsx@0.36.4(postcss-syntax@0.36.2(postcss@7.0.39))(postcss@7.0.39))(postcss-less@3.1.4)(postcss-markdown@0.36.0)(postcss-scss@2.1.1)(postcss@7.0.39)
+      postcss-syntax: 0.36.2(postcss-html@0.36.0(postcss-syntax@0.36.2)(postcss@7.0.39))(postcss-jsx@0.36.4)(postcss-less@3.1.4)(postcss-markdown@0.36.0)(postcss-scss@2.1.1)(postcss@7.0.39)
       postcss-value-parser: 4.2.0
       resolve-from: 5.0.0
       slash: 3.0.0
@@ -29324,7 +29341,7 @@ snapshots:
       postcss-sass: 0.3.5
       postcss-scss: 2.1.1
       postcss-selector-parser: 3.1.2
-      postcss-syntax: 0.36.2(postcss-html@0.36.0(postcss-syntax@0.36.2)(postcss@7.0.39))(postcss-jsx@0.36.4(postcss-syntax@0.36.2(postcss@7.0.39))(postcss@7.0.39))(postcss-less@3.1.4)(postcss-markdown@0.36.0)(postcss-scss@2.1.1)(postcss@7.0.39)
+      postcss-syntax: 0.36.2(postcss-html@0.36.0(postcss-syntax@0.36.2)(postcss@7.0.39))(postcss-jsx@0.36.4)(postcss-less@3.1.4)(postcss-markdown@0.36.0)(postcss-scss@2.1.1)(postcss@7.0.39)
       postcss-value-parser: 3.3.1
       resolve-from: 4.0.0
       signal-exit: 3.0.7
@@ -30162,10 +30179,10 @@ snapshots:
       - '@vue/composition-api'
       - vue
 
-  vite-plugin-md@0.22.5(@vitejs/plugin-vue@4.6.2(vite@5.4.21(@types/node@17.0.45)(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1))(vue@3.4.38(typescript@5.9.3)))(happy-dom@8.9.0)(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1)(vite@5.4.21(@types/node@17.0.45)(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1)):
+  vite-plugin-md@0.22.5(@vitejs/plugin-vue@4.6.2(vite@5.4.21(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1))(vue@3.4.38(typescript@5.9.3)))(happy-dom@8.9.0)(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1)(vite@5.4.21(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1)):
     dependencies:
-      '@vitejs/plugin-vue': 4.6.2(vite@5.4.21(@types/node@17.0.45)(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1))(vue@3.4.38(typescript@5.9.3))
-      '@yankeeinlondon/builder-api': 1.4.1(@vitejs/plugin-vue@4.6.2(vite@5.4.21(@types/node@17.0.45)(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1))(vue@3.4.38(typescript@5.9.3)))(happy-dom@8.9.0)(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1)(vite@5.4.21(@types/node@17.0.45)(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1))
+      '@vitejs/plugin-vue': 4.6.2(vite@5.4.21(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1))(vue@3.4.38(typescript@5.9.3))
+      '@yankeeinlondon/builder-api': 1.4.1(@vitejs/plugin-vue@4.6.2(vite@5.4.21(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1))(vue@3.4.38(typescript@5.9.3)))(happy-dom@8.9.0)(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1)(vite@5.4.21(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1))
       '@yankeeinlondon/gray-matter': 6.2.1(happy-dom@8.9.0)(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1)
       '@yankeeinlondon/happy-wrapper': 2.10.1(less@4.4.2)(sugarss@2.0.0)(terser@5.44.1)
       markdown-it: 13.0.2
