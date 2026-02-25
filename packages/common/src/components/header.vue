@@ -547,57 +547,7 @@ const toggleTheme = (event: MouseEvent) => {
 
 .hand {
   cursor: pointer;
-}
-
-@media screen and (max-width: 1890px) {
-  .opentiny-design-header {
-      display: grid;
-      grid-template-columns: 1fr auto;  // 两列：左侧内容 + 右侧nav-right
-      grid-template-rows: auto auto;      // 两行
-      align-items: center;
-
-    .nav-left {
-      margin-top: 16px;
-      grid-column: 1;  // 第1列
-      grid-row: 1;     // 第1行
-    }
-
-    .nav-center {
-      grid-column: 1 / -1;  // 跨越所有列
-      grid-row: 2;          // 第2行
-      margin-left: 0 !important;  // 移除原来的左边距
-      flex-wrap: wrap;      // 允许内部换行
-      margin: 16px 0; // 上下间距10px
-    }
-
-    .nav-right {
-      margin-top: 16px;
-      grid-column: 2;  // 第2列
-      grid-row: 1;     // 第1行
-      margin-left: 0;  // 移除auto margin
-      .top-menu {
-        .dropdown-menu {
-          .dropdown-content-title {
-            margin: 10px 0 0 112px;
-          }
-          .dropdown-100 {
-            margin-left: 96px;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 1855px) {
-  .opentiny-design-header {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     --top-height: 64px;
-     height: var(--top-height);
-  }
-}   
+} 
 
 .opentiny-design-header {
      top: 0;
@@ -720,7 +670,6 @@ const toggleTheme = (event: MouseEvent) => {
 
     
     & .active {
-      // border-bottom: 2px solid #000;
       .dropdown-menu {
         max-height: 290px;
       }
@@ -737,12 +686,11 @@ const toggleTheme = (event: MouseEvent) => {
     // 下拉面板 默认撑满宽度
     .dropdown-menu {
       display: flex;
-      justify-content: center;
       position: absolute;
       left: 0;
       top: 64px;
       width: 100vw;
-      height: 208px;
+      height: auto;
       background-color: #fff;
       box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.08);
       overflow: hidden;
@@ -962,6 +910,83 @@ const toggleTheme = (event: MouseEvent) => {
 
   }
 }
+
+@media screen and (max-width: 1720px) {
+  .opentiny-design-header {
+      display: grid;
+      grid-template-columns: 1fr auto;  // 两列：左侧内容 + 右侧nav-right
+      grid-template-rows: auto auto;      // 两行
+      align-items: center;
+
+    .nav-left {
+      margin-top: 16px;
+      margin-right: 64px;
+      grid-column: 1;  // 第1列
+      grid-row: 1;     // 第1行
+    }
+
+    .nav-center {
+      grid-column: 1 / -1;  // 跨越所有列
+      grid-row: 2;          // 第2行
+      margin-left: 0 !important;  // 移除原来的左边距
+      flex-wrap: wrap;      // 允许内部换行
+      margin: 16px 0; // 上下间距10px
+    }
+
+    .nav-right {
+      margin-top: 16px;
+      grid-column: 2;  // 第2列
+      grid-row: 1;     // 第1行
+      margin-left: 0;  // 移除auto margin
+      .top-menu {
+        .dropdown-menu {
+          .dropdown-content-title {
+            margin: 10px 0 0 112px;
+          }
+          .dropdown-100 {
+            margin-left: 96px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1721px) and (max-width: 1854px) {
+  .opentiny-design-header .nav-center {
+      margin-left: 70px;
+      grid-row: 1; 
+  }
+  .opentiny-design-header {
+    display: grid;
+    align-items: center;
+    .nav-left, .nav-right {
+      grid-row: 1;     // 第1行
+    }
+  }
+} 
+
+@media (min-width: 990px) and (max-width: 1090px) {
+  .opentiny-design-header .nav-center .top-menu {
+    margin-right: 28px;
+  }
+} 
+
+@media (min-width: 821px) and (max-width: 910px) {
+  .opentiny-design-header .nav-center .top-menu {
+    margin-right: 24px;
+  }
+} 
+
+@media screen and (min-width: 1855px) {
+  .opentiny-design-header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     --top-height: 64px;
+     height: var(--top-height);
+  }
+}  
 </style>
 
 <style lang="less">
