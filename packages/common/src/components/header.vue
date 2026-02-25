@@ -558,6 +558,7 @@ const toggleTheme = (event: MouseEvent) => {
      padding: 0 32px;
      background-color: #fff;
      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+     height: 64px;
 
      // 通用样式
      font-family: PingFangSC;
@@ -566,8 +567,8 @@ const toggleTheme = (event: MouseEvent) => {
      font-weight: 400;
      transition: all 0.3s;
   * {
-    box-sizing: border-box;
-  }
+      box-sizing: border-box;
+    }
 
   & {
     .app-logo {
