@@ -978,6 +978,34 @@ const toggleTheme = (event: MouseEvent) => {
   }
 } 
 
+@media screen and (max-width: 1150px) {
+  .opentiny-design-header .nav-right .dropdown-menu .dropdown-content {
+    gap: 0;
+  }
+} 
+
+@media (min-width: 985px) and (max-width: 1050px) {
+  .opentiny-design-header .nav-right .top-menu .dropdown-menu {
+    .dropdown-100 {
+      margin-left: 40px;
+    }
+    .dropdown-content-title {
+      margin: 10px 0 0 56px;
+    }
+  }
+} 
+
+@media (min-width: 960px) and (max-width: 984px) {
+  .opentiny-design-header .nav-right .top-menu .dropdown-menu {
+    .dropdown-100 {
+      margin-left: 20px;
+    }
+    .dropdown-content-title {
+      margin: 10px 0 0 36px;
+    }
+  }
+}
+
 @media screen and (min-width: 1855px) {
   .opentiny-design-header {
      display: flex;
