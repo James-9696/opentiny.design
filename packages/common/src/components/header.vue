@@ -516,7 +516,7 @@ const toggleTheme = (event: MouseEvent) => {
 
 .dropdown-100 {
   width: 100%;
-  margin-left: 296px;
+  margin-left: 269px;
 }
 
 // flex-center
@@ -703,11 +703,12 @@ const toggleTheme = (event: MouseEvent) => {
         font-size: 16px;
         font-weight: 400;
         line-height: 14px;
-        margin: 60px 0 0 312px;
+        margin: 16px 0 0 285px;
       }
 
       .dropdown-content {
-          padding: 32px 0;
+          width: auto;
+          padding: 16px 0;
           flex-wrap: wrap;
           justify-content: flex-start;
           gap: 24px;
@@ -942,7 +943,7 @@ const toggleTheme = (event: MouseEvent) => {
       .top-menu {
         .dropdown-menu {
           .dropdown-content-title {
-            margin: 10px 0 0 112px;
+            margin: 16px 0 0 112px;
           }
           .dropdown-100 {
             margin-left: 96px;
@@ -966,6 +967,114 @@ const toggleTheme = (event: MouseEvent) => {
     }
   }
 } 
+
+@media (min-width: 1740px) and (max-width: 1750px) {
+  .opentiny-design-header .nav-right .dropdown-menu .dropdown-content-title {
+    margin-left: 290px;
+  }
+  .dropdown-100 {
+    margin-left: 275px;
+  }
+} 
+
+@media (min-width: 1751px) and (max-width: 1760px) {
+  .opentiny-design-header .nav-right .dropdown-menu .dropdown-content-title {
+    margin-left: 295px;
+  }
+  .dropdown-100 {
+    margin-left: 279px;
+  }
+} 
+
+@media (min-width: 1761px) and (max-width: 1770px) {
+  .opentiny-design-header .nav-right .dropdown-menu .dropdown-content-title {
+    margin-left: 297px;
+  }
+  .dropdown-100 {
+    margin-left: 282px;
+  }
+}
+
+@media (min-width: 1771px) and (max-width: 1780px) {
+  .opentiny-design-header .nav-right .dropdown-menu .dropdown-content-title {
+    margin-left: 301px;
+  }
+  .dropdown-100 {
+    margin-left: 286px;
+  }
+}
+
+@media (min-width: 1781px) and (max-width: 1790px) {
+  .opentiny-design-header .nav-right .dropdown-menu .dropdown-content-title {
+    margin-left: 304px;
+  }
+  .dropdown-100 {
+    margin-left: 289px;
+  }
+}
+
+@media (min-width: 1791px) and (max-width: 1800px) {
+  .opentiny-design-header .nav-right .dropdown-menu .dropdown-content-title {
+    margin-left: 308px;
+  }
+  .dropdown-100 {
+    margin-left: 293px;
+  }
+}
+
+@media (min-width: 1801px) and (max-width: 1812px) {
+  .opentiny-design-header .nav-right .dropdown-menu .dropdown-content-title {
+    margin-left: 311px;
+  }
+  .dropdown-100 {
+    margin-left: 295px;
+  }
+}
+
+@media (min-width: 1813px) and (max-width: 1825px) {
+  .opentiny-design-header .nav-right .dropdown-menu .dropdown-content-title {
+    margin-left: 316px;
+  }
+  .dropdown-100 {
+    margin-left: 300px;
+  }
+}
+
+@media (min-width: 1826px) and (max-width: 1840px) {
+  .opentiny-design-header .nav-right .dropdown-menu .dropdown-content-title {
+    margin-left: 320px;
+  }
+  .dropdown-100 {
+    margin-left: 304px;
+  }
+}
+
+@media (min-width: 1841px) and (max-width: 1851px) {
+  .opentiny-design-header .nav-right .dropdown-menu .dropdown-content-title {
+    margin-left: 323px;
+  }
+  .dropdown-100 {
+    margin-left: 307px;
+  }
+}
+
+@media (min-width: 1852px) and (max-width: 1854px) {
+  .opentiny-design-header .nav-right .dropdown-menu .dropdown-content-title {
+    margin-left: 326px;
+  }
+  .dropdown-100 {
+    margin-left: 310px;
+  }
+}
+
+@media (min-width: 1855px) {
+  .opentiny-design-header .nav-right .dropdown-menu .dropdown-content-title {
+    margin-left: 310px;
+  }
+  .dropdown-100 {
+    margin-left: 295px;
+  }
+}
 
 @media (min-width: 990px) and (max-width: 1090px) {
   .opentiny-design-header .nav-center .top-menu {
