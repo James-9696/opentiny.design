@@ -1049,7 +1049,7 @@ const toggleTheme = (event: MouseEvent) => {
   }
 }
 
-@media (min-width: 1841px) and (max-width: 1851px) {
+@media (min-width: 1841px) and (max-width: 1849px) {
   .opentiny-design-header .nav-right .dropdown-menu .dropdown-content-title {
     margin-left: 323px;
   }
@@ -1058,7 +1058,7 @@ const toggleTheme = (event: MouseEvent) => {
   }
 }
 
-@media (min-width: 1852px) and (max-width: 1854px) {
+@media (min-width: 1850px) and (max-width: 1854px) {
   .opentiny-design-header .nav-right .dropdown-menu .dropdown-content-title {
     margin-left: 326px;
   }
