@@ -516,7 +516,7 @@ const toggleTheme = (event: MouseEvent) => {
 
 .dropdown-100 {
   width: 100%;
-  margin-left: 296px;
+  margin-left: 269px;
 }
 
 // flex-center
@@ -547,57 +547,7 @@ const toggleTheme = (event: MouseEvent) => {
 
 .hand {
   cursor: pointer;
-}
-
-@media screen and (max-width: 1890px) {
-  .opentiny-design-header {
-      display: grid;
-      grid-template-columns: 1fr auto;  // 两列：左侧内容 + 右侧nav-right
-      grid-template-rows: auto auto;      // 两行
-      align-items: center;
-
-    .nav-left {
-      margin-top: 16px;
-      grid-column: 1;  // 第1列
-      grid-row: 1;     // 第1行
-    }
-
-    .nav-center {
-      grid-column: 1 / -1;  // 跨越所有列
-      grid-row: 2;          // 第2行
-      margin-left: 0 !important;  // 移除原来的左边距
-      flex-wrap: wrap;      // 允许内部换行
-      margin: 16px 0; // 上下间距10px
-    }
-
-    .nav-right {
-      margin-top: 16px;
-      grid-column: 2;  // 第2列
-      grid-row: 1;     // 第1行
-      margin-left: 0;  // 移除auto margin
-      .top-menu {
-        .dropdown-menu {
-          .dropdown-content-title {
-            margin: 10px 0 0 112px;
-          }
-          .dropdown-100 {
-            margin-left: 96px;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 1855px) {
-  .opentiny-design-header {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     --top-height: 64px;
-     height: var(--top-height);
-  }
-}   
+} 
 
 .opentiny-design-header {
      top: 0;
@@ -608,6 +558,7 @@ const toggleTheme = (event: MouseEvent) => {
      padding: 0 32px;
      background-color: #fff;
      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+     height: 64px;
 
      // 通用样式
      font-family: PingFangSC;
@@ -616,8 +567,8 @@ const toggleTheme = (event: MouseEvent) => {
      font-weight: 400;
      transition: all 0.3s;
   * {
-    box-sizing: border-box;
-  }
+      box-sizing: border-box;
+    }
 
   & {
     .app-logo {
@@ -720,7 +671,6 @@ const toggleTheme = (event: MouseEvent) => {
 
     
     & .active {
-      // border-bottom: 2px solid #000;
       .dropdown-menu {
         max-height: 290px;
       }
@@ -737,12 +687,11 @@ const toggleTheme = (event: MouseEvent) => {
     // 下拉面板 默认撑满宽度
     .dropdown-menu {
       display: flex;
-      justify-content: center;
       position: absolute;
       left: 0;
       top: 64px;
       width: 100vw;
-      height: 208px;
+      height: auto;
       background-color: #fff;
       box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.08);
       overflow: hidden;
@@ -754,11 +703,12 @@ const toggleTheme = (event: MouseEvent) => {
         font-size: 16px;
         font-weight: 400;
         line-height: 14px;
-        margin: 60px 0 0 312px;
+        margin: 16px 0 0 285px;
       }
 
       .dropdown-content {
-          padding: 32px 0;
+          width: auto;
+          padding: 16px 0;
           flex-wrap: wrap;
           justify-content: flex-start;
           gap: 24px;
@@ -962,6 +912,219 @@ const toggleTheme = (event: MouseEvent) => {
 
   }
 }
+
+@media screen and (max-width: 1720px) {
+  .opentiny-design-header {
+      display: grid;
+      grid-template-columns: 1fr auto;  // 两列：左侧内容 + 右侧nav-right
+      grid-template-rows: auto auto;      // 两行
+      align-items: center;
+
+    .nav-left {
+      margin-top: 16px;
+      margin-right: 64px;
+      grid-column: 1;  // 第1列
+      grid-row: 1;     // 第1行
+    }
+
+    .nav-center {
+      grid-column: 1 / -1;  // 跨越所有列
+      grid-row: 2;          // 第2行
+      margin-left: 0 !important;  // 移除原来的左边距
+      flex-wrap: wrap;      // 允许内部换行
+      margin: 16px 0; // 上下间距10px
+    }
+
+    .nav-right {
+      margin-top: 16px;
+      grid-column: 2;  // 第2列
+      grid-row: 1;     // 第1行
+      margin-left: 0;  // 移除auto margin
+      .top-menu {
+        .dropdown-menu {
+          .dropdown-content-title {
+            margin: 16px 0 0 112px;
+          }
+          .dropdown-100 {
+            margin-left: 96px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1721px) and (max-width: 1854px) {
+  .opentiny-design-header .nav-center {
+      margin-left: 70px;
+      grid-row: 1; 
+  }
+  .opentiny-design-header {
+    display: grid;
+    align-items: center;
+    .nav-left, .nav-right {
+      grid-row: 1;     // 第1行
+    }
+  }
+} 
+
+@media (min-width: 1740px) and (max-width: 1750px) {
+  .opentiny-design-header .nav-right .dropdown-menu .dropdown-content-title {
+    margin-left: 290px;
+  }
+  .dropdown-100 {
+    margin-left: 275px;
+  }
+} 
+
+@media (min-width: 1751px) and (max-width: 1760px) {
+  .opentiny-design-header .nav-right .dropdown-menu .dropdown-content-title {
+    margin-left: 295px;
+  }
+  .dropdown-100 {
+    margin-left: 279px;
+  }
+} 
+
+@media (min-width: 1761px) and (max-width: 1770px) {
+  .opentiny-design-header .nav-right .dropdown-menu .dropdown-content-title {
+    margin-left: 297px;
+  }
+  .dropdown-100 {
+    margin-left: 282px;
+  }
+}
+
+@media (min-width: 1771px) and (max-width: 1780px) {
+  .opentiny-design-header .nav-right .dropdown-menu .dropdown-content-title {
+    margin-left: 301px;
+  }
+  .dropdown-100 {
+    margin-left: 286px;
+  }
+}
+
+@media (min-width: 1781px) and (max-width: 1790px) {
+  .opentiny-design-header .nav-right .dropdown-menu .dropdown-content-title {
+    margin-left: 304px;
+  }
+  .dropdown-100 {
+    margin-left: 289px;
+  }
+}
+
+@media (min-width: 1791px) and (max-width: 1800px) {
+  .opentiny-design-header .nav-right .dropdown-menu .dropdown-content-title {
+    margin-left: 308px;
+  }
+  .dropdown-100 {
+    margin-left: 293px;
+  }
+}
+
+@media (min-width: 1801px) and (max-width: 1812px) {
+  .opentiny-design-header .nav-right .dropdown-menu .dropdown-content-title {
+    margin-left: 311px;
+  }
+  .dropdown-100 {
+    margin-left: 295px;
+  }
+}
+
+@media (min-width: 1813px) and (max-width: 1825px) {
+  .opentiny-design-header .nav-right .dropdown-menu .dropdown-content-title {
+    margin-left: 316px;
+  }
+  .dropdown-100 {
+    margin-left: 300px;
+  }
+}
+
+@media (min-width: 1826px) and (max-width: 1840px) {
+  .opentiny-design-header .nav-right .dropdown-menu .dropdown-content-title {
+    margin-left: 320px;
+  }
+  .dropdown-100 {
+    margin-left: 304px;
+  }
+}
+
+@media (min-width: 1841px) and (max-width: 1849px) {
+  .opentiny-design-header .nav-right .dropdown-menu .dropdown-content-title {
+    margin-left: 323px;
+  }
+  .dropdown-100 {
+    margin-left: 307px;
+  }
+}
+
+@media (min-width: 1850px) and (max-width: 1854px) {
+  .opentiny-design-header .nav-right .dropdown-menu .dropdown-content-title {
+    margin-left: 326px;
+  }
+  .dropdown-100 {
+    margin-left: 310px;
+  }
+}
+
+@media (min-width: 1855px) {
+  .opentiny-design-header .nav-right .dropdown-menu .dropdown-content-title {
+    margin-left: 310px;
+  }
+  .dropdown-100 {
+    margin-left: 295px;
+  }
+}
+
+@media (min-width: 990px) and (max-width: 1090px) {
+  .opentiny-design-header .nav-center .top-menu {
+    margin-right: 28px;
+  }
+} 
+
+@media (min-width: 821px) and (max-width: 910px) {
+  .opentiny-design-header .nav-center .top-menu {
+    margin-right: 24px;
+  }
+} 
+
+@media screen and (max-width: 1150px) {
+  .opentiny-design-header .nav-right .dropdown-menu .dropdown-content {
+    gap: 0;
+  }
+} 
+
+@media (min-width: 985px) and (max-width: 1050px) {
+  .opentiny-design-header .nav-right .top-menu .dropdown-menu {
+    .dropdown-100 {
+      margin-left: 40px;
+    }
+    .dropdown-content-title {
+      margin: 10px 0 0 56px;
+    }
+  }
+} 
+
+@media (min-width: 960px) and (max-width: 984px) {
+  .opentiny-design-header .nav-right .top-menu .dropdown-menu {
+    .dropdown-100 {
+      margin-left: 20px;
+    }
+    .dropdown-content-title {
+      margin: 10px 0 0 36px;
+    }
+  }
+}
+
+@media screen and (min-width: 1855px) {
+  .opentiny-design-header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     --top-height: 64px;
+     height: var(--top-height);
+  }
+}  
 </style>
 
 <style lang="less">
