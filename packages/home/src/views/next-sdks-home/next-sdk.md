@@ -76,10 +76,12 @@ await server.connect(serverTransport)
 
 安装并使用遥控器组件
 
-```typescript
-// 安装依赖
+```bash
 npm install @opentiny/next-remoter
 
+```
+
+```typescript
 // 在 Vue 中使用
 <template>
   <TinyRemoter v-model:show="show" sessionId="your-session-id" title="我的AI助手" systemPrompt="你是一个智能助手" />
@@ -93,3 +95,4 @@ const show = ref(false)
 </script>
 
 ```
+
