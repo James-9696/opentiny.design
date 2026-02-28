@@ -131,6 +131,8 @@ onUnmounted(() => {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 120px;
+    padding-bottom: 130px;
     .first-screen-content {
       max-width: 682px;
       .first-screen-content-title {
@@ -212,8 +214,6 @@ onUnmounted(() => {
       }
     }
     .first-screen-image {
-      margin-top: 120px;
-      margin-bottom: 130px;
       animation: slideUpFadeIn 0.8s ease forwards;
       img {
         width: 100%;
@@ -228,6 +228,7 @@ onUnmounted(() => {
     background-image: url(@/assets/images/home/tinyrobot_top_mobile_banner.svg);
     .first-screen-wrap {
       flex-direction: column;
+      padding: 0;
       .first-screen-content {
         margin-top: 50px;
         .first-screen-content-title {
