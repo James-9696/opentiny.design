@@ -1,0 +1,113 @@
+<svg viewBox="0 0 48 48.0527" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48.000000" height="48.052734" fill="none" customFrame="#000000">
+	<defs>
+		<linearGradient id="paint_linear_190" x1="44.7541809" x2="4.11354065" y1="2.85664749" y2="45.3990593" gradientUnits="userSpaceOnUse">
+			<stop stop-color="rgb(19,246,53)" offset="0" stop-opacity="1" />
+			<stop stop-color="rgb(19,188,255)" offset="1" stop-opacity="1" />
+		</linearGradient>
+		<radialGradient id="paint_radial_138" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(32.8,-23.2877,23.2877,32.8,16.2602,4.12052)">
+			<stop stop-color="rgb(88,214,245)" offset="0" stop-opacity="0.529411793" />
+			<stop stop-color="rgb(15,207,255)" offset="0.440641403" stop-opacity="0.34117648" />
+			<stop stop-color="rgb(255,255,255)" offset="1" stop-opacity="0" />
+		</radialGradient>
+		<radialGradient id="paint_radial_139" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(36.5117,37.7444,-37.7444,36.5117,41.534,7.23271)">
+			<stop stop-color="rgb(113,233,53)" offset="0" stop-opacity="1" />
+			<stop stop-color="rgb(255,255,255)" offset="1" stop-opacity="0" />
+		</radialGradient>
+		<radialGradient id="paint_radial_140" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-35.4316,32.4796,-32.4796,-35.4316,42.2125,35.9999)">
+			<stop stop-color="rgb(254,217,26)" offset="0" stop-opacity="0.819607854" />
+			<stop stop-color="rgb(255,255,255)" offset="1" stop-opacity="0" />
+		</radialGradient>
+		<radialGradient id="paint_radial_141" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-46.8733,-41.5302,41.5302,-46.8732,6.46983,43.9831)">
+			<stop stop-color="rgb(255,140,44)" offset="0" stop-opacity="0.592156887" />
+			<stop stop-color="rgb(255,255,255)" offset="1" stop-opacity="0" />
+		</radialGradient>
+		<g id="pixso_custom_effect_97">
+			<effect x="0.000000" y="1.000000" visibility="visible" fill="rgb(0,76,128)" fill-opacity="0.149019614" effectType="dropShadow" stdDeviation="2" radius="0" />
+		</g>
+		<filter id="filter_97" width="32.000000" height="22.691406" x="7.000000" y="17.360718" filterUnits="userSpaceOnUse" customEffect="url(#pixso_custom_effect_97)" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix" />
+			<feColorMatrix result="hardAlpha" in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.11111 0 " />
+			<feOffset dx="0.000000" dy="1.000000" in="hardAlpha" />
+			<feGaussianBlur stdDeviation="0.666666687" />
+			<feComposite k2="-1" k3="1" in2="hardAlpha" operator="out" />
+			<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.298039 0 0 0 0 0.501961 0 0 0 0.14902 0 " />
+			<feBlend result="effect_dropShadow_1" in2="BackgroundImageFix" mode="normal" />
+			<feBlend result="shape" in="SourceGraphic" in2="effect_dropShadow_1" mode="normal" />
+		</filter>
+		<linearGradient id="paint_linear_191" x1="20.6618958" x2="16.4284935" y1="26.3448086" y2="30.77631" gradientUnits="userSpaceOnUse">
+			<stop stop-color="rgb(19,246,53)" offset="0" stop-opacity="1" />
+			<stop stop-color="rgb(19,188,255)" offset="1" stop-opacity="1" />
+		</linearGradient>
+		<radialGradient id="paint_radial_142" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(8.4375,7.03124,-7.03124,8.43751,22.1458,23.9694)">
+			<stop stop-color="rgb(88,214,245)" offset="0" stop-opacity="0.529411793" />
+			<stop stop-color="rgb(20,118,255)" offset="0.355827332" stop-opacity="0.800000012" />
+			<stop stop-color="rgb(20,118,255)" offset="0.685414374" stop-opacity="1" />
+			<stop stop-color="rgb(20,174,255)" offset="1" stop-opacity="1" />
+		</radialGradient>
+		<radialGradient id="paint_radial_143" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(3.80331,3.93171,-3.93171,3.80331,20.3265,26.8006)">
+			<stop stop-color="rgb(113,233,53)" offset="0" stop-opacity="1" />
+			<stop stop-color="rgb(255,255,255)" offset="1" stop-opacity="0" />
+		</radialGradient>
+		<radialGradient id="paint_radial_144" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-3.69079,3.38329,-3.38329,-3.69079,20.3971,29.7972)">
+			<stop stop-color="rgb(254,217,26)" offset="0" stop-opacity="0.819607854" />
+			<stop stop-color="rgb(255,255,255)" offset="1" stop-opacity="0" />
+		</radialGradient>
+		<radialGradient id="paint_radial_145" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-4.88263,-4.32606,4.32606,-4.88263,16.6739,30.6288)">
+			<stop stop-color="rgb(255,140,44)" offset="0" stop-opacity="0.592156887" />
+			<stop stop-color="rgb(255,255,255)" offset="1" stop-opacity="0" />
+		</radialGradient>
+		<linearGradient id="paint_linear_192" x1="29.6618958" x2="25.4284935" y1="26.3448086" y2="30.77631" gradientUnits="userSpaceOnUse">
+			<stop stop-color="rgb(19,246,53)" offset="0" stop-opacity="1" />
+			<stop stop-color="rgb(19,188,255)" offset="1" stop-opacity="1" />
+		</linearGradient>
+		<radialGradient id="paint_radial_146" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(8.4375,7.03124,-7.03124,8.43751,31.1458,23.9694)">
+			<stop stop-color="rgb(88,214,245)" offset="0" stop-opacity="0.529411793" />
+			<stop stop-color="rgb(20,118,255)" offset="0.355827332" stop-opacity="0.800000012" />
+			<stop stop-color="rgb(20,118,255)" offset="0.685414374" stop-opacity="1" />
+			<stop stop-color="rgb(20,174,255)" offset="1" stop-opacity="1" />
+		</radialGradient>
+		<radialGradient id="paint_radial_147" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(3.80331,3.93171,-3.93171,3.80331,29.3265,26.8006)">
+			<stop stop-color="rgb(113,233,53)" offset="0" stop-opacity="1" />
+			<stop stop-color="rgb(255,255,255)" offset="1" stop-opacity="0" />
+		</radialGradient>
+		<radialGradient id="paint_radial_148" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-3.69079,3.38329,-3.38329,-3.69079,29.3971,29.7972)">
+			<stop stop-color="rgb(254,217,26)" offset="0" stop-opacity="0.819607854" />
+			<stop stop-color="rgb(255,255,255)" offset="1" stop-opacity="0" />
+		</radialGradient>
+		<radialGradient id="paint_radial_149" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-4.88263,-4.32606,4.32606,-4.88263,25.6739,30.6288)">
+			<stop stop-color="rgb(255,140,44)" offset="0" stop-opacity="0.592156887" />
+			<stop stop-color="rgb(255,255,255)" offset="1" stop-opacity="0" />
+		</radialGradient>
+	</defs>
+	<rect id="hxld-5" width="48.000000" height="48.000000" x="0.000000" y="0.000000" />
+	<rect id="矩形" width="48.000000" height="48.000000" x="0.000000" y="0.052734" rx="11.428572" fill="url(#paint_linear_190)" />
+	<rect id="矩形" width="48.000000" height="48.000000" x="0.000000" y="0.052734" rx="11.428572" fill="url(#paint_radial_138)" fill-opacity="0" />
+	<rect id="矩形" width="48.000000" height="48.000000" x="0.000000" y="0.052734" rx="11.428572" fill="url(#paint_radial_139)" fill-opacity="0" />
+	<rect id="矩形" width="48.000000" height="48.000000" x="0.000000" y="0.052734" rx="11.428572" fill="url(#paint_radial_140)" fill-opacity="0" />
+	<rect id="矩形" width="48.000000" height="48.000000" x="0.000000" y="0.052734" rx="11.428572" fill="url(#paint_radial_141)" fill-opacity="0" />
+	<rect id="矩形" width="47.000000" height="47.000000" x="0.500000" y="0.552734" rx="10.928572" stroke="rgb(210,45,38)" stroke-opacity="0" stroke-width="1" />
+	<g id="ic_ict_robot-机器人_3D图标">
+		<path id="路径-3" d="M11.9167 21.9365L11.9167 22.8318L10.1667 22.8318C9.52233 22.8318 9 23.3784 9 24.0527L9 23.1574C9 22.4831 9.52233 21.9365 10.1667 21.9365L11.9167 21.9365ZM34.0833 21.9365L35.8333 21.9365C36.4777 21.9365 37 22.4831 37 23.1574L37 24.0527C37 23.3784 36.4777 22.8318 35.8333 22.8318L34.0833 22.8318L34.0833 21.9365ZM30.5833 17.0527C32.5163 17.0527 34.0833 18.6926 34.0833 20.7155L34.0833 21.9365L34.0829 21.8759C34.052 19.8809 32.497 18.553 30.5833 18.553L15.4167 18.553C13.4837 18.553 11.9167 19.9136 11.9167 21.9365L11.9167 20.7155C11.9167 18.6926 13.4837 17.0527 15.4167 17.0527L30.5833 17.0527Z" fill="rgb(255,255,255)" fill-opacity="0.600000024" fill-rule="nonzero" />
+		<g id="路径">
+			<g filter="url(#filter_97)">
+				<path id="path-4" d="M34.0833 22.0036L34.0833 22.8941L35.8333 22.8941C36.4777 22.8941 37 23.4377 37 24.1083L37 30.1712C37 30.8418 36.4777 31.3855 35.8333 31.3855L34.0833 31.3855L34.0833 33.4093C34.0833 35.4212 32.5163 37.0521 30.5833 37.0521L15.4167 37.0521C13.4837 37.0521 11.9167 35.4212 11.9167 33.4093L11.9167 31.3855L10.1667 31.3855C9.52233 31.3855 9 30.8418 9 30.1712L9 24.1083C9 23.4377 9.52233 22.8941 10.1667 22.8941L11.9167 22.8941L11.9167 22.0036C11.9167 19.9917 13.4837 18.3607 15.4167 18.3607L30.5833 18.3607C32.5163 18.3607 34.0833 19.9917 34.0833 22.0036Z" fill="rgb(255,255,255)" fill-opacity="0.899999976" fill-rule="nonzero" />
+			</g>
+		</g>
+		<path id="矩形-2" d="M22.125 15.9727C22.125 15.9727 22.5625 16.1662 23 16.1662C23.4375 16.1662 23.875 15.9727 23.875 15.9727L23.875 18.8733C23.875 18.9699 23.4832 19.0483 23 19.0483C22.5168 19.0483 22.125 18.9699 22.125 18.8733L22.125 15.9727Z" fill="rgb(255,255,255)" fill-rule="nonzero" />
+		<circle id="椭圆形" cx="23.0006504" cy="12.9684238" r="2.91666627" fill="rgb(255,255,255)" fill-opacity="0.600000024" />
+		<circle id="椭圆形" cx="18.5" cy="28.5527344" r="2.5" fill="url(#paint_linear_191)" fill-opacity="0" />
+		<circle id="椭圆形" cx="18.5" cy="28.5527344" r="2.5" fill="url(#paint_radial_142)" fill-opacity="0" />
+		<circle id="椭圆形" cx="18.5" cy="28.5527344" r="2.5" fill="url(#paint_radial_143)" fill-opacity="0" />
+		<circle id="椭圆形" cx="18.5" cy="28.5527344" r="2.5" fill="url(#paint_radial_144)" fill-opacity="0" />
+		<circle id="椭圆形" cx="18.5" cy="28.5527344" r="2.5" fill="url(#paint_radial_145)" fill-opacity="0" />
+		<circle id="椭圆形" cx="18.5" cy="28.5527344" r="2.5" fill="rgb(19,228,117)" />
+		<circle id="椭圆形" cx="18.5" cy="28.5527344" r="2" stroke="rgb(210,45,38)" stroke-opacity="0" stroke-width="1" />
+		<circle id="椭圆形" cx="27.5" cy="28.5527344" r="2.5" fill="url(#paint_linear_192)" fill-opacity="0" />
+		<circle id="椭圆形" cx="27.5" cy="28.5527344" r="2.5" fill="url(#paint_radial_146)" fill-opacity="0" />
+		<circle id="椭圆形" cx="27.5" cy="28.5527344" r="2.5" fill="url(#paint_radial_147)" fill-opacity="0" />
+		<circle id="椭圆形" cx="27.5" cy="28.5527344" r="2.5" fill="url(#paint_radial_148)" fill-opacity="0" />
+		<circle id="椭圆形" cx="27.5" cy="28.5527344" r="2.5" fill="url(#paint_radial_149)" fill-opacity="0" />
+		<circle id="椭圆形" cx="27.5" cy="28.5527344" r="2.5" fill="rgb(19,228,117)" />
+		<circle id="椭圆形" cx="27.5" cy="28.5527344" r="2" stroke="rgb(210,45,38)" stroke-opacity="0" stroke-width="1" />
+	</g>
+</svg>
