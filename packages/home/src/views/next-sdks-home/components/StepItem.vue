@@ -19,9 +19,9 @@
             :class="`language-${codeBlock.lang}`"
           ><code :class="`language-${codeBlock.lang}`" v-html="codeBlock.highlightedCode"></code></pre>
           <tiny-tooltip
-            :content="copiedStates ? '已复制' : ''"
+            :content="copiedStates[`${stepIndex}-${codeIndex}`] ? '已复制' : '复制代码'"
             placement="top"
-            :visible="copiedStates"
+            :visible="copiedStates[`${stepIndex}-${codeIndex}`]"
             effect="light"
           >
             <TinyIconCopySolid
@@ -110,11 +110,17 @@ const parseMarkdown = () => {
   let body = lines.slice(1).join("\n");
 
   const codeBlocks = [];
+  const codeBlockRanges = []; // 存储代码块的位置范围，用于后续移除
 
-  // 仅处理第一个代码块：```lang\n ... \n```
-  const fenceStart = body.indexOf("```");
-  if (fenceStart !== -1) {
+  // 先提取所有代码块：```lang\n ... \n```
+  let searchStart = 0;
+  while (true) {
+    const fenceStart = body.indexOf("```", searchStart);
+    if (fenceStart === -1) break;
+
     const langLineEnd = body.indexOf("\n", fenceStart + 3);
+    if (langLineEnd === -1) break;
+
     const fenceHeader = body.slice(fenceStart + 3, langLineEnd).trim();
     // 简单判断语言：首个和最后一个步骤是 bash，其余默认为 ts
     const lang =
@@ -122,26 +128,35 @@ const parseMarkdown = () => {
       (props.stepIndex === 0 || props.stepIndex === 3 ? "bash" : "typescript");
 
     const fenceEnd = body.indexOf("```", langLineEnd + 1);
-    if (fenceEnd !== -1) {
-      const code = body.slice(langLineEnd + 1, fenceEnd).trim();
-      if (code) {
-        try {
-          const language = Prism.languages[lang] || Prism.languages.markup || {};
-          const highlightedCode = Prism.highlight(code, language, lang);
-          codeBlocks.push({ lang, code, highlightedCode });
-        } catch {
-          const escapedCode = code
-            .replace(/&/g, "&amp;")
-            .replace(/</g, "&lt;")
-            .replace(/>/g, "&gt;")
-            .replace(/"/g, "&quot;")
-            .replace(/'/g, "&#39;");
-          codeBlocks.push({ lang, code, highlightedCode: escapedCode });
-        }
+    if (fenceEnd === -1) break;
+
+    const code = body.slice(langLineEnd + 1, fenceEnd).trim();
+    if (code) {
+      try {
+        const language = Prism.languages[lang] || Prism.languages.markup || {};
+        const highlightedCode = Prism.highlight(code, language, lang);
+        codeBlocks.push({ lang, code, highlightedCode });
+      } catch {
+        const escapedCode = code
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#39;");
+        codeBlocks.push({ lang, code, highlightedCode: escapedCode });
       }
-      // 去掉代码块部分，保留其余内容用于 markdown 渲染
-      body = body.slice(0, fenceStart) + body.slice(fenceEnd + 3);
+      // 记录代码块的位置范围
+      codeBlockRanges.push({ start: fenceStart, end: fenceEnd + 3 });
     }
+
+    // 更新搜索起始位置
+    searchStart = fenceEnd + 3;
+  }
+
+  // 从后往前移除代码块，避免索引变化
+  for (let i = codeBlockRanges.length - 1; i >= 0; i--) {
+    const range = codeBlockRanges[i];
+    body = body.slice(0, range.start) + body.slice(range.end);
   }
 
   const processedContent = body.trim();
@@ -156,8 +171,8 @@ const parseMarkdown = () => {
 
 const step = ref(parseMarkdown());
 
-// 跟踪每个代码块的复制状态
-const copiedStates = ref(false);
+// 跟踪每个代码块的复制状态，使用对象存储每个代码块的独立状态
+const copiedStates = ref({});
 
 // 监听 markdownContent 或 stepIndex 变化，重新解析
 watch([() => props.markdownContent, () => props.stepIndex], () => {
@@ -198,10 +213,10 @@ const copyCode = async (code, index, codeIndex) => {
       document.body.removeChild(textArea);
     }
 
-    // 显示复制成功提示
-    copiedStates.value = true;
+    // 显示复制成功提示（针对当前代码块）
+    copiedStates.value[key] = true;
     setTimeout(() => {
-      copiedStates.value = false;
+      copiedStates.value[key] = false;
     }, 2000);
   } catch (err) {
     console.error("复制失败:", err);
@@ -210,6 +225,10 @@ const copyCode = async (code, index, codeIndex) => {
 </script>
 
 <style scoped lang="less">
+.feature-section {
+  flex-direction: column;
+}
+
 .step-item {
   position: relative;
   background: #fff;
@@ -261,7 +280,7 @@ const copyCode = async (code, index, codeIndex) => {
   }
 
   .step-title {
-    line-height: 24px;
+    margin-bottom: 8px;
     margin-left: 44px;
   }
 }
@@ -270,9 +289,9 @@ const copyCode = async (code, index, codeIndex) => {
   padding-left: 44px;
   .step-description {
     font-size: 16px;
-    line-height: 1.8;
     color: #808080;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
+    line-height: 1.5;
 
     :deep(p) {
       word-break: break-all;
@@ -353,7 +372,6 @@ const copyCode = async (code, index, codeIndex) => {
   .step-content {
     .step-description {
       font-size: 14px;
-      margin-bottom: 12px;
     }
   }
 

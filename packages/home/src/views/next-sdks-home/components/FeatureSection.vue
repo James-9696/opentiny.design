@@ -1,5 +1,5 @@
 <script setup>
-import { defineProps } from "vue";
+import { defineProps, computed } from "vue";
 
 const props = defineProps({
   // Feature 配置对象
@@ -7,17 +7,21 @@ const props = defineProps({
     type: Object,
   },
 });
+
+// 使用 computed 确保背景图片被正确追踪
+const backgroundImageStyle = computed(() => {
+  if (props.feature?.backgroundImage) {
+    return { backgroundImage: `url(${props.feature.backgroundImage})` };
+  }
+  return {};
+});
 </script>
 
 <template>
   <section
     class="feature-section section"
     :class="[feature.bgClass || 'bg-tech-1', 'bg-color-1']"
-    :style="
-      feature.backgroundImage
-        ? { backgroundImage: `url(${feature.backgroundImage})` }
-        : {}
-    "
+    :style="backgroundImageStyle"
   >
     <div
       class="feature-content pad-t40 fade-in-up"
@@ -41,15 +45,8 @@ const props = defineProps({
 @import "../common.less";
 
 /* FeatureSection 特有样式 */
-.feature-section {
-  min-height: 100vh;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.section {
+  min-height: 75vh;
 }
 
 .feature-content {
@@ -68,8 +65,6 @@ const props = defineProps({
 }
 
 .feature-text {
-  color: var(--text-primary);
-
   .title {
     font-size: 40px;
     letter-spacing: 2px;
@@ -87,7 +82,7 @@ const props = defineProps({
 
   .btn {
     background: transparent;
-    padding: 10px 24px;
+    padding: 12px 24px;
     font-size: 14px;
   }
 }
