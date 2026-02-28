@@ -114,6 +114,13 @@ const menuItems = [
         github: 'https://github.com/opentiny/playground'
       },
       {
+        title: 'GenUI-SDK',
+        desc: '生成式UI',
+        href: 'https://playground.opentiny.design/genui-sdk',
+        logo: GenuiSdk,
+        github: 'https://github.com/opentiny/playground'
+      },
+      {
         title: 'TinyPro',
         desc: '中后台解决方案',
         href: 'https://opentiny.design/vue-pro/pages',
@@ -153,6 +160,13 @@ const menuItems = [
         desc: '开发套件',
         href: 'https://docs.opentiny.design/next-sdk/guide',
         logo: tinySdks,
+        github: 'https://github.com/opentiny/docs'
+      },
+      {
+        title: 'GenUI-SDK',
+        desc: '生成式UI',
+        href: 'https://docs.opentiny.design/genui-sdk/guide/quick-start',
+        logo: GenuiSdk,
         github: 'https://github.com/opentiny/docs'
       },
       {
