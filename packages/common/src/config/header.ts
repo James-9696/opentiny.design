@@ -114,13 +114,6 @@ const menuItems = [
         github: 'https://github.com/opentiny/playground'
       },
       {
-        title: 'NEXT-SDKs',
-        desc: '开发套件',
-        href: 'https://playground.opentiny.design/next-sdk',
-        logo: tinySdks,
-        github: 'https://github.com/opentiny/playground'
-      },
-      {
         title: 'GenUI-SDK',
         desc: '生成式UI',
         href: 'https://playground.opentiny.design/genui-sdk',
