@@ -19,6 +19,7 @@
     position: relative;
     overflow: hidden;
     display: flex;
+    padding: 30px;
     justify-content: center;
     align-items: center;
   }
@@ -107,17 +108,20 @@
 
   /* ==================== 公共文本样式 ==================== */
   .title {
-    font-size: 50px;
+    font-size: 52px;
     font-weight: 700;
     color: #191919;
-    letter-spacing: 5px;
-    line-height: 1.2;
-    padding-bottom: 20px;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    padding-bottom: 32px;
+    .title-us {
+      font-size: 56px;
+    }
   }
 
   .subtitle {
-    font-size: 44px;
-    padding-bottom: 20px;
+    font-size: 50px;
+    padding-bottom: 48px;
     line-height: 1.5;
     background: linear-gradient(90deg, #cb43a8 10%, #2c5fef 50%);
     -webkit-background-clip: text;
@@ -128,8 +132,8 @@
   }
 
   .description {
-    font-size: 20px;
-    padding-bottom: 30px;
+    font-size: 18px;
+    padding-bottom: 48px;
     line-height: 2;
     color: #a0a0a0;
     letter-spacing: 2px;
@@ -143,10 +147,11 @@
   }
 
   .btn {
-    padding: 16px 40px;
+    padding: 12px 44px;
+    line-height: 24px;
     border-radius: 30px;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 400;
     text-decoration: none;
     cursor: pointer;
     letter-spacing: 1px;
@@ -168,22 +173,15 @@
   }
 
   .btn.secondary {
-    background: rgba(255, 255, 255, 0.8);
     color: #191919;
     border: 1px solid #191919;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   }
 
   .btn.secondary:hover {
-    background: white;
     transform: translateY(-3px);
     border-color: #191919;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  }
-
-  /* ==================== Feature 相关样式 ==================== */
-  .feature-title {
-    font-size: 36px;
   }
 
   .feature-sub-title {
@@ -205,7 +203,7 @@
     position: relative;
     z-index: 1;
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: space-between;
     max-width: 1400px;
     width: 100%;
@@ -214,14 +212,7 @@
 
   .feature-text {
     flex: 1;
-    color: var(--text-primary);
-    padding: 0 30px;
-
-    .description {
-      font-size: 16px;
-      letter-spacing: 2px;
-      color: #808080;
-    }
+    padding: 0 20px;
   }
 
   .feature-visual {
@@ -278,21 +269,17 @@
     }
 
     .title {
-      font-size: 24px;
+      font-size: 28px;
       letter-spacing: 3px;
     }
 
     .subtitle {
-      font-size: 32px;
+      font-size: 26px;
       letter-spacing: 3px;
     }
 
     .description {
       font-size: 16px;
-    }
-
-    .feature-title {
-      font-size: 30px;
     }
   }
 
@@ -307,7 +294,7 @@
     }
 
     .title {
-      font-size: 32px;
+      font-size: 28px;
       letter-spacing: 2px;
       padding-bottom: 15px;
     }
@@ -333,10 +320,6 @@
       font-size: 14px;
     }
 
-    .feature-title {
-      font-size: 28px;
-    }
-
     .feature-sub-title {
       font-size: 18px;
       padding-bottom: 0px;
@@ -349,30 +332,47 @@
     }
 
     .title {
-      font-size: 28px;
+      font-size: 22px;
       letter-spacing: 1px;
+      .title-us {
+        font-size: 24px;
+      }
+    }
+
+    .floating-img {
+      width: 100%;
+      animation: none;
+      transition: none;
     }
 
     .subtitle {
-      font-size: 22px;
+      font-size: 20px;
       letter-spacing: 1px;
     }
 
     .description {
-      font-size: 14px;
+      font-size: 16px;
       letter-spacing: 0px;
+      padding-left: 15px;
+      padding-right: 15px;
     }
 
     .feature-title {
-      font-size: 24px;
+      font-size: 20px;
     }
 
     .feature-sub-title {
       font-size: 16px;
     }
 
+    .feature-text-description {
+      font-size: 14px;
+    }
+
     .btn {
-      padding: 12px 25px;
+      padding: 12px 24px;
+      font-size: 14px;
+      line-height: 1;
     }
   }
 }

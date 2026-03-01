@@ -1,151 +1,155 @@
 /* ==================== 公共样式 ==================== */
+/* 使用 .next-sdks-home 作为根选择器进行 CSS 隔离，并对齐 tiny-vue-home 的字号/间距体系 */
 
-/* 工具类 */
-.pad-b40 {
-  padding-bottom: 40px !important;
-}
+.next-sdks-home {
+  /* 工具类 */
+  .pad-b40 {
+    padding-bottom: 40px !important;
+  }
 
-.mar-t40 {
-  margin-top: 40px !important;
-}
+  .mar-t40 {
+    margin-top: 40px !important;
+  }
 
-.pad-t40 {
-  padding-top: 40px !important;
-}
+  .pad-t40 {
+    padding-top: 40px !important;
+  }
 
-/* 通用布局 */
-.section {
-  min-height: 100vh;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+  /* 通用布局 */
+  .section {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-.content-around {
-  justify-content: space-around;
-}
+  .content-around {
+    justify-content: space-around;
+    flex-direction: column;
+  }
 
-.text-center {
-  text-align: center;
-}
+  .text-center {
+    text-align: center;
+  }
 
-/* 背景类 */
-.bg-color-1 {
-  background: #f7fbfe;
-}
+  /* 背景类 */
+  .bg-color-1 {
+    background: #f7fbfe;
+  }
 
-.bg-tech-1 {
-  background-size: cover;
-  background-position: center;
-}
+  .bg-tech-1 {
+    background-size: cover;
+    background-position: center;
+  }
 
-.bg-tech-2 {
-  background-size: cover;
-  background-position: center;
-}
+  .bg-tech-2 {
+    background-size: cover;
+    background-position: center;
+  }
 
-/* 通用文字样式 */
-.title {
-  font-size: 50px;
-  font-weight: 700;
-  color: #191919;
-  letter-spacing: 5px;
-  line-height: 1.2;
-  padding-bottom: 20px;
-}
+  /* 通用文字样式（对齐 tiny-vue-home） */
+  .title {
+    font-size: 52px;
+    font-weight: 600;
+    color: #191919;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    padding-bottom: 32px;
+    .title-us {
+      font-size: 56px;
+    }
+  }
 
-.subtitle {
-  font-size: 44px;
-  padding-bottom: 20px;
-  line-height: 1.5;
-  background: linear-gradient(90deg, #cb43a8 10%, #2c5fef 50%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  letter-spacing: 5px;
-  -webkit-text-fill-color: transparent;
-  font-weight: 700;
-}
+  .subtitle {
+    font-size: 50px;
+    padding-bottom: 48px;
+    line-height: 1.5;
+    background: linear-gradient(90deg, #cb43a8 10%, #2c5fef 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    letter-spacing: 5px;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+  }
 
-.description {
-  font-size: 20px;
-  padding-bottom: 30px;
-  line-height: 2;
-  color: #a0a0a0;
-  letter-spacing: 3px;
-  font-weight: 400;
-}
+  .description {
+    font-size: 18px;
+    padding-bottom: 48px;
+    line-height: 2;
+    color: #a0a0a0;
+    letter-spacing: 2px;
+    font-weight: 400;
+  }
 
-.feature-title {
-  font-size: 36px;
-}
+  .feature-title {
+    font-size: 36px;
+  }
 
-.feature-sub-title {
-  font-size: 20px;
-  letter-spacing: 2px;
-  padding-bottom: 0;
-}
+  .feature-sub-title {
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding-bottom: 0;
+  }
 
-.title-logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding-bottom: 20px;
-}
+  /* 按钮样式（对齐 tiny-vue-home） */
+  .cta-group {
+    display: flex;
+    gap: 30px;
+  }
 
-/* 按钮样式 */
-.btn {
-  padding: 16px 48px;
-  border-radius: 30px;
-  font-size: 19px;
-  text-decoration: none;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  position: relative;
-  overflow: hidden;
-}
+  .btn {
+    padding: 12px 44px;
+    line-height: 24px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+  }
 
-.btn.primary {
-  background: #191919;
-  color: white;
-  border: none;
-  box-shadow: 0 10px 25px rgba(94, 124, 226, 0.3);
-}
+  .btn.primary {
+    background: #191919;
+    color: white;
+    border: none;
+    box-shadow: 0 10px 25px rgba(94, 124, 226, 0.3);
+  }
 
-.btn.primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 35px rgba(94, 124, 226, 0.5);
-}
+  .btn.primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(94, 124, 226, 0.5);
+  }
 
-.btn.secondary {
-  background: transparent;
-  color: #191919;
-  border: 1px solid #191919;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-}
+  .btn.secondary {
+    background: transparent;
+    color: #191919;
+    border: 1px solid #191919;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
 
-.btn.secondary:hover {
-  transform: translateY(-3px);
-  border-color: #191919;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
+  .btn.secondary:hover {
+    transform: translateY(-3px);
+    border-color: #191919;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
 
-/* 动画效果 */
-.fade-in-up {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
+  /* 动画效果 */
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
 
-.fade-in-up.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+  .fade-in-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
 @keyframes fadeInUp {
   from {
@@ -186,12 +190,12 @@
 /* 平板横屏 (1024px - 1440px) */
 @media (max-width: 1024px) {
   .title {
-    font-size: 24px;
+    font-size: 28px;
     letter-spacing: 3px;
   }
 
   .subtitle {
-    font-size: 32px;
+    font-size: 26px;
     letter-spacing: 3px;
   }
 
@@ -199,9 +203,6 @@
     font-size: 16px;
   }
 
-  .feature-title {
-    font-size: 30px;
-  }
 }
 
 /* 平板竖屏 / 大手机 (768px - 1024px) */
@@ -216,7 +217,7 @@
   }
 
   .title {
-    font-size: 32px;
+    font-size: 28px;
     letter-spacing: 2px;
     padding-bottom: 15px;
   }
@@ -231,13 +232,15 @@
     padding-bottom: 20px;
   }
 
+  .cta-group {
+    gap: 15px;
+    width: 100%;
+    justify-content: center;
+  }
+
   .btn {
     padding: 14px 30px;
     font-size: 14px;
-  }
-
-  .feature-title {
-    font-size: 28px;
   }
 
   .feature-sub-title {
@@ -261,31 +264,32 @@
   }
 
   .btn {
-    padding: 10px 20px;
-    font-size: 12px;
+    padding: 12px 24px;
+    font-size: 14px;
+    line-height: 1;
   }
 
   .description {
     letter-spacing: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .title {
-    font-size: 28px;
+    font-size: 22px;
     letter-spacing: 1px;
+    .title-us {
+      font-size: 24px;
+    }
   }
 
   .subtitle {
-    font-size: 22px;
+    font-size: 20px;
     letter-spacing: 1px;
-  }
-
-  .feature-title {
-    font-size: 24px;
   }
 
   .feature-sub-title {
     font-size: 16px;
   }
 }
-
-
+}

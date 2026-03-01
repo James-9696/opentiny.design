@@ -78,14 +78,27 @@ export default defineConfig(({ command, mode }) => {
       'process.env': { TINY_MODE: 'pc' }
     },
     base: process.env.VITE_BASE || process.env.VITE_EnvName || '/',
+    // 确保静态资源被正确包含
+    assetsInclude: ['**/*.webp', '**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.svg', '**/*.gif'],
     build: {
       outDir: `../../dist/home`,
       commonjsOptions: {
         transformMixedEsModules: true
       },
       emptyOutDir: false,
+      // 确保静态资源被正确处理
+      assetsInlineLimit: 4096, // 小于 4KB 的图片会被内联为 base64
       rollupOptions: {
         output: {
+          // 确保静态资源文件名包含 hash，便于缓存
+          assetFileNames: (assetInfo) => {
+            const info = assetInfo.name.split('.')
+            const ext = info[info.length - 1]
+            if (/png|jpe?g|svg|gif|tiff|bmp|ico|webp/i.test(ext)) {
+              return `assets/images/[name]-[hash][extname]`
+            }
+            return `assets/[name]-[hash][extname]`
+          },
           manualChunks(id) {
             if (id.includes('/genui-sdk/sites/homepage/web/dist/')) {
               const rel = id.split('/genui-sdk/sites/homepage/web/dist/')[1]
