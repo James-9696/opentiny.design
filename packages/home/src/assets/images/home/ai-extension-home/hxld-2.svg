@@ -1,0 +1,51 @@
+<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48.000000" height="48.000000" fill="none">
+	<defs>
+		<linearGradient id="paint_linear_184" x1="43.889431" x2="4.94215012" y1="3.6870842" y2="44.4569016" gradientUnits="userSpaceOnUse">
+			<stop stop-color="rgb(19,246,53)" offset="0" stop-opacity="1" />
+			<stop stop-color="rgb(19,188,255)" offset="1" stop-opacity="1" />
+		</linearGradient>
+		<radialGradient id="paint_radial_118" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(31.4333,-22.3174,22.3174,31.4333,16.5827,4.8983)">
+			<stop stop-color="rgb(88,214,245)" offset="0" stop-opacity="0.529411793" />
+			<stop stop-color="rgb(15,207,255)" offset="0.440641403" stop-opacity="0.34117648" />
+			<stop stop-color="rgb(255,255,255)" offset="1" stop-opacity="0" />
+		</radialGradient>
+		<radialGradient id="paint_radial_119" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(34.9904,36.1717,-36.1717,34.9904,40.8034,7.8808)">
+			<stop stop-color="rgb(113,233,53)" offset="0" stop-opacity="1" />
+			<stop stop-color="rgb(255,255,255)" offset="1" stop-opacity="0" />
+		</radialGradient>
+		<radialGradient id="paint_radial_120" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-33.9552,31.1263,-31.1263,-33.9552,41.4536,35.4493)">
+			<stop stop-color="rgb(254,217,26)" offset="0" stop-opacity="0.819607854" />
+			<stop stop-color="rgb(255,255,255)" offset="1" stop-opacity="0" />
+		</radialGradient>
+		<radialGradient id="paint_radial_121" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-44.9202,-39.7998,39.7997,-44.9202,7.20025,43.1)">
+			<stop stop-color="rgb(255,140,44)" offset="0" stop-opacity="0.592156887" />
+			<stop stop-color="rgb(255,255,255)" offset="1" stop-opacity="0" />
+		</radialGradient>
+		<radialGradient id="paint_radial_122" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-22.9099,0,0,-19.6166,24,37)">
+			<stop stop-color="rgb(80,159,245)" offset="0" stop-opacity="1" />
+			<stop stop-color="rgb(169,210,253)" offset="1" stop-opacity="1" />
+		</radialGradient>
+		<radialGradient id="paint_radial_123" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-23.4824,0,0,-23.5792,24,27)">
+			<stop stop-color="rgb(19,220,144)" offset="0" stop-opacity="1" />
+			<stop stop-color="rgb(208,253,227)" offset="1" stop-opacity="1" />
+		</radialGradient>
+		<linearGradient id="paint_linear_185" x1="24" x2="24" y1="27" y2="47" gradientUnits="userSpaceOnUse">
+			<stop stop-color="rgb(255,255,255)" offset="0" stop-opacity="1" />
+			<stop stop-color="rgb(255,255,255)" offset="1" stop-opacity="0" />
+		</linearGradient>
+	</defs>
+	<rect id="hxld-2" width="48.000000" height="48.000000" x="0.000000" y="0.000000" />
+	<g id="ic_digital_-power_property_assessment-资产盘点_质感图标">
+		<rect id="矩形" width="48.000000" height="48.000000" x="0.000000" y="0.000000" />
+		<rect id="矩形" width="46.000000" height="46.000000" x="1.000000" y="1.000000" rx="11.428572" fill="url(#paint_linear_184)" />
+		<rect id="矩形" width="46.000000" height="46.000000" x="1.000000" y="1.000000" rx="11.428572" fill="url(#paint_radial_118)" fill-opacity="0" />
+		<rect id="矩形" width="46.000000" height="46.000000" x="1.000000" y="1.000000" rx="11.428572" fill="url(#paint_radial_119)" fill-opacity="0" />
+		<rect id="矩形" width="46.000000" height="46.000000" x="1.000000" y="1.000000" rx="11.428572" fill="url(#paint_radial_120)" fill-opacity="0" />
+		<rect id="矩形" width="46.000000" height="46.000000" x="1.000000" y="1.000000" rx="11.428572" fill="url(#paint_radial_121)" fill-opacity="0" />
+		<rect id="矩形" width="45.000000" height="45.000000" x="1.500000" y="1.500000" rx="10.928572" stroke="rgb(210,45,38)" stroke-opacity="0" stroke-width="1" />
+		<path id="path7" d="M24 14L24 26M29 15L19 15M29 20L19 20M23.5 14L20.5 9.03857M24.5 14L27.5 9.03857" opacity="0.800000012" stroke="rgb(255,255,255)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+		<path id="path" d="M18 27L2 27C1.44772 27 1 27.4477 1 28L1 40C1 43.866 4.13401 47 8 47L40 47C43.866 47 47 43.866 47 40L47 28C47 27.4477 46.5523 27 46 27L30 27C29.4477 27 29 27.4477 29 28C29 30.7614 26.7614 33 24 33C21.2386 33 19 30.7614 19 28C19 27.4477 18.5523 27 18 27Z" fill="url(#paint_radial_122)" fill-rule="evenodd" />
+		<path id="path" d="M18 27L2 27C1.44772 27 1 27.4477 1 28L1 40C1 43.866 4.13401 47 8 47L40 47C43.866 47 47 43.866 47 40L47 28C47 27.4477 46.5523 27 46 27L30 27C29.4477 27 29 27.4477 29 28C29 30.7614 26.7614 33 24 33C21.2386 33 19 30.7614 19 28C19 27.4477 18.5523 27 18 27Z" fill="url(#paint_radial_123)" fill-rule="nonzero" />
+		<path id="path" d="M2 27C1.44772 27 1 27.4477 1 28L1 40C1 43.866 4.13401 47 8 47L40 47C43.866 47 47 43.866 47 40L47 28C47 27.4477 46.5523 27 46 27L30 27C29.4477 27 29 27.4477 29 28C29 30.7614 26.7614 33 24 33C21.2386 33 19 30.7614 19 28C19 27.4477 18.5523 27 18 27L2 27Z" fill-rule="nonzero" stroke="url(#paint_linear_185)" stroke-width="1.20000005" />
+	</g>
+</svg>
