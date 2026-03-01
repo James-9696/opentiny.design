@@ -1,11 +1,11 @@
 <script setup>
 // 导入图片资源
 import heroBgWhite from "@/assets/images/home/next-sdk-home/banner-bg.svg";
-import heroBgPc from "@/assets/images/home/next-sdk-home/banner-img.svg";
 import nextsdkMcpProtocol from "@/assets/images/home/next-sdk-home/mcp.svg";
 import nextsdkRemoter from "@/assets/images/home/next-sdk-home/remoter.svg";
-import { ref, computed, onMounted, onUnmounted, nextTick, provide } from "vue";
+import { ref, onMounted, onUnmounted, nextTick } from "vue";
 import nextSdkMd from "./next-sdk.md?raw";
+import HeroSection from "./components/HeroSection.vue";
 import StepItem from "./components/StepItem.vue";
 import FeatureSection from "./components/FeatureSection.vue";
 
@@ -266,34 +266,9 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="container">
-    <!-- Hero Section: 头部布局与 tiny-vue 一致 -->
-    <div class="hero section" :style="{ backgroundImage: `url(${heroBgWhite})` }">
-      <div class="hero-content">
-        <h1 class="title pad-b40">NEXT-SDKs <br />前端智能应用开发工具包</h1>
-        <p class="subtitle pad-b40">让你的前端应用变成智能应用</p>
-        <p class="description pad-b40">
-          只需四步，即可接入 AI 能力，让应用智能化开发更简单高效
-        </p>
-        <div class="cta-group">
-          <a
-            href="https://docs.opentiny.design/next-sdk/guide/"
-            target="_blank"
-            class="btn primary"
-            >快速开始</a
-          >
-          <a
-            href="https://docs.opentiny.design/next-sdk/guide/api-client.html"
-            target="_blank"
-            class="btn secondary"
-            >API 文档</a
-          >
-        </div>
-      </div>
-      <div class="hero-img">
-        <img :src="heroBgPc" alt="NEXT-SDKs" />
-      </div>
-    </div>
+  <div class="container next-sdks-home">
+    <!-- Hero Section -->
+    <HeroSection />
 
     <!-- Feature 1: 安装步骤 -->
     <section class="feature-section section bg-tech-1 pad-t40 content-around fade-in-up">
@@ -349,46 +324,10 @@ onUnmounted(() => {
   justify-content: center;
   padding-bottom: 90px;
   padding-top: 20px;
-}
-
-/* Hero Section 特有样式 */
-.hero {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* Hero Content */
-.hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 1400px;
-  padding: 20px 0 0 40px;
-  padding-top: 0;
-  animation: fadeInUp 1s ease-out;
-}
-
-.hero-img {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: fadeInUp 1s ease-out;
-
-  img {
-    max-width: 1000px;
-    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15));
-    border-radius: 20px;
+  .btn.secondary {
+    font-size: 14px;
+    padding: 12px 24px;
   }
-}
-
-.cta-group {
-  display: flex;
-  gap: 30px;
 }
 
 /* Feature Sections 特有样式 */
@@ -420,18 +359,6 @@ onUnmounted(() => {
 
 /* 平板横屏 (1024px - 1440px) */
 @media (max-width: 1024px) {
-  .hero {
-    padding: 40px 30px;
-  }
-
-  .hero-img {
-    width: 100%;
-    margin-top: 40px;
-    img {
-      width: 100%;
-    }
-  }
-
   .max-w1100 {
     max-width: 100%;
   }
@@ -443,21 +370,8 @@ onUnmounted(() => {
 
 /* 平板竖屏 / 大手机 (768px - 1024px) */
 @media (max-width: 768px) {
-  .hero {
-    padding: 30px 20px;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-  }
-
-  .hero-content {
-    padding: 20px;
-  }
-
-  .cta-group {
-    gap: 15px;
-    width: 100%;
-    justify-content: center;
+  .step-link {
+    padding-bottom: 0;
   }
 
   .feature-header {
@@ -467,13 +381,6 @@ onUnmounted(() => {
   .steps-container {
     padding: 0 10px;
     max-width: 100%;
-  }
-}
-
-/* 小手机 (< 480px) */
-@media (max-width: 480px) {
-  .hero {
-    padding: 20px 15px;
   }
 }
 </style>

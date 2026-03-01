@@ -2,16 +2,19 @@
 import { onMounted, ref, inject, nextTick } from "vue";
 // 导入图片资源
 import featureCrossPlatform from "@/assets/images/home/tinyvue-home/web/framework.svg";
-
+import img1 from "@/assets/images/home/tinyvue-home/web/img1.svg";
+import img2 from "@/assets/images/home/tinyvue-home/web/img2.svg";
 // 跨端跨框架特性数据
 const features = [
   {
     title: "一套代码同时支持PC和移动端",
+    icon: img1,
     description:
       "我们支持PC和移动端，同一个组件在不同终端表现不同在多端场景下组件的使用方式完全相同。",
   },
   {
-    title: "一套代码同时支持Vue 2 / Vue 3",
+    title: "一套代码同时支持 Vue 2 / Vue 3",
+    icon: img2,
     description:
       "针对Vue2 和 Vue3 实现了相应的版本适配器，抹平Vue2 和 Vue3 的差异，实现了一套代码同时支持Vue2 和 Vue3。",
   },
@@ -24,16 +27,17 @@ const features = [
   <section class="feature-section section bg-tech-1 pad-t40 content-around">
     <div class="feature-header pad-t40 fade-in-up">
       <h2 class="title feature-title">跨端跨框架</h2>
-      <p class="description text-center">
+      <p class="description feature-sub-title text-center">
         相同的组件代码可在不同的Vue版本和设备平台上运行，显著降低了企业应用的维护成本，无需重复开发，大幅提升开发效率
       </p>
     </div>
     <div class="feature-content max-w1100 pad-t40 fade-in-up">
       <div v-for="(item, index) in features" :key="index" class="feature-text">
         <div class="title-logo">
+          <img :src="item.icon" class="feature-icon" />
           <h2 class="title feature-sub-title">{{ item.title }}</h2>
         </div>
-        <p class="description">{{ item.description }}</p>
+        <p class="description feature-text-description">{{ item.description }}</p>
       </div>
     </div>
     <div class="feature-visual pad-t40 fade-in-up">

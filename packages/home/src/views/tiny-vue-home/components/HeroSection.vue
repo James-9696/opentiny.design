@@ -1,5 +1,5 @@
 <script setup>
-import { ref, inject, onMounted } from "vue";
+import { ref, inject, onMounted, computed } from "vue";
 // 导入图片资源
 import heroBgWhite from "@/assets/images/home/tinyvue-home/web/banner-bg.svg";
 import heroBgPc from "@/assets/images/home/tinyvue-home/web/banner-img.svg";
@@ -8,6 +8,16 @@ import heroBgMobile from "@/assets/images/home/tinyvue-home/mobile/bannerimg.svg
 // 从父组件注入
 const isMobile = inject("isMobile");
 const initFadeInUp = inject("initFadeInUp");
+
+// 使用 computed 确保 Vite 在构建时能正确追踪图片资源
+const backgroundImageUrl = computed(() => {
+  return `url(${heroBgWhite})`;
+});
+
+// 使用 computed 确保移动端和PC端图片都被正确追踪
+const heroImageSrc = computed(() => {
+  return isMobile.value ? heroBgMobile : heroBgPc;
+});
 
 // 使用 ref 引用 fade-in-up 元素
 const heroImgRef = ref(null);
@@ -23,13 +33,11 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="hero section" :style="{ backgroundImage: `url(${heroBgWhite})` }">
+  <div class="hero section" :style="{ backgroundImage: backgroundImageUrl }">
     <div class="hero-content">
-      <h1 class="title pad-b40">TinyVue 智能组件库</h1>
-      <p class="subtitle pad-b40">跨端、跨框架、智能化</p>
-      <p class="description pad-b40">
-        一款跨端、跨框架的企业级 UI 组件库，支持 Vue 2 和 Vue 3，支持 PC 端和移动端
-      </p>
+      <h1 class="title"><span class="title-us">TinyVue</span> 智能组件库</h1>
+      <p class="subtitle">轻量 高性能 智能化</p>
+      <p class="description">一款支持主流前端框架、AI对话框、MCP Host 和智能体搭建平台</p>
       <div class="cta-group">
         <a href="https://opentiny.design/tiny-vue" target="_blank" class="btn primary"
           >立即体验</a
@@ -43,7 +51,7 @@ onMounted(() => {
       </div>
     </div>
     <div ref="heroImgRef" class="hero-img fade-in-up">
-      <img :src="isMobile ? heroBgMobile : heroBgPc" alt="TinyVue 智能组件库" />
+      <img :src="heroImageSrc" alt="TinyVue 智能组件库" />
     </div>
   </div>
 </template>
@@ -59,7 +67,7 @@ onMounted(() => {
     align-items: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 0 75px;
+    gap: 60px;
   }
 
   .hero-content {
@@ -79,8 +87,7 @@ onMounted(() => {
     align-items: center;
 
     img {
-      width: 90%;
-      max-width: 1000px;
+      width: 1000px;
       filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15));
       border-radius: 20px;
     }
@@ -107,6 +114,7 @@ onMounted(() => {
       flex-direction: column;
       text-align: center;
       justify-content: center;
+      gap: 0px;
     }
 
     .hero-content {
