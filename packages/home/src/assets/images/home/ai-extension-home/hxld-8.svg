@@ -1,0 +1,56 @@
+<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48.000000" height="48.000000" fill="none" customFrame="#000000">
+	<defs>
+		<linearGradient id="paint_linear_200" x1="44.7541809" x2="4.11354065" y1="2.80391312" y2="45.3463249" gradientUnits="userSpaceOnUse">
+			<stop stop-color="rgb(19,246,53)" offset="0" stop-opacity="1" />
+			<stop stop-color="rgb(19,188,255)" offset="1" stop-opacity="1" />
+		</linearGradient>
+		<radialGradient id="paint_radial_170" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(32.8,-23.2877,23.2877,32.8,16.2602,4.06778)">
+			<stop stop-color="rgb(88,214,245)" offset="0" stop-opacity="0.529411793" />
+			<stop stop-color="rgb(15,207,255)" offset="0.440641403" stop-opacity="0.34117648" />
+			<stop stop-color="rgb(255,255,255)" offset="1" stop-opacity="0" />
+		</radialGradient>
+		<radialGradient id="paint_radial_171" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(36.5117,37.7444,-37.7444,36.5117,41.534,7.17997)">
+			<stop stop-color="rgb(113,233,53)" offset="0" stop-opacity="1" />
+			<stop stop-color="rgb(255,255,255)" offset="1" stop-opacity="0" />
+		</radialGradient>
+		<radialGradient id="paint_radial_172" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-35.4316,32.4796,-32.4796,-35.4316,42.2125,35.9471)">
+			<stop stop-color="rgb(254,217,26)" offset="0" stop-opacity="0.819607854" />
+			<stop stop-color="rgb(255,255,255)" offset="1" stop-opacity="0" />
+		</radialGradient>
+		<radialGradient id="paint_radial_173" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-46.8733,-41.5302,41.5302,-46.8732,6.46983,43.9304)">
+			<stop stop-color="rgb(255,140,44)" offset="0" stop-opacity="0.592156887" />
+			<stop stop-color="rgb(255,255,255)" offset="1" stop-opacity="0" />
+		</radialGradient>
+		<radialGradient id="paint_radial_174" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(25.1534,29.0618,-67.1664,58.1334,-22.8803,72.7593)">
+			<stop stop-color="rgb(19,220,144)" offset="0" stop-opacity="1" />
+			<stop stop-color="rgb(208,253,227)" offset="1" stop-opacity="1" />
+		</radialGradient>
+		<linearGradient id="paint_linear_201" x1="24" x2="24" y1="13.791626" y2="34.2082901" gradientUnits="userSpaceOnUse">
+			<stop stop-color="rgb(255,255,255)" offset="0" stop-opacity="1" />
+			<stop stop-color="rgb(255,255,255)" offset="1" stop-opacity="0" />
+		</linearGradient>
+		<radialGradient id="paint_radial_175" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(9.95029,7.77846,-18.4669,23.6231,6.97586,64.435)">
+			<stop stop-color="rgb(19,220,144)" offset="0" stop-opacity="1" />
+			<stop stop-color="rgb(220,255,235)" offset="1" stop-opacity="1" />
+		</radialGradient>
+		<linearGradient id="paint_linear_202" x1="30.4160156" x2="30.4160156" y1="24" y2="38" gradientUnits="userSpaceOnUse">
+			<stop stop-color="rgb(255,255,255)" offset="0" stop-opacity="1" />
+			<stop stop-color="rgb(255,255,255)" offset="1" stop-opacity="0" />
+		</linearGradient>
+	</defs>
+	<rect id="hxld-8" width="48.000000" height="48.000000" x="0.000000" y="0.000000" />
+	<rect id="矩形" width="48.000000" height="48.000000" x="0.000000" y="0.000000" rx="11.428572" fill="url(#paint_linear_200)" />
+	<rect id="矩形" width="48.000000" height="48.000000" x="0.000000" y="0.000000" rx="11.428572" fill="url(#paint_radial_170)" fill-opacity="0" />
+	<rect id="矩形" width="48.000000" height="48.000000" x="0.000000" y="0.000000" rx="11.428572" fill="url(#paint_radial_171)" fill-opacity="0" />
+	<rect id="矩形" width="48.000000" height="48.000000" x="0.000000" y="0.000000" rx="11.428572" fill="url(#paint_radial_172)" fill-opacity="0" />
+	<rect id="矩形" width="48.000000" height="48.000000" x="0.000000" y="0.000000" rx="11.428572" fill="url(#paint_radial_173)" fill-opacity="0" />
+	<rect id="矩形" width="47.000000" height="47.000000" x="0.500000" y="0.500000" rx="10.928572" stroke="rgb(210,45,38)" stroke-opacity="0" stroke-width="1" />
+	<g id="ic_huawei_cloud_obs-对象存储服务_质感图标">
+		<rect id="矩形" width="28.000000" height="28.000000" x="10.000000" y="10.000000" />
+		<path id="path4" d="M23.043 13.7938C19.3543 13.8803 16.2627 16.5469 15.5559 20.1168L15.5446 20.1762L15.5194 20.1818C12.3377 20.8902 10 23.7471 10 27.1111C10 31.0293 13.1556 34.2083 17.0515 34.2083L30.1765 34.2083C34.4987 34.2083 38 30.6811 38 26.3333L37.9979 26.1501C37.904 22.0086 34.633 18.6549 30.5397 18.4666L30.3752 18.4606L30.3387 18.3779C29.0814 15.6235 26.3285 13.7916 23.2279 13.7916L23.043 13.7938Z" fill="url(#paint_radial_174)" fill-rule="nonzero" />
+		<path id="path4" d="M15.5559 20.1168L15.5446 20.1762L15.5194 20.1818C12.3377 20.8902 10 23.7471 10 27.1111C10 31.0293 13.1556 34.2083 17.0515 34.2083L30.1765 34.2083C34.4987 34.2083 38 30.6811 38 26.3333L37.9979 26.1501C37.904 22.0086 34.633 18.6549 30.5397 18.4666L30.3752 18.4606L30.3387 18.3779C29.0814 15.6235 26.3285 13.7916 23.2279 13.7916L23.043 13.7938C19.3543 13.8803 16.2627 16.5469 15.5559 20.1168Z" fill-rule="nonzero" stroke="url(#paint_linear_201)" stroke-width="0.5" />
+		<path id="path" d="M30.416 24C26.55 24 23.416 27.134 23.416 31C23.416 34.866 26.55 38 30.416 38C34.282 38 37.416 34.866 37.416 31C37.416 27.134 34.282 24 30.416 24Z" fill="url(#paint_radial_175)" fill-rule="nonzero" />
+		<path id="path" d="M23.416 31C23.416 34.866 26.55 38 30.416 38C34.282 38 37.416 34.866 37.416 31C37.416 27.134 34.282 24 30.416 24C26.55 24 23.416 27.134 23.416 31Z" fill-rule="nonzero" stroke="url(#paint_linear_202)" stroke-width="0.5" />
+		<path id="path11" d="M2.57554 0L0.0341708 2.54137C-0.011391 2.58693 -0.011391 2.6608 0.0341708 2.70636L2.57781 5.25M6.31001 2.625L0.476676 2.625" fill-rule="evenodd" stroke="rgb(18,222,136)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.16666663" transform="matrix(0,1,1,0,27.791,27.8691)" />
+	</g>
+</svg>

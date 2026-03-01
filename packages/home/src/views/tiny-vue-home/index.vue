@@ -1,11 +1,21 @@
 <script setup>
-import { ref, computed, onMounted, onUnmounted, nextTick, provide, watch } from "vue";
+import {
+  ref,
+  reactive,
+  computed,
+  onMounted,
+  onUnmounted,
+  nextTick,
+  provide,
+  watch,
+} from "vue";
 // 导入组件
 import HeroSection from "./components/HeroSection.vue";
 import CrossPlatformFeature from "./components/CrossPlatformFeature.vue";
 import ComponentShowcase from "./components/ComponentShowcase.vue";
 import ConfigArchitecture from "./components/ConfigArchitecture.vue";
 import ThemeCustomization from "./components/ThemeCustomization.vue";
+import McpSection from "./components/McpSection.vue";
 
 // 响应式屏幕尺寸判断（统一管理）
 const windowWidth = ref(typeof window !== "undefined" ? window.innerWidth : 1920);
@@ -110,6 +120,7 @@ const initFadeInUp = async (elementRefs) => {
 
 // 通过 provide 提供给子组件
 provide("isMobile", isMobile);
+provide("initFadeInUp", initFadeInUp);
 
 onMounted(async () => {
   if (typeof window !== "undefined") {
@@ -156,6 +167,8 @@ watch(isMobile, () => {
     <ConfigArchitecture />
 
     <ThemeCustomization />
+
+    <McpSection />
   </div>
 </template>
 

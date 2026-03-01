@@ -1,0 +1,44 @@
+<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48.000000" height="48.000000" fill="none">
+	<defs>
+		<linearGradient id="paint_linear_193" x1="44.7541809" x2="4.11354065" y1="2.80391312" y2="45.3463249" gradientUnits="userSpaceOnUse">
+			<stop stop-color="rgb(19,246,53)" offset="0" stop-opacity="1" />
+			<stop stop-color="rgb(19,188,255)" offset="1" stop-opacity="1" />
+		</linearGradient>
+		<radialGradient id="paint_radial_150" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(32.8,-23.2877,23.2877,32.8,16.2602,4.06778)">
+			<stop stop-color="rgb(88,214,245)" offset="0" stop-opacity="0.529411793" />
+			<stop stop-color="rgb(15,207,255)" offset="0.440641403" stop-opacity="0.34117648" />
+			<stop stop-color="rgb(255,255,255)" offset="1" stop-opacity="0" />
+		</radialGradient>
+		<radialGradient id="paint_radial_151" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(36.5117,37.7444,-37.7444,36.5117,41.534,7.17997)">
+			<stop stop-color="rgb(113,233,53)" offset="0" stop-opacity="1" />
+			<stop stop-color="rgb(255,255,255)" offset="1" stop-opacity="0" />
+		</radialGradient>
+		<radialGradient id="paint_radial_152" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-35.4316,32.4796,-32.4796,-35.4316,42.2125,35.9471)">
+			<stop stop-color="rgb(254,217,26)" offset="0" stop-opacity="0.819607854" />
+			<stop stop-color="rgb(255,255,255)" offset="1" stop-opacity="0" />
+		</radialGradient>
+		<radialGradient id="paint_radial_153" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-46.8733,-41.5302,41.5302,-46.8732,6.46983,43.9304)">
+			<stop stop-color="rgb(255,140,44)" offset="0" stop-opacity="0.592156887" />
+			<stop stop-color="rgb(255,255,255)" offset="1" stop-opacity="0" />
+		</radialGradient>
+		<radialGradient id="paint_radial_154" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(35.5812,26.3104,-62.2736,84.2165,-22.8803,90.1929)">
+			<stop stop-color="rgb(19,220,144)" offset="0" stop-opacity="1" />
+			<stop stop-color="rgb(208,253,227)" offset="1" stop-opacity="1" />
+		</radialGradient>
+		<linearGradient id="paint_linear_194" x1="24" x2="24" y1="10.1417236" y2="37.8582153" gradientUnits="userSpaceOnUse">
+			<stop stop-color="rgb(255,255,255)" offset="0" stop-opacity="1" />
+			<stop stop-color="rgb(255,255,255)" offset="1" stop-opacity="0" />
+		</linearGradient>
+	</defs>
+	<rect id="hxld-6" width="48.000000" height="48.000000" x="0.000000" y="0.000000" />
+	<g id="ic_digital_-power_reused_switching_power_supply-利旧开关电源_质感图标">
+		<rect id="矩形" width="48.000000" height="48.000000" x="0.000000" y="0.000000" rx="11.428572" fill="url(#paint_linear_193)" />
+		<rect id="矩形" width="48.000000" height="48.000000" x="0.000000" y="0.000000" rx="11.428572" fill="url(#paint_radial_150)" fill-opacity="0" />
+		<rect id="矩形" width="48.000000" height="48.000000" x="0.000000" y="0.000000" rx="11.428572" fill="url(#paint_radial_151)" fill-opacity="0" />
+		<rect id="矩形" width="48.000000" height="48.000000" x="0.000000" y="0.000000" rx="11.428572" fill="url(#paint_radial_152)" fill-opacity="0" />
+		<rect id="矩形" width="48.000000" height="48.000000" x="0.000000" y="0.000000" rx="11.428572" fill="url(#paint_radial_153)" fill-opacity="0" />
+		<rect id="矩形" width="47.000000" height="47.000000" x="0.500000" y="0.500000" rx="10.928572" stroke="rgb(210,45,38)" stroke-opacity="0" stroke-width="1" />
+		<path id="path7-2" d="M26.0008 10.1419C32.785 11.1127 38 16.9473 38 24C38 31.0526 32.785 36.8872 26.0008 37.8581L26 33C26 31.8954 25.1046 31 24 31C22.8954 31 22 31.8954 22 33L22.0002 37.8582C15.2155 36.8878 10 31.053 10 24C10 16.947 15.2155 11.1121 22.0002 10.1417L22 15C22 16.1045 22.8954 17 24 17C25.1046 17 26 16.1045 26 15L26.0008 10.1419ZM18 21C16.3431 21 15 22.3431 15 24C15 25.6568 16.3431 27 18 27C19.6569 27 21 25.6568 21 24C21 22.3431 19.6569 21 18 21ZM30 21C28.3431 21 27 22.3431 27 24C27 25.6568 28.3431 27 30 27C31.6569 27 33 25.6568 33 24C33 22.3431 31.6569 21 30 21Z" fill="url(#paint_radial_154)" fill-rule="nonzero" />
+		<path id="path7-2" d="M38 24C38 31.0526 32.785 36.8872 26.0008 37.8581L26 33C26 31.8954 25.1046 31 24 31C22.8954 31 22 31.8954 22 33L22.0002 37.8582C15.2155 36.8878 10 31.053 10 24C10 16.947 15.2155 11.1121 22.0002 10.1417L22 15C22 16.1045 22.8954 17 24 17C25.1046 17 26 16.1045 26 15L26.0008 10.1419C32.785 11.1127 38 16.9473 38 24ZM15 24C15 25.6568 16.3431 27 18 27C19.6569 27 21 25.6568 21 24C21 22.3431 19.6569 21 18 21C16.3431 21 15 22.3431 15 24ZM27 24C27 25.6568 28.3431 27 30 27C31.6569 27 33 25.6568 33 24C33 22.3431 31.6569 21 30 21C28.3431 21 27 22.3431 27 24Z" fill-rule="nonzero" stroke="url(#paint_linear_194)" stroke-width="0.5" />
+	</g>
+</svg>
