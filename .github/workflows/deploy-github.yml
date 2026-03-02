@@ -46,6 +46,9 @@ jobs:
         run: |
           cd genui-sdk
           pnpm build:homepage
+        env:
+          VITE_GENUI_DOC_DOMAIN: https://opentiny.github.io/docs
+          VITE_GENUI_PLAYGROUND_HREF: https://agent-alpha.opentiny.design/genui-sdk-playground
       - name: Install deps
         run: |
           pnpm -F opentiny-design-common i --no-frozen-lockfile
