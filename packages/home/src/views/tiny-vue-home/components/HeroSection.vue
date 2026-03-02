@@ -9,11 +9,6 @@ import heroBgMobile from "@/assets/images/home/tinyvue-home/mobile/bannerimg.svg
 const isMobile = inject("isMobile");
 const initFadeInUp = inject("initFadeInUp");
 
-// 使用 computed 确保 Vite 在构建时能正确追踪图片资源
-const backgroundImageUrl = computed(() => {
-  return `url(${heroBgWhite})`;
-});
-
 // 使用 computed 确保移动端和PC端图片都被正确追踪
 const heroImageSrc = computed(() => {
   return isMobile.value ? heroBgMobile : heroBgPc;
@@ -33,7 +28,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="hero section" :style="{ backgroundImage: backgroundImageUrl }">
+  <div class="hero section">
     <div class="hero-content">
       <h1 class="title"><span class="title-us">TinyVue</span> 智能组件库</h1>
       <p class="subtitle">轻量 高性能 智能化</p>
@@ -68,6 +63,10 @@ onMounted(() => {
     background-repeat: no-repeat;
     background-size: cover;
     gap: 60px;
+    background-image: url(@/assets/images/home/tinyvue-home/web/banner-bg.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   .hero-content {

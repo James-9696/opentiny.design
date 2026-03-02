@@ -38,7 +38,6 @@ const features = [
     imageSrc: nextsdkMcpProtocol,
     imageAlt: "MCP 协议",
     reverse: false,
-    bgClass: "bg-tech-2",
     backgroundImage: heroBgWhite,
   },
   {
@@ -49,7 +48,6 @@ const features = [
     imageSrc: nextsdkRemoter,
     imageAlt: "TinyRemoter 遥控器",
     reverse: true,
-    bgClass: "bg-tech-1",
     backgroundImage: heroBgWhite,
   },
 ];
