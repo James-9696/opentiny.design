@@ -33,7 +33,7 @@ const menuItems = [
   },
   {
     name: 'TinyEngine',
-    url: 'https://opentiny.design/tiny-engine',
+    url: '/tiny-engine',
     children: [],
     logo: tinyEngine,
     desc: '智能搭建平台',
