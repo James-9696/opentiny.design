@@ -1,17 +1,11 @@
 <script setup>
-import { computed } from "vue";
 // 导入图片资源
 import heroBgWhite from "@/assets/images/home/ai-extension-home/banner-bg.svg";
 import heroBgPc from "@/assets/images/home/ai-extension-home/banner-img.svg";
-
-// 使用 computed 确保 Vite 在构建时能正确追踪图片资源
-const backgroundImageUrl = computed(() => {
-  return `url(${heroBgWhite})`;
-});
 </script>
 
 <template>
-  <header class="hero section" :style="{ backgroundImage: backgroundImageUrl }">
+  <header class="hero section">
     <div class="hero-content">
       <h1 class="title"><span class="title-us">AI Extension AI</span>扩展插件</h1>
       <p class="subtitle">智能交互 随你智动</p>
@@ -46,6 +40,10 @@ const backgroundImageUrl = computed(() => {
     background-position: center;
     flex-direction: row;
     gap: 60px;
+    background-image: url(@/assets/images/home/ai-extension-home/banner-bg.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   .hero-content {

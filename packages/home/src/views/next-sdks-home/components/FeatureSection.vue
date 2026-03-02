@@ -7,22 +7,10 @@ const props = defineProps({
     type: Object,
   },
 });
-
-// 使用 computed 确保背景图片被正确追踪
-const backgroundImageStyle = computed(() => {
-  if (props.feature?.backgroundImage) {
-    return { backgroundImage: `url(${props.feature.backgroundImage})` };
-  }
-  return {};
-});
 </script>
 
 <template>
-  <section
-    class="feature-section section"
-    :class="[feature.bgClass || 'bg-tech-1', 'bg-color-1']"
-    :style="backgroundImageStyle"
-  >
+  <section class="feature-section section">
     <div
       class="feature-content pad-t40 fade-in-up"
       :class="{ 'reverse-layout': feature.reverse }"
@@ -45,8 +33,11 @@ const backgroundImageStyle = computed(() => {
 @import "../common.less";
 
 /* FeatureSection 特有样式 */
-.section {
-  min-height: 75vh;
+.section.feature-section {
+  background-image: url(@/assets/images/home/next-sdk-home/banner-bg.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .feature-content {

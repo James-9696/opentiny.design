@@ -1,17 +1,11 @@
 <script setup>
-import { computed } from "vue";
 // 导入图片资源
 import heroBgWhite from "@/assets/images/home/next-sdk-home/banner-bg.svg";
 import heroBgPc from "@/assets/images/home/next-sdk-home/banner-img.svg";
-
-// 使用 computed 确保 Vite 在构建时能正确追踪背景图片资源
-const heroBackgroundImageUrl = computed(() => {
-  return `url(${heroBgWhite})`;
-});
 </script>
 
 <template>
-  <div class="hero section" :style="{ backgroundImage: heroBackgroundImageUrl }">
+  <div class="hero section">
     <div class="hero-content">
       <h1 class="title">
         <span class="title-us">NEXT-SDKs</span> <br />前端智能应用开发工具包
@@ -51,6 +45,10 @@ const heroBackgroundImageUrl = computed(() => {
   background-repeat: no-repeat;
   background-size: cover;
   gap: 60px;
+  background-image: url(@/assets/images/home/next-sdk-home/banner-bg.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Hero Content */
