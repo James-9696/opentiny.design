@@ -112,7 +112,7 @@
     .app-name {
       display: inline-block;
       margin-left: 12px;
-      font-size: 16px;
+      font-size: 14px;
       line-height: 14px;
       font-weight: 400;
       color: #191919;
@@ -223,10 +223,11 @@
       width: 100vw;
       height: auto;
       background-color: #fff;
-      box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.08);
+      box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.04);
       overflow: hidden;
       max-height: 0;
       transition: max-height 0.3s linear;
+      border-radius: 0 0 20px 20px;
 
       .dropdown-content-title {
         color: #808080;
@@ -452,7 +453,7 @@
       height: auto;
 
     .nav-left {
-      margin-top: 16px;
+      margin: 8px 0 8px 0;
       margin-right: 64px;
       grid-column: 1;  // 第1列
       grid-row: 1;     // 第1行
@@ -463,11 +464,11 @@
       grid-row: 2;          // 第2行
       margin-left: 0 !important;  // 移除原来的左边距
       flex-wrap: wrap;      // 允许内部换行
-      margin: 16px 0; // 上下间距10px
+      margin: 8px 0; // 上下间距8px
     }
 
     .nav-right {
-      margin-top: 16px;
+      margin: 8px 0 8px 0;
       grid-column: 2;  // 第2列
       grid-row: 1;     // 第1行
       margin-left: 0;  // 移除auto margin
@@ -485,25 +486,11 @@
   }
 }
 
-@media screen and (max-width: 1150px) {
-  .opentiny-design-header .nav-right .dropdown-menu .dropdown-content {
-    gap: 0;
-  }
-} 
-
-@media (min-width: 985px) and (max-width: 1050px) {
+@media screen and (max-width: 865px) {
   .opentiny-design-header .nav-right .top-menu .dropdown-menu {
-    .dropdown-100 {
-      margin-left: 40px;
+    .dropdown-content {
+      gap: 10px;
     }
-    .dropdown-content-title {
-      margin: 10px 0 0 56px;
-    }
-  }
-} 
-
-@media (min-width: 960px) and (max-width: 985px) {
-  .opentiny-design-header .nav-right .top-menu .dropdown-menu {
     .dropdown-100 {
       margin-left: 20px;
     }
@@ -689,3 +676,38 @@
     margin-left: 248px;
   }
 }
+
+@media (min-width: 905px) and (max-width: 1045px) {
+  .opentiny-design-header {
+    // 右侧导航
+    .nav-center {
+       .top-menu {
+         margin-right: 24px;
+       }
+    }
+  }
+}
+
+@media (min-width: 855px) and (max-width: 905px) {
+  .opentiny-design-header {
+    // 右侧导航
+    .nav-center {
+       .top-menu {
+         margin-right: 16px;
+       }
+    }
+  }
+}
+
+@media (min-width: 815px) and (max-width: 855px) {
+  .opentiny-design-header {
+    // 右侧导航
+    .nav-center {
+       .top-menu {
+         margin-right: 8px;
+       }
+    }
+  }
+}
+
+
