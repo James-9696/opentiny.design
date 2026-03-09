@@ -19,7 +19,9 @@ export default defineConfig(({ mode }) => ({
     }
   },
   define: {
-    'process.env': {}
+    'process.env': {
+      NODE_ENV: 'production'
+    }
   },
   build: {
     emptyOutDir: false,
