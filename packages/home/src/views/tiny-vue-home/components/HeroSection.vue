@@ -34,7 +34,7 @@ onMounted(() => {
       <p class="subtitle">轻量 高性能 智能化</p>
       <p class="description">一款支持主流前端框架、AI对话框、MCP Host 和智能体搭建平台</p>
       <div class="cta-group">
-        <a href="https://opentiny.design/tiny-vue" target="_blank" class="btn primary"
+        <a href="/tiny-vue" target="_blank" class="btn primary"
           >立即体验</a
         >
         <a

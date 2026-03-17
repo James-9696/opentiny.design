@@ -97,7 +97,7 @@ onMounted(() => {
       <div class="title pad-t40">TinyVue 智能组件库</div>
       <div class="mcp-desc description">让你的Web 随心所动 无需手动</div>
       <div class="mcp-button">
-        <a href="https://opentiny.design/tiny-vue" target="_blank" class="btn primary"
+        <a href="/tiny-vue" target="_blank" class="btn primary"
           >即刻体验</a
         >
         <a
