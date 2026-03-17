@@ -123,7 +123,7 @@ const menuItems = [
       {
         title: 'TinyPro',
         desc: '中后台解决方案',
-        href: 'https://opentiny.design/vue-pro/pages',
+        href: '/vue-pro/pages',
         logo: tinyPro,
         github: 'https://github.com/opentiny/tiny-pro'
       }
@@ -172,7 +172,7 @@ const menuItems = [
       {
         title: 'TinyPro',
         desc: '中后台解决方案',
-        href: 'https://opentiny.design/vue-pro',
+        href: '/vue-pro',
         logo: tinyPro,
         github: 'https://github.com/opentiny/tiny-pro'
       },
@@ -193,7 +193,7 @@ const menuItems = [
       {
         title: '技术学院',
         desc: '轻松 get 开发技巧',
-        href: 'https://opentiny.design/tech-college',
+        href: '/tech-college',
         logo: tinyTech,
         github: 'https://github.com/opentiny/opentiny.design'
       },

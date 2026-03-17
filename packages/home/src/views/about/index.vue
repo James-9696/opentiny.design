@@ -68,7 +68,7 @@ export default defineComponent({
           backgroundImage: `url("${work1}")`
         },
         icon: right,
-        src: 'https://opentiny.design/tiny-vue'
+        src: '/tiny-vue'
       },
       {
         enTitle: $t('work_material'),
@@ -79,7 +79,7 @@ export default defineComponent({
           backgroundImage: `url("${work2}")`
         },
         icon: right,
-        src: 'https://opentiny.design/tiny-vue'
+        src: '/tiny-vue'
       },
       {
         enTitle: $t('work_rack'),
@@ -90,7 +90,7 @@ export default defineComponent({
           backgroundImage: `url("${work3}")`
         },
         icon: right,
-        src: 'https://opentiny.design/tiny-ng'
+        src: '/tiny-ng'
       },
       {
         enTitle: $t('work_scheme'),
@@ -101,7 +101,7 @@ export default defineComponent({
           backgroundImage: `url("${work4}")`
         },
         icon: right,
-        src: 'https://opentiny.design/tiny-charts'
+        src: '/tiny-charts'
       },
       {
         enTitle: $t('work_multiend'),
@@ -124,7 +124,7 @@ export default defineComponent({
           backgroundImage: `url("${work6}")`
         },
         icon: right,
-        src: 'https://opentiny.design/tiny-cli'
+        src: '/tiny-cli'
       },
       {
         enTitle: $t('work_platform'),
@@ -135,7 +135,7 @@ export default defineComponent({
           backgroundImage: `url("${work7}")`
         },
         icon: right,
-        src: 'https://opentiny.design/pro'
+        src: '/pro'
       },
       {
         enTitle: $t('work_door'),
@@ -146,7 +146,7 @@ export default defineComponent({
           backgroundImage: `url("${work8}")`
         },
         icon: right,
-        src: 'https://opentiny.design/designtheme'
+        src: '/designtheme'
       }
     ]);
     // 我们的内部技术项目
