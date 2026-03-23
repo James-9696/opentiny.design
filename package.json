@@ -7,6 +7,7 @@
     "dev:engine": "pnpm -F tiny-engine-portal dev",
     "build:common": "pnpm -F opentiny-design-common build:open",
     "build": "pnpm -F opentiny-design-home build",
-    "build:engine": "pnpm -F tiny-engine-portal build:open"
+    "build:engine": "pnpm -F tiny-engine-portal build:open",
+    "build:genui-sdk": "cd genui-sdk && pnpm install && pnpm build:homepage"
   }
 }
