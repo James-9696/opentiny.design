@@ -11,6 +11,8 @@ import html from 'highlight.js/lib/languages/xml'
 import { findParent, getRoutePath } from './tools'
 import { router } from './router'
 
+import { createMcpServer, clientTransport } from './mcp-servers'
+
 hljs.registerLanguage('javascript', javascript)
 hljs.registerLanguage('css', css)
 hljs.registerLanguage('html', html)
@@ -33,15 +35,53 @@ const jumpByRouter = (event) => {
   }
 }
 
+// LLM 配置
+const llmConfig = {
+  apiKey: 'your-api-key',
+  baseURL: 'https://api.openai.com/v1',
+  providerType: 'openai',
+  model: 'gpt-4o',
+  maxSteps: 10
+}
+
+// 加载 skills 目录下所有文件（SKILL.md + 所有参考资料）
+const skillMdModules = import.meta.glob('./skills/**/*', {
+  query: '?raw',
+  import: 'default',
+  eager: true
+})  
+
+// 将本地 MCP Server 注册到 TinyRemoter
+const mcpServers = {
+  'my-mcp-server': {
+    type: 'local',
+    transport: clientTransport
+  }
+}
+
+
 onMounted(() => {
   document.querySelector('#header').addEventListener('click', jumpByRouter, true)
 })
+
+onMounted(async () => {
+  await createMcpServer()
+})
+
 </script>
 
 <template>
   <div class="hp100">
     <config-provider :design="designSmbConfig" class="hp100">
       <router-view />
+          <!-- AI 对话面板 -->
+    <TinyRemoter
+      :show="true"
+      :skills="skillMdModules"
+      :mcpServers="mcpServers"
+      title="智能助手"
+      :llmConfig="llmConfig"
+    />
     </config-provider>
   </div>
 </template>
