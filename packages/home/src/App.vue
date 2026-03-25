@@ -75,6 +75,7 @@ onMounted(async () => {
       :mcpServers="mcpServers"
       mode="remoter"
       title="智能助手"
+      :style="{['--tr-z-index-fixed']:1000, width: '600px'}"
     />
     </config-provider>
   </div>
