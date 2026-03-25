@@ -1,5 +1,5 @@
 <script lang="jsx" setup>
-import { onMounted } from 'vue'
+import { onMounted,ref } from 'vue'
 import { ConfigProvider } from '@opentiny/vue'
 import designSmbConfig from '@opentiny/vue-design-smb'
 import hljs from 'highlight.js/lib/core'
@@ -11,6 +11,8 @@ import html from 'highlight.js/lib/languages/xml'
 import { findParent, getRoutePath } from './tools'
 import { router } from './router'
 
+import { TinyRemoter } from '@opentiny/next-remoter'
+import '@opentiny/next-remoter/dist/style.css'
 import { createMcpServer, clientTransport } from './mcp-servers'
 
 hljs.registerLanguage('javascript', javascript)
@@ -35,15 +37,7 @@ const jumpByRouter = (event) => {
   }
 }
 
-// LLM 配置
-const llmConfig = {
-  apiKey: 'your-api-key',
-  baseURL: 'https://api.openai.com/v1',
-  providerType: 'openai',
-  model: 'gpt-4o',
-  maxSteps: 10
-}
-
+const show = ref(false)
 // 加载 skills 目录下所有文件（SKILL.md + 所有参考资料）
 const skillMdModules = import.meta.glob('./skills/**/*', {
   query: '?raw',
@@ -76,11 +70,11 @@ onMounted(async () => {
       <router-view />
           <!-- AI 对话面板 -->
     <TinyRemoter
-      :show="true"
+      :show="show"
       :skills="skillMdModules"
       :mcpServers="mcpServers"
+      mode="remoter"
       title="智能助手"
-      :llmConfig="llmConfig"
     />
     </config-provider>
   </div>
