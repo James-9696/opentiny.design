@@ -832,7 +832,7 @@ export default defineComponent({
             <span>{{ $t('need_malibox') }}</span>
           </div>
           <img :src="pn" loading="lazy" />
-          <p style="font-weight: 600; font-size: 14px">添加微信备注：2027实习生，微信发送CV简历编码，才能定向投递我们团队哈~</p>
+          <p style="font-weight: 600; font-size: 14px">添加微信备注：2027实习生（微信发送CV简历编码，才能定向投递我们团队哈~）</p>
         </div>
       </div>
     </div>
