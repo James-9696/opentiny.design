@@ -1096,8 +1096,8 @@ packages:
   '@docsearch/css@3.9.0':
     resolution: {integrity: sha512-cQbnVbq0rrBwNAKegIac/t6a8nWoUAn8frnkLFW6YARaRmAQr5/Eoe6Ln2fqkUCZ40KpdrKbpSAmgrkviOxuWA==}
 
-  '@docsearch/css@4.6.0':
-    resolution: {integrity: sha512-YlcAimkXclvqta47g47efzCM5CFxDwv2ClkDfEs/fC/Ak0OxPH2b3czwa4o8O1TRBf+ujFF2RiUwszz2fPVNJQ==, tarball: https://registry.npmmirror.com/@docsearch/css/-/css-4.6.0.tgz}
+  '@docsearch/css@4.6.2':
+    resolution: {integrity: sha512-fH/cn8BjEEdM2nJdjNMHIvOVYupG6AIDtFVDgIZrNzdCSj4KXr9kd+hsehqsNGYjpUjObeKYKvgy/IwCb1jZYQ==, tarball: https://registry.npmmirror.com/@docsearch/css/-/css-4.6.2.tgz}
 
   '@docsearch/js@3.9.0':
     resolution: {integrity: sha512-4bKHcye6EkLgRE8ze0vcdshmEqxeiJM77M0JXjef7lrYZfSlMunrDOCqyLjiZyo1+c0BhUqA2QpFartIjuHIjw==}
@@ -11921,7 +11921,7 @@ snapshots:
 
   '@docsearch/css@3.9.0': {}
 
-  '@docsearch/css@4.6.0': {}
+  '@docsearch/css@4.6.2': {}
 
   '@docsearch/js@3.9.0(@algolia/client-search@5.44.0)(search-insights@2.17.3)':
     dependencies:
@@ -15421,7 +15421,7 @@ snapshots:
     dependencies:
       '@docsearch/css': 3.9.0
       '@docsearch/js': 3.9.0(@algolia/client-search@5.44.0)(search-insights@2.17.3)
-      '@docsearch/react': '@docsearch/css@4.6.0'
+      '@docsearch/react': '@docsearch/css@4.6.2'
       '@opentiny/tiny-vue-mcp': 0.0.3
       '@opentiny/utils': 3.27.0
       '@opentiny/vue': 3.27.0
