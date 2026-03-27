@@ -255,6 +255,15 @@ export default defineComponent({
         posts: $t('need_responsibilities'),
         jobList: [$t('need_java_work1'), $t('need_java_work2'), $t('need_java_work3'), $t('need_java_work4'), $t('need_java_work5')],
         postSrc: ''
+      },
+      {
+        name: "3",
+        directions: $t('need_c'),
+        place: $t('need_location'),
+        citys: [$t('need_city2')],
+        posts: $t('need_responsibilities'),
+        jobList: [$t('need_c_work1'), $t('need_c_work2'), $t('need_c_work3')],
+        postSrc: ''
       }
     ]);
 
@@ -823,7 +832,7 @@ export default defineComponent({
             <span>{{ $t('need_malibox') }}</span>
           </div>
           <img :src="pn" loading="lazy" />
-          <p style="font-weight: 600; font-size: 14px">添加微信备注：26校招</p>
+          <p style="font-weight: 600; font-size: 14px">添加微信备注：2027实习生，微信发送CV简历编码，才能定向投递我们团队哈~</p>
         </div>
       </div>
     </div>
