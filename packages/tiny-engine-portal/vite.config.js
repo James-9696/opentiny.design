@@ -39,7 +39,7 @@ const config = {
     }
   },
   define: {
-    'process.env': process.env
+    'process.env': {}
   },
   optimizeDeps: {
     esbuildOptions: {
