@@ -43,4 +43,6 @@ jobs:
       - name: Install deps
         run: pnpm -F opentiny-design-home i --no-frozen-lockfile
       - name: Build home
-        run: export NODE_OPTIONS="--max-old-space-size=8192" &&pnpm build
+        run: pnpm build
+        env:
+          NODE_OPTIONS: --max-old-space-size=8192

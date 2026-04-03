@@ -69,10 +69,11 @@ jobs:
           VITE_CONTEXT: /
           VITE_BASE: //res-static.opentiny.design/tinyui-design/${{ steps.ver.outputs.value }}/home/
       - name: Build home
-        run: export NODE_OPTIONS="--max-old-space-size=8192" && pnpm build
+        run: pnpm build
         env:
           VITE_CONTEXT: /
           VITE_BASE: //res-static.opentiny.design/tinyui-design/${{ steps.ver.outputs.value }}/home/
+          NODE_OPTIONS: --max-old-space-size=8192
       - name: Copy files
         run: |
           cp dist/common/tinyui-design-common.iife.js dist/home
