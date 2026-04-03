@@ -55,7 +55,7 @@ jobs:
           VITE_CONTEXT: /opentiny.design/
           VITE_BASE: /opentiny.design/
       - name: Build home
-        run: pnpm build
+        run: export NODE_OPTIONS="--max-old-space-size=8192" && pnpm build
         env:
           VITE_CONTEXT: /opentiny.design/
           VITE_BASE: /opentiny.design/

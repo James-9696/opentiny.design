@@ -69,7 +69,7 @@ jobs:
           VITE_CONTEXT: /
           VITE_BASE: //res-static.opentiny.design/tinyui-design/${{ steps.ver.outputs.value }}/home/
       - name: Build home
-        run: pnpm build
+        run: export NODE_OPTIONS="--max-old-space-size=8192" && pnpm build
         env:
           VITE_CONTEXT: /
           VITE_BASE: //res-static.opentiny.design/tinyui-design/${{ steps.ver.outputs.value }}/home/
