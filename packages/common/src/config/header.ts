@@ -79,56 +79,57 @@ const menuItems = [
     github: 'https://github.com/opentiny/tiny-robot',
     isUnderline: createIsUnderline(`${basePath}ai-extension`)
   },
-  {
-    type: 'other',
-    name: '演练场',
-    url: '',
-    children: [
-      {
-        title: 'TinyVue',
-        desc: '智能组件库',
-        href: 'https://playground.opentiny.design/tiny-vue',
-        logo: tinyVue,
-        github: 'https://github.com/opentiny/playground'
-      },
-      {
-        title: 'TinyEngine',
-        desc: '智能搭建平台',
-        href: 'https://playground.opentiny.design/tiny-engine',
-        logo: tinyEngine,
-        github: 'https://github.com/opentiny/playground'
-      },
-      {
-        title: 'TinyRobot',
-        desc: '智能助手',
-        href: 'https://playground.opentiny.design/tiny-robot',
-        logo: tinyRobot,
-        github: 'https://github.com/opentiny/playground'
-      },
-      {
-        title: 'NEXT-SDKs',
-        desc: '开发套件',
-        href: 'https://playground.opentiny.design/next-sdk',
-        hide: true,
-        logo: tinySdks,
-        github: 'https://github.com/opentiny/playground'
-      },
-      {
-        title: 'GenUI-SDK',
-        desc: '生成式UI',
-        href: 'https://playground.opentiny.design/genui-sdk',
-        logo: GenuiSdk,
-        github: 'https://github.com/opentiny/playground'
-      },
-      {
-        title: 'TinyPro',
-        desc: '中后台解决方案',
-        href: '/vue-pro/pages',
-        logo: tinyPro,
-        github: 'https://github.com/opentiny/tiny-pro'
-      }
-    ]
-  },
+  // 暂时隐藏起来
+  // {
+  //   type: 'other',
+  //   name: '演练场',
+  //   url: '',
+  //   children: [
+  //     {
+  //       title: 'TinyVue',
+  //       desc: '智能组件库',
+  //       href: 'https://playground.opentiny.design/tiny-vue',
+  //       logo: tinyVue,
+  //       github: 'https://github.com/opentiny/playground'
+  //     },
+  //     {
+  //       title: 'TinyEngine',
+  //       desc: '智能搭建平台',
+  //       href: 'https://playground.opentiny.design/tiny-engine',
+  //       logo: tinyEngine,
+  //       github: 'https://github.com/opentiny/playground'
+  //     },
+  //     {
+  //       title: 'TinyRobot',
+  //       desc: '智能助手',
+  //       href: 'https://playground.opentiny.design/tiny-robot',
+  //       logo: tinyRobot,
+  //       github: 'https://github.com/opentiny/playground'
+  //     },
+  //     {
+  //       title: 'NEXT-SDKs',
+  //       desc: '开发套件',
+  //       href: 'https://playground.opentiny.design/next-sdk',
+  //       hide: true,
+  //       logo: tinySdks,
+  //       github: 'https://github.com/opentiny/playground'
+  //     },
+  //     {
+  //       title: 'GenUI-SDK',
+  //       desc: '生成式UI',
+  //       href: 'https://playground.opentiny.design/genui-sdk',
+  //       logo: GenuiSdk,
+  //       github: 'https://github.com/opentiny/playground'
+  //     },
+  //     {
+  //       title: 'TinyPro',
+  //       desc: '中后台解决方案',
+  //       href: '/vue-pro/pages',
+  //       logo: tinyPro,
+  //       github: 'https://github.com/opentiny/tiny-pro'
+  //     }
+  //   ]
+  // },
   {
     type: 'other',
     name: '开发文档',
