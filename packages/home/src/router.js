@@ -10,7 +10,6 @@ const ComponentOverview = () => import('@/views/overview/overview.vue')
 const HomePage = () => import('@/views/home/index.vue')
 
 const Docs = () => import('@/views/docs/docs.vue')
-const About = () => import('@/views/about/index.vue')
 const Developing = () => import('@/views/developing/index.vue')
 const Tools = () => import('@/views/tools/index.vue')
 const IconPage = () => import('@/views/icon/index.vue')
@@ -108,11 +107,6 @@ export const rootRoutes = [
               }
             }
           },
-          {
-            path: 'about',
-            component: About,
-            meta: { title: geneTitle('关于我们') }
-          }
         ]
       },
       {
