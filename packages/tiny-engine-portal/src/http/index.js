@@ -88,4 +88,4 @@ export const createHttp = (options) => {
   return http
 }
 
-export const useHttp = (isMock) => createHttp({ enableMock: isMock || process.env.API_MOCK === 'mock' })
+export const useHttp = (isMock) => createHttp({ enableMock: isMock || import.meta.env.VITE_API_MOCK === 'mock' })

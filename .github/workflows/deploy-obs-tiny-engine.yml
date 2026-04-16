@@ -67,6 +67,7 @@ jobs:
         env:
           VITE_APP_ORIGIN: https://opentiny.design
           VITE_APP_STATIC_PATH: //res-static.opentiny.design/lowcode-portal/${{ steps.ver.outputs.value }}/
+          VITE_API_MOCK: mock
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
