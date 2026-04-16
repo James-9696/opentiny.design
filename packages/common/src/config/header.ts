@@ -199,13 +199,6 @@ const menuItems = [
         github: 'https://github.com/opentiny/opentiny.design'
       },
       {
-        title: '关于我们',
-        desc: '一起加入我们',
-        href: '/opentiny-design/about',
-        logo: tinyAbout,
-        github: 'https://github.com/opentiny/opentiny.design'
-      },
-      {
         title: 'Sketch 资源下载',
         desc: 'Sketch 组件资源包',
         href: '#',
