@@ -43,7 +43,7 @@ jobs:
         run: |
           pnpm build:genui-sdk
         env:
-          VITE_GENUI_DOC_DOMAIN: https://opentiny.github.io/docs
+          VITE_GENUI_DOCS_BASE: https://opentiny.github.io/docs/genui-sdk
           VITE_GENUI_PLAYGROUND_HREF: https://agent-alpha.opentiny.design/genui-sdk-playground
       - name: Install deps
         run: |
