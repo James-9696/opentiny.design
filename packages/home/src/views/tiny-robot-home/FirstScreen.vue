@@ -10,7 +10,7 @@
           <img class="first-screen-content-sender-icon" :src="state.senderImg" alt="" />
         </div>
         <div class="first-screen-content-footer">
-          <tiny-button type="primary" round @click="gotoChat">立即体验</tiny-button>
+          <!-- <tiny-button type="primary" round @click="gotoChat">立即体验</tiny-button> -->
           <tiny-button round ghost @click="gotoDocs">组件文档</tiny-button>
         </div>
       </div>
