@@ -28,9 +28,9 @@
                   {{ item }}
                 </div>
               </div>
-              <div class="scene-section-button">
+              <!-- <div class="scene-section-button">
                 <tiny-button round @click="gotoChat">立即体验</tiny-button>
-              </div>
+              </div> -->
             </div>
             <div class="scene-section-img">
               <img :src="activeScene.imgUrl" :alt="activeScene.title" />
