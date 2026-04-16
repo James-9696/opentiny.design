@@ -1,25 +1,8 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import { Notify } from '@opentiny/vue'
 import {
-  guideline,
   changelogPortal,
   changelogDesign,
-  materialPanel,
-  vscode,
-  domTree,
-  page,
-  block,
-  dataSource,
-  resource,
-  i18n,
-  script,
-  state,
-  schema,
-  toolbar,
-  setting,
-  buildMaterial,
-  buildPlatform,
-  permissionManagement
 } from '../help'
 import { requestEvent } from '../monitor/http.js'
 import { getExtendRoute } from '../application/ApplicationSetting'
@@ -205,20 +188,6 @@ const routes = [
         meta: { activeMenuName: 'help' }
       },
       {
-        path: 'vscode',
-        name: 'vscode',
-        component: () => import('../help/markdownRender/Main.vue'),
-        props: { md: vscode },
-        meta: { activeMenuName: 'help' }
-      },
-      {
-        path: 'guideline',
-        name: 'helpGuideline',
-        component: () => import('../help/markdownRender/Main.vue'),
-        props: { md: guideline },
-        meta: { activeMenuName: 'help' }
-      },
-      {
         path: 'course/:type',
         name: 'course',
         component: () => import('../help/course/Main.vue'),
@@ -240,114 +209,9 @@ const routes = [
         meta: { activeMenuName: 'help' }
       },
       {
-        path: 'material-panel',
-        name: 'helpMaterialPanel',
-        component: () => import('../help/markdownRender/Main.vue'),
-        props: { md: materialPanel },
-        meta: { activeMenuName: 'help' }
-      },
-      {
-        path: 'dom-tree',
-        name: 'helpDomTree',
-        component: () => import('../help/markdownRender/Main.vue'),
-        props: { md: domTree },
-        meta: { activeMenuName: 'help' }
-      },
-      {
-        path: 'page',
-        name: 'helpPageMana',
-        component: () => import('../help/markdownRender/Main.vue'),
-        props: { md: page },
-        meta: { activeMenuName: 'help' }
-      },
-      {
-        path: 'block',
-        name: 'helpBlockMana',
-        component: () => import('../help/markdownRender/Main.vue'),
-        props: { md: block },
-        meta: { activeMenuName: 'help' }
-      },
-      {
-        path: 'data-source',
-        name: 'helpDataSource',
-        component: () => import('../help/markdownRender/Main.vue'),
-        props: { md: dataSource },
-        meta: { activeMenuName: 'help' }
-      },
-      {
-        path: 'resource',
-        name: 'helpResourceMana',
-        component: () => import('../help/markdownRender/Main.vue'),
-        props: { md: resource },
-        meta: { activeMenuName: 'help' }
-      },
-      {
-        path: 'i18n',
-        name: 'helpI18n',
-        component: () => import('../help/markdownRender/Main.vue'),
-        props: { md: i18n },
-        meta: { activeMenuName: 'help' }
-      },
-      {
-        path: 'script',
-        name: 'helpScript',
-        component: () => import('../help/markdownRender/Main.vue'),
-        props: { md: script },
-        meta: { activeMenuName: 'help' }
-      },
-      {
-        path: 'state',
-        name: 'helpStateMana',
-        component: () => import('../help/markdownRender/Main.vue'),
-        props: { md: state },
-        meta: { activeMenuName: 'help' }
-      },
-      {
-        path: 'schema',
-        name: 'helpSchema',
-        component: () => import('../help/markdownRender/Main.vue'),
-        props: { md: schema },
-        meta: { activeMenuName: 'help' }
-      },
-      {
-        path: 'toolbar',
-        name: 'helpDesignCoreToolbar',
-        component: () => import('../help/markdownRender/Main.vue'),
-        props: { md: toolbar },
-        meta: { activeMenuName: 'help' }
-      },
-      {
-        path: 'setting',
-        name: 'helpSetting',
-        component: () => import('../help/markdownRender/Main.vue'),
-        props: { md: setting },
-        meta: { activeMenuName: 'help' }
-      },
-      {
         path: 'upload-material',
         name: 'helpUploadMaterial',
         component: () => import('../common/components/PageBlank.vue'),
-        meta: { activeMenuName: 'help' }
-      },
-      {
-        path: 'build-material',
-        name: 'helpBuildMaterial',
-        component: () => import('../help/markdownRender/Main.vue'),
-        props: { md: buildMaterial },
-        meta: { activeMenuName: 'help' }
-      },
-      {
-        path: 'build-platform',
-        name: 'helpBuildPlatform',
-        component: () => import('../help/markdownRender/Main.vue'),
-        props: { md: buildPlatform },
-        meta: { activeMenuName: 'help' }
-      },
-      {
-        path: 'permission-management',
-        name: 'helpPermissionManagement',
-        component: () => import('../help/markdownRender/Main.vue'),
-        props: { md: permissionManagement },
         meta: { activeMenuName: 'help' }
       },
       {
