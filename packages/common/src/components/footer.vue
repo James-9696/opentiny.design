@@ -61,10 +61,6 @@ function toggleLink(link: any) {
         </div>
       </div>
     </div>
-    <div class="copyright">
-      <p>Copyright © Huawei Technologies Co., Ltd. 2023-{{new Date().getFullYear()}}. All rights reserved.</p>
-      <p>粤ICP备2022156931号-1</p>
-    </div>
   </div>
 </template>
 
@@ -82,7 +78,6 @@ function toggleLink(link: any) {
     justify-content: space-between;
     width: 100%;
     box-sizing: border-box;
-    border-bottom: 0.5px solid #c2c2c2;
 
     .contact {
       width: fit-content;
