@@ -119,11 +119,11 @@ const backgroundImageStyle = computed(() => {
   }
 
   .feature-text {
-    .title {
+    .feature-title {
       font-size: 20px;
       padding-bottom: 12px;
     }
-    .description {
+    .feature-desc {
       font-size: 14px;
     }
   }
