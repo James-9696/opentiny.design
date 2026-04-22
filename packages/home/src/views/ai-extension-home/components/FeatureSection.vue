@@ -29,8 +29,8 @@ const backgroundImageStyle = computed(() => {
       :class="{ 'reverse-layout': feature.reverse }"
     >
       <div class="feature-text">
-        <h3 class="title">{{ feature.title }}</h3>
-        <p class="description" v-html="feature.description"></p>
+        <h3 class="feature-title">{{ feature.title }}</h3>
+        <p class="feature-desc" v-html="feature.description"></p>
       </div>
       <div class="feature-visual">
         <img
@@ -46,67 +46,7 @@ const backgroundImageStyle = computed(() => {
 
 <style scoped lang="less">
 @import "../common.less";
-
-/* FeatureSection 特有样式 */
-.feature-section.section {
-  position: relative;
-  overflow: hidden;
-  min-height: 75vh;
-}
-
-.feature-content {
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  column-gap: 100px;
-}
-
-.reverse-layout {
-  flex-direction: row-reverse;
-}
-
-.section-title {
-  font-size: 45px;
-  font-weight: 700;
-  margin-bottom: 30px;
-  color: var(--text-primary);
-}
-
-.feature-desc {
-  font-size: 22px;
-  line-height: 1.8;
-  color: var(--text-secondary);
-}
-
-.feature-visual {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.floating-img {
-  width: 100%;
-  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15));
-  border-radius: 24px;
-  transition: transform 0.3s ease;
-}
-
-.floating-img:hover {
-  transform: scale(1.02);
-}
-
-.delay-1 {
-  animation-delay: 1s;
-}
-
-.delay-2 {
-  animation-delay: 2s;
-}
-
-.delay-3 {
-  animation-delay: 3s;
-}
+@import "../components/feature-section.less";
 
 /* ==================== 响应式适配 ==================== */
 
