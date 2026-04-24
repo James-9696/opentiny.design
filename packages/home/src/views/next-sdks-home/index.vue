@@ -276,7 +276,7 @@ onUnmounted(() => {
           使用 OpenTiny NEXT-NEXT-SDKs，只需要以下四步，就可以把你的前端应用变成智能应用。
         </p>
       </div>
-      <div class="steps-wrapper mar-t40">
+      <div class="steps-wrapper">
         <StepItem
           v-for="(step, index) in steps"
           :key="index"
@@ -323,7 +323,8 @@ onUnmounted(() => {
   padding-bottom: 90px;
   padding-top: 20px;
   .btn.secondary {
-    font-size: 14px;
+    color: #595959;
+    font-size: 16px;
     padding: 12px 24px;
   }
 }
@@ -350,7 +351,7 @@ onUnmounted(() => {
   max-width: 1200px;
   position: relative;
   flex-direction: column;
-  border-left: 1px solid #e1e8ed;
+  border-left: 1px solid rgba(219, 219, 219, 0.5);
 }
 
 /* ==================== 响应式适配（index.vue 特有） ==================== */

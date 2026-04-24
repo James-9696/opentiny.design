@@ -12,7 +12,7 @@
   }
 
   .pad-t40 {
-    padding-top: 40px !important;
+    padding-top: 50px !important;
   }
 
   /* 通用布局 */
@@ -52,11 +52,10 @@
 
   /* 通用文字样式（对齐 tiny-vue-home） */
   .title {
+    line-height: 74px;
     font-size: 52px;
     font-weight: 600;
     color: #191919;
-    letter-spacing: 2px;
-    line-height: 1.5;
     padding-bottom: 32px;
     .title-us {
       font-size: 56px;
@@ -70,7 +69,6 @@
     background: linear-gradient(90deg, #cb43a8 10%, #2c5fef 50%);
     -webkit-background-clip: text;
     background-clip: text;
-    letter-spacing: 5px;
     -webkit-text-fill-color: transparent;
     font-weight: 700;
   }
@@ -79,18 +77,15 @@
     font-size: 18px;
     padding-bottom: 48px;
     line-height: 2;
-    color: #a0a0a0;
-    letter-spacing: 2px;
-    font-weight: 400;
+    color: #595959;
   }
 
   .feature-title {
-    font-size: 36px;
+    font-size: 40px;
   }
 
   .feature-sub-title {
     font-size: 20px;
-    letter-spacing: 2px;
     padding-bottom: 0;
   }
 
@@ -104,12 +99,11 @@
     padding: 12px 44px;
     line-height: 24px;
     border-radius: 30px;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 400;
     text-decoration: none;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
-    letter-spacing: 1px;
     position: relative;
     overflow: hidden;
   }
@@ -118,25 +112,23 @@
     background: #191919;
     color: white;
     border: none;
-    box-shadow: 0 10px 25px rgba(94, 124, 226, 0.3);
   }
 
   .btn.primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 35px rgba(94, 124, 226, 0.5);
   }
 
   .btn.secondary {
+    font-size: 16px;
     background: transparent;
-    color: #191919;
-    border: 1px solid #191919;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    color: #595959;
+    border: 1px solid #808080;
   }
 
   .btn.secondary:hover {
+    color: #191919;
     transform: translateY(-3px);
     border-color: #191919;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   }
 
   /* 动画效果 */
@@ -191,12 +183,10 @@
 @media (max-width: 1024px) {
   .title {
     font-size: 28px;
-    letter-spacing: 3px;
   }
 
   .subtitle {
     font-size: 26px;
-    letter-spacing: 3px;
   }
 
   .description {
@@ -218,13 +208,11 @@
 
   .title {
     font-size: 28px;
-    letter-spacing: 2px;
     padding-bottom: 15px;
   }
 
   .subtitle {
     font-size: 26px;
-    letter-spacing: 2px;
     padding-bottom: 15px;
   }
 
@@ -270,14 +258,12 @@
   }
 
   .description {
-    letter-spacing: 0px;
     padding-left: 15px;
     padding-right: 15px;
   }
 
   .title {
     font-size: 22px;
-    letter-spacing: 1px;
     .title-us {
       font-size: 24px;
     }
@@ -285,7 +271,6 @@
 
   .subtitle {
     font-size: 20px;
-    letter-spacing: 1px;
   }
 
   .feature-sub-title {
