@@ -67,12 +67,12 @@ onMounted(() => {
 <template>
   <section class="mcp-section section">
     <div ref="featureHeaderRef" class="feature-header pad-t40 fade-in-up">
-      <h2 class="title feature-title">支持 Agent Skills</h2>
-      <p class="description">
+      <h2 class="feature-title">支持 Agent Skills</h2>
+      <p class="description feature-sub-title text-center">
         提供 TinyVue 组件库的 Skills 技能包，让 AI 使用 TinyVue 组件快速搭建 Web 应用
       </p>
     </div>
-    <div ref="mcpContentRef" class="mcp-content fade-in-up">
+    <div ref="mcpContentRef" class="mcp-content fade-in-up mt-70 mb-100">
       <div class="feature-grid">
         <div
           v-for="(item, index) in mcpFeatures"
@@ -91,7 +91,7 @@ onMounted(() => {
       </div>
     </div>
     <div
-      class="mcp-image bg-tech-2 pad-t40"
+      class="mcp-image bg-tech-2 pad-t40 mt-40 mb-70"
       :style="{ backgroundImage: backgroundImageUrl }"
     >
       <div class="title pad-t40">TinyVue 智能组件库</div>
@@ -128,24 +128,26 @@ onMounted(() => {
   .mcp-image {
     width: 100%;
     max-width: 1400px;
-    padding-left: 90px;
-    border-radius: 24px;
+    padding-left: 200px;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     height: 345px;
     background-repeat: no-repeat;
     .title {
-      font-size: 40px;
-      font-weight: 600;
+      font-size: 48px;
+      font-weight: 700;
       color: #fff;
-      letter-spacing: 2px;
-      line-height: 1.2;
-      padding-bottom: 20px;
+      line-height: 60px;
+      padding-bottom: 16px;
     }
     .mcp-desc {
-      font-size: 22px;
-      color: rgba(255, 255, 255, 0.7);
+      font-size: 24px;
+      color: #fff;
+      line-height: 36px;
+      font-weight: 300;
+      padding-bottom: 32px;
     }
     .mcp-button {
       display: flex;
@@ -159,12 +161,21 @@ onMounted(() => {
         display: flex;
         align-items: center;
         gap: 5px;
+        font-size: 18px;
       }
       .primary {
+        height: 40px;
         background: transparent;
-        color: white;
         border: 1px solid;
-        box-shadow: 0 10px 25px rgba(94, 124, 226, 0.3);
+
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow: none;
+        }
+      }
+      .secondary {
+        line-height: 18px;
+        font-weight: 400;
       }
       svg {
         fill: #fff;
@@ -186,12 +197,11 @@ onMounted(() => {
   .feature-card {
     display: flex;
     flex-direction: column;
-    border-radius: 16px;
-    padding: 40px 30px;
+    border: 1px solid #dbdbdb;
+    border-radius: 20px;
+    padding: 32px;
     text-align: left;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    gap: 20px;
+    gap: 16px;
     .mcp-text {
       display: flex;
       flex-direction: column;
@@ -204,10 +214,10 @@ onMounted(() => {
       }
       .mcp-description {
         font-size: 16px;
-        line-height: 2;
-        color: #a0a0a0;
-        letter-spacing: 2px;
-        font-weight: 400;
+        line-height: 32px;
+        color: #191919;
+        letter-spacing: 1px;
+        font-weight: 300;
       }
     }
 
@@ -219,12 +229,6 @@ onMounted(() => {
       background-position: center;
       background-repeat: no-repeat;
     }
-  }
-
-  .feature-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
-    border-color: rgba(94, 124, 226, 0.3);
   }
 
   .mcp-section {

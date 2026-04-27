@@ -13,12 +13,12 @@ const isMobile = inject("isMobile");
 <template>
   <section class="feature-section section bg-tech-2 bg-color-1">
     <div class="feature-header fade-in-up">
-      <h2 class="title feature-title">强大的主题定制</h2>
-      <p class="description">
+      <h2 class="feature-title mt-60">强大的主题定制</h2>
+      <p class="description feature-sub-title text-center">
         支持灵活的主题配置和定制能力。轻松适配企业品牌风格，打造独特视觉体验。
       </p>
     </div>
-    <div class="feature-content pad-t40 content-center fade-in-up">
+    <div class="feature-content pad-t40 content-center mt-20 mb-100 fade-in-up">
       <div class="feature-visual">
         <img
           :src="isMobile ? themeLeftImgMobile : themeLeftImg"
@@ -45,7 +45,8 @@ const isMobile = inject("isMobile");
   .theme-item-img {
     border-radius: 20px;
     object-fit: cover;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 12px 32px 0 rgba(0, 0, 0, 0.05);
+    border: none; 
   }
 
   .feature-content {
@@ -53,10 +54,16 @@ const isMobile = inject("isMobile");
   }
 
   .theme-left {
-    margin-right: 40px;
+    margin-right: 0;
   }
 
   /* 响应式适配 */
+  @media (min-width: 1441px) and (max-width: 1670px) {
+    .theme-item-img {
+      zoom: 0.9;
+    }
+  }
+
   @media (max-width: 1024px) {
     .feature-content {
       flex-direction: column;
@@ -67,7 +74,6 @@ const isMobile = inject("isMobile");
     }
 
     .theme-left {
-      margin-right: 0;
       margin-bottom: 30px;
     }
   }

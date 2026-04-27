@@ -109,13 +109,13 @@ const anchorData = reactive([
 </script>
 
 <template>
-  <section class="feature-section section bg-tech-2 bg-color-1">
+  <section class="feature-section section bg-tech-2 bg-color-1 pb-100">
     <div class="feature-header fade-in-up">
-      <h2 class="title feature-title">丰富的组件</h2>
-      <p class="description">持续更新迭代，满足企业级应用需求。</p>
+      <h2 class="feature-title mt-60">丰富的组件</h2>
+      <p class="description feature-sub-title text-center">持续更新迭代，满足企业级应用需求。</p>
     </div>
     <div
-      class="flex-row"
+      class="flex-row mt-100 mb-60"
       :style="{ width: isMobile ? '100%' : '550px', gap: isMobile ? '20px' : '120px' }"
     >
       <div class="flex-row-column">
@@ -443,12 +443,12 @@ const anchorData = reactive([
     padding: 30px 25px;
     background: #fff;
     border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    box-shadow: 2px  2px 16px 8px rgba(126, 141, 145, 0.09);
     flex: 1;
 
     &:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+      transform: scale(1.02);
+      box-shadow: 0 8px 32px 0 rgba(126, 141, 145, 0.09);
     }
 
     .tiny-tree-menu:before {
@@ -472,11 +472,11 @@ const anchorData = reactive([
   }
 
   .component-demo-title {
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 700;
     color: #191919;
-    letter-spacing: 2px;
-    line-height: 1.2;
+    letter-spacing: 0px;
+    line-height: 32px;
     padding-bottom: 20px;
   }
 
@@ -492,6 +492,12 @@ const anchorData = reactive([
 
   .tiny-carousel {
     width: 100%;
+  }
+
+  @media (max-width: 1670px) {
+    .component-demo-container {
+      zoom: 0.9;
+    }
   }
 
   /* 响应式适配 */
@@ -556,10 +562,6 @@ const anchorData = reactive([
       max-width: 100%;
       text-align: center;
     }
-
-    .component-demo-title {
-      font-size: 18px;
-    }
   }
 
   @media (max-width: 480px) {
@@ -575,10 +577,6 @@ const anchorData = reactive([
         transform: none;
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
       }
-    }
-
-    .component-demo-title {
-      font-size: 18px;
     }
   }
 }
