@@ -33,22 +33,22 @@ const isMobile = inject("isMobile");
 
 <template>
   <section class="feature-section section bg-tech-1 min-h75">
-    <div class="feature-header pad-t40 fade-in-up">
-      <h2 class="title feature-title">配置式组件</h2>
-      <p class="description">
+    <div class="feature-header pad-t40 fade-in-up mb-40">
+      <h2 class="feature-title">配置式组件</h2>
+      <p class="feature-sub-title text-center">
         支持模板式和配置式两种使用方式， 配置式组件让复杂场景的开发更简单高效。
       </p>
     </div>
     <div class="feature-content pad-t40 fade-in-up">
-      <div class="flex-row gap-30 config-content">
+      <div class="flex-row gap-30 config-content pb-130">
         <div
           v-for="(item, index) in items"
           :key="index"
-          class="flex-row flex-row-column gap-30 config-item"
+          class="flex-row flex-row-column config-item"
         >
-          <img :src="item.icon" :alt="item.title" />
-          <div class="title feature-sub-title pad-0-30 pad-t40">{{ item.title }}</div>
-          <div class="description feature-text-description pad-0-30">
+          <img :src="item.icon" :alt="item.title" class="feature-icon"/>
+          <div class="feature-desc-title pd-space-title">{{ item.title }}</div>
+          <div class="feature-text-description pd-space">
             {{ item.description }}
           </div>
         </div>
@@ -65,15 +65,13 @@ const isMobile = inject("isMobile");
 
   .config-item {
     background-color: #fff;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    box-shadow: 0 12px 32px 0 rgba(0, 0, 0, 0.05);
     align-items: baseline;
-    gap: 20px;
     border-radius: 20px;
 
     &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+      transform: scale(1.02);
+      box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.05);
     }
 
     .description {
@@ -84,10 +82,11 @@ const isMobile = inject("isMobile");
     }
 
     img {
-      width: 100%;
+      width: stretch;
       height: auto;
       border-radius: 20px 20px 0 0;
       object-fit: cover;
+      margin-bottom: 48px;
     }
 
     .title {
