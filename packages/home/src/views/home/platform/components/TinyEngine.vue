@@ -18,7 +18,7 @@
         </div>
         <div class="description">
           <img :src="$pub('images/platform/engine_1.svg')" alt="" loading="lazy" />
-          <div class="line">
+          <div>
             <div>集成 TinyEngine MCP 工具，AI 对话直调内置能力，</div>
             <div>自定义工具还能扩 AI 边界</div>
           </div>

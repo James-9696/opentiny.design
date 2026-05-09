@@ -10,7 +10,6 @@
           {{ data.title }}<span class="banner-item-title1">{{ data.title1 }}</span>
         </div>
         <div class="banner-item-description">{{ data.description }}</div>
-        <CustomAniButton v-if="!isMobile" text="立即体验" @click.stop="onPlayground" />
         <CustomAniButton v-if="!isMobile" text="产品文档" ghost @click.stop="onDocs" />
       </div>
     </div>
@@ -30,7 +29,6 @@ const props = defineProps({
 })
 const { isMobile } = useWindowSize()
 
-const onPlayground = () => window.open('https://playground.opentiny.design/genui-sdk', '_blank', 'noopener,noreferrer')
 const onDocs = () => window.open('https://docs.opentiny.design/genui-sdk', '_blank', 'noopener,noreferrer')
 </script>
 

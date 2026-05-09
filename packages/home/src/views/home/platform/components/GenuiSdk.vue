@@ -23,7 +23,6 @@
       </div>
       <div class="footer">
         <div class="operation">
-          <tiny-button class="button" type="primary" @click="onPlayground">立即体验</tiny-button>
           <tiny-button class="button" ghost @click="onDocs">产品文档</tiny-button>
         </div>
       </div>
@@ -35,7 +34,6 @@
 <script setup>
 import { TinyButton } from '@opentiny/vue';
 
-const onPlayground = () => window.open('https://playground.opentiny.design/genui-sdk', '_blank', 'noopener,noreferrer')
 const onDocs = () => window.open('https://docs.opentiny.design/genui-sdk', '_blank', 'noopener,noreferrer')
 </script>
 
