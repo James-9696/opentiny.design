@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { onMounted, reactive, ref ,watch} from 'vue'
+import { onMounted, reactive, ref} from 'vue'
 import type { PropType } from 'vue'
 import type { ICommonOption } from '../index'
 
@@ -283,18 +283,6 @@ const toggleTheme = (event: MouseEvent) => {
     );
   });
 }
-
-watch(
-  () => currApp,
-  (newVal) => {
-    if (newVal === 'tiny-charts') {
-      state.headerInfo = [];
-    }
-  },
-  {
-    immediate: true,
-  },
-);
 </script>
 
 <template>
