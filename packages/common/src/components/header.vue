@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { onMounted, reactive, ref} from 'vue'
+import { onMounted, reactive, ref } from 'vue'
 import type { PropType } from 'vue'
 import type { ICommonOption } from '../index'
 
