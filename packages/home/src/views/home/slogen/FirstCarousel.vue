@@ -14,8 +14,7 @@
           {{ data.descriptionA2 }}
         </div>
         <div class="home-title-buttons" v-if="!isMobile">
-          <CustomAniButton text="开发文档" @click.stop="onDocs" />
-          <CustomAniButton text="立即体验" ghost @click.stop="handleExperience" />
+          <CustomAniButton text="开发文档" ghost @click.stop="onDocs" />
         </div>
       </div>
     </div>
@@ -36,7 +35,6 @@ const props = defineProps({
 const { isMobile } = useWindowSize()
 
 const onDocs = () => window.open('https://docs.opentiny.design', '_blank', 'noopener,noreferrer')
-const handleExperience = () => window.open('https://ai.opentiny.design/tar/', '_blank', 'noopener,noreferrer')
 </script>
 <style scoped lang="less">
 @import '@/mixin.less';

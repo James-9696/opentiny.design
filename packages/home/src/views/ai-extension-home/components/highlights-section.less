@@ -1,0 +1,72 @@
+ /** 1、HighlightsSection.vue部分 */
+  .section-container {
+    max-width: 1400px;
+    margin: 100px 90px 100px;
+  }
+
+  .highlights-section {
+    background: #fff;
+  }
+
+  .highlights-section.section {
+    position: relative;
+    overflow: hidden;
+    min-height: 90vh;
+  }
+
+  .card-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 28px;
+  }
+
+  .card-icon img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+
+   .highlight-card {
+    background: #f8f9fa;
+    padding: 40px 40px 28px 40px;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    width: 330px;
+    height: 283px;
+
+    h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      line-height: 27px;
+    }
+
+    p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+  }
+
+  .highlights-title {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    line-height: 53px;
+    color: #191919;
+  }
+
+  .section-description {
+    font-size: 20px;
+    padding-bottom: 100px;
+    line-height: 28px;
+    color: #808080;
+    letter-spacing: 1px;
+    font-weight: 300;
+  }

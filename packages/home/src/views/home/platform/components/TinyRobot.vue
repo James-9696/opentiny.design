@@ -1,15 +1,11 @@
 <script setup>
-import { TinyButton, TinyLink } from '@opentiny/vue'
-import { iconFilletExternalLink } from '@opentiny/vue-icon'
+import { TinyButton } from '@opentiny/vue'
 import useWindowSize from '@/tools/useWindowSize.js'
 
 const { isMobile } = useWindowSize()
 
-const TinyIconFilletExternalLink = iconFilletExternalLink()
 
-const onTinyRobot = () => {
-  window.open('https://chat.opentiny.design/', '_blank', 'noopener,noreferrer')
-}
+const onDocs = () => window.open('https://docs.opentiny.design/tiny-robot/guide/quick-start.html', '_blank', 'noopener,noreferrer')
 
 const cardList = [
   {
@@ -57,13 +53,7 @@ const cardList = [
       </div>
       <div class="footer">
         <div class="operation">
-          <tiny-button class="button" @click="onTinyRobot">即刻体验</tiny-button>
-          <tiny-link class="link" href="https://docs.opentiny.design/tiny-robot/guide/quick-start.html" target="_blank">
-            <template #icon>
-              <TinyIconFilletExternalLink></TinyIconFilletExternalLink>
-            </template>
-            查看文档
-          </tiny-link>
+          <tiny-button class="button" ghost @click="onDocs">查看文档</tiny-button>
         </div>
       </div>
     </div>

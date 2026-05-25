@@ -57,17 +57,15 @@ const props = defineProps({
 
 .feature-text {
   .title {
-    font-size: 40px;
-    letter-spacing: 2px;
+    font-size: 36px;
     padding-bottom: 0px;
   }
 
   .description {
     font-size: 20px;
-    letter-spacing: 2px;
     color: #808080;
-    padding-bottom: 50px;
-    padding-top: 30px;
+    padding-bottom: 0px;
+    padding-top: 32px;
     font-family: 微软雅黑;
   }
 
@@ -75,6 +73,8 @@ const props = defineProps({
     background: transparent;
     padding: 12px 24px;
     font-size: 14px;
+    margin-top: 32px;
+    display: inline-block;
   }
 }
 

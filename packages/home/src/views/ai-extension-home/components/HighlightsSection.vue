@@ -59,8 +59,8 @@ const highlights = [
 <template>
   <section class="highlights-section section fade-in-up">
     <div class="section-container">
-      <h3 class="text-center title">核心亮点</h3>
-      <p class="section-description text-center description">AI 助手赋能网页智能交互</p>
+      <h3 class="text-center highlights-title">核心亮点</h3>
+      <p class="section-description text-center">AI 助手赋能网页智能交互</p>
       <div class="highlights-grid">
         <div
           v-for="(highlight, index) in highlights"
@@ -80,67 +80,7 @@ const highlights = [
 
 <style scoped lang="less">
 @import "../common.less";
-
-.highlights-section {
-  background: #fff;
-}
-
-.highlights-section.section {
-  position: relative;
-  overflow: hidden;
-  min-height: 90vh;
-}
-
-.section-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 40px;
-}
-
-.highlights-grid {
-  margin-top: 20px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-}
-
-.highlight-card {
-  background: #f8f9fa;
-  padding: 40px;
-  border-radius: 16px;
-  transition: all 0.3s ease;
-  border: 1px solid transparent;
-}
-
-.highlight-card:hover {
-  transform: translateY(-5px);
-  background: #fff;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-}
-
-.card-icon {
-  width: 48px;
-  height: 48px;
-  margin-bottom: 28px;
-}
-
-.card-icon img {
-  width: 100%;
-  height: 100%;
-}
-
-.highlight-card h3 {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-.highlight-card p {
-  font-size: 14px;
-  color: var(--text-secondary);
-  line-height: 1.5;
-}
-
+@import "../components/highlights-section.less";
 /* ==================== 响应式适配 ==================== */
 
 @media (max-width: 1200px) {

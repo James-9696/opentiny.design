@@ -232,18 +232,17 @@ const copyCode = async (code, index, codeIndex) => {
 .step-item {
   position: relative;
   background: #fff;
-  padding: 20px 30px 30px 30px;
+  padding: 0 30px 0 30px;
   scroll-margin-top: 120px;
   transition: all 0.3s ease;
-  border-left: 4px solid transparent;
-  margin-left: -2px;
+  margin-bottom: 40px;
 
   &:last-child {
     margin-bottom: 0;
   }
 
   &.step-active {
-    border-left: 4px solid #1476ff;
+    border-left: 3px solid #1476ff;
     margin-left: -2px;
     .step-index {
       background: #1476ff;
@@ -255,8 +254,6 @@ const copyCode = async (code, index, codeIndex) => {
 }
 
 .step-header {
-  margin-bottom: 20px;
-
   .feature-sub-title {
     display: flex;
     position: relative;
@@ -289,7 +286,7 @@ const copyCode = async (code, index, codeIndex) => {
   padding-left: 44px;
   .step-description {
     font-size: 16px;
-    color: #808080;
+    color: #595959;
     margin-bottom: 16px;
     line-height: 1.5;
 
@@ -319,7 +316,6 @@ const copyCode = async (code, index, codeIndex) => {
   border-radius: 8px;
   overflow: hidden;
   background: #f7f9fc;
-  border: 1px solid #e1e8ed;
 }
 
 .copy-button {
@@ -345,7 +341,7 @@ const copyCode = async (code, index, codeIndex) => {
   overflow-x: auto;
   font-size: 16px;
   line-height: 1.6;
-  background: #f5f5f5;
+  background: rgba(245, 245, 245, 1);
 
   :deep(code) {
     background: transparent;
@@ -361,10 +357,6 @@ const copyCode = async (code, index, codeIndex) => {
   .step-item {
     padding: 20px 15px;
   }
-  .step-header {
-    margin-bottom: 4px;
-  }
-
   .step-title {
     font-size: 16px;
   }
