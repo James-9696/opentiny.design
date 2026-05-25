@@ -1,0 +1,72 @@
+  /* 2、FeatureSection 特有样式 */
+  .feature-section.section {
+    position: relative;
+    overflow: hidden;
+    min-height: 75vh;
+    border-top: 1px solid #f0f0f0;
+  } 
+
+  .feature-content {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 100px;
+
+    .feature-title {
+      font-size: 38px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 32px;
+    }
+
+    .feature-desc {
+      max-width: 432px;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 40px;
+      letter-spacing: 1px;
+      color: #808080;
+    }
+  } 
+
+
+  .reverse-layout {
+    flex-direction: row-reverse;
+  } 
+
+  .section-title {
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: var(--text-primary);
+  } 
+
+  .feature-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .floating-img {
+    width: 100%;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15));
+    border-radius: 24px;
+    transition: transform 0.3s ease;
+  }
+  
+  .floating-img:hover {
+    transform: scale(1.02);
+  }
+  
+  .delay-1 {
+    animation-delay: 1s;
+  }
+  
+  .delay-2 {
+    animation-delay: 2s;
+  }
+  
+  .delay-3 {
+    animation-delay: 3s;
+  }

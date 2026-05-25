@@ -8,8 +8,6 @@
  用于打通华为云和[`云服务插件`](/vue-pro/docs/advanced/plugin)用于管理和使用您的各类云服务资源。
  <br/>
 
-你可以通过访问以下演示站点体验 TinyPro：[https://opentiny.design/vue-pro/pages](https://opentiny.design/vue-pro/pages)
- 
  <h2 id='knowledge'>背景知识</h2>
 
 `TinyPro of Vue`作为一个前端脚手架，默认读者已经懂了一些前端的基础知识，并且了解[`Vue`](https://cn.vuejs.org/)、[`Tiny Vue`](/tiny-vue)和[`TinyCLI`](/tiny-cli/home)。
