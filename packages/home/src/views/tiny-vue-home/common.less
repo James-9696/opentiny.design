@@ -7,6 +7,21 @@
   padding: 0;
   background-color: var(--bg-color);
 
+  .feature-title {
+    margin-top: 20px;
+    font-size: 40px;
+    line-height:54px;
+    font-weight: 700;
+  }
+
+  .feature-text-description {
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    color: #808080;
+  }
+
   .container {
     width: 100%;
     overflow-x: hidden;
@@ -77,6 +92,58 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .mt-100 {
+    margin-top: 100px;
+  }
+
+  .mt-20 {
+    margin-top: 20px;
+  }
+
+  .mt-40 {
+    margin-top: 40px;
+  }
+
+  .mt-60 {
+    margin-top: 60px;
+  }
+
+  .mt-70 {
+    margin-top: 70px;
+  }
+
+  .mb-60 {
+    margin-bottom: 60px;
+  }
+
+  .mb-70 {
+    margin-bottom: 70px;
+  }
+
+ .mb-40 {
+    margin-bottom: 40px;
+  }
+
+  .mb-100 {
+    margin-bottom: 100px;
+  }
+
+  .pd-space {
+    padding:  16px 32px 40px;
+  }
+
+  .pd-space-title {
+    padding:  0px 32px;
+  }
+
+  .pb-130 {
+    padding-bottom: 130px;
+  }
+
+  .pb-100 {
+    padding-bottom: 100px;
   }
 
   .flex-row-column {
@@ -181,7 +248,18 @@
 
   .feature-sub-title {
     font-size: 20px;
-    padding-bottom: 0;
+    letter-spacing: 1px;
+    padding: 16px 0 20px 0;
+    line-height: 28px;
+    font-weight: 300;
+    color: #808080;
+  }
+
+  .feature-desc-title {
+    color: #191919;
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 0;
   }
 
   .feature-header {
@@ -191,10 +269,10 @@
     justify-content: center;
     max-width: 1400px;
     width: 100%;
+    margin-top: 10px;
   }
 
   .feature-content {
-    position: relative;
     z-index: 1;
     display: flex;
     align-items: baseline;
@@ -202,17 +280,19 @@
     max-width: 1400px;
     width: 100%;
     height: 100%;
+    gap: 40px;
   }
 
   .feature-text {
     flex: 1;
-    padding: 0 20px;
+    padding: 0 32px;
   }
 
   .feature-visual {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
   }
 
   .floating-img {
@@ -232,20 +312,29 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    padding-bottom: 20px;
+    padding-bottom: 16px;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
   }
 
   .title-logo-text {
-    font-size: 16px;
-    color: #808080;
+    font-size: 24px;
+    color: #595959;
+    letter-spacing: 0px;
+    line-height: 36px;
+    font-weight: 400;
   }
 
   .title-number {
-    font-size: 44px;
+    font-size: 52px;
     font-weight: 600;
     color: #1476ff;
-    line-height: 1.2;
-    padding-bottom: 20px;
+    letter-spacing: 0;
+    line-height: 74px;
+    padding-bottom: 8px;
   }
 
   /* ==================== 响应式适配 ==================== */
@@ -308,7 +397,7 @@
       font-size: 14px;
     }
 
-    .feature-sub-title {
+    .feature-sub-title, .feature-desc-title {
       font-size: 18px;
       padding-bottom: 0px;
     }
@@ -346,7 +435,7 @@
       font-size: 20px;
     }
 
-    .feature-sub-title {
+    .feature-sub-title, .feature-desc-title {
       font-size: 16px;
     }
 

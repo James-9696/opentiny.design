@@ -26,7 +26,7 @@ const features = [
 <template>
   <section class="feature-section section bg-tech-1 pad-t40 content-around">
     <div class="feature-header pad-t40 fade-in-up">
-      <h2 class="title feature-title">跨端跨框架</h2>
+      <h2 class="feature-title">跨端跨框架</h2>
       <p class="description feature-sub-title text-center">
         相同的组件代码可在不同的Vue版本和设备平台上运行，显著降低了企业应用的维护成本，无需重复开发，大幅提升开发效率
       </p>
@@ -35,9 +35,9 @@ const features = [
       <div v-for="(item, index) in features" :key="index" class="feature-text">
         <div class="title-logo">
           <img :src="item.icon" class="feature-icon" />
-          <h2 class="title feature-sub-title">{{ item.title }}</h2>
+          <h2 class="feature-desc-title">{{ item.title }}</h2>
         </div>
-        <p class="description feature-text-description">{{ item.description }}</p>
+        <p class="feature-text-description">{{ item.description }}</p>
       </div>
     </div>
     <div class="feature-visual pad-t40 fade-in-up">
