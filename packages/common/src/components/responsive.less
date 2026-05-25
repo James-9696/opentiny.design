@@ -444,7 +444,7 @@
   }
 }
 
-@media screen and (max-width: 1475px) {
+@media screen and (max-width: 1400px) {
   .opentiny-design-header {
       display: grid;
       grid-template-columns: 1fr auto;  // 两列：左侧内容 + 右侧nav-right
@@ -627,13 +627,17 @@
   }
 }
 
-@media (min-width: 1476px) and (max-width: 1576px) {
+@media (min-width: 1400px) and (max-width: 1576px) {
+
   .opentiny-design-header {
     // 右侧导航
     .nav-right {
       .dropdown-menu {
         .dropdown-content-title {
           margin-left: 243px;
+        }
+        .dropdown-content .dropdown-app {
+          width: 216px;
         }
       }
     }
@@ -674,6 +678,29 @@
 
   .dropdown-100 {
     margin-left: 248px;
+  }
+}
+
+@media (min-width: 1401px) and (max-width: 1475px) {
+  .opentiny-design-header {
+    // 左侧导航
+    .nav-left {
+      margin-right: 48px;
+    }
+
+    // 中间导航
+    .nav-center {
+      .top-menu {
+        margin-right: 20px;
+      }
+    }
+
+    // 右侧导航
+    .nav-right {
+      .mg-r {
+        margin-right: 20px;
+      }
+    }
   }
 }
 
