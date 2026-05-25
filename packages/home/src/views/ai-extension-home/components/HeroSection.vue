@@ -61,13 +61,6 @@ import heroBgPc from "@/assets/images/home/ai-extension-home/banner-img.svg";
     display: flex;
     justify-content: center;
     align-items: center;
-
-    img {
-      filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15));
-      border-radius: 20px;
-      width: 90%;
-      max-width: 1000px;
-    }
   }
 
   .cta-group {

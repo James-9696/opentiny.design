@@ -68,12 +68,6 @@ import heroBgPc from "@/assets/images/home/next-sdk-home/banner-img.svg";
   justify-content: center;
   align-items: center;
   animation: fadeInUp 1s ease-out;
-
-  img {
-    width: 1000px;
-    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15));
-    border-radius: 20px;
-  }
 }
 
 .cta-group {
