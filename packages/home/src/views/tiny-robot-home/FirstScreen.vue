@@ -11,7 +11,7 @@
         </div>
         <div class="first-screen-content-footer">
           <!-- <tiny-button type="primary" round @click="gotoChat">立即体验</tiny-button> -->
-          <tiny-button round ghost @click="gotoDocs">组件文档</tiny-button>
+          <tiny-button type="primary" round @click="gotoDocs">组件文档</tiny-button>
         </div>
       </div>
       <div class="first-screen-image">
@@ -23,16 +23,16 @@
 <script setup>
 import { reactive, computed, onMounted, onUnmounted } from 'vue'
 import { TinyButton } from '@opentiny/vue'
-import img from '@/assets/images/home/tinyrobot_top.svg'
-import sender from '@/assets/images/home/tinyrobot_sender.svg'
+import img from '@/assets/images/home/tiny-robot-home/top.svg'
+import sender from '@/assets/images/home/tiny-robot-home/sender.svg'
 
 const TYPING_SPEED = 100 // 打字速度（毫秒）
 const PAUSE_AFTER_COMPLETE = 3000 // 打完后停顿时间（毫秒）
 
 const state = reactive({
-  title: 'TinyRobot 智能助手+组件',
-  subtitle: '双核驱动，体验升维',
-  description: '一站式智能协作解决方案，覆盖全业务场景，智能响应无死角',
+  title: 'TinyRobot AI 对话组件库',
+  subtitle: '开箱即用，智能体验',
+  description: '提供丰富的 AI 交互组件，助力企业快速搭建智能对话与业务助手应用',
   image: img,
   list: [
     '创建一个下周二去上海五天的出差申请',
@@ -122,7 +122,7 @@ onUnmounted(() => {
   }
 }
 .first-screen {
-  background-image: url(@/assets/images/home/tinyrobot_top_banner.svg);
+  background-image: url(@/assets/images/home/tiny-robot-home/top_banner.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -145,9 +145,10 @@ onUnmounted(() => {
         font-size: 52px;
         font-weight: 700;
         line-height: 72px;
-        background: linear-gradient(90deg, #bc43cb, #0e70ff);
+        background: linear-gradient(90deg, #ff943f, #e449db, #9d36f0, #1273ff);
         background-clip: text;
         color: transparent;
+        width: fit-content;
         margin-top: 4px;
       }
       .first-screen-content-text {
@@ -225,7 +226,7 @@ onUnmounted(() => {
 
 @media (max-width: 1023px) {
   .first-screen {
-    background-image: url(@/assets/images/home/tinyrobot_top_mobile_banner.svg);
+    background-image: url(@/assets/images/home/top_mobile_banner.svg);
     .first-screen-wrap {
       flex-direction: column;
       padding: 0;
@@ -240,6 +241,7 @@ onUnmounted(() => {
           font-size: 24px;
           line-height: 32px;
           text-align: center;
+          margin: 4px auto;
         }
         .first-screen-content-text {
           width: 249px;

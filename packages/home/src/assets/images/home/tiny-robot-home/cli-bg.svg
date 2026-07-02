@@ -1,0 +1,97 @@
+<svg viewBox="0 0 1920 376" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920.000000" height="376.000000" fill="none">
+	<defs>
+		<g id="pixso_custom_effect_75">
+			<effect visibility="visible" effectType="gaussianBlur" stdDeviation="400" />
+		</g>
+		<filter id="filter_75" width="1215.000000" height="1228.000000" x="1023.000000" y="-643.000000" filterUnits="userSpaceOnUse" customEffect="url(#pixso_custom_effect_75)" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix" />
+			<feBlend result="shape" in="SourceGraphic" in2="BackgroundImageFix" mode="normal" />
+			<feGaussianBlur stdDeviation="133.333328" result="effect_layerBlur_1" />
+		</filter>
+		<g id="pixso_custom_effect_76">
+			<effect visibility="visible" effectType="gaussianBlur" stdDeviation="500" />
+		</g>
+		<filter id="filter_76" width="1496.000000" height="1417.000000" x="461.000000" y="-732.000000" filterUnits="userSpaceOnUse" customEffect="url(#pixso_custom_effect_76)" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix" />
+			<feBlend result="shape" in="SourceGraphic" in2="BackgroundImageFix" mode="normal" />
+			<feGaussianBlur stdDeviation="166.666672" result="effect_layerBlur_1" />
+		</filter>
+		<g id="pixso_custom_effect_77">
+			<effect visibility="visible" effectType="gaussianBlur" stdDeviation="500" />
+		</g>
+		<filter id="filter_77" width="392.000000" height="403.000000" x="-127.000000" y="62.000000" filterUnits="userSpaceOnUse" customEffect="url(#pixso_custom_effect_77)" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix" />
+			<feBlend result="shape" in="SourceGraphic" in2="BackgroundImageFix" mode="normal" />
+			<feGaussianBlur stdDeviation="166.666672" result="effect_layerBlur_1" />
+		</filter>
+		<g id="pixso_custom_effect_78">
+			<effect visibility="visible" effectType="gaussianBlur" stdDeviation="500" />
+		</g>
+		<filter id="filter_78" width="1696.000000" height="1697.000000" x="-652.000000" y="-148.000000" filterUnits="userSpaceOnUse" customEffect="url(#pixso_custom_effect_78)" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix" />
+			<feBlend result="shape" in="SourceGraphic" in2="BackgroundImageFix" mode="normal" />
+			<feGaussianBlur stdDeviation="166.666672" result="effect_layerBlur_1" />
+		</filter>
+		<g id="pixso_custom_effect_79">
+			<effect visibility="visible" effectType="gaussianBlur" stdDeviation="400" />
+		</g>
+		<filter id="filter_79" width="1528.000000" height="1148.000000" x="-403.000000" y="-348.000000" filterUnits="userSpaceOnUse" customEffect="url(#pixso_custom_effect_79)" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix" />
+			<feBlend result="shape" in="SourceGraphic" in2="BackgroundImageFix" mode="normal" />
+			<feGaussianBlur stdDeviation="133.333328" result="effect_layerBlur_1" />
+		</filter>
+		<g id="pixso_custom_effect_80">
+			<effect visibility="visible" effectType="gaussianBlur" stdDeviation="400" />
+		</g>
+		<filter id="filter_80" width="622.501953" height="352.500000" x="1344.000000" y="208.000000" filterUnits="userSpaceOnUse" customEffect="url(#pixso_custom_effect_80)" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix" />
+			<feBlend result="shape" in="SourceGraphic" in2="BackgroundImageFix" mode="normal" />
+			<feGaussianBlur stdDeviation="133.333328" result="effect_layerBlur_1" />
+		</filter>
+		<g id="pixso_custom_effect_81">
+			<effect visibility="visible" effectType="gaussianBlur" stdDeviation="452" />
+		</g>
+		<filter id="filter_81" width="620.000000" height="620.000000" x="-187.000000" y="-210.000000" filterUnits="userSpaceOnUse" customEffect="url(#pixso_custom_effect_81)" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix" />
+			<feBlend result="shape" in="SourceGraphic" in2="BackgroundImageFix" mode="normal" />
+			<feGaussianBlur stdDeviation="150.666672" result="effect_layerBlur_1" />
+		</filter>
+		<g id="pixso_custom_effect_82">
+			<effect x="0.000000" y="0.000000" visibility="visible" fill="rgb(210,196,237)" fill-opacity="0.26000002" effectType="dropShadow" stdDeviation="50" radius="0" />
+		</g>
+		<filter id="filter_82" width="762.000000" height="583.000000" x="1008.000000" y="-104.000000" filterUnits="userSpaceOnUse" customEffect="url(#pixso_custom_effect_82)" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix" />
+			<feOffset dx="0.000000" dy="0.000000" in="SourceAlpha" />
+			<feGaussianBlur stdDeviation="16.666666" />
+			<feColorMatrix type="matrix" values="0 0 0 0 0.823529 0 0 0 0 0.768627 0 0 0 0 0.929412 0 0 0 0.26 0 " />
+			<feBlend result="effect_dropShadow_1" in2="BackgroundImageFix" mode="normal" />
+			<feBlend result="shape" in="SourceGraphic" in2="effect_dropShadow_1" mode="normal" />
+		</filter>
+	</defs>
+	<rect id="8_bg" width="1920.000000" height="376.000000" x="0.000000" y="0.000000" fill="rgb(254,252,253)" />
+	<g filter="url(#filter_75)">
+		<ellipse id="椭圆 3717" rx="207.500000" ry="214.000000" cx="1630.5" cy="-29" fill="rgb(170,159,255)" fill-opacity="0.5" />
+	</g>
+	<g filter="url(#filter_76)">
+		<path id="椭圆 3722" d="M961 -23.5C961 -138.651 1051.66 -232 1163.5 -232C1275.34 -232 1457 -131.651 1457 -16.5C1457 98.6514 1275.34 185 1163.5 185C1051.66 185 961 91.6514 961 -23.5Z" fill="rgb(255,198,207)" fill-opacity="0.300000012" fill-rule="evenodd" />
+	</g>
+	<g filter="url(#filter_77)">
+		<ellipse id="椭圆 3723" rx="196.000000" ry="201.500000" cx="69" cy="263.5" fill="rgb(244,198,255)" fill-opacity="0" />
+	</g>
+	<g filter="url(#filter_78)">
+		<ellipse id="椭圆 3719" rx="348.000000" ry="348.500000" cx="196" cy="700.5" fill="rgb(223,242,255)" fill-opacity="0.5" />
+	</g>
+	<g filter="url(#filter_79)">
+		<path id="椭圆 3721" d="M-3 252.742C33.2573 213.807 191.53 52 279.727 52C322.124 52 392.354 157.341 542.084 197.834C703.835 241.577 725 209.244 725 265.221C725 373.015 386.257 400.001 298.06 400.001C209.862 400.001 -3 360.537 -3 252.742Z" fill="rgb(202,238,255)" fill-opacity="0.400000006" fill-rule="evenodd" />
+	</g>
+	<g filter="url(#filter_80)">
+		<path id="椭圆 3724" d="M1344 364.999C1364 297.001 1574.25 208 1682.5 208C1790.75 208 1966.5 275.528 1966.5 383.499C1966.5 491.471 1790.75 560.499 1682.5 560.499C1574.25 560.499 1344 472.97 1344 364.999Z" fill="rgb(244,247,253)" fill-opacity="0" fill-rule="evenodd" />
+	</g>
+	<g filter="url(#filter_81)">
+		<circle id="椭圆 3720" cx="123" cy="100" r="310" fill="rgb(255,252,245)" fill-opacity="0" />
+	</g>
+	<g filter="url(#filter_82)">
+		<rect id="矩形 18568" width="762.000000" height="583.000000" x="1008.000000" y="-104.000000" rx="24.000000" fill="rgb(255,255,255)" fill-opacity="0" />
+		<rect id="矩形 18568" width="761.000000" height="582.000000" x="1008.500000" y="-103.500000" rx="23.500000" stroke="rgb(255,255,255)" stroke-opacity="0" stroke-width="1.000000" />
+	</g>
+</svg>

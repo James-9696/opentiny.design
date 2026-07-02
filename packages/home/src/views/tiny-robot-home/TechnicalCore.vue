@@ -18,42 +18,40 @@
               {{ item }}
             </div>
           </div>
-          <div class="technical-core-item-description-mobile">
-            {{content.description.join('，') }}。
-          </div>
+          <div class="technical-core-item-description-mobile">{{ content.description.join('，') }}。</div>
         </div>
       </div>
     </div>
   </div>
 </template>
 <script setup>
-import technicalIcon1 from '@/assets/images/home/tinyrobot_technical_core_icon1.svg'
-import technicalIcon2 from '@/assets/images/home/tinyrobot_technical_core_icon2.svg'
-import technicalIcon3 from '@/assets/images/home/tinyrobot_technical_core_icon3.svg'
-import technicalIcon4 from '@/assets/images/home/tinyrobot_technical_core_icon4.svg'
+import technicalIcon1 from '@/assets/images/home/tiny-robot-home/technical_core_icon1.svg'
+import technicalIcon2 from '@/assets/images/home/tiny-robot-home/technical_core_icon2.svg'
+import technicalIcon3 from '@/assets/images/home/tiny-robot-home/technical_core_icon3.svg'
+import technicalIcon4 from '@/assets/images/home/tiny-robot-home/technical_core_icon4.svg'
 
 const info = {
-  title: '强大的技术核心',
-  subtitle: '驱动本质，重塑未来',
+  title: 'TinyRobot 核心优势',
+  subtitle: '统一接入、组件丰富与开放扩展，支撑 AI 应用高效落地',
   list: [
     {
-      title: '自主执行',
-      description: ['理解复杂指令', '构建多层级处理框架', '自动实现从洞察到执行闭环'],
+      title: '组件丰富灵活',
+      description: ['场景组件全覆盖，适配多元对话', '原子化设计，自由拼装、随心组合', '急速搭建个性化界面，告别重复开发'],
       icon: technicalIcon1
     },
     {
-      title: 'MCP生态',
-      description: ['提供丰富的官方工具市场', '支持用户自定义添加', '实现灵活扩展'],
+      title: '接入极简高效',
+      description: ['开箱即用，几行代码即可完成接入', 'UI 与逻辑 Kit 分层解耦，组合更自由', 'CLI + Skill + 示例文档，极速落地'],
       icon: technicalIcon2
     },
     {
-      title: '开放连接',
-      description: ['提供开放API', '轻松介入Next SDK', '快速构建智能应用'],
+      title: '生态开放无界',
+      description: ['原生兼容三方调用，扩展即生效', '工具链清晰可观测，调试一目了然', '能力随业务生长，持续延展不设限'],
       icon: technicalIcon3
     },
     {
-      title: '安全可靠',
-      description: ['对接企业级WebAgent中枢', '实现精细化权限管理', '全链路操作审计与端到端数据加密'],
+      title: '样式深度定制',
+      description: ['细粒度样式控制，微调即可焕新', '灵活适配多元化业务场景与品牌语言', '让每一个界面，都准确表达你的个性'],
       icon: technicalIcon4
     }
   ]
@@ -83,7 +81,7 @@ const info = {
     gap: 45px;
     margin-top: 66px;
     .technical-core-item {
-      padding: 50px 40px;
+      padding: 48px 24px 48px 36px;
       width: calc((100% - 135px) / 4);
       box-shadow: 0 4px 26px 0 rgba(234, 233, 237, 0.9);
       border: 3px solid #fff;

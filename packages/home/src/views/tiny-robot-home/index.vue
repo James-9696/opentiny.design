@@ -2,19 +2,23 @@
   <div class="home">
     <FirstScreen />
     <TechnicalCore />
-    <IntelligentExperience />
-    <ServiceScene />
+    <DualEngine />
+    <ProductMatrix />
     <RobotComponent />
     <SceneCases />
+    <UseUs />
+    <Cli />
   </div>
 </template>
 <script setup>
 import FirstScreen from "./FirstScreen.vue"
 import TechnicalCore from "./TechnicalCore.vue"
-import IntelligentExperience from "./IntelligentExperience.vue"
-import ServiceScene from "./ServiceScene.vue"
+import DualEngine from "./DualEngine.vue"
+import ProductMatrix from "./ProductMatrix.vue"
 import RobotComponent from "./RobotComponent.vue"
 import SceneCases from "./SceneCases.vue"
+import UseUs from "./UseUs.vue"
+import Cli from "./Cli.vue"
 </script>
 <style lang="less" scoped>
 .home{
@@ -31,11 +35,11 @@ import SceneCases from "./SceneCases.vue"
     :deep(.technical-core){
       max-width: var(--max-width);
     }
-    :deep(.intelligent-experience){
+    :deep(.dual-engine){
       max-width: var(--max-width);
     }
-    :deep(.service-scene){
-      .service-scene-container{
+    :deep(.product-matrix){
+      .product-matrix-container{
         max-width: var(--max-width);
       }
     }
@@ -44,6 +48,14 @@ import SceneCases from "./SceneCases.vue"
     }
     :deep(.scene-cases){
       max-width: var(--max-width);
+    }
+    :deep(.use-us){
+      max-width: var(--max-width);
+    }
+    :deep(.cli){
+      .cli-container{
+        max-width: var(--max-width);
+      }
     }
   }
 }
@@ -57,11 +69,11 @@ import SceneCases from "./SceneCases.vue"
     :deep(.technical-core){
       max-width: var(--mobile-width);
     }
-    :deep(.intelligent-experience){
+    :deep(.dual-engine){
       max-width: var(--mobile-width);
     }
-    :deep(.service-scene){
-      .service-scene-container{
+    :deep(.product-matrix){
+      .product-matrix-container{
         max-width: var(--mobile-width);
       }
     }
@@ -70,6 +82,14 @@ import SceneCases from "./SceneCases.vue"
     }
     :deep(.scene-cases){
       max-width: var(--mobile-width);
+    }
+    :deep(.use-us){
+      max-width: var(--mobile-width);
+    }
+    :deep(.cli){
+      .cli-container{
+        max-width: var(--mobile-width);
+      }
     }
   }
 }

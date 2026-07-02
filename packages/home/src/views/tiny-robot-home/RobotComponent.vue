@@ -3,41 +3,81 @@
     <div class="robot-component-title">{{ info.title }}</div>
     <div class="robot-component-subtitle">{{ info.subtitle }}</div>
     <div class="robot-component-container">
-      <div class="robot-component-item">
-        <div class="robot-component-container-left-mask">
-          <tiny-button round @click="gotoDocs">查看组件文档</tiny-button>
+      <div class="item" v-for="item in info.list" :key="item.name" @click="handleClickComponent(item.link)">
+        <div class="item-image">
+          <img :src="item.imgUrl" :alt="item.name" />
         </div>
-        <div class="robot-component-container-mask" @click="gotoDocs"></div>
-        <div class="robot-component-container-left">
-          <img :src="info.image1" />
+        <div class="item-name">
+          <div>{{ item.name }}</div>
+          <tiny-tag class="tag" type="info" :value="item.tag"></tiny-tag>
         </div>
-      </div>
-      <div class="robot-component-item">
-        <div class="robot-component-container-right-mask">
-          <tiny-button round @click="gotoDocs">查看组件文档</tiny-button>
-        </div>
-        <div class="robot-component-container-mask" @click="gotoDocs"></div>
-        <div class="robot-component-container-right">
-          <img :src="info.image2" />
+        <div class="item-text">
+          {{ item.text }}
         </div>
       </div>
     </div>
   </div>
 </template>
 <script setup>
-import componentImg1 from '@/assets/images/home/tinyrobot_component1.svg'
-import componentImg2 from '@/assets/images/home/tinyrobot_component2.svg'
-import { TinyButton } from '@opentiny/vue'
+import { TinyTag } from '@opentiny/vue'
+import caseImg1 from '@/assets/images/home/tiny-robot-home/component-welcome.svg'
+import caseImg2 from '@/assets/images/home/tiny-robot-home/component-sender.svg'
+import caseImg3 from '@/assets/images/home/tiny-robot-home/component-bubble.svg'
+import caseImg4 from '@/assets/images/home/tiny-robot-home/component-mcp.svg'
+import caseImg5 from '@/assets/images/home/tiny-robot-home/component-popover.svg'
+import caseImg6 from '@/assets/images/home/tiny-robot-home/component-history.svg'
 
 const info = {
-  title: '典型组件展示',
-  subtitle: '开箱即用的AI对话模块',
-  image1: componentImg1,
-  image2: componentImg2
+  title: '组件展示',
+  subtitle: '大量实用组件满足你的需求',
+  list: [
+    {
+      name: '欢迎组件',
+      text: '用于展示欢迎信息的通用组件',
+      imgUrl: caseImg1,
+      tag: '唤醒',
+      link: 'https://docs.opentiny.design/tiny-robot/components/welcome.html'
+    },
+    {
+      name: '输入模版',
+      text: '高度可组合的聊天输入组件',
+      imgUrl: caseImg2,
+      tag: '表达',
+      link: 'https://docs.opentiny.design/tiny-robot/components/sender.html'
+    },
+    {
+      name: '对话组',
+      text: '支持灵活的内容渲染和自定义扩展',
+      imgUrl: caseImg3,
+      tag: '反馈',
+      link: 'https://docs.opentiny.design/tiny-robot/components/bubble.html'
+    },
+    {
+      name: '插件选择器',
+      text: '用于展示和管理插件的组件',
+      imgUrl: caseImg4,
+      tag: '推荐',
+      link: 'https://docs.opentiny.design/tiny-robot/components/mcp-server-picker.html'
+    },
+    {
+      name: '热门问题',
+      text: '开箱即用、易于配置、极致体验的通用组件',
+      imgUrl: caseImg5,
+      tag: '推荐',
+      link: 'https://docs.opentiny.design/tiny-robot/components/suggestion-popover.html'
+    },
+    {
+      name: '对话管理',
+      text: '更新对话轮次，保存对话记录的通用组件',
+      imgUrl: caseImg6,
+      tag: '通用',
+      link: 'https://docs.opentiny.design/tiny-robot/components/history.html'
+    }
+  ]
 }
 
-const gotoDocs = () => {
-  window.open('https://docs.opentiny.design/tiny-robot/guide/quick-start')
+const handleClickComponent = (url) => {
+  window.open(url)
 }
 </script>
 <style lang="less" scoped>
@@ -58,70 +98,51 @@ const gotoDocs = () => {
     color: #808080;
   }
   .robot-component-container {
-    display: flex;
-    gap: 40px;
     margin-top: 66px;
-    .robot-component-item {
-      background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    .item {
+      width: 453px;
+      padding: 38px 40px 36px;
+      box-sizing: border-box;
+      border: 1px solid transparent;
       border-radius: 16px;
-      width: calc((100% - 40px) / 2);
-      position: relative;
-      overflow: hidden;
-
-      &:hover {
-        .robot-component-container-left-mask,
-        .robot-component-container-right-mask {
-          opacity: 1;
-          :deep(.tiny-button) {
-            transform: translateY(0);
-          }
+      background: #f8f8f8;
+      cursor: pointer;
+      .item-image {
+        width: 100%;
+        img {
+          width: 100%;
+          border-radius: 8px;
         }
       }
-    }
-    .robot-component-container-left {
-      padding: 54px 50px;
-      img {
-        width: 100%;
-      }
-    }
-    .robot-component-container-left-mask,
-    .robot-component-container-right-mask {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0.05);
-      backdrop-filter: blur(2px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      z-index: 10;
-      border-radius: 16px;
-      :deep(.tiny-button) {
+      .item-name {
         font-size: 18px;
-        width: 188px;
-        height: 48px;
-        transform: translateY(10px);
-        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        color: #191919;
+        margin-top: 24px;
+        line-height: 30px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
       }
-    }
-    .robot-component-container-mask {
-      display: none;
-    }
-    .robot-component-container-right {
-      padding: 46px 40px;
-      img {
-        width: 100%;
+      .item-text {
+        font-size: 14px;
+        color: #808080;
+        margin-top: 2px;
+        line-height: 22px;
+      }
+      &:hover {
+        background: linear-gradient(#f8f8f8, #f8f8f8) padding-box,
+          linear-gradient(90deg, #e8e8e8, #f5f5f5) border-box;
       }
     }
   }
 }
 @media (max-width: 1023px) {
   .robot-component {
-    margin-top: 46px;
+    margin-top: 34px;
     .robot-component-title {
       font-size: 22px;
       line-height: 30px;
@@ -133,29 +154,31 @@ const gotoDocs = () => {
     }
     .robot-component-container {
       margin-top: 30px;
-      flex-direction: column;
-      gap: 16px;
-      .robot-component-item {
+      gap: 24px;
+      .item {
         width: 100%;
-        .robot-component-container-left,
-        .robot-component-container-right {
-          padding: 23px 20px;
+        padding: 14px 14px 20px;
+        box-sizing: border-box;
+        border: 1px solid transparent;
+        border-radius: 12px;
+        box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.08);
+        background: #f8f8f8;
+        cursor: pointer;
+        .item-image {
+          width: 100%;
+          img {
+            border-radius: 8px;
+          }
         }
-        .robot-component-container-left-mask,
-        .robot-component-container-right-mask {
-          display: none;
+        .item-name {
+          font-size: 16px;
+          line-height: 24px;
+          margin-top: 16px;
         }
-        .robot-component-container-mask {
-          display: block;
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background-color: transparent;
-          opacity: 0;
-          z-index: 10;
-          border-radius: 16px;
+        .item-text {
+          font-size: 12px;
+          line-height: 16px;
+          margin-top: 6px;
         }
       }
     }
