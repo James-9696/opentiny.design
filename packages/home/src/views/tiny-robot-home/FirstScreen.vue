@@ -226,7 +226,7 @@ onUnmounted(() => {
 
 @media (max-width: 1023px) {
   .first-screen {
-    background-image: url(@/assets/images/home/top_mobile_banner.svg);
+    background-image: url(@/assets/images/home/tiny-robot-home/top_mobile_banner.svg);
     .first-screen-wrap {
       flex-direction: column;
       padding: 0;
