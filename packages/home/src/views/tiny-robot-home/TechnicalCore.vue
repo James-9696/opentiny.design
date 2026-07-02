@@ -61,7 +61,7 @@ const info = {
 .technical-core {
   margin: 0 auto;
   .technical-core-title {
-    font-size: 48px;
+    font-size: 44px;
     line-height: 64px;
     text-align: center;
     margin-top: 120px;

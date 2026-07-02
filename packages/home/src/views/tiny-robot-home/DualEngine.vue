@@ -54,7 +54,7 @@ const info = {
   margin: 0 auto;
   margin-top: 120px;
   .dual-engine-title {
-    font-size: 48px;
+    font-size: 44px;
     line-height: 64px;
     text-align: center;
     font-weight: 700;

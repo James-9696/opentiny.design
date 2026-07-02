@@ -35,9 +35,9 @@ const info = {
     {
       title: 'Components 基础组件',
       description: [
-        '基于Vue3的 AI 对话组件库，支持按需引入，借助',
+        '基于Vue3的 AI 对话组件库，支持按需引入',
         '渲染器机制，开发者可轻松将图表、卡片等自定义',
-        '内容嵌入对话流'
+        '让对话流更灵活、可扩展'
       ],
       imgUrl: componentImg
     },
@@ -82,7 +82,7 @@ const info = {
     margin: 40px auto 0;
     padding: 100px 0;
     .product-matrix-title {
-      font-size: 48px;
+      font-size: 44px;
       line-height: 64px;
       text-align: center;
       font-weight: 700;
@@ -110,6 +110,7 @@ const info = {
         }
         .item-content {
           margin-top: 34px;
+          margin-left: 12px;
           .item-title {
             color: #191919;
             font-weight: 600;
@@ -174,9 +175,10 @@ const info = {
           width: 100%;
           padding: 14px 14px 21px;
           border-radius: 12px;
-          box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.08);
+          box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.02);
           .item-content {
             margin-top: 20px;
+            margin-left: 0;
             .item-title {
               font-size: 16px;
               line-height: 22px;

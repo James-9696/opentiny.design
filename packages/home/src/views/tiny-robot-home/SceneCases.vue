@@ -89,7 +89,7 @@ const handleClickCase = (item) => {
 .scene-cases {
   margin: 120px auto 0;
   .scene-cases-title {
-    font-size: 48px;
+    font-size: 44px;
     line-height: 64px;
     text-align: center;
     font-weight: 700;
@@ -114,7 +114,7 @@ const handleClickCase = (item) => {
       .item {
         display: flex;
         gap: 18px;
-        padding: 32px;
+        padding: 30px 32px;
         width: 500px;
         border-radius: 20px;
         cursor: pointer;
@@ -211,7 +211,7 @@ const handleClickCase = (item) => {
           .mobile-section-title {
             font-size: 16px;
             line-height: 22px;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
             margin-top: 20px;
             color: #191919;
             font-weight: 600;

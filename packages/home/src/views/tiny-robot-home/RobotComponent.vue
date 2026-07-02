@@ -85,7 +85,7 @@ const handleClickComponent = (url) => {
   margin: 0 auto;
   margin-top: 120px;
   .robot-component-title {
-    font-size: 48px;
+    font-size: 44px;
     line-height: 64px;
     text-align: center;
     font-weight: 700;
@@ -107,7 +107,7 @@ const handleClickComponent = (url) => {
       width: 453px;
       padding: 38px 40px 36px;
       box-sizing: border-box;
-      border: 1px solid transparent;
+      border: 2px solid transparent;
       border-radius: 16px;
       background: #f8f8f8;
       cursor: pointer;
@@ -126,16 +126,18 @@ const handleClickComponent = (url) => {
         display: flex;
         align-items: center;
         gap: 6px;
+        margin-left: 0;
       }
       .item-text {
         font-size: 14px;
         color: #808080;
         margin-top: 2px;
         line-height: 22px;
+        margin-left: 0;
       }
       &:hover {
         background: linear-gradient(#f8f8f8, #f8f8f8) padding-box,
-          linear-gradient(90deg, #e8e8e8, #f5f5f5) border-box;
+          linear-gradient(180deg, #e8e8e8, #f5f5f5) border-box;
       }
     }
   }
@@ -161,7 +163,6 @@ const handleClickComponent = (url) => {
         box-sizing: border-box;
         border: 1px solid transparent;
         border-radius: 12px;
-        box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.08);
         background: #f8f8f8;
         cursor: pointer;
         .item-image {
@@ -174,11 +175,13 @@ const handleClickComponent = (url) => {
           font-size: 16px;
           line-height: 24px;
           margin-top: 16px;
+          margin-left: 10px;
         }
         .item-text {
           font-size: 12px;
           line-height: 16px;
           margin-top: 6px;
+          margin-left: 10px;
         }
       }
     }

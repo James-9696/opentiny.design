@@ -136,20 +136,20 @@ onUnmounted(() => {
     .first-screen-content {
       max-width: 682px;
       .first-screen-content-title {
-        font-size: 52px;
+        font-size: 54px;
         font-weight: 700;
         line-height: 72px;
         color: #191919;
       }
       .first-screen-content-subtitle {
-        font-size: 52px;
+        font-size: 50px;
         font-weight: 700;
         line-height: 72px;
         background: linear-gradient(90deg, #ff943f, #e449db, #9d36f0, #1273ff);
         background-clip: text;
         color: transparent;
         width: fit-content;
-        margin-top: 4px;
+        margin-top: 6px;
       }
       .first-screen-content-text {
         font-size: 18px;
@@ -292,6 +292,9 @@ onUnmounted(() => {
       .first-screen-image {
         margin-top: 38px;
         margin-bottom: 38px;
+        img {
+          filter: drop-shadow(0 0 20px rgba(233, 242, 247, 1));
+        }
       }
     }
   }

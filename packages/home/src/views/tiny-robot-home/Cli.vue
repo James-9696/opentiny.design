@@ -8,7 +8,7 @@
           <img class="icon" :src="cliIcon" alt="cli" />
           <div class="command">{{ info.command }}</div>
         </div>
-        <div class="copy-right">
+        <div class="copy-right" @click="copy">
           <img class="copy" :src="copyIcon" alt="复制" />
           <span>复制</span>
         </div>
@@ -17,6 +17,7 @@
   </div>
 </template>
 <script setup>
+import { Message } from '@opentiny/vue'
 import cliIcon from '@/assets/images/home/tiny-robot-home/cli-icon.svg'
 import copyIcon from '@/assets/images/home/tiny-robot-home/copy.svg'
 
@@ -24,6 +25,17 @@ const info = {
   title: '一行命令快速安装CLI',
   subtitle: '助力您实现一站式 AI 能力与应用的快速对接',
   command: 'npx @opentiny/tiny-robot-cli create'
+}
+
+const copy = () => {
+  const textarea = document.createElement('textarea')
+
+  textarea.value = info.command
+  document.body.appendChild(textarea)
+  textarea.select()
+  document.execCommand('copy')
+  document.body.removeChild(textarea)
+  Message.message({ message: '复制成功', status: 'success' })
 }
 </script>
 <style lang="less" scoped>
@@ -87,8 +99,12 @@ const info = {
         align-items: center;
         gap: 5px;
         font-size: 14px;
+        cursor: pointer;
         .copy{
           width: 16px;
+        }
+        &:hover{
+          background: #595959;
         }
       }
     }

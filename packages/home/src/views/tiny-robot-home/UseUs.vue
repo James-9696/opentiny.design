@@ -63,7 +63,7 @@ const handleClickCase = (url) => {
 .use-us {
   margin: 120px auto 0;
   .use-us-title {
-    font-size: 48px;
+    font-size: 44px;
     line-height: 64px;
     text-align: center;
     font-weight: 700;
@@ -111,7 +111,8 @@ const handleClickCase = (url) => {
         line-height: 22px;
       }
       &:hover{
-        border: 1px solid #c2c2c2;
+        box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1);
+        border-color: transparent;
       }
     }
   }
