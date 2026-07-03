@@ -1,10 +1,10 @@
 <template>
   <div class="product-matrix">
     <div class="product-matrix-container">
-      <div class="product-matrix-title">{{ info.title }}</div>
-      <div class="product-matrix-subtitle">{{ info.subtitle }}</div>
+      <div class="product-matrix-title fade-in-up">{{ info.title }}</div>
+      <div class="product-matrix-subtitle fade-in-up">{{ info.subtitle }}</div>
       <div class="product-matrix-content">
-        <div v-for="(item, index) in info.list" :key="item.title" :class="['item', { 'item-last': index > 2 }]">
+        <div v-for="(item, index) in info.list" :key="item.title" :class="['item', 'fade-in-up', { 'item-last': index > 2 }]">
           <div class="item-image">
             <img :src="item.imgUrl" :alt="item.title" />
           </div>
@@ -103,9 +103,13 @@ const info = {
         background: #fff;
         border-radius: 8px;
         box-shadow: 0 2px 12px 0 rgba(194, 206, 225, 0.05);
+        width: calc((100% - 90px) / 3);
+        padding: 20px 20px 54px;
         .item-image {
           img {
+            display: block;
             width: 100%;
+            border-radius: 8px;
           }
         }
         .item-content {
@@ -124,16 +128,6 @@ const info = {
             margin-top: 20px;
           }
         }
-      }
-    }
-  }
-}
-@media (min-width: 1024px) {
-  .product-matrix {
-    .product-matrix-content {
-      .item {
-        width: calc((100% - 90px) / 3);
-        padding: 20px 20px 54px;
       }
       .item-last {
         width: calc((100% - 45px) / 2);
@@ -189,6 +183,17 @@ const info = {
               margin-top: 12px;
               color: #808080;
             }
+          }
+          .item-image {
+            width: 100%;
+          }
+        }
+        .item-last {
+          width: 100%;
+          display: block;
+          flex-direction: column;
+          .item-image {
+            width: 100%;
           }
         }
       }

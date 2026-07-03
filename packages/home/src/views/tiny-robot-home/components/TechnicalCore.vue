@@ -1,12 +1,12 @@
 <template>
   <div class="technical-core">
-    <div class="technical-core-title">{{ info.title }}</div>
-    <div class="technical-core-subtitle">{{ info.subtitle }}</div>
+    <div class="technical-core-title fade-in-up">{{ info.title }}</div>
+    <div class="technical-core-subtitle fade-in-up">{{ info.subtitle }}</div>
     <div class="technical-core-content">
       <div
         v-for="(content, index) in info.list"
         :key="index"
-        :class="`technical-core-item technical-core-item-${index % 4}`"
+        :class="`technical-core-item fade-in-up technical-core-item-${index % 4}`"
       >
         <div class="technical-core-item-icon">
           <img class="technical-core-item-icon" :src="content.icon" :alt="content.title" />

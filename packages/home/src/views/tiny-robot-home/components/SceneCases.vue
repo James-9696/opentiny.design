@@ -1,9 +1,9 @@
 <template>
   <div class="scene-cases">
-    <div class="scene-cases-title">{{ info.title }}</div>
-    <div class="scene-cases-subtitle">{{ info.subtitle }}</div>
+    <div class="scene-cases-title fade-in-up">{{ info.title }}</div>
+    <div class="scene-cases-subtitle fade-in-up">{{ info.subtitle }}</div>
     <div class="scene-cases-container">
-      <div class="container-left">
+      <div class="container-left fade-in-up">
         <div
           v-for="item in info.list"
           :key="item.name"
@@ -19,7 +19,7 @@
           </div>
         </div>
       </div>
-      <div class="container-right">
+      <div class="container-right fade-in-up">
         <img :src="state.imgUrl" alt="" />
       </div>
     </div>

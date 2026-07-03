@@ -1,9 +1,9 @@
 <template>
   <div class="use-us">
-    <div class="use-us-title">{{ info.title }}</div>
-    <div class="use-us-subtitle">{{ info.subtitle }}</div>
+    <div class="use-us-title fade-in-up">{{ info.title }}</div>
+    <div class="use-us-subtitle fade-in-up">{{ info.subtitle }}</div>
     <div class="use-us-container">
-      <div v-for="item in info.list" :key="item.name" class="item" @click="handleClickCase(item.link)">
+      <div v-for="item in info.list" :key="item.name" class="item fade-in-up" @click="handleClickCase(item.link)">
         <div class="item-image">
           <img :src="item.imgUrl" :alt="item.name" />
         </div>

@@ -1,12 +1,12 @@
 <template>
   <div class="dual-engine">
-    <div class="dual-engine-title">{{ info.title }}</div>
-    <div class="dual-engine-subtitle">{{ info.subtitle }}</div>
+    <div class="dual-engine-title fade-in-up">{{ info.title }}</div>
+    <div class="dual-engine-subtitle fade-in-up">{{ info.subtitle }}</div>
     <div class="dual-engine-container">
-      <div class="dual-engine-image">
+      <div class="dual-engine-image fade-in-up">
         <img :src="info.image" />
       </div>
-      <div class="dual-engine-content">
+      <div class="dual-engine-content fade-in-up">
         <div v-for="(item, index) in info.list" :key="index" class="dual-engine-content-item">
           <div class="dual-engine-content-header">
             <img class="dual-engine-content-icon" :src="item.icon" :alt="item.title" />

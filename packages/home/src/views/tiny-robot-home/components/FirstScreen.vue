@@ -1,7 +1,7 @@
 <template>
   <div class="first-screen">
     <div class="first-screen-wrap">
-      <div class="first-screen-content">
+      <div class="first-screen-content fade-in-up">
         <div class="first-screen-content-title">{{ state.title }}</div>
         <div class="first-screen-content-subtitle">{{ state.subtitle }}</div>
         <div class="first-screen-content-text">{{ state.description }}</div>
@@ -14,7 +14,7 @@
           <tiny-button type="primary" round @click="gotoDocs">组件文档</tiny-button>
         </div>
       </div>
-      <div class="first-screen-image">
+      <div class="first-screen-image fade-in-up">
         <img :src="state.image" />
       </div>
     </div>
@@ -111,16 +111,6 @@ onUnmounted(() => {
 })
 </script>
 <style lang="less" scoped>
-@keyframes slideUpFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 .first-screen {
   background-image: url(@/assets/images/home/tiny-robot-home/top_banner.svg);
   background-repeat: no-repeat;
@@ -134,6 +124,7 @@ onUnmounted(() => {
     padding-top: 120px;
     padding-bottom: 130px;
     .first-screen-content {
+      animation: slideUpFadeIn 0.8s ease forwards;
       max-width: 682px;
       .first-screen-content-title {
         font-size: 54px;
@@ -215,7 +206,6 @@ onUnmounted(() => {
       }
     }
     .first-screen-image {
-      animation: slideUpFadeIn 0.8s ease forwards;
       img {
         width: 100%;
         filter: drop-shadow(0 0 50px rgba(192, 204, 255, 0.4));
