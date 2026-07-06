@@ -23,47 +23,55 @@ import Cli from "./components/Cli.vue"
 
 const homeRef = ref()
 let fadeObserver
+const FADE_ENABLED_CLASS = "is-fade-enabled"
 
 const initFadeInUp = async () => {
   if (typeof window === "undefined" || !homeRef.value) return
 
   await nextTick()
 
-  const sections = homeRef.value.querySelectorAll(".fade-in-up")
+  const home = homeRef.value
+  const sections = home.querySelectorAll(".fade-in-up")
   if (!sections.length) return
 
   if (!("IntersectionObserver" in window)) {
-    sections.forEach((section) => section.classList.add("is-visible"))
     return
   }
 
-  fadeObserver?.disconnect()
-  fadeObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible")
-        } else if (entry.intersectionRatio === 0) {
-          entry.target.classList.remove("is-visible")
-        }
-      })
-    },
-    {
-      threshold: 0.1,
-      rootMargin: "0px 0px -50px 0px",
-    }
-  )
+  try {
+    fadeObserver?.disconnect()
+    sections.forEach((section) => {
+      const rect = section.getBoundingClientRect()
+      const isVisible = rect.top < window.innerHeight && rect.bottom > 0
 
-  sections.forEach((section) => {
-    const rect = section.getBoundingClientRect()
-    const isVisible = rect.top < window.innerHeight && rect.bottom > 0
+      section.classList.toggle("is-visible", isVisible)
+    })
+    home.classList.add(FADE_ENABLED_CLASS)
 
-    if (isVisible) {
-      section.classList.add("is-visible")
-    }
+    fadeObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible")
+          } else if (entry.intersectionRatio === 0) {
+            entry.target.classList.remove("is-visible")
+          }
+        })
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      }
+    )
 
-    fadeObserver?.observe(section)
-  })
+    sections.forEach((section) => {
+      fadeObserver?.observe(section)
+    })
+  } catch {
+    fadeObserver?.disconnect()
+    fadeObserver = undefined
+    home.classList.remove(FADE_ENABLED_CLASS)
+  }
 }
 
 onMounted(() => {
@@ -73,6 +81,7 @@ onMounted(() => {
 onUnmounted(() => {
   fadeObserver?.disconnect()
   fadeObserver = undefined
+  homeRef.value?.classList.remove(FADE_ENABLED_CLASS)
 })
 </script>
 <style lang="less" scoped>
@@ -81,14 +90,21 @@ onUnmounted(() => {
   --mobile-width: calc(100% - 40px);
 
   :deep(.fade-in-up) {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  }
-
-  :deep(.fade-in-up.is-visible) {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  &.is-fade-enabled {
+    :deep(.fade-in-up) {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    :deep(.fade-in-up.is-visible) {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
 @media (min-width: 1024px) {
