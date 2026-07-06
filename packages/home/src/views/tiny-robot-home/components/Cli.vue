@@ -31,10 +31,21 @@ const copy = () => {
   const textarea = document.createElement('textarea')
 
   textarea.value = info.command
-  document.body.appendChild(textarea)
-  textarea.select()
-  document.execCommand('copy')
-  document.body.removeChild(textarea)
+  textarea.setAttribute('readonly', '')
+  textarea.style.position = 'fixed'
+  textarea.style.top = '-9999px'
+  textarea.style.left = '-9999px'
+  textarea.style.opacity = '0'
+  textarea.style.pointerEvents = 'none'
+
+  try {
+    document.body.appendChild(textarea)
+    textarea.select()
+    textarea.setSelectionRange(0, textarea.value.length)
+    document.execCommand('copy')
+  } finally {
+    document.body.removeChild(textarea)
+  }
   Message.message({ message: '复制成功', status: 'success' })
 }
 </script>

@@ -77,7 +77,7 @@ const info = {
 }
 
 const handleClickComponent = (url) => {
-  window.open(url)
+  window.open(url, '_blank', 'noopener,noreferrer')
 }
 </script>
 <style lang="less" scoped>

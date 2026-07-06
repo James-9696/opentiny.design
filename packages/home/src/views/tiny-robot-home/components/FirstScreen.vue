@@ -10,7 +10,6 @@
           <img class="first-screen-content-sender-icon" :src="state.senderImg" alt="" />
         </div>
         <div class="first-screen-content-footer">
-          <!-- <tiny-button type="primary" round @click="gotoChat">立即体验</tiny-button> -->
           <tiny-button type="primary" round @click="gotoDocs">组件文档</tiny-button>
         </div>
       </div>
@@ -51,12 +50,8 @@ const displayText = computed(() => {
   return state.list[state.currentIndex].slice(0, state.charIndex)
 })
 
-const gotoChat = () => {
-  window.open('https://chat.opentiny.design/')
-}
-
 const gotoDocs = () => {
-  window.open('https://docs.opentiny.design/tiny-robot/guide/quick-start')
+  window.open('https://docs.opentiny.design/tiny-robot/guide/quick-start', '_blank', 'noopener,noreferrer')
 }
 
 // 打字机动画核心逻辑

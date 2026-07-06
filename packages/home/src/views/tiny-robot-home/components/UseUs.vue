@@ -56,7 +56,7 @@ const info = {
 }
 
 const handleClickCase = (url) => {
-  window.open(url)
+  window.open(url, '_blank', 'noopener,noreferrer')
 }
 </script>
 <style lang="less" scoped>
