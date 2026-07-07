@@ -1,5 +1,9 @@
 <template>
-  <div ref="homeRef" class="home">
+  <div
+    ref="homeRef"
+    class="home"
+    :class="{ 'is-fade-enabled': fadeEnabled }"
+  >
     <FirstScreen />
     <TechnicalCore />
     <DualEngine />
@@ -22,8 +26,8 @@ import UseUs from "./components/UseUs.vue"
 import Cli from "./components/Cli.vue"
 
 const homeRef = ref()
+const fadeEnabled = ref(false)
 let fadeObserver
-const FADE_ENABLED_CLASS = "is-fade-enabled"
 
 const initFadeInUp = async () => {
   if (typeof window === "undefined" || !homeRef.value) return
@@ -32,21 +36,21 @@ const initFadeInUp = async () => {
 
   const home = homeRef.value
   const sections = home.querySelectorAll(".fade-in-up")
-  if (!sections.length) return
 
-  if (!("IntersectionObserver" in window)) {
+  if (!sections.length || !("IntersectionObserver" in window)) {
+    fadeEnabled.value = false
     return
   }
 
   try {
     fadeObserver?.disconnect()
+    fadeEnabled.value = true
     sections.forEach((section) => {
       const rect = section.getBoundingClientRect()
       const isVisible = rect.top < window.innerHeight && rect.bottom > 0
 
       section.classList.toggle("is-visible", isVisible)
     })
-    home.classList.add(FADE_ENABLED_CLASS)
 
     fadeObserver = new IntersectionObserver(
       (entries) => {
@@ -70,18 +74,16 @@ const initFadeInUp = async () => {
   } catch {
     fadeObserver?.disconnect()
     fadeObserver = undefined
-    home.classList.remove(FADE_ENABLED_CLASS)
+    fadeEnabled.value = false
   }
 }
 
-onMounted(() => {
-  initFadeInUp()
-})
+onMounted(initFadeInUp)
 
 onUnmounted(() => {
   fadeObserver?.disconnect()
   fadeObserver = undefined
-  homeRef.value?.classList.remove(FADE_ENABLED_CLASS)
+  fadeEnabled.value = false
 })
 </script>
 <style lang="less" scoped>
