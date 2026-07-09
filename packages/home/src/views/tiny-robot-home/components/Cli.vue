@@ -22,7 +22,7 @@ import cliIcon from '@/assets/images/home/tiny-robot-home/cli-icon.svg'
 import copyIcon from '@/assets/images/home/tiny-robot-home/copy.svg'
 
 const info = {
-  title: '一行命令快速安装CLI',
+  title: '一行命令快速开始',
   subtitle: '助力您实现一站式 AI 能力与应用的快速对接',
   command: 'npx @opentiny/tiny-robot-cli create'
 }
