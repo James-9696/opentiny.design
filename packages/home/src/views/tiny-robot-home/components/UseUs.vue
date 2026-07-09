@@ -84,7 +84,7 @@ const handleClickCase = (url) => {
     .item {
       width: 340px;
       padding: 23px 52px;
-      border-radius: 16px;
+      border-radius: 12px;
       background: #f8f8f8;
       cursor: pointer;
       display: flex;

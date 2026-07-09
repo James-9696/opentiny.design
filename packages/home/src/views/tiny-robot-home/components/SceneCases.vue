@@ -2,8 +2,8 @@
   <div class="scene-cases">
     <div class="scene-cases-title fade-in-up">{{ info.title }}</div>
     <div class="scene-cases-subtitle fade-in-up">{{ info.subtitle }}</div>
-    <div class="scene-cases-container">
-      <div class="container-left fade-in-up">
+    <div class="scene-cases-container fade-in-up">
+      <div class="container-left">
         <div
           v-for="item in info.list"
           :key="item.name"
@@ -19,11 +19,11 @@
           </div>
         </div>
       </div>
-      <div class="container-right fade-in-up">
+      <div class="container-right">
         <img :src="state.imgUrl" alt="" />
       </div>
     </div>
-    <tiny-carousel class="mobile-container" arrow="never" height="310px" autoplay>
+    <tiny-carousel class="mobile-container" arrow="never" height="310px" :autoplay="state.isMobile">
       <tiny-carousel-item v-for="item in info.list" :key="item.id" class="mobile-section">
         <div class="mobile-image-section">
           <img :src="item.imgUrl" :alt="item.title" />
@@ -39,7 +39,7 @@
   </div>
 </template>
 <script setup>
-import { reactive } from 'vue'
+import { onMounted, onUnmounted, reactive } from 'vue'
 import { Carousel as TinyCarousel, CarouselItem as TinyCarouselItem } from '@opentiny/vue'
 import caseImg1 from '@/assets/images/home/tiny-robot-home/scene-cases-img1.webp'
 import caseImg2 from '@/assets/images/home/tiny-robot-home/scene-cases-img2.webp'
@@ -77,13 +77,35 @@ const info = {
 }
 const state = reactive({
   active: 1,
-  imgUrl: caseImg1
+  imgUrl: caseImg1,
+  isMobile: false
 })
+
+let mobileMediaQuery
+
+const syncMobileState = () => {
+  state.isMobile = Boolean(mobileMediaQuery?.matches)
+}
 
 const handleClickCase = (item) => {
   state.active = item.id
   state.imgUrl = item.imgUrl
 }
+
+onMounted(() => {
+  if (typeof window === 'undefined') {
+    return
+  }
+
+  mobileMediaQuery = window.matchMedia('(max-width: 1023px)')
+  syncMobileState()
+  mobileMediaQuery.addEventListener('change', syncMobileState)
+})
+
+onUnmounted(() => {
+  mobileMediaQuery?.removeEventListener('change', syncMobileState)
+  mobileMediaQuery = undefined
+})
 </script>
 <style lang="less" scoped>
 .scene-cases {
@@ -197,7 +219,7 @@ const handleClickCase = (item) => {
         border-radius: 12px;
         width: 100%;
         .mobile-image-section {
-          padding: 1px;
+          padding: 2px;
           background: linear-gradient(90deg, #79d8f7, #a8db6e, #fcbc72, #fa8682, #eb75e7 70%);
           border-radius: 6px;
           img {

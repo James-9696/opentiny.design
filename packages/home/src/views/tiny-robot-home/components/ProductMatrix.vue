@@ -1,10 +1,10 @@
 <template>
   <div class="product-matrix">
     <div class="product-matrix-container">
-      <div class="product-matrix-title fade-in-up">{{ info.title }}</div>
-      <div class="product-matrix-subtitle fade-in-up">{{ info.subtitle }}</div>
+      <div class="product-matrix-title">{{ info.title }}</div>
+      <div class="product-matrix-subtitle">{{ info.subtitle }}</div>
       <div class="product-matrix-content">
-        <div v-for="(item, index) in info.list" :key="item.title" :class="['item', 'fade-in-up', { 'item-last': index > 2 }]">
+        <div v-for="(item, index) in info.list" :key="item.title" :class="['item', { 'item-last': index > 2 }]">
           <div class="item-image">
             <img :src="item.imgUrl" :alt="item.title" />
           </div>

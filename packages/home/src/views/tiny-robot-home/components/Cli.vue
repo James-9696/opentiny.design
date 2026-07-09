@@ -83,8 +83,8 @@ const copy = () => {
       height: 56px;
       border-radius: 199px;
       box-sizing: border-box;
-      border: 1px solid transparent;
-      background: linear-gradient(#fff, #fff) padding-box, linear-gradient(90deg, #94abff, #bd9fff) border-box;
+      border: 2px solid transparent;
+      background: linear-gradient(#fff, #fff) padding-box, linear-gradient(90deg, rgba(148, 171, 255, 0.45), rgba(189, 159, 255, 0.45)) border-box;
       display: flex;
       justify-content: space-between;
       align-items: center;

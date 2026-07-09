@@ -1,9 +1,9 @@
 <template>
   <div class="robot-component">
-    <div class="robot-component-title fade-in-up">{{ info.title }}</div>
-    <div class="robot-component-subtitle fade-in-up">{{ info.subtitle }}</div>
+    <div class="robot-component-title">{{ info.title }}</div>
+    <div class="robot-component-subtitle">{{ info.subtitle }}</div>
     <div class="robot-component-container">
-      <div class="item fade-in-up" v-for="item in info.list" :key="item.name" @click="handleClickComponent(item.link)">
+      <div class="item" v-for="item in info.list" :key="item.name" @click="handleClickComponent(item.link)">
         <div class="item-image">
           <img :src="item.imgUrl" :alt="item.name" />
         </div>

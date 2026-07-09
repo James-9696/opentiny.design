@@ -1,5 +1,5 @@
 <template>
-  <div class="first-screen">
+  <div ref="firstScreenRef" class="first-screen">
     <div class="first-screen-wrap">
       <div class="first-screen-content fade-in-up">
         <div class="first-screen-content-title">{{ state.title }}</div>
@@ -20,7 +20,7 @@
   </div>
 </template>
 <script setup>
-import { reactive, computed, onMounted, onUnmounted } from 'vue'
+import { reactive, computed, onMounted, onUnmounted, ref } from 'vue'
 import { TinyButton } from '@opentiny/vue'
 import img from '@/assets/images/home/tiny-robot-home/top.svg'
 import sender from '@/assets/images/home/tiny-robot-home/sender.svg'
@@ -40,10 +40,13 @@ const state = reactive({
   ],
   currentIndex: 0,
   charIndex: 0,
-  senderImg: sender,
-  animationFrameId: null,
-  lastUpdateTime: 0
+  senderImg: sender
 })
+
+const firstScreenRef = ref()
+let typingTimer = null
+let isTypingActive = false
+let visibilityObserver = null
 
 // 计算属性：当前显示的文本
 const displayText = computed(() => {
@@ -55,54 +58,92 @@ const gotoDocs = () => {
 }
 
 // 打字机动画核心逻辑
-const typeWriter = (timestamp) => {
-  if (!state.lastUpdateTime) {
-    state.lastUpdateTime = timestamp
+const clearTypingTimer = () => {
+  if (typingTimer) {
+    clearTimeout(typingTimer)
+    typingTimer = null
+  }
+}
+
+const setTypingTimer = (callback, delay) => {
+  clearTypingTimer()
+  typingTimer = setTimeout(callback, delay)
+}
+
+const typeWriter = () => {
+  if (!isTypingActive) {
+    return
   }
 
-  const elapsed = timestamp - state.lastUpdateTime
   const currentText = state.list[state.currentIndex]
 
   // 如果还在打字中
   if (state.charIndex < currentText.length) {
-    if (elapsed >= TYPING_SPEED) {
-      state.charIndex++
-      state.lastUpdateTime = timestamp
-    }
-    state.animationFrameId = requestAnimationFrame(typeWriter)
+    state.charIndex++
+    setTypingTimer(typeWriter, TYPING_SPEED)
   } else {
     // 打字完成，等待一段时间后切换到下一句
-    setTimeout(() => {
+    setTypingTimer(() => {
+      if (!isTypingActive) {
+        return
+      }
+
       state.currentIndex = (state.currentIndex + 1) % state.list.length
       state.charIndex = 0
-      state.lastUpdateTime = 0
-      state.animationFrameId = requestAnimationFrame(typeWriter)
+      typeWriter()
     }, PAUSE_AFTER_COMPLETE)
   }
 }
 
 // 启动动画
-const startAnimation = () => {
-  stopAnimation()
-  state.charIndex = 0
-  state.lastUpdateTime = 0
-  state.animationFrameId = requestAnimationFrame(typeWriter)
+const startAnimation = (reset = false) => {
+  if (isTypingActive) {
+    return
+  }
+
+  if (reset) {
+    state.charIndex = 0
+  }
+
+  isTypingActive = true
+  typeWriter()
 }
 
 // 停止动画
 const stopAnimation = () => {
-  if (state.animationFrameId) {
-    cancelAnimationFrame(state.animationFrameId)
-    state.animationFrameId = null
+  isTypingActive = false
+  clearTypingTimer()
+}
+
+const initVisibilityObserver = () => {
+  if (typeof window === 'undefined') {
+    return
   }
+
+  if (!firstScreenRef.value || !('IntersectionObserver' in window)) {
+    startAnimation(true)
+    return
+  }
+
+  visibilityObserver = new IntersectionObserver(([entry]) => {
+    if (entry.isIntersecting) {
+      startAnimation()
+    } else {
+      stopAnimation()
+    }
+  })
+
+  visibilityObserver.observe(firstScreenRef.value)
 }
 
 onMounted(() => {
-  startAnimation()
+  initVisibilityObserver()
 })
 
 onUnmounted(() => {
   stopAnimation()
+  visibilityObserver?.disconnect()
+  visibilityObserver = null
 })
 </script>
 <style lang="less" scoped>
@@ -203,7 +244,6 @@ onUnmounted(() => {
     .first-screen-image {
       img {
         width: 100%;
-        filter: drop-shadow(0 0 50px rgba(192, 204, 255, 0.4));
       }
     }
   }
@@ -278,7 +318,6 @@ onUnmounted(() => {
         margin-top: 38px;
         margin-bottom: 38px;
         img {
-          filter: drop-shadow(0 0 20px rgba(233, 242, 247, 1));
         }
       }
     }
