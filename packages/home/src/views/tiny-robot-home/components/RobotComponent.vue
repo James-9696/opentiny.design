@@ -187,4 +187,37 @@ const handleClickComponent = (url) => {
     }
   }
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .robot-component {
+    margin-top: 64px;
+    .robot-component-title {
+      font-size: 34px;
+      line-height: 44px;
+    }
+    .robot-component-subtitle {
+      font-size: 16px;
+      line-height: 24px;
+      margin-top: 10px;
+    }
+    .robot-component-container {
+      gap: 24px;
+      margin-top: 40px;
+      .item {
+        width: calc((100% - 24px) / 2);
+        padding: 22px 22px 26px;
+        .item-name {
+          font-size: 17px;
+          line-height: 26px;
+          margin-top: 18px;
+          margin-left: 0;
+        }
+        .item-text {
+          font-size: 13px;
+          line-height: 20px;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
 </style>

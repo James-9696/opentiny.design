@@ -156,4 +156,41 @@ const handleClickCase = (url) => {
     }
   }
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .use-us {
+    margin-top: 64px;
+    .use-us-title {
+      font-size: 34px;
+      line-height: 44px;
+    }
+    .use-us-subtitle {
+      font-size: 16px;
+      line-height: 24px;
+      margin-top: 10px;
+    }
+    .use-us-container {
+      margin: 40px 0 0;
+      gap: 20px;
+      .item {
+        width: calc((100% - 20px) / 2);
+        padding: 20px 28px;
+        gap: 14px;
+        .item-image {
+          img {
+            width: 44px;
+            height: 44px;
+          }
+        }
+        .item-name {
+          font-size: 18px;
+          line-height: 26px;
+        }
+        .item-text {
+          font-size: 13px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}
 </style>

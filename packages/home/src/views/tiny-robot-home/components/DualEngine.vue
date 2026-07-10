@@ -74,7 +74,10 @@ const info = {
     margin: 66px 0 120px;
     .dual-engine-image {
       max-width: 910px;
+      border: 1.2px solid #e6e6e6;
+      border-radius: 16px;
       img {
+        border-radius: 16px;
         width: 100%;
       }
     }
@@ -122,6 +125,13 @@ const info = {
       margin: 30px 0 46px;
       flex-direction: column-reverse;
       gap: 20px;
+      .dual-engine-image {
+        border: 1px solid #e6e6e6;
+        border-radius: 6px;
+        img {
+          border-radius: 6px;
+        }
+      }
       .dual-engine-content {
         gap: 24px;
         width: 100%;
@@ -143,6 +153,44 @@ const info = {
         .dual-engine-content-description {
           font-size: 12px;
           line-height: 18px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .dual-engine {
+    margin-top: 64px;
+    .dual-engine-title {
+      font-size: 34px;
+      line-height: 44px;
+    }
+    .dual-engine-subtitle {
+      font-size: 16px;
+      line-height: 24px;
+      margin-top: 10px;
+    }
+    .dual-engine-container {
+      margin: 40px 0 64px;
+      gap: 32px;
+      .dual-engine-content {
+        gap: 24px;
+        padding: 0;
+        .dual-engine-content-header {
+          gap: 10px;
+          margin-bottom: 10px;
+          .dual-engine-content-icon {
+            width: 22px;
+            height: 22px;
+          }
+          .dual-engine-content-title {
+            font-size: 18px;
+            line-height: 26px;
+          }
+        }
+        .dual-engine-content-description {
+          font-size: 14px;
+          line-height: 22px;
         }
       }
     }

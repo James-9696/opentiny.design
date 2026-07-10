@@ -175,4 +175,44 @@ const info = {
     }
   }
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .technical-core {
+    .technical-core-title {
+      font-size: 34px;
+      line-height: 44px;
+      margin-top: 64px;
+    }
+    .technical-core-subtitle {
+      font-size: 16px;
+      line-height: 24px;
+      margin-top: 10px;
+    }
+    .technical-core-content {
+      flex-direction: row;
+      gap: 24px;
+      margin-top: 40px;
+      .technical-core-item {
+        width: calc((100% - 24px) / 2);
+        min-height: 176px;
+        padding: 28px;
+        border-radius: 12px;
+        .technical-core-item-icon {
+          width: 48px;
+          height: 48px;
+        }
+        .technical-core-item-title {
+          font-size: 18px;
+          line-height: 26px;
+        }
+        .technical-core-item-description {
+          &-mobile {
+            font-size: 13px;
+            line-height: 20px;
+            margin-top: 8px;
+          }
+        }
+      }
+    }
+  }
+}
 </style>

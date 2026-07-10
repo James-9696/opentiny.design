@@ -163,4 +163,45 @@ const copy = () => {
     }
   }
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .cli {
+    .cli-container {
+      margin: 64px auto 0;
+      padding: 56px 0 64px;
+      .cli-title {
+        font-size: 34px;
+        line-height: 44px;
+      }
+      .cli-subtitle {
+        font-size: 16px;
+        line-height: 24px;
+        margin-top: 10px;
+      }
+      .cli-content {
+        width: 560px;
+        height: 50px;
+        margin-top: 32px;
+        padding: 12px 10px 12px 20px;
+        .copy-left {
+          gap: 8px;
+          .icon{
+            width: 24px;
+          }
+          .command {
+            font-size: 16px;
+          }
+        }
+        .copy-right {
+          width: 82px;
+          height: 32px;
+          padding: 6px 16px;
+          font-size: 13px;
+          .copy{
+            width: 14px;
+          }
+        }
+      }
+    }
+  }
+}
 </style>

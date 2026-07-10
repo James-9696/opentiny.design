@@ -323,4 +323,58 @@ onUnmounted(() => {
     }
   }
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .first-screen {
+    .first-screen-wrap {
+      padding: 64px 0 56px;
+      .first-screen-content {
+        max-width: 640px;
+        margin-top: 0;
+        .first-screen-content-title {
+          font-size: 40px;
+          line-height: 52px;
+        }
+        .first-screen-content-subtitle {
+          font-size: 38px;
+          line-height: 50px;
+        }
+        .first-screen-content-text {
+          width: 560px;
+          font-size: 16px;
+          line-height: 24px;
+          margin: 20px auto 0;
+        }
+        .first-screen-content-sender {
+          width: 560px;
+          height: 50px;
+          margin: 32px auto 0;
+          padding: 10px 14px;
+          .first-screen-content-sender-content {
+            width: calc(100% - 42px);
+            font-size: 14px;
+            line-height: 22px;
+          }
+          .first-screen-content-sender-icon {
+            width: 28px;
+            height: 28px;
+            margin-left: 14px;
+          }
+        }
+        .first-screen-content-footer {
+          margin-top: 36px;
+          :deep(.tiny-button) {
+            width: 144px;
+            height: 42px;
+            font-size: 16px;
+          }
+        }
+      }
+      .first-screen-image {
+        width: 76%;
+        margin-top: 48px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
 </style>

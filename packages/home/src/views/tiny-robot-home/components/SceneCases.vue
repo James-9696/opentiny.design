@@ -23,7 +23,7 @@
         <img :src="state.imgUrl" alt="" />
       </div>
     </div>
-    <tiny-carousel class="mobile-container" arrow="never" height="310px" :autoplay="state.isMobile">
+    <tiny-carousel class="mobile-container" arrow="never" :height="state.carouselHeight" :autoplay="state.isMobile">
       <tiny-carousel-item v-for="item in info.list" :key="item.id" class="mobile-section">
         <div class="mobile-image-section">
           <img :src="item.imgUrl" :alt="item.title" />
@@ -78,13 +78,16 @@ const info = {
 const state = reactive({
   active: 1,
   imgUrl: caseImg1,
-  isMobile: false
+  isMobile: false,
+  carouselHeight: '310px'
 })
 
 let mobileMediaQuery
+let tabletMediaQuery
 
 const syncMobileState = () => {
   state.isMobile = Boolean(mobileMediaQuery?.matches)
+  state.carouselHeight = tabletMediaQuery?.matches ? 'clamp(560px, 74vw, 700px)' : '310px'
 }
 
 const handleClickCase = (item) => {
@@ -98,13 +101,17 @@ onMounted(() => {
   }
 
   mobileMediaQuery = window.matchMedia('(max-width: 1023px)')
+  tabletMediaQuery = window.matchMedia('(min-width: 768px) and (max-width: 1023px)')
   syncMobileState()
   mobileMediaQuery.addEventListener('change', syncMobileState)
+  tabletMediaQuery.addEventListener('change', syncMobileState)
 })
 
 onUnmounted(() => {
   mobileMediaQuery?.removeEventListener('change', syncMobileState)
+  tabletMediaQuery?.removeEventListener('change', syncMobileState)
   mobileMediaQuery = undefined
+  tabletMediaQuery = undefined
 })
 </script>
 <style lang="less" scoped>
@@ -243,6 +250,45 @@ onUnmounted(() => {
             line-height: 18px;
             color: #808080;
             margin: auto;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .scene-cases {
+    margin-top: 64px;
+    margin-bottom: 0;
+    .scene-cases-title {
+      font-size: 34px;
+      line-height: 44px;
+    }
+    .scene-cases-subtitle {
+      font-size: 16px;
+      line-height: 24px;
+      margin-top: 10px;
+    }
+    .mobile-container {
+      margin-top: 40px;
+      .mobile-section {
+        padding: 18px;
+        border-radius: 14px;
+        .mobile-image-section {
+          border-radius: 8px;
+          img {
+            border-radius: 8px;
+          }
+        }
+        .mobile-text-section {
+          .mobile-section-title {
+            font-size: 20px;
+            line-height: 28px;
+            margin-top: 24px;
+          }
+          .mobile-section-description {
+            font-size: 14px;
+            line-height: 22px;
           }
         }
       }

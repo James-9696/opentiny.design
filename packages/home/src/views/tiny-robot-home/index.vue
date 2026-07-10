@@ -3,6 +3,7 @@
     ref="homeRef"
     class="home"
     :class="{ 'is-fade-enabled': fadeEnabled }"
+    :style="homeStyle"
   >
     <FirstScreen />
     <TechnicalCore />
@@ -15,7 +16,7 @@
   </div>
 </template>
 <script setup>
-import { nextTick, onMounted, onUnmounted, ref } from "vue"
+import { computed, nextTick, onMounted, onUnmounted, ref } from "vue"
 import FirstScreen from "./components/FirstScreen.vue"
 import TechnicalCore from "./components/TechnicalCore.vue"
 import DualEngine from "./components/DualEngine.vue"
@@ -27,7 +28,18 @@ import Cli from "./components/Cli.vue"
 
 const homeRef = ref()
 const fadeEnabled = ref(false)
+const desktopScale = ref(1)
 let fadeObserver
+
+const homeStyle = computed(() => ({
+  "--desktop-scale": desktopScale.value,
+}))
+
+const updateDesktopScale = () => {
+  if (typeof window === "undefined") return
+
+  desktopScale.value = window.innerWidth >= 1024 ? Math.min(window.innerWidth / 1920, 1) : 1
+}
 
 const initFadeInUp = async () => {
   if (typeof window === "undefined" || !homeRef.value) return
@@ -78,9 +90,14 @@ const initFadeInUp = async () => {
   }
 }
 
-onMounted(initFadeInUp)
+onMounted(() => {
+  updateDesktopScale()
+  window.addEventListener("resize", updateDesktopScale)
+  initFadeInUp()
+})
 
 onUnmounted(() => {
+  window.removeEventListener("resize", updateDesktopScale)
   fadeObserver?.disconnect()
   fadeObserver = undefined
   fadeEnabled.value = false
@@ -90,6 +107,7 @@ onUnmounted(() => {
 .home{
   --max-width: 1440px;
   --mobile-width: calc(100% - 40px);
+  --desktop-scale: 1;
 
   :deep(.fade-in-up) {
     opacity: 1;
@@ -111,35 +129,17 @@ onUnmounted(() => {
 }
 @media (min-width: 1024px) {
   .home{
-    :deep(.first-screen){
-      .first-screen-wrap{
-        max-width: var(--max-width);
-      }
-    }
-    :deep(.technical-core){
+    :deep(.first-screen .first-screen-wrap),
+    :deep(.technical-core),
+    :deep(.dual-engine),
+    :deep(.product-matrix .product-matrix-container),
+    :deep(.robot-component),
+    :deep(.scene-cases),
+    :deep(.use-us),
+    :deep(.cli .cli-container) {
+      width: var(--max-width);
       max-width: var(--max-width);
-    }
-    :deep(.dual-engine){
-      max-width: var(--max-width);
-    }
-    :deep(.product-matrix){
-      .product-matrix-container{
-        max-width: var(--max-width);
-      }
-    }
-    :deep(.robot-component){
-      max-width: var(--max-width);
-    }
-    :deep(.scene-cases){
-      max-width: var(--max-width);
-    }
-    :deep(.use-us){
-      max-width: var(--max-width);
-    }
-    :deep(.cli){
-      .cli-container{
-        max-width: var(--max-width);
-      }
+      zoom: var(--desktop-scale);
     }
   }
 }
@@ -175,6 +175,11 @@ onUnmounted(() => {
         max-width: var(--mobile-width);
       }
     }
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .home{
+    --mobile-width: min(calc(100% - 80px), 920px);
   }
 }
 </style>
