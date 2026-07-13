@@ -1,0 +1,16 @@
+<svg viewBox="0 0 1920 1145" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920.000000" height="1145.000000" fill="none">
+	<defs>
+		<g id="pixso_custom_effect_59">
+			<effect visibility="visible" effectType="gaussianBlur" stdDeviation="600" />
+		</g>
+		<filter id="filter_59" width="2380.000000" height="1380.000000" x="-212.000000" y="61.000000" filterUnits="userSpaceOnUse" customEffect="url(#pixso_custom_effect_59)" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix" />
+			<feBlend result="shape" in="SourceGraphic" in2="BackgroundImageFix" mode="normal" />
+			<feGaussianBlur stdDeviation="200" result="effect_layerBlur_1" />
+		</filter>
+	</defs>
+	<rect id="4_bg" width="1920.000000" height="1145.000000" x="0.000000" y="0.000000" fill="rgb(248,249,254)" />
+	<g filter="url(#filter_59)">
+		<path id="椭圆 3724" d="M388 725.828C413.909 657.915 711.166 679.989 851.397 679.989C915.499 679.989 1101.78 644.717 1172.33 670.318C1256.12 700.723 1568 634.528 1568 693.072C1568 752.483 1525.78 808.156 1410.5 827.344C1316.54 842.984 1153.91 827.347 1090.93 827.347C1026.13 827.347 602.492 858.068 515.219 827.344C413.633 791.582 388 783.832 388 725.828Z" fill="rgb(236,241,255)" fill-rule="evenodd" />
+	</g>
+</svg>
