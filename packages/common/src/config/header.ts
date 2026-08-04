@@ -45,7 +45,7 @@ const menuItems = [
     url: `${basePath}tiny-robot`,
     children: [],
     logo: tinyRobot,
-    desc: '智能助手',
+    desc: 'AI 对话组件库',
     hide: false,
     github: 'https://github.com/opentiny/tiny-robot',
     isUnderline: createIsUnderline(`${basePath}tiny-robot`)
