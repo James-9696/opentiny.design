@@ -3,19 +3,17 @@
     <div class="home-contents">
       <!-- 全局通知 -->
       <!-- <global-notice></global-notice> -->
-      <!-- 标题 -->
-      <home-slogen id="home-1"></home-slogen>
-      <web-mcp-struc id="home-2"></web-mcp-struc>
-      <why-opentiny id="home-3"></why-opentiny>
-      <guide id="home-4"></guide>
-      <!-- 新特性 -->
-      <new-features id="home-5"></new-features>
-      <!-- 生态平台 -->
-      <home-platform id="home-6"></home-platform>
-      <!-- 最新动态 -->
-      <recent-activity></recent-activity>
-      <!-- 体验旅程 -->
-      <!-- <home-journey></home-journey> -->
+      <banner id="home-1"></banner>
+      <!-- OpenTiny 全家桶 -->
+      <opentiny-all id="home-2"></opentiny-all>
+      <!-- OpenTiny系列产品组成的核心能力 -->
+      <opentiny-power id="home-3"></opentiny-power>
+      <!-- 带你三分钟改造智能应用 -->
+      <update-app id="home-4"></update-app>
+      <!-- 和更多开发者一起成长、一起创造价值 -->
+       <growth-with-user id="home-5"></growth-with-user>
+       <!-- 最新动态 -->
+      <activity id="home-6"></activity>
       <!-- 贡献者 -->
       <contributor></contributor>
     </div>
@@ -32,15 +30,16 @@
 </template>
 <script setup>
 import { onMounted, onUnmounted, ref } from 'vue'
-import HomeSlogen from './slogen/index.vue'
-import WebMcpStruc from './architecture/index.vue'
+import banner from './new-banner/index.vue'
+import OpentinyAll from './about-opentiny/index.vue'
 import GlobalNotice from './global-notice.vue'
 import HomePlatform from './platform/index.vue'
 import GrowthWithUser from './growth-with-user/index.vue'
-import WhyOpentiny from './why-opentiny/index.vue'
+import OpentinyPower from './opentiny-power/index.vue'
+import activity from './activity/index.vue'
 import RecentActivity from './recent-activity/index.vue'
 import Contributor from './contributor/index.vue'
-import Guide from './guide/index.vue'
+import updateApp from './update-app/index.vue'
 import NewFeatures from './new-features/index.vue'
 import { debounce } from '../../tools/utils'
 import useWindowSize from '@/tools/useWindowSize.js'
@@ -71,7 +70,7 @@ const scrollToAnchor = (target) => {
 }
 
 const checkAnchorNav = () => {
-  const carouselRect = document.querySelector('#home-slogan-carousel')?.getBoundingClientRect()
+  const carouselRect = document.querySelector('#news-anchor')?.getBoundingClientRect()
   const viewportHeight = window.innerHeight // 视口高度
 
   if (!carouselRect) return

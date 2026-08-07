@@ -1,0 +1,335 @@
+@import '@/mixin.less';
+
+@bp-mobile: 768px;
+@bp-tablet: 1024px;
+@bp-desktop: 1440px;
+
+.home-growth-with-user {
+  .pcPadding(0, 60, 0, 0);
+  width: 100%;
+  background: #f5f6f9;
+  height: 100%;
+  overflow: hidden;
+
+  .user-stat {
+    height: auto;
+    min-height: 500px;
+    padding: clamp(80px, 13.5vw, 194px) clamp(40px, 8.7vw, 167px) clamp(40px, 4.2vw, 60px) clamp(40px, 6.2vw, 119px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .text-slogen {
+    color: #191919;
+    .pcRem(font-size, 44);
+    line-height: 1.5;
+  }
+  .text-bold {
+    font-weight: bold;
+  }
+  .text-blue {
+    color:#1476ff;
+  }
+  .text-desc {
+    color: rgb(89, 89, 89);
+    font-size: clamp(16px, 1.67vw, 24px);
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  .text-num {
+    .pcRem(font-size, 60);
+    font-weight: bold;
+    line-height: 1.5;
+  }
+
+  .flex-box {
+    display: flex;
+    margin-top: clamp(40px, 6.2vw, 89px);
+    margin-bottom: clamp(40px, 5vw, 72px);
+    flex-wrap: wrap;
+    gap: clamp(32px, 6.4vw, 92px);
+    > div + div {
+      margin-left: 0;
+    }
+  }
+
+  .growth-with-user-box {
+    display: flex;
+    max-width: 1600px;
+    justify-content: space-around;
+    margin: 0 auto;
+    height: auto;
+    min-height: 600px;
+    background: url('../../../assets/images/new-icon/floor5/growth-bg.svg');
+    background-position: 0px clamp(-190px, -13.2vw, -60px);
+    background-size: clamp(300px, 36.8vw, 530px) clamp(300px, 36.8vw, 530px);
+    background-repeat: no-repeat;
+  }
+
+  @keyframes infiniteScroll {
+    from {
+      margin-top: 0;
+    }
+    to {
+      margin-top: -1641px;
+    }
+  }
+  .user-list-comma {
+    font-family: arial;
+    position: absolute;
+    color: #1476ff;
+    font-size: clamp(60px, 8.3vw, 120px);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0px;
+    z-index: 10;
+    left: clamp(-90px, -5.6vw, -80px);
+    top: clamp(-5px, -0.7vw, -10px);
+  }
+  .user-list-box {
+    position: relative;
+    flex-shrink: 0;
+  }
+  .user-list-card-box {
+    height: clamp(600px, 63.9vw, 920px);
+    overflow: hidden;
+    position: relative;
+    top: clamp(40px, 5.6vw, 80px);
+  }
+
+  .user-list {
+    .pcRem(width, 660);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    animation: infiniteScroll 30s linear infinite;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+
+  .user-card {
+    break-inside: avoid;
+    .pcPadding(30, 30);
+    background-color: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.08);
+    }
+
+    .user-card-header {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding-bottom: 16px;
+
+      .user-name {
+        font-size: 16px;
+        font-weight: 600;
+        color: #191919;
+        line-height: 24px;
+      }
+
+      .user-location {
+        color: #575d6c;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+
+    .user-comments {
+      flex: 1;
+      font-size: 14px;
+      color: #191919;
+      line-height: 24px;
+      padding-top: 16px;
+    }
+  }
+
+  .user-carousel {
+    .tiny-carousel__indicators {
+      justify-content: center !important;
+    }
+  }
+
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 16px;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  .user-card-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: auto;
+    padding-top: 12px;
+
+    .user-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: #191919;
+    }
+
+    .user-location {
+      color: #575d6c;
+      font-size: 12px;
+    }
+  }
+
+  .user-comments-inner {
+    font-size: 14px;
+    color: #191919;
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .tiny-carousel {
+    min-height: 280px;
+    aspect-ratio: auto !important;
+  }
+
+  .carousel-item-demo {
+    height: 100% !important;
+  }
+
+  .tiny-carousel__item {
+    height: 100% !important;
+  }
+}
+
+@media screen and (max-width: @bp-tablet) {
+  .home-growth-with-user {
+    .growth-with-user-box {
+      flex-direction: column;
+      align-items: center;
+      background-position: center top;
+      background-size: 400px 400px;
+      padding-bottom: 40px;
+      min-height: 0;
+    }
+
+    .user-stat {
+      padding: 60px 40px 40px;
+      min-height: auto;
+      align-items: center;
+      text-align: center;
+    }
+
+    .text-slogen {
+      text-align: center;
+    }
+
+    .flex-box {
+      justify-content: center;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    .user-list-box {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: @bp-mobile) {
+  .home-growth-with-user {
+    .pcPadding(0, 0, 0, 0);
+
+    .growth-with-user-box {
+      background-size: 280px 280px;
+      background-position: center top;
+      padding-bottom: 0;
+    }
+
+    .user-stat {
+      padding: 48px 20px 32px;
+      min-height: auto;
+      align-items: center;
+      text-align: center;
+    }
+
+    .text-slogen {
+      font-size: 28px;
+      line-height: 1.4;
+    }
+
+    .text-num {
+      font-size: 40px;
+    }
+
+    .text-desc {
+      font-size: 14px;
+    }
+
+    .flex-box {
+      margin-top: 32px;
+      margin-bottom: 32px;
+      gap: 32px;
+      justify-content: center;
+    }
+
+    .user-list-box {
+      display: none;
+    }
+
+    .card-container {
+      padding: 0 12px;
+      gap: 8px;
+    }
+
+    .user-card {
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    .user-comments-inner {
+      -webkit-line-clamp: 3;
+      font-size: 13px;
+    }
+
+    .tiny-carousel {
+      min-height: 320px;
+      padding-bottom: 40px;
+    }
+  }
+}
+
+@media screen and (min-width: @bp-tablet) and (max-width: @bp-desktop) {
+  .home-growth-with-user {
+    .growth-with-user-box {
+      justify-content: space-between;
+      padding: 0 40px;
+    }
+
+    .user-stat {
+      padding: 120px 40px 60px;
+    }
+
+    .user-list {
+      width: 480px;
+      grid-template-columns: 1fr;
+    }
+
+    .user-list-card-box {
+      height: 700px;
+    }
+
+    .user-list-comma {
+      left: -80px;
+    }
+  }
+}

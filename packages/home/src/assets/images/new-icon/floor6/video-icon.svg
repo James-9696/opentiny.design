@@ -1,0 +1,16 @@
+<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20.000000" height="20.000000" fill="none">
+	<defs>
+		<linearGradient id="paint_linear_29" x1="7.91601562" x2="7.91601562" y1="7.5" y2="12.5" gradientUnits="userSpaceOnUse">
+			<stop stop-color="rgb(255,255,255)" offset="0" stop-opacity="1" />
+			<stop stop-color="rgb(255,255,255)" offset="1" stop-opacity="0" />
+		</linearGradient>
+	</defs>
+	<rect id="fool5_02" width="20.000000" height="20.000000" x="0.000000" y="0.000000" />
+	<g id="ic_car_cameras-摄像头_质感图标">
+		<rect id="矩形" width="20.000000" height="20.000000" x="0.000000" y="0.000000" />
+		<path id="path6" d="M15 6.75016L18.8572 5.20729C19.2845 5.03636 19.7695 5.2442 19.9404 5.67152C19.9798 5.76996 20 5.875 20 5.98102L20 14.0193C20 14.4795 19.6269 14.8526 19.1667 14.8526C19.0606 14.8526 18.9556 14.8324 18.8572 14.793L15 13.2502L15 6.75016Z" fill="rgb(25,25,25)" fill-rule="nonzero" />
+		<path id="path5" d="M15 14.1668C15 15.5475 13.8149 16.6668 12.3529 16.6668L2.64706 16.6668C1.18513 16.6668 0 15.5475 0 14.1668L0 5.8335C0 4.45278 1.18513 3.3335 2.64706 3.3335L12.3529 3.3335C13.8149 3.3335 15 4.45278 15 5.8335L15 14.1668Z" fill="rgb(25,25,25)" fill-rule="nonzero" />
+		<circle id="path7" cx="7.91601562" cy="10" r="2.5" fill="rgb(255,255,255)" />
+		<circle id="path7" cx="7.91601562" cy="10" r="2.5" stroke="url(#paint_linear_29)" stroke-width="0.500000" />
+	</g>
+</svg>
