@@ -1,24 +1,28 @@
-<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28.000000" height="28.000000" fill="none" customFrame="#000000">
 	<defs>
-		<linearGradient id="bgGradient" x1="0" y1="0" x2="28" y2="28" gradientUnits="userSpaceOnUse">
-			<stop stop-color="rgba(0,0,0,0)" stop-opacity="0"/>
-			<stop offset="1" stop-color="rgba(0,0,0,1)" stop-opacity="1"/>
+		<linearGradient id="paint_linear_41" x1="17.3610077" x2="5.88370419" y1="20.3651447" y2="16.9533119" gradientUnits="userSpaceOnUse">
+			<stop stop-color="rgb(255,255,255)" offset="0" stop-opacity="0.905882359" />
+			<stop stop-color="rgb(255,255,255)" offset="0.697115064" stop-opacity="0.800000012" />
+			<stop stop-color="rgb(255,255,255)" offset="1" stop-opacity="1" />
 		</linearGradient>
-		<linearGradient id="textGradient" x1="17.36246" y1="20.365192" x2="5.885156" y2="16.953363" gradientUnits="userSpaceOnUse">
-			<stop stop-color="rgba(255,255,255,0.96)" stop-opacity="0.96"/>
-			<stop offset="0.5" stop-color="rgba(255,255,255,0.8)" stop-opacity="0.8"/>
-			<stop offset="1" stop-color="rgba(255,255,255,1)" stop-opacity="1"/>
+		<linearGradient id="paint_linear_42" x1="3.98996615" x2="1.61461902" y1="2.63119507" y2="7.03259659" gradientUnits="userSpaceOnUse">
+			<stop stop-color="rgb(0,0,0)" offset="0" stop-opacity="0" />
+			<stop stop-color="rgb(0,0,0)" offset="1" stop-opacity="1" />
 		</linearGradient>
-		<linearGradient id="soft" x1="3.989966" y1="2.631195" x2="1.61462" y2="7.032596" gradientUnits="userSpaceOnUse">
-			<stop stop-color="#000000" stop-opacity="0"/>
-			<stop offset="1" stop-color="#000000"/>
+		<linearGradient id="paint_linear_43" x1="24.6430111" x2="16.7968216" y1="20.6321011" y2="18.6884174" gradientUnits="userSpaceOnUse">
+			<stop stop-color="rgb(255,255,255)" offset="0" stop-opacity="0.905882359" />
+			<stop stop-color="rgb(255,255,255)" offset="0.697115064" stop-opacity="0.800000012" />
+			<stop stop-color="rgb(255,255,255)" offset="1" stop-opacity="1" />
 		</linearGradient>
 	</defs>
-	<rect width="28" height="28" rx="5.6" fill="#191919"/>
-	<rect width="28" height="28" rx="5.6" fill="url(#bgGradient)"/>
-	<path d="M4.835404 18.54874C4.202548 20.0438 5.299966 21.7 6.923406 21.7C7.91021 21.7 8.78367 21.06181 9.08355 20.12171L10.33291 16.20507C10.51575 15.63184 11.32425 15.62491 11.51696 16.19478L12.87881 20.22181C13.17757 21.10535 14.00637 21.7 14.93905 21.7C16.49102 21.7 17.54354 20.12115 16.94665 18.6886L12.89757 8.97148C12.1576 7.19558 9.64425 7.18851 8.89434 8.96021L4.835404 18.54874Z" fill="url(#textGradient)" fill-rule="evenodd"/>
-	<g style="mix-blend-mode:soft-light">
-		<path d="M0 5.431209C0 8.23123 3.289972 10.33123 5.039965 6.131195C5.283775 5.546051 5.739972 4.112836 6.439972 2.631202C7.14 1.149568 2.239993 -2.067996 2.239965 1.931209C2.239965 2.631195 1.327683 4.911991 1.119986 5.431209C0.839965 6.131209 0.209784 5.901112 0 5.431209Z" fill="url(#soft)" fill-rule="evenodd" transform="matrix(1,0,0,-1,10.36147,21.53123)"/>
+	<g id="ico04">
+		<rect id="矩形备份 3" width="28.000000" height="28.000000" x="0.000000" y="0.000000" rx="6.000000" fill="rgb(20,118,255)" />
+		<g id="组合 3464">
+			<path id="矢量 2512" d="M4.83395 18.5487C4.2011 20.0437 5.29851 21.7 6.92195 21.7C7.90874 21.7 8.78221 21.0617 9.08209 20.1216L10.3314 16.205C10.5143 15.6318 11.3228 15.6248 11.5155 16.1948L12.8773 20.2218C13.1761 21.1053 14.0049 21.7 14.9376 21.7C16.4896 21.7 17.5421 20.1211 16.9452 18.6885L12.8961 8.97141C12.1561 7.19555 9.64283 7.18848 8.89286 8.96015L4.83395 18.5487Z" fill="url(#paint_linear_41)" fill-rule="evenodd" />
+			<g style="mix-blend-mode:soft-light">
+				<path id="路径 41" d="M3.1113e-13 5.43121C-1.16825e-06 8.2312 3.28997 10.3312 5.03997 6.1312C5.28378 5.54605 5.73997 4.11284 6.43997 2.6312C7.13997 1.14957 2.23999 -2.06799 2.23997 1.93121C2.23996 2.63119 1.32768 4.91199 1.11998 5.43121C0.839965 6.13121 0.209785 5.90111 3.1113e-13 5.43121Z" fill="url(#paint_linear_42)" fill-rule="evenodd" transform="matrix(1,0,0,-1,10.3633,21.5312)" />
+			</g>
+			<path id="路径" d="M19.9113 20.2187L16.5332 10.8397C15.9828 9.31144 17.1152 7.69995 18.7395 7.69995C19.6058 7.69995 20.3788 8.244 20.6711 9.05948L24.1282 18.7035C24.6514 20.163 23.5696 21.6999 22.0192 21.6999C21.0746 21.6999 20.2314 21.1075 19.9113 20.2187Z" fill="url(#paint_linear_43)" fill-rule="evenodd" />
+		</g>
 	</g>
-	<path d="M19.91045 20.2188L16.53232 10.83978C15.98184 9.31147 17.1143 7.7 18.73865 7.7C19.60497 7.7 20.37791 8.24404 20.67023 9.05954L24.12732 18.70358C24.6505 20.16308 23.56872 21.7 22.01829 21.7C21.07364 21.7 20.23056 21.10752 19.91045 20.2188Z" fill="url(#textGradient)" fill-rule="evenodd"/>
 </svg>
