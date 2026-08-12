@@ -1,0 +1,22 @@
+<svg viewBox="0 0 14.1875 14.2002" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14.187500" height="14.200195" fill="none" customFrame="#000000">
+	<defs>
+		<linearGradient id="paint_linear_16" x1="4.9032774" x2="0.57277298" y1="2.85717583" y2="5.87903881" gradientUnits="userSpaceOnUse">
+			<stop stop-color="rgb(0,0,0)" offset="0" stop-opacity="0" />
+			<stop stop-color="rgb(0,0,0)" offset="1" stop-opacity="1" />
+		</linearGradient>
+		<linearGradient id="paint_linear_17" x1="3.62892294" x2="0.727596521" y1="1.28086436" y2="2.54444003" gradientUnits="userSpaceOnUse">
+			<stop stop-color="rgb(0,0,0)" offset="0" stop-opacity="0" />
+			<stop stop-color="rgb(0,0,0)" offset="1" stop-opacity="1" />
+		</linearGradient>
+	</defs>
+	<rect id="fool2_02" width="14.000000" height="14.000000" x="0.093750" y="0.200195" />
+	<g id="编组 4">
+		<g style="mix-blend-mode:soft-light">
+			<path id="路径 41" d="M-1.36858e-12 5.64719C1.13601 8.01686 2.84866 8.42445 4.06977 5.97346C4.26961 5.57236 5.22984 3.67399 5.50437 3.10559C7.93505 -1.92683 3.66041 0.0935175 2.39606 2.62222C2.16851 3.07732 1.08157 5.31516 0.894861 5.66362C0.67226 6.07906 0.148304 5.97938 -1.36858e-12 5.64719Z" fill="url(#paint_linear_16)" fill-rule="evenodd" transform="matrix(1,0,0,-1,5.86914,10.1343)" />
+		</g>
+		<g style="mix-blend-mode:soft-light">
+			<path id="路径 41备份 2" d="M7.8544e-13 2.0031C0.803372 3.30645 2.57489 5.28794 3.90998 2.62753C4.11173 2.22551 4.94224 0.55728 5.21987 5.6344e-20C4.09683 0.00187516 2.66617 0.00764072 1.89758 0.00824859C1.67003 0.463349 1.09736 1.61889 0.912238 1.9852C0.697736 2.40964 0.204555 2.35514 7.8544e-13 2.0031Z" fill="url(#paint_linear_17)" fill-rule="evenodd" transform="matrix(0.446198,0.894934,-0.894934,0.446198,5.47461,7.96875)" />
+		</g>
+		<path id="减去顶层" d="M4.10972 1.36775L0.264409 9.05837C-0.558166 10.7035 0.638136 12.6392 2.47747 12.6392L7.80362 12.6392L7.80405 12.6392L6.31949 9.67005L4.0788 9.67005C3.71094 9.67005 3.47168 9.28292 3.63619 8.95389L5.87787 4.47052C6.06006 4.10616 6.57986 4.10569 6.7627 4.46973L10.8658 12.6392L14.1883 12.6392L8.53452 1.36511C7.62113 -0.45625 5.02095 -0.454702 4.10972 1.36775Z" fill="rgb(20,118,255)" fill-rule="evenodd" />
+	</g>
+</svg>

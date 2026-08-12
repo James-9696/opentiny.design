@@ -1,0 +1,20 @@
+<svg viewBox="0 0 576.639 529.763" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="576.638672" height="529.762695" fill="none" customFrame="#000000">
+	<defs>
+		<g id="pixso_custom_effect_2">
+			<effect visibility="visible" effectType="gaussianBlur" stdDeviation="114.472198" />
+		</g>
+		<filter id="filter_2" width="576.638672" height="529.762695" x="0.000000" y="0.000000" filterUnits="userSpaceOnUse" customEffect="url(#pixso_custom_effect_2)" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix" />
+			<feBlend result="shape" in="SourceGraphic" in2="BackgroundImageFix" mode="normal" />
+			<feGaussianBlur stdDeviation="38.1573982" result="effect_layerBlur_1" />
+		</filter>
+		<linearGradient id="paint_linear_27" x1="172.629044" x2="-54.3945312" y1="63.3006134" y2="350.898315" gradientUnits="userSpaceOnUse">
+			<stop stop-color="rgb(255,255,255)" offset="0" stop-opacity="1" />
+			<stop stop-color="rgb(36.263,197.883,249.308)" offset="1" stop-opacity="1" />
+		</linearGradient>
+	</defs>
+	<rect id="fool4_02" width="352.843750" height="305.853516" x="112.162109" y="111.617188" />
+	<g filter="url(#filter_2)">
+		<path id="椭圆 58" d="M57.1333 223.495C-69.4884 111.91 53.8763 15.4822 53.8763 15.4822C53.8763 15.4822 225.282 -25.7558 302.367 26.3728C379.452 78.5013 349.237 292.432 285.543 292.432C221.849 292.432 183.755 335.079 57.1333 223.495Z" fill="url(#paint_linear_27)" fill-opacity="0.400000006" fill-rule="evenodd" transform="matrix(-0.999877,0.0156652,0.0156652,0.999877,460.299,111.617)" />
+	</g>
+</svg>

@@ -67,9 +67,9 @@ function toggleLink(link: any) {
 <style lang="less" scoped>
 .opentiny-design-footer {
   font-size: 16px;
-  color: #191919;
+  color: #ffffff;
   padding: 64px 160px 32px 160px;
-  background-color: #fafafa;
+  background-color: #191919;
   overflow: hidden;
 
   .footer-content {
@@ -115,7 +115,7 @@ function toggleLink(link: any) {
           width: 100%;
           display: block;
           text-decoration: none;
-          color: #808080;
+          color: #e6e6e6;
           overflow: hidden;
           white-space: nowrap;
           text-overflow: ellipsis;
