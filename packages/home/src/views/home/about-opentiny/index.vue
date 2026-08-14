@@ -171,14 +171,14 @@ const cardOptions = [
     tag: '开箱即用、前后台分离',
     cards: [
       {
-        brand: 'VuePro',
+        brand: 'TinyPro Vue',
         title: 'Vue技术栈企业级开发应用模板',
         desc: '开箱即用企业级中后台模板',
         link: 'https://opentiny.design/vue-pro',
         icon: getIconAppUrl('tiny-pro')
       },
       {
-        brand: 'NgPro',
+        brand: 'TinyPro Angular',
         title: 'Angular技术栈企业级开发应用模板',
         desc: '企业级开发应用模板',
         link: 'https://opentiny.design/ng-pro',
@@ -248,18 +248,18 @@ const getImgFrontUrl = (name) => new URL(`../../../assets/images/new-icon/floor2
 
 // 每个卡片的渐变色
 const gradients = [
-  'linear-gradient(157.34deg, rgb(224, 240, 255, 1) 17.524%, rgb(243, 244, 251, 1) 53.201%, rgb(243, 244, 251, 1) 92.235%)',
+  'linear-gradient(157.34deg, rgba(224, 240, 255, 1) 17.524%, rgba(243, 244, 251, 1) 53.201%, rgba(243, 244, 251, 1) 92.235%)',
   'linear-gradient(135deg, rgba(239, 243, 255, 1) -0.086%, rgba(242, 246, 254, 1) 43.63%, rgba(243, 244, 251, 1) 100%)',
-  'linear-gradient(180deg, #f4f8ff 0%, #ece9f5 100%)',
-  'linear-gradient(135deg, rgb(245, 241, 255) 20%, rgb(245, 241, 255) 20%, rgb(225, 233, 246) 80%)'
+  'linear-gradient(180deg, rgba(244, 248, 255, 1) 0%, rgba(236, 233, 245, 1) 100%)',
+  'linear-gradient(135deg, rgba(245, 241, 255, 1) 20%, rgba(245, 241, 255, 1) 20%, rgba(225, 233, 246, 1) 80%)'
 ]
 
 // 悬浮展开状态：只显示新的渐变（颜色更鲜明/方向不同）
 const hoverGradients = [
-  'linear-gradient(160deg, rgb(200, 230, 255) 0%, rgb(255, 255, 255) 20%, rgb(243, 244, 251) 100%)',
-  'linear-gradient(135deg, rgba(233, 234, 242, 0) 0%, rgba(237, 239, 251, 0) 100%)',
-  'linear-gradient(134.71deg,  rgba(244, 248, 255, 0.5) 0.448% , rgba(243, 246, 255, 0.5) 100%)',
-  'linear-gradient(135deg, rgb(245, 241, 255) 15%,  rgb(245, 241, 255) 0%, rgb(244, 246, 249) 100%)'
+  'linear-gradient(160deg, rgba(200, 230, 255, 1) 0%, rgba(255, 255, 255, 1) 20%, rgba(243, 244, 251, 1) 100%)',
+  'linear-gradient(160deg, rgba(255, 207, 207, 0.2) 0%, rgba(255, 255, 255, 1) 20%, rgb(243, 244, 251, 1) 100%)',
+  'linear-gradient(160deg, rgba(207, 200, 255, 0.2) 0%, rgba(255, 255, 255,1) 20%, rgba(243, 244, 251, 1) 100%)',
+  'linear-gradient(160deg, rgba(230, 238, 253, 0.2) 0%, rgba(255, 255, 255, 1) 20%, rgb(243, 244, 251, 1) 100%)',
 ]
 
 
@@ -279,16 +279,16 @@ const getCardBgStyle = (index) => {
   return {
     backgroundImage: `url(${getImgUrl(`bg-${index + 1}`)}), ${gradients[index]}`,
     backgroundSize: 'cover, cover',
-    backgroundPosition: 'center, center',
+    backgroundPosition: 'center, right',
     backgroundRepeat: 'no-repeat, no-repeat'
   }
 }
 
 // 每个卡片的渐变色
 const gradientsFronts = [
-  'linear-gradient(135deg, rgb(238, 245, 255) 20%, rgb(238, 245, 255) 20%, rgb(228, 248, 230) 90%)',
-  'linear-gradient(135deg, rgb(255, 243, 230) 20%, rgb(255, 243, 230) 20%, rgb(255, 207, 207)  100%)',
-  'linear-gradient(135deg, rgb(225, 236, 255) 20%, rgb(225, 236, 255) 20%, rgb(222, 224, 255) 100%)'
+  'linear-gradient(135deg, rgba(238, 245, 255, 0.6) 20%, rgba(238, 245, 255, 0.6) 20%, rgba(228, 248, 230, 0.6) 90%)',
+  'linear-gradient(135deg, rgba(255, 243, 230, 0.6) 20%, rgba(255, 243, 230, 0.6) 20%, rgba(255, 207, 207, 0.6) 100%)',
+  'linear-gradient(135deg, rgba(225, 236, 255, 0.6) 20%, rgba(225, 236, 255, 0.6) 20%, rgba(222, 224, 255, 0.6) 100%)'
 ]
 
 const getFrontBgStyle = (index) => {
@@ -296,7 +296,7 @@ const getFrontBgStyle = (index) => {
   // 默认状态：图片在上层，渐变在下层（多层背景）
   return {
     backgroundImage: `url(${getImgFrontUrl(`front-bg-${index + 1}`)}), ${gradientFront}`,
-    backgroundSize: 'cover, cover',
+    backgroundSize: 'auto 99%, cover',
     backgroundPosition: 'center, center',
     backgroundRepeat: 'no-repeat, no-repeat'
   }
@@ -304,10 +304,10 @@ const getFrontBgStyle = (index) => {
 
 // 每个卡片的渐变色
 const gradientsUIs = [
-  'linear-gradient(135deg, rgb(238, 235, 255) 20%, rgb(238, 235, 255) 20%, rgb(0, 129, 255) 100%)',
-  'linear-gradient(145deg, rgb(255, 243, 230) 20%, rgb(255, 243, 230) 20%, rgb(255, 207, 207) 100%)',
-  'linear-gradient(135deg, rgb(253, 242, 255) 20%, rgb(253, 242, 255) 20%, rgb(223, 211, 255) 100%)',
-  'linear-gradient(135deg, rgb(255, 247, 228) 10%, rgb(255, 247, 228) 10%, rgb(193, 236, 255) 100%)'
+  'linear-gradient(-45deg, rgba(0, 129, 255, 0.28) -0.036%, rgba(238, 235, 255, 0.33) 100%)',
+  'linear-gradient(145deg, rgba(255, 243, 230, 1) 20%, rgba(255, 243, 230,1) 20%, rgba(255, 207, 207, 1) 100%)',
+  'linear-gradient(135deg, rgba(253, 242, 255, 1) 20%, rgba(253, 242, 255, 1) 20%, rgba(223, 211, 255, 1) 100%)',
+  'linear-gradient(135deg, rgba(255, 247, 228, 0.6) 10%, rgba(255, 247, 228, 0.6) 20%, rgba(193, 236, 255, 1) 100%)'
 ]
 
 const getUIBgStyle = (index) => {
@@ -315,7 +315,7 @@ const getUIBgStyle = (index) => {
   // 默认状态：图片在上层，渐变在下层（多层背景）
   return {
     backgroundImage: `url(${getImgFrontUrl(`ui-bg-${index + 1}`)}), ${gradientsUI}`,
-    backgroundSize: 'contain, cover',     // 图片：完整显示；渐变：铺满
+    backgroundSize: 'auto 95%, cover',
     backgroundPosition: 'right top, center', // 图片放右下，渐变居中
     backgroundRepeat: 'no-repeat, no-repeat'
   }
@@ -323,9 +323,9 @@ const getUIBgStyle = (index) => {
 
 const getEngineBgStyle = () => {
   return {
-    backgroundImage: `url(${getImgFrontUrl('engine-bg-1')}), linear-gradient(135deg, rgb(230, 238, 253) 20%, rgb(230, 238, 253) 20%, rgb(222, 224, 255) 100%)`,
+    backgroundImage: `url(${getImgFrontUrl('engine-bg-1')}), linear-gradient(-45deg, rgba(222, 224, 255, 1) 0%, rgba(230, 238, 253, 1) 99.917%)`,
     backgroundSize: 'auto',     // 图片：完整显示；渐变：铺满
-    backgroundPosition: 'center', // 图片放右下，渐变居中
+    backgroundPosition: 'bottom right', // 图片放右下
     backgroundRepeat: 'no-repeat'
   }
 }
