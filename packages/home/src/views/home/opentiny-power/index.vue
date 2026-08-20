@@ -2,7 +2,7 @@
   <div class="capability-showcase">
     <div>
       <div class="showcase-title">OpenTiny系列产品组成的核心能力</div>
-      <div class="showcase-subtitle">覆盖组件、低代码、生成式UI、AI对话、智能执行、浏览器增强与Web智能体</div>
+      <div class="showcase-subtitle">覆盖组件、低代码、生成式 UI、AI 对话、智能执行、浏览器增强与 Web 智能体</div>
       <div class="showcase-body">
         <div class="compare-header">
           <span class="compare-left">前端应用开发能力 + NEXT AI智能应用开发能力</span>
@@ -32,7 +32,7 @@
             </div>
           </div>
           <div class="panel-right">
-            <div class="panel-heading">AI智能应用开发能力</div>
+            <div class="panel-heading">AI 智能应用开发能力</div>
             <div class="panel-blocks">
               <div class="capability-block" v-for="(section, idx) in rightSections" :key="idx">
                 <div class="block-header">
@@ -66,7 +66,7 @@ const leftSections = [
     title: '企业级组件库',
     tags: [{ icon: getImgPowerUrl('app-vue'), desc: 'TinyVue'}, { icon: getImgPowerUrl('app-ng'), desc:'TinyNG' } , { icon: getImgPowerUrl('app-chart'), desc:'TinyChart' }, { icon: getImgPowerUrl('app-editor'), desc: 'TinyEditor' }],
     descs: [
-      { label: '跨框架兼容：', value: '一套代码同时支持Vue2/Vue3/Angular' },
+      { label: '跨框架兼容：', value: '一套代码同时支持 Vue2/Vue3/Angular' },
       { label: '跨端自适应：', value: 'PC + 移动端一套代码全搞定' },
       { label: '组件丰富：', value: '130+ 企业级组件，覆盖企业开发全场景' },
       { label: '高性能：', value: '内置虚拟滚动、大数据渲染也流畅' },
@@ -98,17 +98,17 @@ const leftSections = [
 
 const rightSections = [
   {
-    title: '兼容MCP与Skill生态',
+    title: '兼容 MCP与Skill 生态',
     tags: [{ icon: '', desc: '全局智能组件能力'}],
     desc: '遵循通用协议标准，无缝对接主流生态与工具'
   },
   {
-    title: 'AI对话式开发',
+    title: 'AI 对话式开发',
     tags: [{ icon: getImgPowerUrl('app-tinyrobot'), desc: 'TinyRobot'}],
     desc: '内置 TinyRobot AI组件库，用对话驱动开发与交互'
   },
   {
-    title: '生成式UI',
+    title: '生成式 UI',
     tags: [{  icon: getImgPowerUrl('app-genui'), desc: 'GenUI SDK'}],
     desc: 'GenUI SDK让文本快速生成页面、组件、代码规范直接落地'
   },
@@ -120,7 +120,7 @@ const rightSections = [
   {
     title: '支持Web MCP接入服务',
     tags: [{ icon: getImgPowerUrl('app-webagent'), desc: 'WebAgent'}],
-    desc: '搭载WebAgent，提供MCP 协议中转服务，自主执行复杂网页任务'
+    desc: '搭载 WebAgent，提供 MCP 协议中转服务，自主执行复杂网页任务'
   }
 ]
 </script>
