@@ -33,7 +33,7 @@
                     <span class="ai-brand">{{ card.brand }}</span>
                   </div>
                   <div class="ai-card-title">{{ card.title }}</div>
-                  <div class="ai-card-desc">{{ card.desc }}</div>
+                  <div class="ai-card-desc" v-html="card.desc"></div>
                   <a class="ai-card-link" :href="card.link" target="_blank" rel="noopener noreferrer" @click.stop>
                     了解详情
                   </a>
@@ -128,15 +128,15 @@ const cardOptions = [
     topCards: [
       {
         brand: 'TinyRobot',
-        title: 'AI交互组件',
-        desc: '为应用加入对话，消息和智能操作界面',
+        title: 'AI 交互组件',
+        desc: '提供丰富组件，高效搭建 Web 页面',
         link:`${basePath}tiny-robot`,
         icon: getIconAppUrl('tiny-robot')
       },
       {
         brand: 'GenUI-SDK',
         title: '生成式界面',
-        desc: '根据对话数据动态生成交互界面',
+        desc: '根据对话数据动态生成<br/>交互界面',
         link: `https://docs.opentiny.design/genui-sdk/guide/quick-start`,
         icon: getIconAppUrl('genui-sdk')
       }
@@ -144,15 +144,15 @@ const cardOptions = [
     bottomCards: [
       {
         brand: 'NEXT SDKs',
-        title: '前端AI应用开发',
+        title: '前端 AI 应用开发',
         desc: '快速接入模型，工具和智能交互能力',
         link: `${basePath}next-sdk`,
         icon: getIconAppUrl('next-sdk')
       },
       {
         brand: 'AI-Extension',
-        title: 'AI扩展插件',
-        desc: '为现有应用快速增加AI 和MCP能力',
+        title: 'AI 扩展插件',
+        desc: '为现有应用快速增加 AI 和 MCP 能力',
         link: `${basePath}ai-extension`,
         icon: getIconAppUrl('ai-extension')
       },
@@ -172,21 +172,21 @@ const cardOptions = [
     cards: [
       {
         brand: 'TinyPro Vue',
-        title: 'Vue技术栈企业级开发应用模板',
+        title: 'Vue 技术栈企业级开发应用模板',
         desc: '开箱即用企业级中后台模板',
         link: 'https://opentiny.design/vue-pro',
         icon: getIconAppUrl('tiny-pro')
       },
       {
         brand: 'TinyPro Angular',
-        title: 'Angular技术栈企业级开发应用模板',
+        title: 'Angular 技术栈企业级开发应用模板',
         desc: '企业级开发应用模板',
         link: 'https://opentiny.design/ng-pro',
         icon: getIconAppUrl('tiny-pro-ng')
       },
       {
         brand: 'TinyCLI',
-        title: '一站式工程化CLI工具',
+        title: '一站式工程化 CLI 工具',
         desc: '开发业务脚手架工程',
         link: '/tiny-cli/home',
         icon: getIconAppUrl('tiny-cli')
@@ -207,7 +207,7 @@ const cardOptions = [
       },
       {
         brand: 'TinyNg',
-        title: 'Angular技术栈',
+        title: 'Angular 技术栈',
         desc: '全覆盖基础组件库',
         link: `https://opentiny.design/tiny-ng/overview`,
         icon: getIconAppUrl('tiny-ng')
@@ -222,7 +222,7 @@ const cardOptions = [
       {
         brand: 'TinyEditor',
         title: '富文本编辑器',
-        desc: '支持JS/Vue/React',
+        desc: '支持 JS/Vue/React',
         link: 'https://docs.opentiny.design/tiny-editor/guide/quick-start.html',
         icon: getIconAppUrl('tiny-editor')
       }
