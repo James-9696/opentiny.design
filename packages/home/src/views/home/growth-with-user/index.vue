@@ -48,11 +48,11 @@ watch([carouselHeight, mobileUserList], () => {
         </div>
         <div class="flex-box">
           <div>
-            <div class="text-blue text-num">100+</div>
+            <div class="text-blue text-num">300+</div>
             <div class="text-desc">贡献者</div>
           </div>
           <div>
-            <div class="text-blue text-num">210W+</div>
+            <div class="text-blue text-num">100W+</div>
             <div class="text-desc">总下载量</div>
           </div>
         </div>
