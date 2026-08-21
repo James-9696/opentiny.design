@@ -29,24 +29,30 @@
     <div class="section-body">
       <div class="card-list">
         <div class="card-grid">
-          <div
+          <tiny-tooltip
             v-for="item in cardList"
             :key="item.id"
-            class="info-card"
-            @click="cardFn(item.href)"
+            :content="item.title"
+            placement="top"
+            effect="light"
           >
-            <p :title="item.title">
-              <a
-                :href="item.href"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {{ item.title }}
-              </a>
-            </p>
-            <span :title="item.desc">{{ item.desc }}</span>
-            <div class="card-meta">{{ item.date }}</div>
-          </div>
+            <div
+              class="info-card"
+              @click="cardFn(item.href)"
+            >
+              <p :title="item.title">
+                <a
+                  :href="item.href"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {{ item.title }}
+                </a>
+              </p>
+              <span :title="item.desc">{{ item.desc }}</span>
+              <div class="card-meta">{{ item.date }}</div>
+            </div>
+          </tiny-tooltip>
         </div>
       </div>
     </div>
@@ -55,7 +61,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import { Button as TinyButton } from '@opentiny/vue'
+import { Button as TinyButton, Tooltip as TinyTooltip } from '@opentiny/vue'
 import './index.less'
 
 const isGitHubBuild = import.meta.env.MODE === 'github'
@@ -104,17 +110,17 @@ const cardList = [
   },
   {
     id: 2,
-    title: 'GenUI SDK v1.2.0 发布：体积更小，流式更稳',
-    href: 'https://mp.weixin.qq.com/s/U3Cc0Qax5eK4eRCU-xGt_A',
-    desc: '聚焦SDK轻量化与按需引入、流式渲染稳定性、Playground能力升级、GenUI Template体验完善四大方向深度打磨，让GenUI SDK在生产场景中用得更轻、跑得更稳、调得更顺。',
-    date: '2026-06-17'
+    title: 'GenUI SDK v1.3.0 发布：多框架兼容，一键换物料，渲染器 & 演练场全面增强',
+    href: 'https://mp.weixin.qq.com/s/syIEFHTO4VhrkhWK2ajyEA',
+    desc: '解耦发包、物料体系可插拔、渲染器能力强化、多框架协同渲染、演练场全方位升级五大核心方向迭代。彻底解决旧版耦合度高、框架适配弱、自定义拓展受限等痛点。',
+    date: '2026-08-11'
   },
   {
     id: 3,
-    title: '一行命令添加AI对话入口！TinyRobot也太省事了~',
-    href: 'https://mp.weixin.qq.com/s/Mg4Usu5z-GptFTRCb-1QkA',
-    desc: 'TinyRobot除了可以作为组件库提供基础的聊天气泡、聊天输入框等AI组件，现在也提供了TinyRobot CLI，通过两条简单的命令可以实现。',
-    date: '2026-07-18'
+    title: 'TinyRobot v0.5.0 版本发布：Agent Skills、导航、自定义布局等多项全新能力同步上线！',
+    href: 'https://mp.weixin.qq.com/s/MVQmOXyadS2zlJhOEaR3wA',
+    desc: '"搭一个 AI 聊天应用"这件事变得更简单了，提供从对话 UI、流式渲染到会话管理的完整能力，使开发者无需自研复杂交互逻辑，即可构建体验一致、可扩展的 AI 产品。',
+    date: '2026-07-21'
   }
 ]
 </script>
