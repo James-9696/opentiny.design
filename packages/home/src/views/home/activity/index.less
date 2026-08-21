@@ -3,6 +3,7 @@
 @bp-mobile: 567px;
 @bp-tablet: 1024px;
 @bp-desktop: 1280px;
+@bp-desktop-large: 1670px;
 
 .updates-guide {
   padding: clamp(48px, 6.94vw, 100px) clamp(16px, 4.17vw, 60px);
@@ -160,6 +161,18 @@
       &--right {
         top: clamp(6px, 0.56vw, 8px);
         right: clamp(6px, 0.56vw, 8px);
+      }
+
+      @media screen and (max-width: @bp-desktop-large) {
+        &--left {
+          top: clamp(4px, 0.56vw, 4px);
+          scale: calc(0.8);
+        }
+
+        &--right {
+          top: clamp(4px, 0.56vw, 4px);
+          scale: calc(0.8);
+        }
       }
     }
 
