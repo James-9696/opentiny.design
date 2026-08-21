@@ -66,7 +66,7 @@ const basePath = isGitHub ? '/opentiny.design/' : '/'
 const subtitleText = ref('')
 
 onMounted(() => {
-  const text = '企业级前端来源 | 覆盖设计，开发，搭建与智能化升级'
+  const text = '企业级前端开源 | 覆盖设计，开发，搭建与智能化升级'
   let i = 0
   const timer = setInterval(() => {
     if (i < text.length) {

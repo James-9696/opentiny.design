@@ -209,7 +209,7 @@ const currentContent = computed(() => allContents[activeTab.value])
 
 const currentLink = computed(() => {
   if (activeTab.value === -1) {
-    return 'https://space.bilibili.com/15284299/lists/7785424?type=season' // 精选页默认链接
+    return 'https://space.bilibili.com/15284299' // 精选页默认链接
   }
   return allContents[activeTab.value]?.link || 'https://opentiny.design/'
 })
