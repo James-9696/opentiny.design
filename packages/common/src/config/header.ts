@@ -111,6 +111,7 @@ const menuItems = [
             url: `${basePath}genui-sdk`,
             logo: GenuiSdk,
             hide: false,
+            new: true,
             github: 'https://github.com/opentiny/genui-sdk',
             isUnderline: createIsUnderline(`${basePath}genui-sdk`)
           },

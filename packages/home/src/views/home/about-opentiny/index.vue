@@ -13,8 +13,8 @@
           :style="getCardBgStyle(index)"
           v-for="(item, index) in cardOptions"
           :key="index"
-          @mouseenter="hoveredIndex = index"
-          @mouseleave="hoveredIndex = -1"
+          @mouseenter="handleMouseEnter(index)"
+          @mouseleave="handleMouseLeave"
         >
           <div class="card-info">
             <div class="card-name">{{ item.title }}</div>
@@ -116,6 +116,21 @@ const isGitHub = isGitHubRuntime || isGitHubBuild
 const basePath = isGitHub ? '/opentiny.design/' : '/'
 
 const hoveredIndex = ref(-1)
+let hoverTimer = null
+
+const handleMouseEnter = (index) => {
+  clearTimeout(hoverTimer)
+  hoverTimer = setTimeout(() => {
+    hoveredIndex.value = index
+  }, 50)
+}
+
+const handleMouseLeave = () => {
+  clearTimeout(hoverTimer)
+  hoverTimer = setTimeout(() => {
+    hoveredIndex.value = -1
+  }, 100)
+}
 
 const getIconUrl = (name) => new URL(`../../../assets/images/new-icon/floor2/${name}.svg`, import.meta.url).href;
 const getIconAppUrl = (name) => new URL(`../../../../../common/src/assets/appIcon/${name}.svg`, import.meta.url).href;
@@ -136,7 +151,7 @@ const cardOptions = [
       {
         brand: 'GenUI-SDK',
         title: '生成式界面',
-        desc: '根据对话数据动态生成<br/>交互界面',
+        desc: '根据对话数据动态，生成交互界面',
         link: `https://docs.opentiny.design/genui-sdk/guide/quick-start`,
         icon: getIconAppUrl('genui-sdk')
       }
@@ -173,21 +188,21 @@ const cardOptions = [
       {
         brand: 'TinyPro Vue',
         title: 'Vue 技术栈企业级开发应用模板',
-        desc: '开箱即用企业级中后台模板',
+        desc: '基于 TinyVue 组件库企业级中后台前端/设计解决方案',
         link: 'https://opentiny.design/vue-pro',
         icon: getIconAppUrl('tiny-pro')
       },
       {
         brand: 'TinyPro Angular',
         title: 'Angular 技术栈企业级开发应用模板',
-        desc: '企业级开发应用模板',
+        desc: '基于 TinyNG 组件库企业级中后台前端/设计解决方案',
         link: 'https://opentiny.design/ng-pro',
         icon: getIconAppUrl('tiny-pro-ng')
       },
       {
         brand: 'TinyCLI',
-        title: '一站式工程化 CLI 工具',
-        desc: '开发业务脚手架工程',
+        title: '前端工程化的核心工具',
+        desc: '提供一系列健壮的工具、套件、插件和工作流',
         link: '/tiny-cli/home',
         icon: getIconAppUrl('tiny-cli')
       }
@@ -195,34 +210,34 @@ const cardOptions = [
   },
   {
     title: '跨端UI组件库',
-    subTitle: '为应用加入对话消息，和智能操作界面',
+    subTitle: '提供丰富组件，高效搭建Web页面',
     tag: '组件丰富、功能强大',
     cards: [
       {
         brand: 'TinyVue',
-        title: '企业级组件库',
-        desc: '跨端、跨框架、兼容各端',
+        title: '企业级 Vue 组件库',
+        desc: '跨端、跨框架的企业级 UI 组件库',
         link: `${basePath}tiny-vue`,
         icon: getIconAppUrl('tiny-vue')
       },
       {
         brand: 'TinyNg',
-        title: 'Angular 技术栈',
-        desc: '全覆盖基础组件库',
+        title: '企业级 Angular 组件库',
+        desc: 'PC 端产品，70+ 开箱即用组件',
         link: `https://opentiny.design/tiny-ng/overview`,
         icon: getIconAppUrl('tiny-ng')
       },
       {
         brand: 'TinyCharts',
         title: '专业图表组件库',
-        desc: '前端可视化全量图表库',
+        desc: '依赖于 ECharts，全量图表库',
         link: 'https://opentiny.design/tiny-charts/QuickStart',
         icon: getIconAppUrl('tiny-chart')
       },
       {
         brand: 'TinyEditor',
         title: '富文本编辑器',
-        desc: '支持 JS/Vue/React',
+        desc: '支持 JS/Vue/React/Angular',
         link: 'https://docs.opentiny.design/tiny-editor/guide/quick-start.html',
         icon: getIconAppUrl('tiny-editor')
       }
