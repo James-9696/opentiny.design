@@ -725,7 +725,8 @@
       box-sizing: border-box;
       cursor: pointer;
       overflow: hidden;
-      transition: flex-basis 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+      position: relative;
+      z-index: 1;
 
       &:nth-child(1) { background-color: #f3f4fb; }
       &:nth-child(2) { background-color: #f3f4fb; }
@@ -766,13 +767,11 @@
         inset: 0;
         opacity: 0;
         visibility: hidden;
-        transition: opacity 0.3s ease 0.1s, visibility 0s linear 0.3s;
 
         @media (max-width: 768px) {
           position: relative;
           opacity: 1;
           visibility: visible;
-          transition: none;
           inset: auto;
         }
       }
@@ -781,6 +780,7 @@
     .suite-card.is-collapsed {
       flex-basis: var(--card-collapsed-w);
       padding: var(--collapsed-pad);
+      z-index: 1;
 
       // 每张卡片单独调整背景图片位置：向左、向下，展示约一半，避免挤压标签
       &:nth-child(1) {
@@ -846,12 +846,12 @@
 
     .suite-card.is-expanded {
       flex-basis: var(--card-expanded-w);
+      z-index: 10;
 
       .card-preview {
         margin-top: var(--card-preview-mt);
         opacity: 1;
         visibility: visible;
-        transition: opacity 0.3s ease 0.12s, visibility 0s linear;
       }
     }
   }
@@ -859,15 +859,31 @@
 
 
 @media (max-width: 768px) {
-    .product-suite{
-        .suite-grid {
-            .suite-card {
-                min-height: 0;
-                max-height: var(--card-max-h);
-            }
+  .product-suite{
+    .suite-grid {
+      .suite-card {
+        min-height: 0;
+        max-height: var(--card-max-h);
+      }
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .product-suite{
+    .suite-grid {
+        .suite-card {
+            min-height: 680px;
         }
     }
   }
+
+  .preview-engine {
+    .engine-card.engine-card {
+      min-height: 450px;
+    }
+  }
+}
 
 /* ============================================================
    AI 应用开发 —— 全部使用变量，无硬编码
@@ -883,11 +899,20 @@
     gap: var(--ai-bottom-gap);
   }
 
+  
+  @media (min-width: 1920px) {
+    gap: 20px;
+  }
+
   .ai-top {
     display: flex;
     gap: var(--ai-top-gap);
     flex: 1;
     max-height: var(--ai-top-max-h);
+
+    @media (min-width: 1920px) {
+      max-height: 220px;
+    }
 
     @media (max-width: 768px) {
       flex-direction: column;
@@ -903,10 +928,6 @@
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
-      transform: translateY(24px) scale(0.96);
-      opacity: 0;
-      transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
-                  opacity 0.4s ease;
       overflow: hidden;
 
       background: url('../../../assets/images/new-icon/floor2/ai-app-1.webp') no-repeat center / cover;
@@ -969,7 +990,6 @@
         display: flex;
         align-items: center;
         gap: 4px;
-        transition: opacity 0.2s ease;
         white-space: nowrap;
 
         &:hover {
@@ -1004,6 +1024,10 @@
     flex: 1;
     max-height: var(--ai-bottom-max-h);
 
+    @media (min-width: 1920px) {
+      max-height: 210px;
+    }
+
     @media (max-width: 768px) {
       flex-direction: column;
       flex: none;
@@ -1018,10 +1042,6 @@
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
-      transform: translateY(24px) scale(0.96);
-      opacity: 0;
-      transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
-                  opacity 0.4s ease;
       overflow: hidden;
 
       &:nth-child(1) {
@@ -1097,7 +1117,6 @@
         display: flex;
         align-items: center;
         gap: 4px;
-        transition: opacity 0.2s ease;
         white-space: nowrap;
 
         &:hover {
@@ -1126,24 +1145,6 @@
   }
 }
 
-/* 悬停时 AI 卡片淡入上浮 */
-.suite-card.is-expanded .preview-ai {
-  .ai-card-light {
-    transform: translateY(0) scale(1);
-    opacity: 1;
-  }
-  .ai-card-light:nth-child(1) { transition-delay: 0.14s; }
-  .ai-card-light:nth-child(2) { transition-delay: 0.22s; }
-
-  .ai-card-dark {
-    transform: translateY(0) scale(1);
-    opacity: 1;
-  }
-  .ai-card-dark:nth-child(1) { transition-delay: 0.30s; }
-  .ai-card-dark:nth-child(2) { transition-delay: 0.38s; }
-  .ai-card-dark:nth-child(3) { transition-delay: 0.46s; }
-}
-
 /* ============================================================
    前端应用模板 —— 全部使用变量
    ============================================================ */
@@ -1166,10 +1167,6 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    transform: translateY(24px) scale(0.96);
-    opacity: 0;
-    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
-                opacity 0.4s ease;
     overflow: hidden;
 
     .template-header {
@@ -1225,7 +1222,6 @@
       display: flex;
       align-items: center;
       gap: 4px;
-      transition: opacity 0.2s ease;
       white-space: nowrap;
 
       &:hover {
@@ -1253,17 +1249,6 @@
   }
 }
 
-/* 悬停时模板卡片淡入上浮 */
-.suite-card.is-expanded .preview-template {
-  .template-card {
-    transform: translateY(0) scale(1);
-    opacity: 1;
-  }
-  .template-card:nth-child(1) { transition-delay: 0.14s; }
-  .template-card:nth-child(2) { transition-delay: 0.22s; }
-  .template-card:nth-child(3) { transition-delay: 0.30s; }
-}
-
 /* ============================================================
    跨端 UI 组件库 —— 全部使用变量
    ============================================================ */
@@ -1288,10 +1273,6 @@
     background: linear-gradient(135deg, #f0f6ff, #faf3ff);
     display: flex;
     flex-direction: column;
-    transform: translateY(24px) scale(0.96);
-    opacity: 0;
-    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
-                opacity 0.4s ease;
     overflow: hidden;
 
     .ui-header {
@@ -1346,7 +1327,6 @@
       display: flex;
       align-items: center;
       gap: 4px;
-      transition: opacity 0.2s ease;
       white-space: nowrap;
 
       &:hover {
@@ -1374,18 +1354,6 @@
   }
 }
 
-/* 悬停时 UI 卡片淡入上浮 */
-.suite-card.is-expanded .preview-ui {
-  .ui-card {
-    transform: translateY(0) scale(1);
-    opacity: 1;
-  }
-  .ui-card:nth-child(1) { transition-delay: 0.14s; }
-  .ui-card:nth-child(2) { transition-delay: 0.22s; }
-  .ui-card:nth-child(3) { transition-delay: 0.30s; }
-  .ui-card:nth-child(4) { transition-delay: 0.38s; }
-}
-
 /* ============================================================
    低代码应用搭建 —— 全部使用变量
    ============================================================ */
@@ -1402,10 +1370,6 @@
     background: linear-gradient(135deg, #f0f6ff, #faf3ff);
     display: flex;
     flex-direction: column;
-    transform: translateY(24px) scale(0.96);
-    opacity: 0;
-    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
-                opacity 0.4s ease;
     overflow: hidden;
 
     .engine-header {
@@ -1460,7 +1424,6 @@
       display: flex;
       align-items: center;
       gap: 4px;
-      transition: opacity 0.2s ease;
       white-space: nowrap;
 
       &:hover {
@@ -1485,14 +1448,5 @@
         -webkit-mask-size: contain;
       }
     }
-  }
-}
-
-/* 悬停时引擎卡片淡入上浮 */
-.suite-card.is-expanded .preview-engine {
-  .engine-card {
-    transform: translateY(0) scale(1);
-    opacity: 1;
-    transition-delay: 0.14s;
   }
 }

@@ -69,12 +69,13 @@
 
   @keyframes infiniteScroll {
     from {
-      margin-top: 0;
+      transform: translateY(0);
     }
     to {
-      margin-top: -1641px;
+      transform: translateY(-50%);
     }
   }
+
   .user-list-comma {
     font-family: arial;
     position: absolute;
@@ -100,9 +101,15 @@
 
   .user-list {
     .pcRem(width, 660);
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
     gap: 16px;
+  }
+
+  .user-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;                    /* 卡片间距严格 16px */
     animation: infiniteScroll 30s linear infinite;
 
     &:hover {
@@ -111,7 +118,6 @@
   }
 
   .user-card {
-    break-inside: avoid;
     .pcPadding(30, 30);
     background-color: #fff;
     border-radius: 16px;
@@ -145,7 +151,6 @@
     }
 
     .user-comments {
-      flex: 1;
       font-size: 14px;
       color: #191919;
       line-height: 24px;
@@ -321,7 +326,6 @@
 
     .user-list {
       width: 480px;
-      grid-template-columns: 1fr;
     }
 
     .user-list-card-box {

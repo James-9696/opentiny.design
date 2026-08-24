@@ -28,7 +28,18 @@ const carouselHeight = computed(() => {
   return '204px'
 })
 
+const leftList = computed(() => {
+  const half = userList.value.filter((_, i) => i % 2 === 0)
+  return [...half, ...half]
+})
+
+const rightList = computed(() => {
+  const half = userList.value.filter((_, i) => i % 2 === 1)
+  return [...half, ...half]
+})
+
 watch([carouselHeight, mobileUserList], () => {
+  if (!carouselRef.value) return
   nextTick(() => {
     carouselRef.value?.resize?.()
     carouselRef.value?.resetItemPosition?.()
@@ -64,12 +75,23 @@ watch([carouselHeight, mobileUserList], () => {
         <div class="user-list-comma">“</div>
         <div class="user-list-card-box">
           <div class="user-list">
-            <div class="user-card" v-for="user in userList" :key="user">
-              <div class="user-card-header">
-                <span class="user-name">{{ user.name }}</span>
-                <span class="user-location">{{ $t('home.from') }}{{ user.location }}</span>
+            <div class="user-column">
+              <div class="user-card" v-for="(user, index) in leftList" :key="`left-${user.name}-${index}`">
+                <div class="user-card-header">
+                  <span class="user-name">{{ user.name }}</span>
+                  <span class="user-location">{{ $t('home.from') }}{{ user.location }}</span>
+                </div>
+                <div class="user-comments">{{ user.comments }}</div>
               </div>
-              <div class="user-comments">{{ user.comments }}</div>
+            </div>
+            <div class="user-column">
+              <div class="user-card" v-for="(user, index) in rightList" :key="`right-${user.name}-${index}`">
+                <div class="user-card-header">
+                  <span class="user-name">{{ user.name }}</span>
+                  <span class="user-location">{{ $t('home.from') }}{{ user.location }}</span>
+                </div>
+                <div class="user-comments">{{ user.comments }}</div>
+              </div>
             </div>
           </div>
         </div>
@@ -87,15 +109,15 @@ watch([carouselHeight, mobileUserList], () => {
       <tiny-carousel-item class="carousel-item-demo" v-for="(list, index) in mobileUserList" :key="index">
         <template #default>
           <div class="card-container">
-            <div class="user-card" v-for="(user, userIdx) in list" :key="userIdx">
-              <p class="user-comments">
+            <div class="user-card" v-for="(user, userIdx) in list" :key="`${user.name}-${userIdx}`">
+              <div class="user-comments">
                 <div class="user-comments-inner">
                   {{ user.comments }}
                 </div>
-              </p>
+              </div>
               <div class="user-card-bottom">
                 <span class="user-name">{{ user.name }}</span>
-                <span class="user-location">{{ $t('from') }}{{ user.location }}</span>
+                <span class="user-location">{{ $t('home.from') }}{{ user.location }}</span>
               </div>
             </div>
           </div>
