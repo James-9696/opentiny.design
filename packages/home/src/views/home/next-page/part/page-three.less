@@ -168,7 +168,7 @@
 
   @media (max-width: 991px) {
     padding: 18px 0 18px 18px;
-    min-height: auto;
+    height: 236px;
   }
 
   @media (max-width: 767px) {
@@ -269,9 +269,9 @@
   }
 
   @media (max-width: 575px) {
-    width: 42%;
+    width: 58%;
     opacity: 0.8;
-    background-size: cover;
+    background-size: auto 75%, cover;
   }
 }
 
@@ -391,6 +391,9 @@
 .card-desc-large.card-desc-large {
   width: max-content;
   max-width: none;
+  @media (max-width: 575px) {
+    max-width: 108px;
+  }
 }
 
 .card-desc,
@@ -442,5 +445,6 @@
 
   @media (max-width: 991px) {
     font-size: 13px;
+    margin-top: 10px;
   }
 }

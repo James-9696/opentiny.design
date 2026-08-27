@@ -1,7 +1,8 @@
 <template>
+    <!-- :style="!isMobile ? { backgroundImage: `url(${bgUrl})` } : {backgroundPosition: 'top'}" -->
   <div 
     class="bg-container"
-    :style="{ backgroundImage: `url(${bgUrl})` }"
+    :style="!isMobile ? { backgroundImage: `url(${bgUrl})` } : {  backgroundImage: `url(${bgUrl})`, backgroundPosition: 'left', backgroundSize: 'cover'}" 
   >
     <div class="content-wrapper">
       <img 
@@ -32,6 +33,9 @@
 
 <script lang="ts" setup>
 import { TinyTag, TinyButton } from '@opentiny/vue'
+import useWindowSize from '@/tools/useWindowSize.js'
+
+const { isMobile } = useWindowSize()
 
 const getImgUrl = (name: string) => 
   new URL(`../../../../assets/images/new-icon/next-page/${name}.svg`, import.meta.url).href
@@ -41,7 +45,7 @@ const bgUrl = getImgUrl('part-one-a')
 const docsFn = () => {
     window.open(`https://docs.opentiny.design/`, '_blank', 'noopener=yes,noreferrer=yes')
 }
-
+// TODO
 const feelFn = () => {
     // window.open(`https://docs.opentiny.design/`, '_blank', 'noopener=yes,noreferrer=yes')
 }

@@ -26,7 +26,7 @@
   --card-name-lh: 40px;
   --card-summary-size: 16px;
   --card-summary-lh: 24px;
-  --card-preview-mt: 28px;
+  --card-preview-mt: 40px;
 
   --collapsed-pad: 20px 12px;
   --collapsed-name-size: 16px;
@@ -565,6 +565,7 @@
     --ps-grid-mt: 32px;
 
     --card-pad: 20px 16px;
+    --card-preview-mt: 20px;
     --card-max-h: auto;
     --card-default-w: calc(50% - 8px);
     --card-expanded-w: calc(50% - 8px);
@@ -583,14 +584,14 @@
     --ai-top-max-h: 240px;
 
     // AI 暗色
-    --ai-bottom-max-h: 310px;
+    --ai-bottom-max-h: 360px;
 
     // 模板
     --tmpl-card-min-h: 160px;
 
     // 引擎
-    --eng-card-min-h: 600px;
-   
+    --eng-card-min-h: 400px;
+
   }
 
   // ========================================
@@ -767,12 +768,32 @@
         inset: 0;
         opacity: 0;
         visibility: hidden;
+        transition: opacity 0.4s ease, visibility 0.4s ease;
+
+        .ai-card-light,
+        .ai-card-dark,
+        .template-card,
+        .ui-card,
+        .engine-card {
+          opacity: 0;
+          transition: opacity 0.4s ease 0.15s;
+        }
 
         @media (max-width: 768px) {
           position: relative;
           opacity: 1;
           visibility: visible;
           inset: auto;
+          margin-top: var(--card-preview-mt);
+
+          .ai-card-light,
+          .ai-card-dark,
+          .template-card,
+          .ui-card,
+          .engine-card {
+            opacity: 1;
+            transition: none;
+          }
         }
       }
     }
@@ -852,6 +873,14 @@
         margin-top: var(--card-preview-mt);
         opacity: 1;
         visibility: visible;
+
+        .ai-card-light,
+        .ai-card-dark,
+        .template-card,
+        .ui-card,
+        .engine-card {
+          opacity: 1;
+        }
       }
     }
   }
@@ -864,6 +893,28 @@
       .suite-card {
         min-height: 0;
         max-height: var(--card-max-h);
+        cursor: default;
+
+        // 移动端强制始终显示展开内容，不受 is-collapsed / is-expanded 影响
+        &.is-collapsed,
+        &.is-expanded {
+          .card-preview {
+            position: relative;
+            opacity: 1;
+            visibility: visible;
+            inset: auto;
+            margin-top: var(--card-preview-mt);
+
+            .ai-card-light,
+            .ai-card-dark,
+            .template-card,
+            .ui-card,
+            .engine-card {
+              opacity: 1;
+              transition: none;
+            }
+          }
+        }
       }
     }
   }
@@ -899,7 +950,7 @@
     gap: var(--ai-bottom-gap);
   }
 
-  
+
   @media (min-width: 1920px) {
     gap: 20px;
   }
@@ -921,6 +972,9 @@
     }
 
     .ai-card-light {
+      @media (max-width: 440px) {
+        min-height: 140px;
+      }
       flex: 1 1 0;
       min-width: 0;
       border-radius: var(--ai-light-radius);
@@ -1027,6 +1081,10 @@
     flex: 1;
     max-height: var(--ai-bottom-max-h);
 
+    @media (max-width: 440px) {
+      margin-top: 52px;
+    }
+
     @media (min-width: 1920px) {
       max-height: 210px;
     }
@@ -1101,7 +1159,7 @@
         overflow-wrap: break-word;
       }
 
-      
+
       @media (max-width: 1280px) {
         .ai-card-sublink.ai-card-sublink.ai-card-sublink { 
           margin-top: 0px;
@@ -1216,6 +1274,10 @@
       color: #595959;
       word-break: break-all;
       overflow-wrap: break-word;
+
+        @media (max-width: 768px) {
+          width: 60%;
+        }
     }
 
     .template-link {

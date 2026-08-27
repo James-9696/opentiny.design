@@ -309,7 +309,7 @@ const toggleTheme = (event: MouseEvent) => {
             <div class="dropdown-app-part">
               <div class="dropdown-app hand" v-for="app in level1.children.filter(lv => !lv.hide)" :key="app.title">
                 <div class="app-title"> {{ app.title }} </div>
-                <div class="app-data" v-for="item in app.data" :key="item.name"> 
+                <div class="app-data" v-for="item in app.data?.filter(d => !d.hide)" :key="item.name"> 
                   <a 
                     class="dropdown-app" 
                     :href="item.url"

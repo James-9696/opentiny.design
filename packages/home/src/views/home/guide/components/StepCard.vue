@@ -58,6 +58,10 @@ const state = reactive({
     display: flex;
     align-items: center;
     gap: 8px;
+    
+    @media (max-width: 920px) {
+      font-size: 18px;
+    }
   }
 
   &-description {
