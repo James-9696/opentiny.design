@@ -9,12 +9,15 @@
       <div class="suite-grid" ref="suiteGrid">
         <div
           class="suite-card"
-          :class="{ 'is-expanded': hoveredIndex === index, 'is-collapsed': hoveredIndex !== -1 && hoveredIndex !== index }"
+          :class="{ 'is-expanded': !isMobile && hoveredIndex === index, 'is-collapsed': !isMobile && hoveredIndex !== -1 && hoveredIndex !== index }"
           :style="getCardBgStyle(index)"
           v-for="(item, index) in cardOptions"
+          tabindex="0"
           :key="index"
           @mouseenter="handleMouseEnter(index)"
           @mouseleave="handleMouseLeave"
+          @focusin="handleFocusIn(index)"
+          @click="handleClick(index)"
         >
           <div class="card-info">
             <div class="card-name">{{ item.title }}</div>
@@ -108,6 +111,7 @@
 <script setup>
 import { ref } from 'vue'
 import { TinyTag } from '@opentiny/vue'
+import useWindowSize from '@/tools/useWindowSize.js'
 import './index.less'
 
 const isGitHubBuild = import.meta.env.MODE === 'github'
@@ -115,10 +119,14 @@ const isGitHubRuntime = typeof window !== 'undefined' && window.location.hostnam
 const isGitHub = isGitHubRuntime || isGitHubBuild
 const basePath = isGitHub ? '/opentiny.design/' : '/'
 
+// 移动端检测
+const { isMobile } = useWindowSize()
+
 const hoveredIndex = ref(-1)
 let hoverTimer = null
 
 const handleMouseEnter = (index) => {
+  if (isMobile.value) return
   clearTimeout(hoverTimer)
   hoverTimer = setTimeout(() => {
     hoveredIndex.value = index
@@ -126,10 +134,21 @@ const handleMouseEnter = (index) => {
 }
 
 const handleMouseLeave = () => {
+  if (isMobile.value) return
   clearTimeout(hoverTimer)
   hoverTimer = setTimeout(() => {
     hoveredIndex.value = -1
   }, 100)
+}
+
+const handleFocusIn = (index) => {
+  if (isMobile.value) return
+  hoveredIndex.value = index
+}
+
+const handleClick = (index) => {
+  if (isMobile.value) return
+  hoveredIndex.value = index
 }
 
 const getIconUrl = (name) => new URL(`../../../assets/images/new-icon/floor2/${name}.svg`, import.meta.url).href;
@@ -280,8 +299,8 @@ const hoverGradients = [
 
 // 动态计算卡片背景：默认"图片+渐变"叠加，悬浮时只显示渐变
 const getCardBgStyle = (index) => {
+  // 悬浮展开（PC hover 状态）：使用悬浮渐变
   if (hoveredIndex.value === index) {
-    // 悬浮展开：使用悬浮渐变
     return {
       backgroundImage: hoverGradients[index],
       backgroundSize: 'cover',
@@ -290,7 +309,18 @@ const getCardBgStyle = (index) => {
       border: '1px solid #f0f0f0'
     }
   }
-  // 默认状态：图片在上层，默认渐变在下层
+
+  // 移动端：去掉背景图，只保留渐变
+  if (isMobile.value) {
+    return {
+      backgroundImage: gradients[index],
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
+    }
+  }
+
+  // PC 默认状态：图片在上层，默认渐变在下层
   return {
     backgroundImage: `url(${getImgUrl(`bg-${index + 1}`)}), ${gradients[index]}`,
     backgroundSize: 'cover, cover',
@@ -308,6 +338,15 @@ const gradientsFronts = [
 
 const getFrontBgStyle = (index) => {
   const gradientFront = gradientsFronts[index]
+
+  if (isMobile.value) {
+    return {
+      backgroundImage: `url(${getImgFrontUrl(`front-bg-${index + 1}`)}), ${gradientFront}`,
+      backgroundSize: '50%, cover',
+      backgroundPosition: 'right bottom',
+      backgroundRepeat: 'no-repeat'
+    }
+  }
   // 默认状态：图片在上层，渐变在下层（多层背景）
   return {
     backgroundImage: `url(${getImgFrontUrl(`front-bg-${index + 1}`)}), ${gradientFront}`,
@@ -330,17 +369,25 @@ const getUIBgStyle = (index) => {
   // 默认状态：图片在上层，渐变在下层（多层背景）
   return {
     backgroundImage: `url(${getImgFrontUrl(`ui-bg-${index + 1}`)}), ${gradientsUI}`,
-    backgroundSize: 'auto 95%, cover',
-    backgroundPosition: 'right top, center', // 图片放右下，渐变居中
+    backgroundSize: 'auto 82%, cover',
+    backgroundPosition: '100%',
     backgroundRepeat: 'no-repeat, no-repeat'
   }
 }
 
 const getEngineBgStyle = () => {
+  if (isMobile.value) {
+    return {
+      backgroundImage: `url(${getImgFrontUrl('engine-bg-1')}), linear-gradient(-45deg, rgba(222, 224, 255, 1) 0%, rgba(230, 238, 253, 1) 99.917%)`,
+      backgroundSize: 'contain',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
+    }
+  }
   return {
     backgroundImage: `url(${getImgFrontUrl('engine-bg-1')}), linear-gradient(-45deg, rgba(222, 224, 255, 1) 0%, rgba(230, 238, 253, 1) 99.917%)`,
-    backgroundSize: 'auto',     // 图片：完整显示；渐变：铺满
-    backgroundPosition: 'bottom right', // 图片放右下
+    backgroundSize: 'auto',
+    backgroundPosition: 'bottom right',
     backgroundRepeat: 'no-repeat'
   }
 }

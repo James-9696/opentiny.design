@@ -257,6 +257,9 @@ onUnmounted(() => {
         line-height: 66px;
         text-align: center;
         margin-bottom: 16px;
+        @media (max-width: 920px) {
+          font-size: 22px;
+        }
       }
 
       .sub-title {
@@ -269,6 +272,9 @@ onUnmounted(() => {
         color: rgba(128, 128, 128, 1);
         margin-bottom: 60px;
         max-width: none;
+        @media (max-width: 920px) {
+          font-size: 16px;
+        }
       }
     }
 
@@ -324,6 +330,10 @@ onUnmounted(() => {
         color: #808080;
         cursor: pointer;
         white-space: nowrap;
+
+        @media (max-width: 768px) {
+          padding: 4px 4px;
+        }
       }
 
       .mobile-button-active {

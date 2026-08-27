@@ -10,7 +10,7 @@
         <span class="typewriter-text">{{ subtitleText }}</span>
       </div>
 
-      <div class="hero-search" @click="searchClick">
+      <div role="button" class="hero-search" @click="searchClick"  @keydown.enter="searchClick" @keydown.space.prevent="searchClick">
         <span class="search-text">有什么可以帮助您，我可以 帮您处理工作</span>
         <div class="search-icon"></div>
       </div>
@@ -60,12 +60,13 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { useRouter } from 'vue-router'
 import { Button as TinyButton, Tooltip as TinyTooltip } from '@opentiny/vue'
 import './index.less'
 
 const router = useRouter()
+let timer = null
 
 const isGitHubBuild = import.meta.env.MODE === 'github'
 const isGitHubRuntime = typeof window !== 'undefined' && window.location.hostname.includes('opentiny.github.io')
@@ -77,7 +78,7 @@ const subtitleText = ref('')
 onMounted(() => {
   const text = '企业级前端开源 | 覆盖设计，开发，搭建与智能化升级'
   let i = 0
-  const timer = setInterval(() => {
+  timer = setInterval(() => {
     if (i < text.length) {
       subtitleText.value += text[i]
       i++
@@ -85,6 +86,10 @@ onMounted(() => {
       clearInterval(timer)
     }
   }, 80)
+})
+
+onBeforeUnmount(() => {
+  clearInterval(timer)
 })
 
 const cardFn = (link) => {
