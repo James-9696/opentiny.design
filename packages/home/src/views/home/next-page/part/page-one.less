@@ -1,0 +1,291 @@
+// ==================== 变量 ====================
+@radius-lg: 16px;
+@radius-md: 12px;
+@radius-sm: 8px;
+
+// ==================== 背景容器 ====================
+.bg-container {
+  position: relative;
+  width: 100%;
+  min-height: 650px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (max-width: 1399px) {
+    min-height: 580px;
+  }
+
+  @media (max-width: 1199px) {
+    min-height: 520px;
+  }
+
+  @media (max-width: 991px) {
+    min-height: 480px;
+  }
+
+  @media (max-width: 767px) {
+    min-height: auto;
+    padding: 80px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 575px) {
+    padding: 64px 0;
+  }
+}
+
+// ==================== 内容区域 ====================
+.content-wrapper {
+  position: absolute;
+  left: 260px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 640px;
+
+  @media (max-width: 1599px) {
+    left: 200px;
+    max-width: 580px;
+  }
+
+  @media (max-width: 1399px) {
+    left: 160px;
+    max-width: 520px;
+  }
+
+  @media (max-width: 1199px) {
+    left: 100px;
+    max-width: 480px;
+  }
+
+  @media (max-width: 991px) {
+    left: 48px;
+    max-width: 440px;
+  }
+
+  @media (max-width: 767px) {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    align-items: center;
+    text-align: center;
+    padding: 0 24px;
+    max-width: 100%;
+  }
+
+  @media (max-width: 575px) {
+    padding: 0 16px;
+  }
+}
+
+// ==================== 叠加图 ====================
+.overlay-img {
+  width: 430px;
+  height: auto;
+  margin-bottom: 30px;
+
+  @media (max-width: 1399px) {
+    width: 380px;
+    margin-bottom: 24px;
+  }
+
+  @media (max-width: 1199px) {
+    width: 340px;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 991px) {
+    width: 300px;
+    margin-bottom: 18px;
+  }
+
+  @media (max-width: 767px) {
+    width: 260px;
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: 575px) {
+    width: 220px;
+    margin-bottom: 14px;
+  }
+}
+
+// ==================== Tag ====================
+.tag-item {
+  margin-bottom: 25px;
+
+  @media (max-width: 1399px) {
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 991px) {
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: 767px) {
+    margin-bottom: 14px;
+  }
+}
+
+// ==================== 主标题 ====================
+.main-title {
+  margin: 0 0 16px 0;
+  padding: 0;
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #191919;
+
+  @media (max-width: 1399px) {
+    font-size: 48px;
+  }
+
+  @media (max-width: 1199px) {
+    font-size: 44px;
+    margin-bottom: 14px;
+  }
+
+  @media (max-width: 991px) {
+    font-size: 38px;
+    margin-bottom: 12px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 26px;
+    margin-bottom: 8px;
+  }
+}
+
+// ==================== 副标题 ====================
+.sub-title {
+  margin: 0 0 24px 0;
+  padding: 0;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #191919;
+
+  @media (max-width: 1399px) {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 1199px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 991px) {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 17px;
+    margin-bottom: 14px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+}
+
+.highlight-plus {
+  color: rgba(20, 118, 255, 1);
+}
+
+// ==================== 描述文字 ====================
+.desc {
+  margin: 0 0 72px 0;
+  padding: 0;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: rgba(89, 89, 89, 1);
+  letter-spacing: 1px;
+
+  @media (max-width: 1399px) {
+    font-size: 18px;
+    margin-bottom: 56px;
+  }
+
+  @media (max-width: 1199px) {
+    font-size: 17px;
+    margin-bottom: 48px;
+  }
+
+  @media (max-width: 991px) {
+    font-size: 16px;
+    margin-bottom: 40px;
+    letter-spacing: 0.5px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 15px;
+    margin-bottom: 32px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 14px;
+    margin-bottom: 28px;
+  }
+}
+
+// ==================== 按钮组 ====================
+.btn-group {
+  display: flex;
+  gap: 16px;
+
+  @media (max-width: 767px) {
+    gap: 14px;
+  }
+
+  @media (max-width: 575px) {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .btn-arrow {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 6px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+
+    &-light {
+      background-image: url('../../../../assets/images/new-icon/floor1/arrow-white.svg');
+    }
+
+    &-dark {
+      background-image: url('../../../../assets/images/new-icon/floor1/arrow.svg');
+    }
+  }
+
+  .tiny-button {
+    &:hover .btn-arrow {
+      transform: translateX(3px);
+    }
+
+    @media (max-width: 575px) {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}

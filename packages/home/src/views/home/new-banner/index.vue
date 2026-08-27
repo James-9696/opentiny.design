@@ -61,8 +61,11 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import { useRouter } from 'vue-router'
 import { Button as TinyButton, Tooltip as TinyTooltip } from '@opentiny/vue'
 import './index.less'
+
+const router = useRouter()
 
 const isGitHubBuild = import.meta.env.MODE === 'github'
 const isGitHubRuntime = typeof window !== 'undefined' && window.location.hostname.includes('opentiny.github.io')
@@ -94,7 +97,7 @@ const searchClick = () => {
 
 const handleClick = (msg) => {
   if (msg === 'find') {
-    window.open(`${basePath}next-sdk`, '_blank', 'noopener=yes,noreferrer=yes')
+    router.push('/next-page')
   } else {
     window.open(`/opentiny-design/tiny-vue`, '_blank', 'noopener=yes,noreferrer=yes')
   }
