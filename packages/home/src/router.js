@@ -50,12 +50,12 @@ export const rootRoutes = [
         name: 'next-sdk',
         meta: { title: geneTitle('') }
       },
-      {
-        path: 'next-page',
-        component: nextPage,
-        name: 'next-page',
-        meta: { title: geneTitle('OpenTiny NEXT') }
-      },
+      // {
+      //   path: 'next-pages',
+      //   component: nextPage,
+      //   name: 'next-pages',
+      //   meta: { title: geneTitle('OpenTiny NEXT') }
+      // },
       {
         path: 'genui-sdk',
         component: genuiSdkHome,
