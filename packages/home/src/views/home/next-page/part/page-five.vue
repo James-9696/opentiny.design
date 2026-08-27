@@ -14,7 +14,7 @@
               rel="noopener noreferrer"
               class="desc-link"
             >{{ link.text }}</a>
-            <span v-if="i < item.desc.length - 1" class="divider"> | </span>
+            <span v-if="i < item.desc.length - 1" class="divider"> &nbsp;| </span>
           </template>
         </p>
       </div>
@@ -174,14 +174,6 @@ const cards = [
     line-height: 24px;
     margin-bottom: 40px;
   }
-  .cards-container {
-    grid-template-columns: 368px;
-    max-width: 368px;
-  }
-}
-
-/* ========== 超小屏幕：卡片宽度自适应 ========== */
-@media (max-width: 420px) {
   .cards-container {
     grid-template-columns: 1fr;
   }

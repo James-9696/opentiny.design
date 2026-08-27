@@ -164,7 +164,7 @@ const darkGradients = [
 ]
 
 const getLightStyle = (index: number) => ({
-  backgroundImage: lightGradients[index],
+  backgroundImage: lightGradients[index]
 })
 
 const getDarkStyle = (index: number) => ({

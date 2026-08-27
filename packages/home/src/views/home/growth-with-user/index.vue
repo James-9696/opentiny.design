@@ -23,7 +23,7 @@ const chunkArr = (arr, size) => {
 const mobileUserList = computed(() => chunkArr(USERS_DATA, width.value < 600 ? 1 : 2))
 
 const carouselHeight = computed(() => {
-  if (width.value < 600) return '320px'
+  if (width.value < 600) return '180px'
   if (width.value < 820) return '280px'
   return '204px'
 })
