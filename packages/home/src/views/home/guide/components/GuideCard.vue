@@ -36,10 +36,10 @@ const state = reactive({
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-weight: 600;
+    font-weight: 700;
     border-bottom: 1px solid rgb(219, 219, 219);
-    .pcRem(line-height, 36);
-    .pcRem(font-size, 16);
+    .pcRem(line-height, 30);
+    .pcRem(font-size, 22);
     .pcRem(margin-bottom, 8);
     .pcRem(padding-bottom, 8);
   }

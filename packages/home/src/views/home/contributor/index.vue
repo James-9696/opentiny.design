@@ -34,16 +34,17 @@
 import { TinyButton } from '@opentiny/vue'
 import { CONTRIBUTORS } from './config'
 import './index.less'
+import { useRouter } from 'vue-router'
 import { i18n } from '@/i18n'
 const t = i18n.global.t
 
-
+const router = useRouter()
 const docsFn = () => {
   window.open(`https://docs.opentiny.design/`, '_blank', 'noopener=yes,noreferrer=yes')
 }
 
 const findFn = () => {
-  window.open(`https://docs.opentiny.design/next-sdk/guide/`, '_blank', 'noopener=yes,noreferrer=yes')
+  router.push('/next-page')
 }
 
 </script>

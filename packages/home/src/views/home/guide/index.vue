@@ -2,7 +2,7 @@
   <div class="guide-wrap">
     <div class="guide">
       <div class="guide-header">
-        <div class="title">快速集成NEXT SDKs</div>
+        <div class="title">轻松 4 步，快速集成 MCP</div>
         <div class="sub-title">支持多种编程语言和前端框架，帮助开发者快速实现智能化功能</div>
       </div>
       <div v-if="!isMobile" class="guide-content">
@@ -55,6 +55,16 @@
           >
           </code-card>
         </div>
+      </div>
+      <div class="more-link">
+        <a
+          class="card-link"
+          href="https://docs.opentiny.design/next-sdk/guide/quick-start"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          查看详情
+        </a>
       </div>
     </div>
   </div>
@@ -191,20 +201,80 @@ onUnmounted(() => {
 <style lang="less" scoped>
 @import '@/mixin.less';
 
+.more-link {
+  text-align: center;
+  margin-top: 60px;
+  letter-spacing: 1px;
+
+  .card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    color: #1476ff;
+
+    &:hover {
+      color: rgba(10, 90, 220, 1);
+
+      &::after {
+        transform: translateX(3px);
+      }
+    }
+
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      background-image: url('../../../assets/images/new-icon/floor1/arrow-blue.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: transform 0.2s ease;
+    }
+  }
+}
+
 .guide-wrap {
   display: flex;
   width: 100%;
-  background: #fff;
+  background: rgba(253, 254, 255, 1);
   .pcPadding(100, 150);
+  border-top: 1px solid rgba(240, 240, 240, 1);
 
   .guide {
     width: 100%;
     margin: 0 auto;
     .pcRem(max-width, 1600);
 
+    .guide-header {
+      .title {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 66px;
+        text-align: center;
+        margin-bottom: 16px;
+      }
+
+      .sub-title {
+        width: 100%;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 24px;
+        letter-spacing: 1px;
+        color: rgba(128, 128, 128, 1);
+        margin-bottom: 60px;
+        max-width: none;
+      }
+    }
+
     &-content {
       display: flex;
-      .pcRem(margin-top, 32);
+      gap: 20px;
 
       .guide-step-cards {
         flex: 1;
@@ -212,7 +282,6 @@ onUnmounted(() => {
         flex-direction: column;
         .pcRem(gap, 16);
         .pcRem(width, 690);
-        .pcMargin(68, 0, 0, 16);
       }
     }
 
@@ -223,7 +292,6 @@ onUnmounted(() => {
       overflow: hidden;
       .pcRem(width, 856);
       .pcRem(height, 538);
-      .pcMargin(68, 0, 0, 16);
 
       &-image {
         width: 100%;
@@ -332,11 +400,6 @@ onUnmounted(() => {
     }
 
     .guide {
-      &-content {
-        .guide-step-cards {
-          .mobileMargin(68, 0, 0, 16);
-        }
-      }
       .mobile-guide-content {
         .guide-card {
           max-height: 438px;
