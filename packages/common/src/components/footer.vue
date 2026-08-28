@@ -67,9 +67,9 @@ function toggleLink(link: any) {
 <style lang="less" scoped>
 .opentiny-design-footer {
   font-size: 16px;
-  color: #191919;
+  color: #ffffff;
   padding: 64px 160px 32px 160px;
-  background-color: #fafafa;
+  background-color: #191919;
   overflow: hidden;
 
   .footer-content {
@@ -115,7 +115,7 @@ function toggleLink(link: any) {
           width: 100%;
           display: block;
           text-decoration: none;
-          color: #808080;
+          color: #e6e6e6;
           overflow: hidden;
           white-space: nowrap;
           text-overflow: ellipsis;
@@ -149,79 +149,6 @@ function toggleLink(link: any) {
     display: flex;
     align-items: center;
   }
-
-  .copyright {
-    line-height: 22px;
-    padding: 16px 0;
-    font-size: 14px;
-    color: #808080;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-
-    p {
-      margin: 0;
-    }
-  }
-}
-
-.footer-promotional-container {
-  margin: 10px 0;
-  padding-left: 1.05vw;
-}
-
-.footer-logo-link {
-  display: inline-block;
-  text-decoration: none;
-  cursor: pointer;
-  height: 38px;
-}
-
-.footer-logo-link-list {
-  height: 26px;
-  margin-right: 30px;
-
-  &:last-child {
-    margin-right: 0;
-  }
-
-  img {
-    height: 100%;
-  }
-}
-
-.footer-promotional-label {
-  font-size: 14px;
-  height: 40px;
-  line-height: 40px;
-  white-space: nowrap;
-}
-
-.footer-logo-title {
-  display: inline-block;
-  height: 38px;
-  font-size: 21px;
-  font-weight: 700;
-  color: #242424;
-  margin-left: 0.53vw;
-}
-
-.footer-logo {
-  vertical-align: middle;
-  width: 53px;
-}
-
-.footer-logo-s {
-  vertical-align: middle;
-  width: 16px;
-}
-
-.footer-logolist-container {
-  margin-top: 10px;
-}
-
-.footer-logo-list {
-  margin-right: 1.46vw;
 }
 
 .icon-arrow {
@@ -279,16 +206,6 @@ function toggleLink(link: any) {
         .group-code {
           margin: 0;
         }
-
-        .footer-logo-s {
-          display: none;
-        }
-
-        .footer-title {
-          font-size: 16px;
-          color: #191919;
-          line-height: 22px;
-        }
       }
 
       .footer-text-list {
@@ -324,20 +241,6 @@ function toggleLink(link: any) {
         }
       }
     }
-
-    .copyright {
-      display: flex;
-      flex-direction: column;
-      justify-content: start;
-      background: transparent;
-
-      p {
-        font-size: 14px;
-        color: #808080;
-        line-height: 22px;
-        margin: 0 24px;
-      }
-    }
   }
 }
 </style>
@@ -345,14 +248,6 @@ function toggleLink(link: any) {
 .dark.dark.dark .opentiny-design-footer {
   color: #b3b3b3;
   background-color: #1a1a1a;
-
-  .footer-content {
-    border-bottom-color: #979797;
-
-    .footer-text-list {
-      border-bottom-color: #979797;
-    }
-  }
 
   .footer-title {
     color: #e6e6e6;

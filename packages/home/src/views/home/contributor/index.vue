@@ -1,14 +1,24 @@
-<script setup>
-import { CONTRIBUTORS } from './config'
-import { i18n } from '@/i18n'
-const t = i18n.global.t
-</script>
-
 <template>
   <div class="home-contributor">
+    <!-- 新增深色区块 -->
+    <div class="explore-section">
+      <div class="explore-title">一起探索更多</div>
+      <div class="explore-desc">智能化操作的底层实现路径，如何让AI"动起来"？</div>
+      <div class="explore-actions">
+        <tiny-button size="medium" round class="explore-btn" @click="docsFn">
+          开发文档
+          <i class="btn-arrow btn-arrow-black"></i>
+        </tiny-button>
+        <tiny-button type="primary" size="medium" round class="explore-btn btn-white-border"  @click="findFn">
+          探索智能化
+          <i class="btn-arrow btn-arrow-white"></i>
+        </tiny-button>
+      </div>
+    </div>
+
     <div class="contributor-box">
-      <div class="title">{{ t('home.contributor') }}</div>
-      <div class="sub-title">{{ t('home.contributorSub') }}</div>
+      <div class="box-title">{{ t('home.contributor') }}</div>
+      <div class="box-sub-title">{{ t('home.contributorSub') }}</div>
       <ul class="contributor-list">
         <li v-for="contributor in CONTRIBUTORS" :key="contributor">
           <a :href="contributor.homepage">
@@ -20,57 +30,21 @@ const t = i18n.global.t
   </div>
 </template>
 
-<style scoped lang="less">
-@import '@/mixin.less';
+<script setup>
+import { TinyButton } from '@opentiny/vue'
+import { CONTRIBUTORS } from './config'
+import './index.less'
+import { useRouter } from 'vue-router'
+import { i18n } from '@/i18n'
+const t = i18n.global.t
 
-.home-contributor {
-  background: #f5f5f5;
-  .pcPadding(80, 60);
+const router = useRouter()
+const docsFn = () => {
+  window.open(`https://docs.opentiny.design/`, '_blank', 'noopener=yes,noreferrer=yes')
 }
 
-.contributor-box {
-  max-width: 1600px;
-  margin: 0 auto;
-
-  .title {
-    .pcRem(margin-top, 40);
-  }
-
-  .sub-title {
-    .pcRem(margin-bottom, 80);
-  }
+const findFn = () => {
+  router.push('/next-page')
 }
 
-.contributor-list {
-  display: flex;
-  list-style: none;
-  flex-wrap: wrap;
-
-  li {
-    margin: 0 8px 30px 0;
-
-    a {
-      text-decoration: none;
-    }
-
-    img {
-      border-radius: 50%;
-      width: 42px;
-      height: 42px;
-    }
-  }
-
-  @media screen and (max-width: @break-point) {
-    justify-content: center;
-
-    li {
-      margin-bottom: 20px;
-
-      img {
-        width: 32px;
-        height: 32px;
-      }
-    }
-  }
-}
-</style>
+</script>

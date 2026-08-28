@@ -1,0 +1,918 @@
+@import '@/mixin.less';
+
+.ai-guide {
+  display: flex;
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid rgba(240, 240, 240, 1);
+  .pcPadding(100, 150);
+
+  // ==================== 1440px ====================
+  @media (max-width: 1440px) {
+    .pcPadding(80, 60);
+  }
+
+  // ==================== 1200px ====================
+  @media (max-width: 1200px) {
+    .pcPadding(60, 40);
+  }
+
+  // ==================== 1024px（平板） ====================
+  @media (max-width: 1024px) {
+    .pcPadding(48, 32);
+  }
+
+  // ==================== 768px（手机横屏/大屏手机） ====================
+  @media (max-width: 768px) {
+    .pcPadding(40, 20);
+  }
+
+  // ==================== 480px（小屏手机） ====================
+  @media (max-width: 480px) {
+    .pcPadding(32, 16);
+  }
+
+  .guide-inner {
+    width: 100%;
+    margin: 0 auto;
+    .pcRem(max-width, 1600);
+
+    @media (max-width: 1440px) {
+      max-width: 1320px;
+    }
+    @media (max-width: 1200px) {
+      max-width: 1120px;
+    }
+    @media (max-width: 1024px) {
+      max-width: 100%;
+    }
+  }
+
+  .guide-header {
+    .guide-title {
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 66px;
+      letter-spacing: 0;
+      color: #191919;
+      text-align: center;
+
+      @media (max-width: 1440px) {
+        font-size: 32px;
+        line-height: 56px;
+      }
+      @media (max-width: 1200px) {
+        font-size: 28px;
+        line-height: 48px;
+      }
+      @media (max-width: 1024px) {
+        font-size: 26px;
+        line-height: 42px;
+      }
+      @media (max-width: 768px) {
+        font-size: 22px;
+        line-height: 36px;
+      }
+      @media (max-width: 480px) {
+        font-size: 20px;
+        line-height: 32px;
+      }
+    }
+
+    .guide-subtitle {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 28px;
+      color: #595959;
+      margin-bottom: 40px;
+      text-align: center;
+
+      @media (max-width: 1440px) {
+        font-size: 18px;
+        line-height: 26px;
+        margin-bottom: 32px;
+      }
+      @media (max-width: 1200px) {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 28px;
+      }
+      @media (max-width: 768px) {
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 24px;
+      }
+      @media (max-width: 480px) {
+        font-size: 13px;
+        line-height: 20px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .guide-layout {
+    display: flex;
+    gap: 20px;
+    height: 600px;
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+
+    @media (max-width: 1440px) {
+      height: 540px;
+      padding: 16px;
+      gap: 16px;
+      border-radius: 16px;
+    }
+    @media (max-width: 1200px) {
+      height: 500px;
+      padding: 14px;
+      gap: 14px;
+      border-radius: 14px;
+    }
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      height: auto;
+      padding: 16px;
+      gap: 16px;
+    }
+    @media (max-width: 768px) {
+      padding: 12px;
+      gap: 12px;
+      border-radius: 12px;
+    }
+    @media (max-width: 480px) {
+      padding: 10px;
+      gap: 10px;
+      border-radius: 10px;
+    }
+
+    // ---------- 左侧视频卡片 ----------
+    .demo-video-card {
+      width: 480px;
+      height: 600px;
+      border-radius: 20px;
+      background: linear-gradient(90deg, rgba(240,246,255) 0%, rgba(250,243,255) 100%);
+      padding: 60px 30px 30px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+
+      @media (max-width: 1440px) {
+        width: 420px;
+        height: 520px;
+        padding: 48px 24px 24px;
+        border-radius: 16px;
+      }
+      @media (max-width: 1200px) {
+        width: 380px;
+        padding: 40px 20px 20px;
+        border-radius: 14px;
+        height: 492px;
+      }
+      @media (max-width: 1180px) {
+        height: 472px;
+      }
+      @media (max-width: 1024px) {
+        width: 100%;
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 32px 24px 24px;
+        min-height: 560px;
+      }
+      @media (max-width: 768px) {
+        padding: 28px 20px 20px;
+        border-radius: 12px;
+      }
+      @media (max-width: 480px) {
+        padding: 24px 16px 16px;
+        border-radius: 10px;
+      }
+
+      .video-card-title {
+        margin-bottom: 20px;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: 1px;
+        text-align: left;
+        color: #191919;
+
+        @media (max-width: 1440px) {
+          font-size: 24px;
+          line-height: 30px;
+          margin-bottom: 16px;
+        }
+        @media (max-width: 1200px) {
+          font-size: 22px;
+          line-height: 28px;
+        }
+        @media (max-width: 768px) {
+          font-size: 20px;
+          line-height: 26px;
+          margin-bottom: 12px;
+        }
+        @media (max-width: 480px) {
+          font-size: 18px;
+          line-height: 24px;
+        }
+      }
+
+      .video-card-desc {
+        margin-bottom: 35px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 1px;
+        color: #595959;
+        text-align: left;
+
+        @media (max-width: 1440px) {
+          font-size: 15px;
+          line-height: 26px;
+          margin-bottom: 28px;
+        }
+        @media (max-width: 1200px) {
+          font-size: 14px;
+          line-height: 24px;
+          margin-bottom: 24px;
+        }
+        @media (max-width: 768px) {
+          font-size: 13px;
+          line-height: 22px;
+          margin-bottom: 20px;
+        }
+        @media (max-width: 480px) {
+          font-size: 12px;
+          line-height: 20px;
+          margin-bottom: 16px;
+        }
+      }
+
+      .video-card-tags {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 768px) {
+          margin-bottom: 16px;
+        }
+
+        .tag-span {
+          letter-spacing: 2px;
+          font-size: 14px;
+          line-height: 20px;
+
+          @media (max-width: 768px) {
+            font-size: 12px;
+            line-height: 18px;
+            letter-spacing: 1px;
+          }
+        }
+
+        .tag-icon {
+          width: 18px;
+          height: 18px;
+
+          @media (max-width: 768px) {
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+
+      .video-player-wrap {
+        flex: 1;
+        cursor: pointer;
+        position: relative;
+
+        .video-frame {
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, rgb(235,240,247), rgb(246,233,255));
+          border-radius: 20px;
+          padding: 12px;
+          box-sizing: border-box;
+
+          @media (max-width: 1440px) {
+            border-radius: 16px;
+            padding: 10px;
+          }
+          @media (max-width: 1024px) {
+            border-radius: 14px;
+            height: 300px;
+          }
+          @media (max-width: 768px) {
+            border-radius: 12px;
+            padding: 8px;
+          }
+        }
+
+        .video-poster {
+          width: 100%;
+          height: 100%;
+          background: url('../../../assets/images/new-icon/floor4/update-bg-1.webp');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .play-icon {
+            transition: transform 0.3s ease;
+
+            img {
+              @media (max-width: 768px) {
+                width: 48px;
+                height: 48px;
+              }
+              @media (max-width: 480px) {
+                width: 40px;
+                height: 40px;
+              }
+            }
+          }
+
+          &:hover .play-icon {
+            transform: scale(1.1);
+          }
+        }
+      }
+
+      .video-player-describe {
+        display: flex;
+        justify-content: center;
+        margin-top: 24px;
+
+        @media (max-width: 768px) {
+          margin-top: 16px;
+        }
+
+        a {
+          color: #1476ff;
+          text-decoration: none;
+          cursor: pointer;
+
+          &:hover {
+            color: #1476ff;
+            text-decoration: underline;
+          }
+
+          &:visited {
+            color: #1476ff;
+          }
+        }
+      }
+
+      .video-player-describe-a {
+        margin-top: auto;
+        padding-top: 8px;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 1px;
+        color: #1476ff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        transition: opacity 0.2s ease;
+
+        @media (max-width: 768px) {
+          font-size: 13px;
+          line-height: 15px;
+        }
+        @media (max-width: 480px) {
+          font-size: 12px;
+          line-height: 14px;
+        }
+
+        &:hover {
+          opacity: 0.8;
+        }
+
+        &::after {
+          content: '';
+          display: inline-block;
+          width: 16px;
+          height: 16px;
+          margin-left: 6px;
+          vertical-align: middle;
+          background: currentColor;
+          mask-image: url('../../../assets/images/new-icon/floor1/arrow-white.svg');
+          mask-position: center;
+          mask-size: contain;
+          -webkit-mask-image: url('../../../assets/images/new-icon/floor1/arrow-white.svg');
+          -webkit-mask-repeat: no-repeat;
+          -webkit-mask-position: center;
+          -webkit-mask-size: contain;
+
+          @media (max-width: 768px) {
+            width: 14px;
+            height: 14px;
+          }
+        }
+        &:hover::after {
+          transform: translateX(3px);
+        }
+      }
+    }
+
+    .compare-cards {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;    
+
+      @media (max-width: 1440px) {
+        gap: 16px;
+      }
+      @media (max-width: 1200px) {
+        gap: 14px;
+      }
+      @media (max-width: 1024px) {
+        width: 100%;
+        max-width: 720px;
+        margin: 0 auto;
+        gap: 16px;
+      }
+      @media (max-width: 768px) {
+        gap: 12px;
+      }
+      @media (max-width: 480px) {
+        gap: 10px;
+      }   
+
+      .compare-card {
+        position: relative;
+        height: 290px;
+        border-radius: 20px;
+        background: linear-gradient(to right, #f0f6ff, #faf3ff);
+        padding-left: 30px;
+        box-sizing: border-box;   
+
+        @media (max-width: 1440px) {
+          height: 260px;
+          padding-left: 24px;
+          padding-top: 52px;
+          border-radius: 16px;
+        }
+        @media (max-width: 1200px) {
+          height: 240px;
+          padding-left: 20px;
+          padding-top: 48px;
+          border-radius: 14px;
+        }
+        @media (max-width: 1024px) {
+          height: auto;
+          min-height: 220px;
+          padding: 48px 24px 24px;
+        }
+        @media (max-width: 768px) {
+          min-height: 280px;
+          padding: 44px 20px 20px;
+          border-radius: 12px;
+        }
+        @media (max-width: 480px) {
+          padding: 40px 16px 16px;
+          border-radius: 10px;
+        }   
+
+        .compare-badge {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 77px;
+          height: 27px;
+          background: #fce3e0;
+          color: #f23030;
+          border-radius: 20px 2px 20px 2px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 14px;
+          font-weight: 700;
+          z-index: 1;   
+
+          @media (max-width: 768px) {
+            width: 64px;
+            height: 24px;
+            font-size: 12px;
+            border-radius: 12px 2px 12px 2px;
+          }
+          @media (max-width: 480px) {
+            width: 56px;
+            height: 22px;
+            font-size: 11px;
+          }
+        }   
+
+        .compare-card-body {
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+          height: 290px;    
+
+          @media (max-width: 1440px) {
+            height: 200px;  
+          }
+
+          @media (max-width: 1180px) {
+            height: 180px; 
+          }
+
+          @media (max-width: 768px) {
+            gap: 16px;
+          }
+          @media (max-width: 480px) {
+            gap: 12px;
+          }   
+
+          .compare-card-text {
+            width: 467px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin-top: 0;
+            padding-top: 60px;    
+
+            @media (max-width: 1670px) {
+              width: 260px;
+              gap: 14px;
+              padding-top: 52px;
+            }
+              @media (max-width: 1440px) {
+              padding-top: 0;
+            }
+            @media (max-width: 1200px) {
+              width: 340px;
+              gap: 12px;
+            }
+            @media (max-width: 1024px) {
+              width: 45%;
+            }
+            @media (max-width: 768px) {
+              gap: 10px;
+              padding-top: 32px;
+            }
+            @media (max-width: 480px) {
+              padding-top: 28px;
+            }   
+
+            .compare-card-title {
+              font-size: 28px;
+              font-weight: 700;
+              line-height: 32px;
+              letter-spacing: 1px;
+              text-align: left;
+              color: #191919;   
+
+              @media (max-width: 1670px) {
+                font-size: 24px;
+                line-height: 30px;
+              }
+              @media (max-width: 1200px) {
+                font-size: 22px;
+                line-height: 28px;
+              }
+              @media (max-width: 768px) {
+                font-size: 20px;
+                line-height: 26px;
+              }
+              @media (max-width: 480px) {
+                font-size: 18px;
+                line-height: 24px;
+              }
+            }   
+
+            .compare-card-desc {
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 28px;
+              letter-spacing: 1px;
+              color: #595959;
+              text-align: left;   
+
+              @media (max-width: 1670px) {
+                font-size: 14px;
+                line-height: 26px;
+              }
+              @media (max-width: 1200px) {
+                font-size: 14px;
+                line-height: 24px;
+              }
+              @media (max-width: 768px) {
+                font-size: 12px;
+                line-height: 22px;
+              }
+              @media (max-width: 480px) {
+                font-size: 10px;
+                line-height: 20px;
+              }
+            }   
+
+            .compare-card-tags {
+              display: flex;
+              gap: 8px;   
+
+              @media (max-width: 480px) {
+                gap: 6px;
+              }
+            }
+          }   
+
+          .compare-card-image {
+            flex: 1;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url('../../../assets/images/new-icon/floor4/update-bg-2.webp');
+            background-size: auto 80%;
+            background-position: 50% 38px;
+            background-repeat: no-repeat;   
+
+            @media (max-width: 1660px) {
+              background-size: auto 70%;
+              background-position: 50% 32px;
+            }
+            @media (max-width: 1562px) {
+              background-size: auto 60%;
+              background-position: 50% 28px;
+            }
+            @media (max-width: 1440px) {
+              background-size: auto 85%;
+              background-position: 50% 0px;
+            }
+            @media (max-width: 1200px) {
+              background-size: auto 62%;
+              background-position: 50% 20px;
+            }
+            @media (max-width: 1024px) {
+              min-width: 200px;
+              height: 200px;
+              background-size: auto 85%;
+              background-position: 50% 50%;
+            }
+            @media (max-width: 768px) {
+              width: 100%;
+              height: 160px;
+              min-width: auto;
+              background-size: auto 90%;
+              background-position: 50% center;
+            }
+            @media (max-width: 480px) {
+              height: 140px;
+              background-size: auto 70%;
+              background-position: 50% bottom;
+            }
+          }   
+
+          .compare-card-after-image {
+            flex: 1;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url('../../../assets/images/new-icon/floor4/update-bg-3.webp');
+            background-size: auto 100%;
+            background-position: 50% 4px;
+            background-repeat: no-repeat;   
+
+            @media (max-width: 1660px) {
+              background-size: auto 82%;
+              background-position: 50% 12px;
+            }
+            @media (max-width: 1562px) {
+              background-size: auto 75%;
+              background-position: 50% 16px;
+            }
+            @media (max-width: 1440px) {
+              background-size: auto 100%;
+              background-position: 50% -30px;
+            }
+            @media (max-width: 1200px) {
+              background-size: auto 68%;
+              background-position: 50% 18px;
+            }
+            @media (max-width: 1024px) {
+              min-width: 200px;
+              height: 200px;
+              background-size: auto 88%;
+              background-position: 50% 50%;
+            }
+            @media (max-width: 768px) {
+              width: 100%;
+              height: 160px;
+              min-width: auto;
+              background-size: auto 92%;
+              background-position: 50% center;
+            }
+            @media (max-width: 480px) {
+              height: 140px;
+              background-size: auto 90%;
+              background-position: 50% center;
+            }
+          }
+        }
+      }
+    } 
+  }
+
+  /* 模态框过渡动画 */
+  .modal-enter-active,
+  .modal-leave-active {
+    transition: opacity 0.35s ease;
+  }
+
+  .modal-enter-from,
+  .modal-leave-to {
+    opacity: 0;
+  }
+
+  .modal-enter-active .video-modal-body,
+  .modal-leave-active .video-modal-body {
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .modal-enter-from .video-modal-body,
+  .modal-leave-to .video-modal-body {
+    transform: scale(0.92) translateY(20px);
+  }
+
+  .video-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .video-modal-body {
+      position: relative;
+      width: 80%;
+      max-width: 960px;
+
+      @media (max-width: 1024px) {
+        width: 90%;
+      }
+      @media (max-width: 768px) {
+        width: 95%;
+      }
+
+      .video-frame {
+        width: 100%;
+        background: linear-gradient(90deg, rgb(235,240,247), rgb(246,233,255));
+        border-radius: 20px;
+        padding: 24px;
+        box-sizing: border-box;
+        position: relative;
+        overflow: hidden;
+        aspect-ratio: 16 / 9;
+
+        @media (max-width: 768px) {
+          border-radius: 12px;
+          padding: 12px;
+        }
+        @media (max-width: 480px) {
+          border-radius: 8px;
+          padding: 8px;
+        }
+
+        .video-player {
+          width: 100%;
+          height: 100%;
+          border-radius: 12px;
+          display: block;
+          object-fit: cover;
+          opacity: 1;
+          transition: opacity 0.3s ease;
+
+          @media (max-width: 768px) {
+            border-radius: 8px;
+          }
+        }
+
+        /* 视频加载骨架屏 */
+        .video-skeleton {
+          position: absolute;
+          inset: 12px;
+          border-radius: 12px;
+          background: linear-gradient(135deg, #e8ecf3 0%, #f0e8f7 50%, #e8ecf3 100%);
+          background-size: 200% 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 16px;
+          z-index: 3;
+
+          @media (max-width: 768px) {
+            inset: 8px;
+            border-radius: 8px;
+            gap: 12px;
+          }
+
+          .skeleton-shimmer {
+            position: absolute;
+            inset: 0;
+            border-radius: 12px;
+            background: linear-gradient(
+              90deg,
+              transparent 0%,
+              rgba(255, 255, 255, 0.4) 50%,
+              transparent 100%
+            );
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+          }
+
+          .skeleton-spinner {
+            width: 48px;
+            height: 48px;
+            position: relative;
+            z-index: 1;
+
+            @media (max-width: 768px) {
+              width: 36px;
+              height: 36px;
+            }
+
+            .spinner-svg {
+              width: 100%;
+              height: 100%;
+              animation: rotate 1s linear infinite;
+
+              .spinner-circle {
+                animation: dash 1.5s ease-in-out infinite;
+              }
+            }
+          }
+
+          .skeleton-text {
+            font-size: 14px;
+            color: #8c8c8c;
+            position: relative;
+            z-index: 1;
+            letter-spacing: 1px;
+
+            @media (max-width: 768px) {
+              font-size: 12px;
+            }
+          }
+        }
+
+        /* 播放按钮（带脉冲动画） */
+        .modal-play-btn {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          cursor: pointer;
+          z-index: 2;
+          width: 64px;
+          height: 64px;
+
+          @media (max-width: 768px) {
+            width: 48px;
+            height: 48px;
+          }
+
+          .play-btn-pulse {
+            position: absolute;
+            inset: -8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+            @media (max-width: 768px) {
+              inset: -6px;
+            }
+          }
+
+          .play-btn-icon {
+            position: relative;
+            z-index: 1;
+            transition: transform 0.3s ease;
+            filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
+
+            @media (max-width: 768px) {
+              width: 48px;
+              height: 48px;
+            }
+          }
+
+          &:hover .play-btn-icon {
+            transform: scale(1.08);
+          }
+        }
+      }
+    }
+  }
+}

@@ -42,7 +42,7 @@ const state = reactive({
   .pcPadding(16);
 
   &-active {
-    border: 1px solid rgb(25, 25, 25);
+    background: rgba(247, 248, 251, 1);
   }
 
   &-title {
@@ -51,14 +51,17 @@ const state = reactive({
   }
 
   &-sub-title {
-    font-weight: 600;
-    color: rgb(25, 25, 25);
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 22px;
+    color: rgba(25, 25, 25, 1);
     .pcRem(line-height, 36);
-    .pcRem(font-size, 18);
     display: flex;
     align-items: center;
     gap: 8px;
+    
+    @media (max-width: 920px) {
+      font-size: 18px;
+    }
   }
 
   &-description {

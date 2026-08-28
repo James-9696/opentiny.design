@@ -1,0 +1,1530 @@
+.product-suite {
+  // ========================================
+  // 外层容器变量
+  // ========================================
+  --ps-pad-y: 100px;
+  --ps-pad-x: 200px;
+  --ps-max-w: 1600px;
+  --ps-title-size: 36px;
+  --ps-title-lh: 66px;
+  --ps-desc-size: 20px;
+  --ps-desc-lh: 28px;
+  --ps-grid-gap: 16px;
+  --ps-grid-mt: 60px;
+
+  // ========================================
+  // 卡片基础变量
+  // ========================================
+  --card-pad: 0px;
+  --card-default-w: 320px;
+  --card-expanded-w: 1022px;
+  --card-collapsed-w: 180px;
+  --card-min-h: 610px;
+  --card-radius: 20px;
+  --card-info-pad: 30px 24px 0px;
+  --card-name-size: 28px;
+  --card-name-lh: 40px;
+  --card-summary-size: 16px;
+  --card-summary-lh: 24px;
+  --card-preview-mt: 40px;
+
+  --collapsed-pad: 20px 12px;
+  --collapsed-name-size: 16px;
+  --collapsed-summary-size: 12px;
+
+  // ========================================
+  // AI 区域变量（亮色卡片）
+  // ========================================
+  --ai-preview-pad: 0 24px 35px;
+  --ai-top-gap: 16px;
+  --ai-bottom-gap: 16px;
+  --ai-top-max-h: 200px;
+  --ai-bottom-max-h: 200px;
+  --ai-light-radius: 20px;
+  --ai-light-pad: 30px 0 0 28px;
+  --ai-header-gap: 18px;
+  --ai-icon-size: 24px;
+  --ai-brand-size: 20px;
+  --ai-brand-lh: 28px;
+  --ai-brand-weight: 700;
+  --ai-title-mt: 16px;
+  --ai-title-size: 20px;
+  --ai-title-lh: 28px;
+  --ai-title-weight: 550;
+  --ai-desc-mt: 4px;
+  --ai-desc-size: 16px;
+  --ai-desc-lh: 22px;
+  --ai-desc-max-w: 40%;
+  --ai-link-pb: 16px;
+
+  // ========================================
+  // AI 区域变量（暗色卡片）
+  // ========================================
+  --ai-dark-radius: 12px;
+  --ai-dark-pad: 30px 0px 0px 28px;
+  --ai-dark-header-gap: 18px;
+  --ai-dark-icon-size: 24px;
+  --ai-dark-brand-size: 18px;
+  --ai-dark-brand-lh: 28px;
+  --ai-dark-brand-weight: 700;
+  --ai-subtitle-mt: 16px;
+  --ai-subtitle-size: 20px;
+  --ai-subtitle-lh: 28px;
+  --ai-subtitle-weight: 550;
+  --ai-subdesc-mt: 4px;
+  --ai-subdesc-size: 16px;
+  --ai-subdesc-lh: 22px;
+  --ai-sublink-pt: 8px;
+
+  // ========================================
+  // 模板区域变量
+  // ========================================
+  --tmpl-preview-pad: 0 24px 30px;
+  --tmpl-gap: 16px;
+  --tmpl-card-min-h: 400px;
+  --tmpl-card-radius: 20px;
+  --tmpl-card-pad: 40px 24px 0px;
+  --tmpl-header-gap: 0px;        // 通过 margin 控制
+  --tmpl-icon-size: 24px;
+  --tmpl-icon-mr: 18px;
+  --tmpl-brand-size: 20px;
+  --tmpl-brand-lh: 28px;
+  --tmpl-brand-weight: 700;
+  --tmpl-title-mt: 16px;
+  --tmpl-title-size: 20px;
+  --tmpl-title-lh: 28px;
+  --tmpl-title-weight: 550;
+  --tmpl-title-min-h: 56px;
+  --tmpl-desc-mt: 4px;
+  --tmpl-desc-size: 16px;
+  --tmpl-desc-lh: 22px;
+  --tmpl-link-mt: 12px;
+
+  // ========================================
+  // UI 区域变量
+  // ========================================
+  --ui-preview-pad: 0 30px 27px;
+  --ui-grid-gap: 24px;
+  --ui-grid-min-h: 388px;
+  --ui-card-min-h: 170px;
+  --ui-card-radius: 20px;
+  --ui-card-pad: 30px 24px 0px;
+  --ui-header-gap: 0px;
+  --ui-icon-size: 24px;
+  --ui-icon-mr: 18px;
+  --ui-brand-ml: 16px;
+  --ui-brand-size: 20px;
+  --ui-brand-lh: 28px;
+  --ui-brand-weight: 700;
+  --ui-title-mt: 16px;
+  --ui-title-size: 20px;
+  --ui-title-lh: 28px;
+  --ui-title-weight: 550;
+  --ui-desc-mt: 4px;
+  --ui-desc-size: 16px;
+  --ui-desc-lh: 22px;
+  --ui-link-mt: 12px;
+
+  // ========================================
+  // 引擎区域变量
+  // ========================================
+  --eng-preview-pad: 0px 30px 24px;
+  --eng-card-min-h: 420px;
+  --eng-card-radius: 20px;
+  --eng-card-pad: 30px 40px 0 24px;
+  --eng-header-gap: 0px;
+  --eng-icon-size: 24px;
+  --eng-icon-mr: 16px;
+  --eng-brand-size: 20px;
+  --eng-brand-lh: 22px;
+  --eng-brand-weight: 700;
+  --eng-title-mt: 16px;
+  --eng-title-size: 20px;
+  --eng-title-lh: 28px;
+  --eng-title-weight: 550;
+  --eng-desc-mt: 20px;
+  --eng-desc-size: 16px;
+  --eng-desc-lh: 29px;
+  --eng-link-mt: 12px;
+
+  // ========================================
+  // 通用链接变量
+  // ========================================
+  --link-size: 14px;
+  --link-lh: 16px;
+  --link-ls: 1px;
+  --arrow-w: 18px;
+  --arrow-h: 18px;
+  --arrow-ml: 6px;
+  --arrow-mt: 2px;
+
+  // ========================================
+  // 媒体查询：1690px
+  // 验证@1440px: 4*280 + 3*12 + 2*80 = 1316 <= 1440
+  // 展开@1440px: 854 + 3*130 + 3*12 + 160 = 1440
+  // ========================================
+  @media (max-width: 1690px) {
+    --ps-pad-y: 80px;
+    --ps-pad-x: 80px;
+    --ps-title-size: 32px;
+    --ps-title-lh: 56px;
+    --ps-desc-size: 18px;
+    --ps-grid-mt: 48px;
+
+    --card-default-w: 280px;
+    --card-expanded-w: 854px;
+    --card-collapsed-w: 130px;
+    --card-min-h: 540px;
+    --card-name-size: 24px;
+    --card-name-lh: 34px;
+
+    // AI 亮色
+    --ai-top-max-h: 170px;
+    --ai-bottom-max-h: 170px;
+    --ai-light-pad: 24px 0 0 20px;
+    --ai-header-gap: 14px;
+    --ai-icon-size: 22px;
+    --ai-brand-size: 18px;
+    --ai-brand-lh: 26px;
+    --ai-title-mt: 14px;
+    --ai-title-size: 18px;
+    --ai-title-lh: 26px;
+    --ai-desc-mt: 4px;
+    --ai-desc-size: 14px;
+    --ai-desc-lh: 20px;
+    --ai-link-pb: 14px;
+
+    // AI 暗色
+    --ai-dark-pad: 16px 12px 12px;
+    --ai-dark-header-gap: 6px;
+    --ai-dark-icon-size: 22px;
+    --ai-dark-brand-size: 18px;
+    --ai-dark-brand-lh: 26px;
+    --ai-subtitle-mt: 12px;
+    --ai-subtitle-size: 18px;
+    --ai-subtitle-lh: 26px;
+    --ai-subdesc-mt: 4px;
+    --ai-subdesc-size: 14px;
+    --ai-subdesc-lh: 20px;
+    --ai-sublink-pt: 6px;
+
+    // 模板
+    --tmpl-card-min-h: 340px;
+    --tmpl-card-pad: 32px 20px 0px;
+    --tmpl-icon-size: 22px;
+    --tmpl-brand-size: 18px;
+    --tmpl-brand-lh: 26px;
+    --tmpl-title-mt: 20px;
+    --tmpl-title-size: 18px;
+    --tmpl-title-lh: 26px;
+    --tmpl-title-min-h: 48px;
+    --tmpl-desc-size: 14px;
+    --tmpl-desc-lh: 20px;
+    --tmpl-link-mt: 16px;
+
+    // UI
+    --ui-grid-min-h: 320px;
+    --ui-grid-gap: 16px;
+    --ui-card-pad: 24px 20px 0px;
+    --ui-icon-size: 22px;
+    --ui-brand-size: 18px;
+    --ui-brand-lh: 26px;
+    --ui-title-mt: 14px;
+    --ui-title-size: 18px;
+    --ui-title-lh: 26px;
+    --ui-desc-size: 14px;
+    --ui-desc-lh: 20px;
+    --ui-link-mt: 16px;
+
+    // 引擎
+    --eng-card-min-h: 360px;
+    --eng-card-pad: 24px 32px 0 20px;
+    --eng-icon-size: 22px;
+    --eng-brand-size: 16px;
+    --eng-brand-lh: 20px;
+    --eng-title-mt: 20px;
+    --eng-title-size: 18px;
+    --eng-title-lh: 26px;
+    --eng-desc-mt: 16px;
+    --eng-desc-size: 14px;
+    --eng-desc-lh: 24px;
+    --eng-link-mt: 16px;
+  }
+
+  // ========================================
+  // 媒体查询：1440px
+  // 验证@1280px: 4*240 + 3*10 + 2*48 = 1086 <= 1280
+  // 展开@1280px: 824 + 3*110 + 3*10 + 96 = 1280
+  // ========================================
+  @media (max-width: 1440px) {
+    --ps-pad-y: 60px;
+    --ps-pad-x: 48px;
+    --ps-title-size: 28px;
+    --ps-title-lh: 48px;
+    --ps-desc-size: 16px;
+    --ps-grid-gap: 10px;
+    --ps-grid-mt: 40px;
+
+    --card-default-w: 240px;
+    --card-expanded-w: 824px;
+    --card-collapsed-w: 110px;
+    --card-min-h: 480px;
+    --card-radius: 16px;
+    --card-info-pad: 24px 16px 0px;
+    --card-name-size: 20px;
+    --card-name-lh: 30px;
+    --card-summary-size: 14px;
+    --card-summary-lh: 20px;
+
+    --collapsed-pad: 16px 10px;
+    --collapsed-name-size: 13px;
+
+    // AI 亮色
+    --ai-top-max-h: 150px;
+    --ai-bottom-max-h: 150px;
+    --ai-preview-pad: 0 16px 24px;
+    --ai-light-pad: 20px 0 0 16px;
+    --ai-header-gap: 12px;
+    --ai-icon-size: 20px;
+    --ai-brand-size: 16px;
+    --ai-brand-lh: 24px;
+    --ai-title-mt: 12px;
+    --ai-title-size: 16px;
+    --ai-title-lh: 24px;
+    --ai-desc-size: 13px;
+    --ai-desc-lh: 18px;
+    --ai-link-pb: 12px;
+
+    // AI 暗色
+    --ai-dark-pad: 14px 10px 10px;
+    --ai-dark-header-gap: 6px;
+    --ai-dark-icon-size: 20px;
+    --ai-dark-brand-size: 16px;
+    --ai-dark-brand-lh: 24px;
+    --ai-subtitle-mt: 10px;
+    --ai-subtitle-size: 16px;
+    --ai-subtitle-lh: 24px;
+    --ai-subdesc-size: 13px;
+    --ai-subdesc-lh: 18px;
+    --ai-sublink-pt: 6px;
+
+    // 模板
+    --tmpl-preview-pad: 0 16px 24px;
+    --tmpl-gap: 12px;
+    --tmpl-card-min-h: 300px;
+    --tmpl-card-pad: 24px 16px 0px;
+    --tmpl-icon-size: 20px;
+    --tmpl-brand-size: 16px;
+    --tmpl-brand-lh: 24px;
+    --tmpl-title-mt: 16px;
+    --tmpl-title-size: 16px;
+    --tmpl-title-lh: 24px;
+    --tmpl-title-min-h: 40px;
+    --tmpl-desc-size: 13px;
+    --tmpl-desc-lh: 18px;
+    --tmpl-link-mt: 12px;
+
+    // UI
+    --ui-card-min-h: 150px;
+    --ui-preview-pad: 0 20px 20px;
+    --ui-grid-gap: 16px;
+    --ui-grid-min-h: 280px;
+    --ui-card-pad: 20px 16px 0px;
+    --ui-icon-size: 20px;
+    --ui-brand-size: 16px;
+    --ui-brand-lh: 24px;
+    --ui-title-mt: 12px;
+    --ui-title-size: 16px;
+    --ui-title-lh: 24px;
+    --ui-desc-size: 13px;
+    --ui-desc-lh: 18px;
+    --ui-link-mt: 12px;
+
+    // 引擎
+    --eng-card-min-h: 310px;
+    --eng-preview-pad: 0px 20px 20px;
+    --eng-card-pad: 20px 24px 0 16px;
+    --eng-icon-size: 20px;
+    --eng-brand-size: 15px;
+    --eng-brand-lh: 20px;
+    --eng-title-mt: 16px;
+    --eng-title-size: 16px;
+    --eng-title-lh: 24px;
+    --eng-desc-mt: 14px;
+    --eng-desc-size: 13px;
+    --eng-desc-lh: 22px;
+    --eng-link-mt: 12px;
+
+    --link-size: 10px;
+  }
+
+  // ========================================
+  // 媒体查询：1280px
+  // 验证@1024px: 4*200 + 3*8 + 2*32 = 888 <= 1024
+  // 展开@1024px: 666 + 3*90 + 3*8 + 64 = 1024
+  // ========================================
+  @media (max-width: 1280px) {
+    --ps-pad-y: 50px;
+    --ps-pad-x: 32px;
+    --ps-title-size: 26px;
+    --ps-title-lh: 42px;
+
+    --card-default-w: 200px;
+    --card-expanded-w: 666px;
+    --card-collapsed-w: 90px;
+    --card-min-h: 420px;
+    --card-info-pad: 20px 12px 0px;
+    --card-name-size: 18px;
+    --card-name-lh: 26px;
+
+    --collapsed-pad: 12px 8px;
+    --collapsed-name-size: 12px;
+
+    // AI 亮色
+    --ai-top-max-h: 130px;
+    --ai-bottom-max-h: 130px;
+    --ai-top-gap: 10px;
+    --ai-bottom-gap: 10px;
+    --ai-light-pad: 16px 0 0 12px;
+    --ai-light-radius: 14px;
+    --ai-header-gap: 10px;
+    --ai-icon-size: 18px;
+    --ai-brand-size: 14px;
+    --ai-brand-lh: 20px;
+    --ai-title-mt: 10px;
+    --ai-title-size: 14px;
+    --ai-title-lh: 20px;
+    --ai-desc-size: 12px;
+    --ai-desc-lh: 16px;
+    --ai-link-pb: 10px;
+
+    // AI 暗色
+    --ai-dark-pad: 12px 8px 8px;
+    --ai-dark-radius: 10px;
+    --ai-dark-header-gap: 4px;
+    --ai-dark-icon-size: 18px;
+    --ai-dark-brand-size: 14px;
+    --ai-dark-brand-lh: 20px;
+    --ai-subtitle-mt: 8px;
+    --ai-subtitle-size: 14px;
+    --ai-subtitle-lh: 20px;
+    --ai-subdesc-size: 12px;
+    --ai-subdesc-lh: 16px;
+    --ai-sublink-pt: 4px;
+
+    // 模板
+    --tmpl-gap: 10px;
+    --tmpl-card-min-h: 260px;
+    --tmpl-card-radius: 16px;
+    --tmpl-card-pad: 20px 12px 0px;
+    --tmpl-icon-size: 18px;
+    --tmpl-brand-size: 14px;
+    --tmpl-brand-lh: 20px;
+    --tmpl-title-mt: 12px;
+    --tmpl-title-size: 14px;
+    --tmpl-title-lh: 20px;
+    --tmpl-title-min-h: 32px;
+    --tmpl-desc-size: 12px;
+    --tmpl-desc-lh: 16px;
+    --tmpl-link-mt: 10px;
+
+    // UI
+    --ui-card-min-h: 130px;
+    --ui-grid-gap: 12px;
+    --ui-grid-min-h: 240px;
+    --ui-card-radius: 16px;
+    --ui-card-pad: 16px 12px 0px;
+    --ui-icon-size: 18px;
+    --ui-brand-size: 14px;
+    --ui-brand-lh: 20px;
+    --ui-title-mt: 10px;
+    --ui-title-size: 14px;
+    --ui-title-lh: 20px;
+    --ui-desc-size: 12px;
+    --ui-desc-lh: 16px;
+    --ui-link-mt: 10px;
+
+    // 引擎
+    --eng-card-min-h: 260px;
+    --eng-card-radius: 16px;
+    --eng-card-pad: 16px 16px 0 12px;
+    --eng-icon-size: 18px;
+    --eng-brand-size: 13px;
+    --eng-brand-lh: 18px;
+    --eng-title-mt: 12px;
+    --eng-title-size: 14px;
+    --eng-title-lh: 20px;
+    --eng-desc-mt: 10px;
+    --eng-desc-size: 12px;
+    --eng-desc-lh: 20px;
+    --eng-link-mt: 10px;
+  }
+
+  // ========================================
+  // 媒体查询：1024px
+  // 验证@820px: 4*180 + 3*6 + 2*24 = 786 <= 820
+  // 展开@820px: 544 + 3*70 + 3*6 + 48 = 820
+  // ========================================
+  @media (max-width: 1024px) {
+    --ps-pad-y: 40px;
+    --ps-pad-x: 24px;
+    --ps-title-size: 24px;
+    --ps-title-lh: 36px;
+
+    --card-default-w: 180px;
+    --card-expanded-w: 544px;
+    --card-collapsed-w: 70px;
+    --card-min-h: 380px;
+    --card-info-pad: 16px 10px 0px;
+    --card-name-size: 15px;
+    --card-name-lh: 22px;
+
+    --collapsed-pad: 10px 6px;
+
+    // AI 亮色
+    --ai-top-max-h: 130px;
+    --ai-bottom-max-h: 100px;
+    --ai-light-pad: 14px 0 0 10px;
+    --ai-header-gap: 8px;
+    --ai-icon-size: 16px;
+    --ai-brand-size: 12px;
+    --ai-brand-lh: 18px;
+    --ai-title-mt: 8px;
+    --ai-title-size: 12px;
+    --ai-title-lh: 18px;
+    --ai-desc-size: 11px;
+    --ai-desc-lh: 15px;
+    --ai-link-pb: 8px;
+
+    // AI 暗色
+    --ai-dark-pad: 10px;
+    --ai-dark-header-gap: 4px;
+    --ai-dark-icon-size: 16px;
+    --ai-dark-brand-size: 12px;
+    --ai-dark-brand-lh: 18px;
+    --ai-subtitle-mt: 6px;
+    --ai-subtitle-size: 12px;
+    --ai-subtitle-lh: 18px;
+    --ai-subdesc-size: 10px;
+    --ai-subdesc-lh: 10px;
+    --ai-sublink-pt: 4px;
+
+    // 模板
+    --tmpl-card-pad: 16px 10px 0px;
+    --tmpl-icon-size: 16px;
+    --tmpl-brand-size: 12px;
+    --tmpl-brand-lh: 18px;
+    --tmpl-title-mt: 10px;
+    --tmpl-title-size: 12px;
+    --tmpl-title-lh: 18px;
+    --tmpl-title-min-h: 28px;
+    --tmpl-desc-size: 11px;
+    --tmpl-desc-lh: 15px;
+    --tmpl-link-mt: 8px;
+    --tmpl-card-min-h: 240px;
+
+    // UI
+    --ui-card-min-h: 115px;
+    --ui-card-pad: 14px 10px 0px;
+    --ui-icon-size: 16px;
+    --ui-brand-size: 12px;
+    --ui-brand-lh: 18px;
+    --ui-title-mt: 8px;
+    --ui-title-size: 12px;
+    --ui-title-lh: 18px;
+    --ui-desc-size: 11px;
+    --ui-desc-lh: 15px;
+    --ui-link-mt: 8px;
+
+    // 引擎
+    --eng-card-min-h: 240px;
+    --eng-card-pad: 16px 12px 0 10px;
+    --eng-icon-size: 16px;
+    --eng-brand-size: 12px;
+    --eng-brand-lh: 18px;
+    --eng-title-mt: 10px;
+    --eng-title-size: 12px;
+    --eng-title-lh: 18px;
+    --eng-desc-mt: 8px;
+    --eng-desc-size: 11px;
+    --eng-desc-lh: 18px;
+    --eng-link-mt: 8px;
+  }
+
+  // ========================================
+  // 媒体查询：768px（平板竖屏，2x2 网格）
+  // ========================================
+  @media (max-width: 768px) {
+    --ps-pad-y: 40px;
+    --ps-pad-x: 24px;
+    --ps-title-size: 22px;
+    --ps-title-lh: 32px;
+    --ps-desc-size: 15px;
+    --ps-desc-lh: 24px;
+    --ps-grid-gap: 16px;
+    --ps-grid-mt: 32px;
+
+    --card-pad: 20px 16px;
+    --card-preview-mt: 20px;
+    --card-max-h: auto;
+    --card-default-w: calc(50% - 8px);
+    --card-expanded-w: calc(50% - 8px);
+    --card-collapsed-w: calc(50% - 8px);
+    --card-radius: 16px;
+    --card-info-pad: 0;
+    --card-name-size: 18px;
+    --card-name-lh: 26px;
+    --card-summary-size: 14px;
+
+    --collapsed-pad: 20px 16px;
+    --collapsed-name-size: 18px;
+    --collapsed-summary-size: 14px;
+
+    // AI 亮色
+    --ai-top-max-h: 240px;
+
+    // AI 暗色
+    --ai-bottom-max-h: 360px;
+
+    // 模板
+    --tmpl-card-min-h: 160px;
+
+    // 引擎
+    --eng-card-min-h: 400px;
+
+  }
+
+  // ========================================
+  // 媒体查询：480px（移动端单列）
+  // ========================================
+  @media (max-width: 480px) {
+    --ps-pad-y: 32px;
+    --ps-pad-x: 16px;
+    --ps-title-size: 20px;
+    --ps-title-lh: 28px;
+    --ps-desc-size: 14px;
+    --ps-grid-mt: 24px;
+
+    --card-default-w: 100%;
+    --card-expanded-w: 100%;
+    --card-collapsed-w: 100%;
+    --card-radius: 16px;
+    --card-info-pad: 0;
+    --card-name-size: 17px;
+    --card-name-lh: 24px;
+
+    // AI 亮色
+    --ai-light-pad: 16px 0 0 12px;
+    --ai-header-gap: 10px;
+    --ai-icon-size: 18px;
+    --ai-brand-size: 14px;
+    --ai-brand-lh: 20px;
+    --ai-title-mt: 12px;
+    --ai-title-size: 14px;
+    --ai-title-lh: 20px;
+    --ai-desc-size: 12px;
+    --ai-desc-lh: 16px;
+
+    // AI 暗色
+    --ai-dark-pad: 12px;
+    --ai-dark-header-gap: 6px;
+    --ai-dark-icon-size: 18px;
+    --ai-dark-brand-size: 14px;
+    --ai-dark-brand-lh: 20px;
+    --ai-subtitle-mt: 10px;
+    --ai-subtitle-size: 14px;
+    --ai-subtitle-lh: 20px;
+    --ai-subdesc-size: 12px;
+    --ai-subdesc-lh: 16px;
+
+    // 模板
+    --tmpl-card-pad: 20px 12px 12px;
+    --tmpl-icon-size: 18px;
+    --tmpl-brand-size: 14px;
+    --tmpl-brand-lh: 20px;
+    --tmpl-title-mt: 12px;
+    --tmpl-title-size: 14px;
+    --tmpl-title-lh: 20px;
+    --tmpl-desc-size: 12px;
+    --tmpl-desc-lh: 16px;
+
+    // UI
+    --ui-card-pad: 16px 12px 12px;
+    --ui-icon-size: 18px;
+    --ui-brand-size: 14px;
+    --ui-brand-lh: 20px;
+    --ui-title-mt: 10px;
+    --ui-title-size: 14px;
+    --ui-title-lh: 20px;
+    --ui-desc-size: 12px;
+    --ui-desc-lh: 16px;
+
+    // 引擎
+    --eng-card-pad: 20px 12px 16px;
+    --eng-icon-size: 18px;
+    --eng-brand-size: 14px;
+    --eng-brand-lh: 20px;
+    --eng-title-mt: 12px;
+    --eng-title-size: 14px;
+    --eng-title-lh: 20px;
+    --eng-desc-size: 12px;
+    --eng-desc-lh: 18px;
+  }
+
+  // ========================================
+  // 基础样式
+  // ========================================
+  padding: var(--ps-pad-y) var(--ps-pad-x);
+  font-size: 14px;
+  font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  border-top: 1px solid rgba(240, 240, 240, 1);
+
+  // 强制所有子元素继承 PingFang SC 字体，防止浏览器默认字体覆盖
+  *, *::before, *::after {
+    font-family: inherit;
+  }
+
+  & > div {
+    max-width: var(--ps-max-w);
+    margin: 0 auto;
+  }
+
+  .suite-title {
+    margin: 0 auto 16px;
+    font-size: var(--ps-title-size);
+    font-weight: 600;
+    line-height: var(--ps-title-lh);
+    text-align: center;
+  }
+
+  .suite-desc {
+    font-size: var(--ps-desc-size);
+    font-weight: 400;
+    line-height: var(--ps-desc-lh);
+    letter-spacing: 1px;
+    color: #595959;
+    text-align: center;
+  }
+
+  .suite-grid {
+    margin-top: var(--ps-grid-mt);
+    display: flex;
+    justify-content: center;
+    gap: var(--ps-grid-gap);
+
+    @media (max-width: 768px) {
+      flex-wrap: wrap;
+    }
+
+    .suite-card {
+      display: flex;
+      flex-direction: column;
+      flex: 0 0 var(--card-default-w);
+      min-height: var(--card-min-h);
+      padding: var(--card-pad);
+      border-radius: var(--card-radius);
+      box-sizing: border-box;
+      cursor: pointer;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      &:nth-child(1) { background-color: #f3f4fb; }
+      &:nth-child(2) { background-color: #f3f4fb; }
+      &:nth-child(3) { background-color: #f3f4fb; }
+      &:nth-child(4) { background-color: #f5f1ff; }
+
+      .card-info {
+        flex: 0 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: var(--card-info-pad);
+      }
+
+      .card-name {
+        font-size: var(--card-name-size);
+        font-weight: 550;
+        line-height: var(--card-name-lh);
+        color: #191919;
+      }
+
+      .card-summary {
+        font-size: var(--card-summary-size);
+        font-weight: 400;
+        line-height: var(--card-summary-lh);
+        color: #595959;
+      }
+
+      .card-visual {
+        flex: 1;
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+      }
+
+      .card-preview {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.4s ease, visibility 0.4s ease;
+
+        .ai-card-light,
+        .ai-card-dark,
+        .template-card,
+        .ui-card,
+        .engine-card {
+          opacity: 0;
+          transition: opacity 0.4s ease 0.15s;
+        }
+
+        @media (max-width: 768px) {
+          position: relative;
+          opacity: 1;
+          visibility: visible;
+          inset: auto;
+          margin-top: var(--card-preview-mt);
+
+          .ai-card-light,
+          .ai-card-dark,
+          .template-card,
+          .ui-card,
+          .engine-card {
+            opacity: 1;
+            transition: none;
+          }
+        }
+      }
+    }
+
+    .suite-card.is-collapsed {
+      flex-basis: var(--card-collapsed-w);
+      padding: var(--collapsed-pad);
+      z-index: 1;
+
+      // 每张卡片单独调整背景图片位置：向左、向下，展示约一半，避免挤压标签
+      &:nth-child(1) {
+        background-position: 25% !important;
+        background-size: auto 100%, cover !important;
+      }
+      &:nth-child(2) {
+        background-position: 10% !important;
+        background-size: auto 100%, cover !important;
+      }
+      &:nth-child(3) {
+        background-position: 16% 45px !important;
+        background-size: auto 100%, cover !important;
+      }
+      &:nth-child(4) {
+        background-position: -7% 56px !important;
+        background-size: auto 100%, cover !important;
+      }
+
+      .card-name {
+        font-size: var(--card-name-size);
+        font-weight: 550;
+        line-height: var(--card-name-lh);
+        color: #191919;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-all;
+      }
+
+      .card-summary {
+        font-size: var(--card-summary-size);
+        font-weight: 400;
+        line-height: var(--card-summary-lh);
+        color: #595959;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-all;
+      }
+
+      .card-badge {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .tag-desc {
+        max-width: 60px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        @media (max-width: 768px) {
+          max-width: none;
+        }
+      }
+    }
+
+    .suite-card.is-expanded {
+      flex-basis: var(--card-expanded-w);
+      z-index: 10;
+
+      .card-preview {
+        margin-top: var(--card-preview-mt);
+        opacity: 1;
+        visibility: visible;
+
+        .ai-card-light,
+        .ai-card-dark,
+        .template-card,
+        .ui-card,
+        .engine-card {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .product-suite{
+    .suite-grid {
+      .suite-card {
+        min-height: 0;
+        max-height: var(--card-max-h);
+        cursor: default;
+
+        // 移动端强制始终显示展开内容，不受 is-collapsed / is-expanded 影响
+        &.is-collapsed,
+        &.is-expanded {
+          .card-preview {
+            position: relative;
+            opacity: 1;
+            visibility: visible;
+            inset: auto;
+            margin-top: var(--card-preview-mt);
+
+            .ai-card-light,
+            .ai-card-dark,
+            .template-card,
+            .ui-card,
+            .engine-card {
+              opacity: 1;
+              transition: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .product-suite{
+    .suite-grid {
+        .suite-card {
+            min-height: 680px;
+        }
+    }
+  }
+
+  .preview-engine {
+    .engine-card.engine-card {
+      min-height: 450px;
+    }
+  }
+}
+
+/* ============================================================
+   AI 应用开发 —— 全部使用变量，无硬编码
+   ============================================================ */
+.preview-ai {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ai-top-gap);
+  height: 100%;
+  padding: var(--ai-preview-pad);
+
+  @media (max-width: 768px) {
+    gap: var(--ai-bottom-gap);
+  }
+
+
+  @media (min-width: 1920px) {
+    gap: 20px;
+  }
+
+  .ai-top {
+    display: flex;
+    gap: var(--ai-top-gap);
+    flex: 1;
+    max-height: var(--ai-top-max-h);
+
+    @media (min-width: 1920px) {
+      max-height: 220px;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      flex: none;
+      min-height: var(--ai-top-max-h);
+    }
+
+    .ai-card-light {
+      @media (max-width: 440px) {
+        min-height: 140px;
+      }
+      flex: 1 1 0;
+      min-width: 0;
+      border-radius: var(--ai-light-radius);
+      padding: var(--ai-light-pad);
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+
+      background: url('../../../assets/images/new-icon/floor2/ai-app-1.jpg') no-repeat center / cover;
+
+      &:nth-child(2) {
+        background: url('../../../assets/images/new-icon/floor2/ai-app-2.jpg') no-repeat center / cover;
+      }
+
+      .ai-card-header {
+        display: flex;
+        align-items: center;
+        gap: var(--ai-header-gap);
+
+        img {
+          width: var(--ai-icon-size);
+          height: var(--ai-icon-size);
+          flex-shrink: 0;
+        }
+
+        .ai-brand {
+          font-size: var(--ai-brand-size);
+          font-weight: var(--ai-brand-weight);
+          line-height: var(--ai-brand-lh);
+          color: #ffffff;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+
+      .ai-card-title {
+        margin-top: var(--ai-title-mt);
+        font-size: var(--ai-title-size);
+        font-weight: var(--ai-title-weight);
+        line-height: var(--ai-title-lh);
+        color: #ffffff;
+        word-break: break-all;
+        overflow-wrap: break-word;
+      }
+
+      .ai-card-desc {
+        max-width: var(--ai-desc-max-w);
+        margin-top: var(--ai-desc-mt);
+        font-size: var(--ai-desc-size);
+        font-weight: 400;
+        line-height: var(--ai-desc-lh);
+        color: #ffffff;
+        word-break: break-all;
+        overflow-wrap: break-word;
+      }
+
+      .ai-card-link {
+        margin-top: auto;
+        padding-bottom: var(--ai-link-pb);
+        font-size: var(--link-size);
+        line-height: var(--link-lh);
+        letter-spacing: var(--link-ls);
+        color: #ffffff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        white-space: nowrap;
+
+        &:hover {
+          opacity: 0.8;
+        }
+
+        &::after {
+          content: '';
+          display: inline-block;
+          width: var(--arrow-w);
+          height: var(--arrow-h);
+          margin-top: var(--arrow-mt);
+          margin-left: var(--arrow-ml);
+          vertical-align: middle;
+          background: currentColor;
+          mask-image: url('../../../assets/images/new-icon/floor1/arrow-white.svg');
+          mask-repeat: no-repeat;
+          mask-position: center;
+          mask-size: contain;
+          -webkit-mask-image: url('../../../assets/images/new-icon/floor1/arrow-white.svg');
+          -webkit-mask-repeat: no-repeat;
+          -webkit-mask-position: center;
+          -webkit-mask-size: contain;
+        }
+        &:hover::after {
+          transform: translateX(3px);
+        }
+      }
+    }
+  }
+
+  .ai-bottom {
+    display: flex;
+    gap: var(--ai-bottom-gap);
+    flex: 1;
+    max-height: var(--ai-bottom-max-h);
+
+    @media (max-width: 440px) {
+      margin-top: 52px;
+    }
+
+    @media (min-width: 1920px) {
+      max-height: 210px;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      flex: none;
+      min-height: var(--ai-bottom-max-h);
+    }
+
+    .ai-card-dark {
+      flex: 1 1 0;
+      min-width: 0;
+      border-radius: var(--ai-dark-radius);
+      padding: var(--ai-dark-pad);
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+
+      &:nth-child(1) {
+        background: linear-gradient(135deg, rgb(225,233,246) 20%, rgb(225,233,246) 20%, rgba(236,233,245) 50%);
+      }
+
+      &:nth-child(2) {
+        background: linear-gradient(115deg, rgb(244,247,242) 30%,rgba(250,240,238) 80%, rgba(250,240,238) 70%, rgba(250,240,238) 60%);
+      }
+
+      &:nth-child(3) {
+        background: linear-gradient(135deg, rgb(236,238,255) 40%, rgb(236,238,255) 20%, rgba(227,242,249) 50%);
+      }
+
+      .ai-card-header-dark {
+        display: flex;
+        align-items: center;
+        gap: var(--ai-dark-header-gap);
+
+        img {
+          width: var(--ai-dark-icon-size);
+          height: var(--ai-dark-icon-size);
+          flex-shrink: 0;
+        }
+
+        .ai-brand-dark {
+          font-size: var(--ai-dark-brand-size);
+          font-weight: var(--ai-dark-brand-weight);
+          line-height: var(--ai-dark-brand-lh);
+          color: #191919;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+
+      .ai-card-subtitle {
+        margin-top: var(--ai-subtitle-mt);
+        font-size: var(--ai-subtitle-size);
+        font-weight: var(--ai-subtitle-weight);
+        line-height: var(--ai-subtitle-lh);
+        color: #191919;
+        word-break: break-all;
+        overflow-wrap: break-word;
+      }
+
+      .ai-card-subdesc {
+        margin-top: var(--ai-subdesc-mt);
+        font-size: var(--ai-subdesc-size);
+        font-weight: 400;
+        line-height: var(--ai-subdesc-lh);
+        color: #595959;
+        word-break: break-all;
+        overflow-wrap: break-word;
+      }
+
+
+      @media (max-width: 1280px) {
+        .ai-card-sublink.ai-card-sublink.ai-card-sublink { 
+          margin-top: 0px;
+        }
+      }
+
+
+      .ai-card-sublink {
+        margin-top: 12px;
+        padding-top: var(--ai-sublink-pt);
+        font-size: var(--link-size);
+        line-height: var(--link-lh);
+        letter-spacing: var(--link-ls);
+        color: #1476ff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        white-space: nowrap;
+
+        &:hover {
+          opacity: 0.8;
+        }
+
+        &::after {
+          content: '';
+          display: inline-block;
+          width: var(--arrow-w);
+          height: var(--arrow-h);
+          margin-top: var(--arrow-mt);
+          margin-left: var(--arrow-ml);
+          vertical-align: middle;
+          background: currentColor;
+          mask-image: url('../../../assets/images/new-icon/floor1/arrow-white.svg');
+          mask-position: center;
+          mask-size: contain;
+          -webkit-mask-image: url('../../../assets/images/new-icon/floor1/arrow-white.svg');
+          -webkit-mask-repeat: no-repeat;
+          -webkit-mask-position: center;
+          -webkit-mask-size: contain;
+        }
+        &:hover::after {
+          transform: translateX(3px);
+        }
+      }
+    }
+  }
+}
+
+/* ============================================================
+   前端应用模板 —— 全部使用变量
+   ============================================================ */
+.preview-template {
+  display: flex;
+  gap: var(--tmpl-gap);
+  padding: var(--tmpl-preview-pad);
+  align-items: stretch;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  .template-card {
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: var(--tmpl-card-min-h);
+    border-radius: var(--tmpl-card-radius);
+    padding: var(--tmpl-card-pad);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    .template-header {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: var(--tmpl-icon-size);
+        height: var(--tmpl-icon-size);
+        flex-shrink: 0;
+        margin-right: var(--tmpl-icon-mr);
+      }
+
+      .template-brand {
+        font-size: var(--tmpl-brand-size);
+        font-weight: var(--tmpl-brand-weight);
+        line-height: var(--tmpl-brand-lh);
+        color: #191919;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .template-title {
+      margin-top: var(--tmpl-title-mt);
+      font-size: var(--tmpl-title-size);
+      font-weight: var(--tmpl-title-weight);
+      line-height: var(--tmpl-title-lh);
+      color: #191919;
+      min-height: var(--tmpl-title-min-h);
+      word-break: break-all;
+      overflow-wrap: break-word;
+    }
+
+    .template-desc {
+      margin-top: var(--tmpl-desc-mt);
+      font-size: var(--tmpl-desc-size);
+      font-weight: 400;
+      line-height: var(--tmpl-desc-lh);
+      color: #595959;
+      word-break: break-all;
+      overflow-wrap: break-word;
+
+        @media (max-width: 768px) {
+          width: 60%;
+        }
+    }
+
+    .template-link {
+      margin-top: var(--tmpl-link-mt);
+      font-size: var(--link-size);
+      line-height: var(--link-lh);
+      letter-spacing: var(--link-ls);
+      color: #1476ff;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      white-space: nowrap;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &::after {
+        content: '';
+        display: inline-block;
+        width: var(--arrow-w);
+        height: var(--arrow-h);
+        margin-top: var(--arrow-mt);
+        margin-left: var(--arrow-ml);
+        vertical-align: middle;
+        background: currentColor;
+        mask-image: url('../../../assets/images/new-icon/floor1/arrow-white.svg');
+        mask-position: center;
+        mask-size: contain;
+        -webkit-mask-image: url('../../../assets/images/new-icon/floor1/arrow-white.svg');
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        -webkit-mask-size: contain;
+      }
+
+      &:hover::after {
+        transform: translateX(3px);
+      }
+    }
+  }
+}
+
+/* ============================================================
+   跨端 UI 组件库 —— 全部使用变量
+   ============================================================ */
+.preview-ui {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: var(--ui-grid-gap);
+  min-height: var(--ui-grid-min-h);
+  padding: var(--ui-preview-pad);
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+
+
+  .ui-card {
+    min-height: var(--ui-card-min-h);
+    border-radius: var(--ui-card-radius);
+    padding: var(--ui-card-pad);
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #f0f6ff, #faf3ff);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    .ui-header {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: var(--ui-icon-size);
+        height: var(--ui-icon-size);
+        flex-shrink: 0;
+        margin-right: var(--ui-icon-mr);
+      }
+
+      .ui-brand {
+        font-size: var(--ui-brand-size);
+        font-weight: var(--ui-brand-weight);
+        line-height: var(--ui-brand-lh);
+        color: #191919;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .ui-title {
+      margin-top: var(--ui-title-mt);
+      font-size: var(--ui-title-size);
+      font-weight: var(--ui-title-weight);
+      line-height: var(--ui-title-lh);
+      color: #191919;
+      word-break: break-all;
+      overflow-wrap: break-word;
+    }
+
+    .ui-desc {
+      margin-top: var(--ui-desc-mt);
+      font-size: var(--ui-desc-size);
+      font-weight: 400;
+      line-height: var(--ui-desc-lh);
+      color: #595959;
+      word-break: break-all;
+      overflow-wrap: break-word;
+    }
+
+    .ui-link {
+      margin-top: var(--ui-link-mt);
+      font-size: var(--link-size);
+      line-height: var(--link-lh);
+      letter-spacing: var(--link-ls);
+      color: #1476ff;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      white-space: nowrap;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &::after {
+        content: '';
+        display: inline-block;
+        width: var(--arrow-w);
+        height: var(--arrow-h);
+        margin-top: var(--arrow-mt);
+        margin-left: var(--arrow-ml);
+        vertical-align: middle;
+        background: currentColor;
+        mask-image: url('../../../assets/images/new-icon/floor1/arrow-white.svg');
+        mask-position: center;
+        mask-size: contain;
+        -webkit-mask-image: url('../../../assets/images/new-icon/floor1/arrow-white.svg');
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        -webkit-mask-size: contain;
+      }
+      &:hover::after {
+        transform: translateX(3px);
+      }
+    }
+  }
+}
+
+/* ============================================================
+   低代码应用搭建 —— 全部使用变量
+   ============================================================ */
+.preview-engine {
+  height: 100%;
+  padding: var(--eng-preview-pad);
+
+  .engine-card {
+    width: 100%;
+    min-height: var(--eng-card-min-h);
+    border-radius: var(--eng-card-radius);
+    padding: var(--eng-card-pad);
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #f0f6ff, #faf3ff);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    .engine-header {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: var(--eng-icon-size);
+        height: var(--eng-icon-size);
+        flex-shrink: 0;
+        margin-right: var(--eng-icon-mr);
+      }
+
+      .engine-brand {
+        font-size: var(--eng-brand-size);
+        font-weight: var(--eng-brand-weight);
+        line-height: var(--eng-brand-lh);
+        color: #191919;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .engine-title {
+      margin-top: var(--eng-title-mt);
+      font-size: var(--eng-title-size);
+      font-weight: var(--eng-title-weight);
+      line-height: var(--eng-title-lh);
+      color: #191919;
+      word-break: break-all;
+      overflow-wrap: break-word;
+    }
+
+    .engine-desc {
+      margin-top: var(--eng-desc-mt);
+      font-size: var(--eng-desc-size);
+      font-weight: 400;
+      line-height: var(--eng-desc-lh);
+      color: #595959;
+      word-break: break-all;
+      overflow-wrap: break-word;
+    }
+
+    .engine-link {
+      margin-top: var(--eng-link-mt);
+      font-size: var(--link-size);
+      line-height: var(--link-lh);
+      letter-spacing: var(--link-ls);
+      color: #1476ff;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      white-space: nowrap;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &::after {
+        content: '';
+        display: inline-block;
+        width: var(--arrow-w);
+        height: var(--arrow-h);
+        margin-top: var(--arrow-mt);
+        margin-left: var(--arrow-ml);
+        vertical-align: middle;
+        background: currentColor;
+        mask-image: url('../../../assets/images/new-icon/floor1/arrow-white.svg');
+        mask-position: center;
+        mask-size: contain;
+        -webkit-mask-image: url('../../../assets/images/new-icon/floor1/arrow-white.svg');
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        -webkit-mask-size: contain;
+      }
+      &:hover::after {
+        transform: translateX(3px);
+      }
+    }
+  }
+}
