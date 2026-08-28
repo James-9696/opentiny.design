@@ -348,7 +348,7 @@ export function vueData() {
     },
     {
       img: vueMini,
-      title: 'TinyVue组件库实战解析，提升组件库构建技能',
+      title: '手把手教你实现mini版 TinyVue 组件库',
       desc: {
         info: '',
         name: '申君健',
@@ -359,7 +359,7 @@ export function vueData() {
     },
     {
       img: vueBattle,
-      title: '手把手教你实现mini版 TinyVue 组件库',
+      title: 'TinyVue组件库实战解析，提升组件库构建技能',
       desc: {
         info: '',
         name: '申君健',
