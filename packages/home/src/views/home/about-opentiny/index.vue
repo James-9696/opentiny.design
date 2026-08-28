@@ -165,14 +165,14 @@ const cardOptions = [
         title: 'AI 交互组件',
         desc: '提供丰富组件，高效搭建 Web 页面',
         link:`${basePath}tiny-robot`,
-        icon: getIconAppUrl('tiny-robot')
+        icon: getIconAppUrl('tiny-robot-white')
       },
       {
         brand: 'GenUI-SDK',
         title: '生成式界面',
         desc: '根据对话数据动态，生成交互界面',
         link: `https://docs.opentiny.design/genui-sdk/guide/quick-start`,
-        icon: getIconAppUrl('genui-sdk')
+        icon: getIconAppUrl('genui-sdk-white')
       }
     ],
     bottomCards: [
