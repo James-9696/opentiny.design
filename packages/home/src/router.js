@@ -51,7 +51,7 @@ export const rootRoutes = [
         meta: { title: geneTitle('') }
       },
       {
-        path: '/next-page',
+        path: '/opentiny.design/next-page',
         component: nextPage,
         name: 'next-page',
         meta: { title: geneTitle('OpenTiny NEXT') }
