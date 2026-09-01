@@ -305,9 +305,11 @@ const toggleTheme = (event: MouseEvent) => {
             fill-opacity="1" fill-rule="evenodd" />
         </svg>
         <div v-show="level1.children?.length" class="dropdown-menu dropdown-column">
+          <!-- todo: -->
+          <!-- <a v-if="level1.linkTitle" class="app-title-link">{{ level1.linkTitle }} <span>&nbsp;&nbsp;></span></a> -->
           <div class="dropdown-content flex-center dropdown-100">
             <div class="dropdown-app-part">
-              <div class="dropdown-app hand" v-for="app in level1.children.filter(lv => !lv.hide)" :key="app.title">
+              <div class="dropdown-app hand" :class="{ 'is-horizontal': level1.name === '前端智能化' }" v-for="app in level1.children.filter(lv => !lv.hide)" :key="app.title">
                 <div class="app-title"> {{ app.title }} </div>
                 <div class="app-data" v-for="item in app.data?.filter(d => !d.hide)" :key="item.name"> 
                   <a 
