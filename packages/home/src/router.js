@@ -133,7 +133,7 @@ export const rootRoutes = [
 ]
 const router = createRouter({
   mode: 'history',
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
   routes: rootRoutes,
   scrollBehavior(to, from, savedPosition) {
     if (to.hash) {
