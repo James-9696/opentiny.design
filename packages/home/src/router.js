@@ -51,6 +51,12 @@ export const rootRoutes = [
         meta: { title: geneTitle('') }
       },
       {
+        path: 'next-page',
+        component: nextPage,
+        name: 'next-page',
+        meta: { title: geneTitle('OpenTiny NEXT') }
+      },
+      {
         path: 'genui-sdk',
         component: genuiSdkHome,
         name: 'genui-sdk',
@@ -70,12 +76,6 @@ export const rootRoutes = [
             component: tinyVueHome,
             name: 'tiny-vue',
             meta: { title: geneTitle('') }
-          },
-          {
-            path: 'next-page',
-            component: nextPage,
-            name: 'next-page',
-            meta: { title: geneTitle('OpenTiny NEXT') }
           },
           {
             path: 'guide',
