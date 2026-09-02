@@ -57,6 +57,12 @@ export const rootRoutes = [
         meta: { title: geneTitle('') }
       },
       {
+        path: 'next-page',
+        component: nextPage,
+        name: 'next-page',
+        meta: { title: geneTitle('OpenTiny NEXT') }
+      },
+      {
         path: 'opentiny-design',
         children: [
           {
@@ -70,12 +76,6 @@ export const rootRoutes = [
             component: tinyVueHome,
             name: 'tiny-vue',
             meta: { title: geneTitle('') }
-          },
-          {
-            path: 'next-page',
-            component: nextPage,
-            name: 'next-page',
-            meta: { title: geneTitle('OpenTiny NEXT') }
           },
           {
             path: 'guide',
@@ -133,7 +133,7 @@ export const rootRoutes = [
 ]
 const router = createRouter({
   mode: 'history',
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
   routes: rootRoutes,
   scrollBehavior(to, from, savedPosition) {
     if (to.hash) {

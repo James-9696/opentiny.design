@@ -140,7 +140,7 @@ const handleMouseLeave = () => {
   clearTimeout(hoverTimer)
   hoverTimer = setTimeout(() => {
     hoveredIndex.value = -1
-  }, 100)
+  }, 500)
 }
 
 const handleFocusIn = (index) => {
@@ -325,8 +325,8 @@ const getCardBgStyle = (index) => {
   // PC 默认状态：图片在上层，默认渐变在下层
   return {
     backgroundImage: `url(${getImgUrl(`bg-${index + 1}`)}), ${gradients[index]}`,
-    backgroundSize: 'cover, cover',
-    backgroundPosition: 'center, right',
+    backgroundSize: 'auto 100%, cover',
+    backgroundPosition: 'bottom',
     backgroundRepeat: 'no-repeat, no-repeat'
   }
 }
