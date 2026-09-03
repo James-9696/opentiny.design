@@ -119,7 +119,7 @@ const isGitHubRuntime = typeof window !== 'undefined' && window.location.hostnam
 const isGitHub = isGitHubRuntime || isGitHubBuild
 const basePath = isGitHub ? '/opentiny.design/' : '/'
 const isTargetDomain = location.hostname === 'opentiny.design'
-const isLocal = location.hostname === 'localhost' || hostname === '127.0.0.1'
+const isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1'
 
 // 移动端检测
 const { isMobile } = useWindowSize()
@@ -158,8 +158,8 @@ const getIconAppUrl = (name) => new URL(`../../../../../common/src/assets/appIco
 
 const cardOptions = [
   {
-    title: 'AI应用开发',
-    subTitle: 'AI交互组件/AI应用开发SDK/生成式界面SDK/AI扩展插件/MCP接入服务',
+    title: 'AI 应用开发',
+    subTitle: 'AI 交互组件/AI 应用开发SDK /生成式界面SDK /AI 扩展插件/MCP 接入服务',
     tag: '加速企业应用智能化改造',
     topCards: [
       {

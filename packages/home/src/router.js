@@ -19,6 +19,7 @@ const aiExtensionHome = () => import('@/views/ai-extension-home/index.vue')
 const nextSdksHome = () => import('@/views/next-sdks-home/index.vue')
 const genuiSdkHome = () => import('@/genui-sdk/index.js')
 const nextPage = () => import('@/views/home/next-page/index.vue')
+const allProducts = () => import('@/views/home/all-products/index.vue')
 const langKey = computed(() => $t2('zh-CN', 'en-US'))
 
 export const rootRoutes = [
@@ -61,6 +62,12 @@ export const rootRoutes = [
         component: nextPage,
         name: 'next-page',
         meta: { title: geneTitle('OpenTiny NEXT') }
+      },
+      {
+        path: 'all-products',
+        component: allProducts,
+        name: 'all-products',
+        meta: { title: geneTitle('') }
       },
       {
         path: 'opentiny-design',
