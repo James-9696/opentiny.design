@@ -119,7 +119,7 @@ const isGitHubRuntime = typeof window !== 'undefined' && window.location.hostnam
 const isGitHub = isGitHubRuntime || isGitHubBuild
 const basePath = isGitHub ? '/opentiny.design/' : '/'
 const isTargetDomain = location.hostname === 'opentiny.design'
-const isLocal = location.hostname === 'localhost' || hostname === '127.0.0.1'
+const isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1'
 
 // 移动端检测
 const { isMobile } = useWindowSize()
