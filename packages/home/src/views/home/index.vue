@@ -5,7 +5,7 @@
       <!-- <global-notice></global-notice> -->
       <banner id="home-1"></banner>
       <!-- OpenTiny 全家桶 -->
-      <opentiny-all id="home-2"></opentiny-all>
+      <products id="home-2"></products>
       <!-- OpenTiny系列产品组成的核心能力 -->
       <opentiny-power id="home-3"></opentiny-power>
       <!-- 带你三分钟改造智能应用 -->
@@ -31,7 +31,7 @@
 <script setup>
 import { onMounted, onUnmounted, ref } from 'vue'
 import banner from './new-banner/index.vue'
-import OpentinyAll from './about-opentiny/index.vue'
+import products from './about-opentiny/index.vue'
 import GlobalNotice from './global-notice.vue'
 import HomePlatform from './platform/index.vue'
 import GrowthWithUser from './growth-with-user/index.vue'
