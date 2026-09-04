@@ -89,7 +89,23 @@ function enterTopMenu(item: any) {
 }
 function leaveTopMenu(item: any) {
   item.active = false
+  item.collapsed = false
   _lastHoverItem = null
+}
+
+function handleAppClick(ev: MouseEvent, item: any, level1: any) {
+  if (item.onClick) {
+    item.onClick(ev)
+  }
+
+  if (_lastHoverItem) {
+    _lastHoverItem.active = false
+    _lastHoverItem = null
+  }
+
+  level1.collapsed = true
+
+  state.mobileMenuActive = false
 }
 
 // 根据path 判断当前应该有下划线的一级菜单
@@ -293,8 +309,7 @@ const toggleTheme = (event: MouseEvent) => {
       <div 
         v-for="level1 in state.otherAppInfo" 
         class="top-menu flex-center mg-r" 
-        :key="level1.name"  
-        :class="{ active: level1.active, underlined: level1.underlined }" 
+        :class="{ active: level1.active, underlined: level1.underlined, collapsed: level1.collapsed }" 
         @mouseenter="enterTopMenu(level1)" 
         @mouseleave="leaveTopMenu(level1)"
       >
@@ -317,7 +332,7 @@ const toggleTheme = (event: MouseEvent) => {
                     :href="item.url"
                     :target="item.target || '_self'"
                     rel="noopener noreferrer" 
-                    @click="item.onClick ? item.onClick($event) : null"
+                    @click="handleAppClick($event, item, level1)"
                   >
                     <img class="app-dropdown-logo" :src="item.logo" />
                     <div>
@@ -395,7 +410,7 @@ const toggleTheme = (event: MouseEvent) => {
                   :href="item.url" 
                   :target="item.target || '_self'"
                   rel="noopener noreferrer"
-                  @click="item.onClick ? item.onClick($event) : null"
+                  @click="handleAppClick($event, item, level1)"
                 >
                   {{ item.name }}
                 </a>
