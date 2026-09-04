@@ -154,8 +154,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 160px;
+      width: auto;
       height: 44px;
+      padding: 0 4px;
       margin-right: clamp(8px, 2.5vw, 60px);
       border-bottom: 2px solid transparent;
       border-radius: 8px;
@@ -215,7 +216,7 @@
     }
 
     .mg-r {
-      margin-right: 60px;
+      margin-right: 20px;
     }
 
     .dropdown-menu {
@@ -382,6 +383,7 @@
     display: flex;
     align-items: center;
     gap: 32px;
+    margin-left: auto;
 
     .github-space {
       display: inline-block;
@@ -607,7 +609,7 @@
     .nav-left { margin-right: clamp(48px, 4vw, 64px); }
 
     .nav-center {
-      .top-menu { margin-right: clamp(20px, 2.5vw, 40px); }
+      .top-menu { width: auto; padding: 0 16px; margin-right: clamp(20px, 2.5vw, 40px); }
       .mg-r { margin-right: clamp(20px, 2.5vw, 40px); }
 
       .dropdown-menu {

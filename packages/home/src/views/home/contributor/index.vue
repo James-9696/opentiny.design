@@ -10,7 +10,7 @@
             开发文档
             <i class="btn-arrow btn-arrow-black"></i>
           </tiny-button>
-          <tiny-button type="primary" size="medium" round class="explore-btn btn-white-border"  @click="findFn">
+          <tiny-button type="primary" size="medium" round class="explore-btn btn-white-border" @click="findFn">
             探索智能化
             <i class="btn-arrow btn-arrow-white"></i>
           </tiny-button>
@@ -46,7 +46,7 @@ const docsFn = () => {
 }
 
 const findFn = () => {
-  router.push('/next-page')
+  router.push({ name: 'next-page' })
 }
 
 </script>
