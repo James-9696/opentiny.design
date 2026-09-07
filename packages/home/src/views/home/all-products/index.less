@@ -168,7 +168,48 @@
   margin-top: 28px;
 }
 
-.content-card {
+.card-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card-link {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #1476ff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+
+  /* 后缀小箭头，不要可去掉这段 */
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 4px;
+    vertical-align: middle;
+    background: currentColor;
+    mask-image: url('../../../assets/images/new-icon/floor1/arrow-white.svg');
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    -webkit-mask-image: url('../../../assets/images/new-icon/floor1/arrow-white.svg');
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+  }
+
+  &:hover::after {
+    transform: translateX(3px);
+  }
+}
+
+.content-card-section {
   flex: 1 1 calc(33.333% - 14px);
   min-width: 280px;
   max-width: calc(33.333% - 14px);
@@ -177,6 +218,7 @@
   border-radius: 20px;
   transition: all 0.3s ease;
   box-sizing: border-box;
+  position: relative;
 
   &:hover {
     transform: translateY(-4px);
@@ -188,7 +230,26 @@
   }
 }
 
-.content-card:hover {
+.card-badge-all {
+    background: #fce3e0;
+    color: #f23030;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 58px;
+    height: 24px;
+    z-index: 10;
+    pointer-events: none;
+    border-radius: 2px 20px 2px 20px;
+    overflow: hidden;
+}
+
+.content-card-section:hover {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
   border-color: #E8E8E8;
   transform: translateY(-2px);
@@ -223,7 +284,7 @@
     padding: 0 40px;
     gap: 40px;
   }
-  .content-card {
+  .content-card-section {
     flex: 1 1 calc(50% - 10px);
     max-width: calc(50% - 10px);
   }
@@ -258,7 +319,7 @@
   .step-item::before {
     display: none;
   }
-  .content-card {
+  .content-card-section {
     flex: 1 1 100%;
     max-width: 100%;
   }

@@ -40,20 +40,36 @@
           <p class="section-desc">{{ section.description }}</p>
 
           <div class="card-grid">
-            <a
+            <div
               v-for="(card, cIndex) in section.cards"
               :key="cIndex"
-              class="content-card"
-              :href="card.link"
+              class="content-card-section"
               target="_blank"
               rel="noopener noreferrer"
             >
+              <span v-if="card.badge" class="card-badge-all">{{ card.badge }}</span>
               <div class="card-icon">
                 <img :src="card.icon" :alt="card.title" />
               </div>
               <h3 class="card-title">{{ card.title }}</h3>
               <p class="card-desc">{{ card.desc }}</p>
-            </a>
+              <div class="card-links">
+                <a
+                  v-if="card.site"
+                  :href="card.site"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="card-link"
+                >官网</a>
+                <a
+                  v-if="card.docs"
+                  :href="card.docs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="card-link"
+                >文档</a>
+              </div>
+            </div>
           </div>
         </div>
       </main>
@@ -85,31 +101,37 @@ const sections = [
         title: 'TinyRobot',
         desc: '提供丰富组件，高效搭建 Web 页面',
         icon: getIconAppUrl('tiny-robot'),
-        link:`${basePath}tiny-robot`
+        site:`${basePath}tiny-robot`,
+        docs: `https://docs.opentiny.design/tiny-robot/guide/quick-start.html`,
+        badge: 'NEW'
       },
       {
         title: 'GenUI-SDK',
         desc: '根据对话数据动态，生成交互界面',
         icon: getIconAppUrl('genui-sdk'),
-         link: `https://docs.opentiny.design/genui-sdk/guide/quick-start`
+        docs: `https://docs.opentiny.design/genui-sdk/guide/quick-start.html`,
+        badge: 'NEW'
       },
       {
         title: 'NEXT SDKs',
-        desc: '快速接入模型，工具和智能交互能力',
+        desc: '快速接入模型，工具和 AI 能力',
         icon: getIconAppUrl('next-sdk'),
-        link: `${basePath}next-sdk`
+        site: `${basePath}next-sdk`,
+        docs: `https://docs.opentiny.design/next-sdk/guide/quick-start.html`
       },
       {
         title: 'AI-Extension',
         desc: '为现有应用快速增加 AI和MCP 能力',
         icon: getIconAppUrl('ai-extension'),
-        link: `${basePath}ai-extension`
+        site: `${basePath}ai-extension`,
+        docs: `https://docs.opentiny.design/next-sdk/guide/ai-extension-install.html`,
+        badge: 'NEW'
       },
       {
         title: 'WebAgent',
         desc: '统一链接和管理 MCP 工具服务',
         icon: getIconAppUrl('web-agent'),
-        link: 'https://docs.opentiny.design/web-agent/guide/getting-started.html'
+        docs: 'https://docs.opentiny.design/web-agent/guide/getting-started.html'
       }
     ]
   },
@@ -121,7 +143,9 @@ const sections = [
         title: 'TinyEngine',
         desc: '支持实时构建，二次开发，插件灵活扩展',
         icon: getIconAppUrl('tiny-engine'),
-        link:  isTargetDomain ? `${basePath}tiny-engine` : isLocal ? '/' : `${location.protocol}//${location.hostname}/tiny-engine`
+        badge: 'NEW',
+        docs: `https://docs.opentiny.design/tiny-engine/guide/introduction.html`,
+        site:  isTargetDomain ? `${basePath}tiny-engine` : isLocal ? '/' : `${location.protocol}//${location.hostname}/tiny-engine`
       }
     ]
   },
@@ -133,25 +157,27 @@ const sections = [
         title: 'TinyVue',
         desc: '跨端、跨框架的企业级 UI 组件库',
         icon: getIconAppUrl('tiny-vue'),
-        link: isTargetDomain ? `${basePath}tiny-vue` : isLocal ? '/' : `${location.protocol}//${location.hostname}/tinyvue`
+        docs: `https://docs.opentiny.design/tiny-vue/guide/introduce.html`,
+        site: isTargetDomain ? `${basePath}tiny-vue` : isLocal ? '/' : `${location.protocol}//${location.hostname}/tinyvue`
       },
       {
         title: 'TinyNg',
-        desc: 'Angular PC 端产品，70+ 开箱即用组件',
+        desc: 'Angular，70+ 开箱即用组件',
         icon: getIconAppUrl('tiny-ng'),
-        link: `https://opentiny.design/tiny-ng/overview`
+        site: `https://opentiny.design/tiny-ng/overview`
       },
       {
         title: 'TinyCharts',
         desc: '依赖于 ECharts，全量图表库',
         icon: getIconAppUrl('tiny-chart'),
-        link: 'https://opentiny.design/tiny-charts/QuickStart'
+        docs: 'https://opentiny.design/tiny-charts/QuickStart'
       },
       {
         title: 'TinyEditor',
         desc: '支持 JS/Vue/React/Angular',
         icon: getIconAppUrl('tiny-editor'),
-        link: location.hostname === 'opentiny.design' ? `https://docs.opentiny.design/tiny-editor/guide/quick-start.html` : 'https://opentiny.github.io/tiny-editor'
+        badge: 'NEW',
+        docs: location.hostname === 'opentiny.design' ? `https://docs.opentiny.design/tiny-editor/guide/quick-start.html` : 'https://opentiny.github.io/tiny-editor'
       }
     ]
   },
@@ -163,19 +189,19 @@ const sections = [
         title: 'TinyPro Vue',
         desc: '基于 TinyVue 组件库企业级中后台前端/设计解决方案',
         icon: getIconAppUrl('tiny-pro'),
-        link: 'https://opentiny.design/vue-pro'
+        docs: 'https://opentiny.design/vue-pro'
       },
       {
         title: 'TinyPro Angular',
         desc: '基于 TinyNG 组件库企业级中后台前端/设计解决方案',
         icon: getIconAppUrl('tiny-pro-ng'),
-        link: 'https://opentiny.design/ng-pro'
+        docs: 'https://opentiny.design/ng-pro'
       },
       {
         title: 'TinyCLI',
         desc: '提供一系列健壮的工具、套件、插件和工作流',
         icon: getIconAppUrl('tiny-cli'),
-        link: '/tiny-cli/home'
+        site: '/tiny-cli/home'
       }
     ]
   }
