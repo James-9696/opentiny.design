@@ -143,7 +143,6 @@ const sections = [
         title: 'TinyEngine',
         desc: '支持实时构建，二次开发，插件灵活扩展',
         icon: getIconAppUrl('tiny-engine'),
-        badge: 'NEW',
         docs: `https://docs.opentiny.design/tiny-engine/guide/introduction.html`,
         site:  isTargetDomain ? `${basePath}tiny-engine` : isLocal ? '/' : `${location.protocol}//${location.hostname}/tiny-engine`
       }

@@ -124,38 +124,9 @@
       margin-top: 24px;
     }
 
-    .compare-header {
-      text-align: center;
-      margin-bottom: 40px;
-      font-size: 32px;
-      font-weight: 700;
-      line-height: 32px;
-
-      @media (max-width: 1440px) {
-        font-size: 28px;
-        line-height: 28px;
-        margin-bottom: 32px;
-      }
-      @media (max-width: 1200px) {
-        font-size: 24px;
-        margin-bottom: 28px;
-      }
-      @media (max-width: 768px) {
-        font-size: 20px;
-        margin-bottom: 24px;
-      }
-
-      .compare-left {
-        color: transparent;
-        background: linear-gradient(90deg, #cb43a8, #2c5fef 56%);
-        -webkit-background-clip: text;
-        background-clip: text;
-      }
-    }
-
     .compare-panels {
       display: flex;
-      gap: 40px;
+      gap: 20px;
       justify-content: center;
       align-items: stretch;
 
@@ -370,6 +341,38 @@
               }
             }
           }
+        }
+      }
+
+      // ---------- 中间的加号 ----------
+      .compare-plus {
+        align-self: center;
+        flex-shrink: 0;
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 1;
+        color: #191919;
+        user-select: none;
+        color: transparent;
+        background: linear-gradient(180deg, #cb43a8, #2c5fef 56%);
+        -webkit-background-clip: text;
+        background-clip: text;    
+
+        @media (max-width: 1440px) {
+          font-size: 36px;
+        }
+        @media (max-width: 1200px) {
+          font-size: 32px;
+        }
+        @media (max-width: 1169px) {
+          // 面板堆叠为纵向后，加号旋转 45° 变为居中连接符效果（可选，不需要可删除）
+          font-size: 30px;
+        }
+        @media (max-width: 768px) {
+          font-size: 28px;
+        }
+        @media (max-width: 480px) {
+          font-size: 24px;
         }
       }
 
