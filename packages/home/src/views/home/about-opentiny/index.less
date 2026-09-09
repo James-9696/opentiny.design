@@ -995,7 +995,10 @@
       }
 
       .ai-card-link {
-        margin-top: 0;
+        @media (max-width: 1430px) {
+          margin-top: 12px;
+        }
+        margin-top: auto;
         padding-bottom: var(--ai-link-pb);
         font-size: var(--link-size);
         line-height: var(--link-lh);
@@ -1124,9 +1127,9 @@
         overflow-wrap: break-word;
       }
 
-      @media (max-width: 1280px) {
+      @media (max-width: 1430px) {
         .ai-card-sublink.ai-card-sublink.ai-card-sublink { 
-          margin-top: 0px;
+          margin-top: 12px;
         }
       }
 
