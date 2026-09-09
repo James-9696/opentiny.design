@@ -109,9 +109,8 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { TinyTag } from '@opentiny/vue'
-import useWindowSize from '@/tools/useWindowSize.js'
 import './index.less'
 
 const isGitHubBuild = import.meta.env.MODE === 'github'
@@ -121,8 +120,21 @@ const basePath = isGitHub ? '/opentiny.design/' : '/'
 const isTargetDomain = location.hostname === 'opentiny.design'
 const isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1'
 
-// 移动端检测
-const { isMobile } = useWindowSize()
+const BREAKPOINT = 1430
+const SMALL_BREAKPOINT = 478
+const isMobile = ref(false)
+const isSmallScreen = ref(false)
+const updateLayoutMode = () => {
+  isMobile.value = window.innerWidth < BREAKPOINT
+  isSmallScreen.value = window.innerWidth <= SMALL_BREAKPOINT
+}
+onMounted(() => {
+  updateLayoutMode()
+  window.addEventListener('resize', updateLayoutMode)
+})
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', updateLayoutMode)
+})
 
 const hoveredIndex = ref(-1)
 let hoverTimer = null
@@ -312,7 +324,7 @@ const getCardBgStyle = (index) => {
     }
   }
 
-  // 移动端：去掉背景图，只保留渐变
+  // 平铺布局（1430px 及以下）：去掉背景图，只保留渐变
   if (isMobile.value) {
     return {
       backgroundImage: gradients[index],
@@ -341,6 +353,15 @@ const gradientsFronts = [
 const getFrontBgStyle = (index) => {
   const gradientFront = gradientsFronts[index]
 
+  if (isSmallScreen.value) {
+    return {
+      backgroundImage: gradientFront,
+      backgroundSize: 'cover !important',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
+    }
+  }
+
   if (isMobile.value) {
     return {
       backgroundImage: `url(${getImgFrontUrl(`front-bg-${index + 1}`)}), ${gradientFront}`,
@@ -368,6 +389,16 @@ const gradientsUIs = [
 
 const getUIBgStyle = (index) => {
   const gradientsUI = gradientsUIs[index]
+
+  if (isSmallScreen.value) {
+    return {
+      backgroundImage: gradientsUI,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
+    }
+  }
+
   // 默认状态：图片在上层，渐变在下层（多层背景）
   return {
     backgroundImage: `url(${getImgFrontUrl(`ui-bg-${index + 1}`)}), ${gradientsUI}`,
@@ -378,6 +409,15 @@ const getUIBgStyle = (index) => {
 }
 
 const getEngineBgStyle = () => {
+  if (isSmallScreen.value) {
+    return {
+      backgroundImage: 'linear-gradient(-45deg, rgba(222, 224, 255, 1) 0%, rgba(230, 238, 253, 1) 99.917%)',
+      backgroundSize: 'cover !important',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
+    }
+  }
+
   if (isMobile.value) {
     return {
       backgroundImage: `url(${getImgFrontUrl('engine-bg-1')}), linear-gradient(-45deg, rgba(222, 224, 255, 1) 0%, rgba(230, 238, 253, 1) 99.917%)`,
