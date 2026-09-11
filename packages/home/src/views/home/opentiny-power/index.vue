@@ -28,7 +28,7 @@
               </div>
             </div>
           </div>
-          <div class="compare-plus">+</div>
+          <img class="compare-plus" :src="getImgPowerUrl('plus-icon')" />
           <div class="panel-right">
             <div class="panel-heading">AI 智能应用开发能力</div>
             <div class="panel-blocks">

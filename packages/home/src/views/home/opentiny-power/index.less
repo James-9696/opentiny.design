@@ -129,17 +129,12 @@
       gap: 20px;
       justify-content: center;
       align-items: stretch;
-
-      @media (max-width: 1440px) {
-        gap: 32px;
-      }
-      @media (max-width: 1200px) {
-        gap: 24px;
-      }
+      position: relative;
+      width: fit-content;
+      margin: 0 auto;
       @media (max-width: 1169px) {
         flex-direction: column;
         align-items: center;
-        gap: 24px;
       }
 
       // ---------- 公共面板基础 ----------
@@ -233,11 +228,14 @@
         }
         @media (max-width: 1169px) {
           width: 100%;
-          max-width: 720px;
+          min-width: 720px;
           min-height: auto;
         }
         @media (max-width: 768px) {
-          max-width: 100%;
+          min-width: 540px;
+        }
+        @media (max-width: 600px) {
+          min-width: 320px;
         }
 
         .capability-block {
@@ -344,37 +342,28 @@
         }
       }
 
-      // ---------- 中间的加号 ----------
       .compare-plus {
-        align-self: center;
-        flex-shrink: 0;
-        font-size: 40px;
-        font-weight: 400;
-        line-height: 1;
-        color: #191919;
-        user-select: none;
-        color: transparent;
-        background: linear-gradient(180deg, #cb43a8, #2c5fef 56%);
-        -webkit-background-clip: text;
-        background-clip: text;    
+        position: absolute;
+        left: 40.15%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 56px;
+        height: 56px;
+        z-index: 10;
+        pointer-events: none;
+        user-select: none;    
 
-        @media (max-width: 1440px) {
-          font-size: 36px;
-        }
-        @media (max-width: 1200px) {
-          font-size: 32px;
-        }
+        @media (max-width: 1440px) { width: 48px; height: 48px; }
+        @media (max-width: 1200px) { width: 44px; height: 44px; }
         @media (max-width: 1169px) {
-          // 面板堆叠为纵向后，加号旋转 45° 变为居中连接符效果（可选，不需要可删除）
-          font-size: 30px;
+          position: static;
+          transform: none;
+          width: 40px;
+          height: 40px;
         }
-        @media (max-width: 768px) {
-          font-size: 28px;
-        }
-        @media (max-width: 480px) {
-          font-size: 24px;
-        }
-      }
+        @media (max-width: 768px) { width: 36px; height: 36px; }
+        @media (max-width: 480px) { width: 32px; height: 32px; }
+      }   
 
       // ---------- 右侧面板 ----------
       .panel-right {
@@ -396,13 +385,15 @@
         }
         @media (max-width: 1169px) {
           width: 100%;
-          max-width: 720px;
+          min-width: 720px;
           min-height: auto;
-          background-position: top right, center;
+          background-image: radial-gradient(ellipse at center, #f5fcff 0%, rgba(208, 236, 255, 0.5) 100%) !important;
         }
         @media (max-width: 768px) {
-          max-width: 100%;
-          background-size: auto 50%, cover;
+          min-width: 540px;
+        }
+        @media (max-width: 600px) {
+          min-width: 320px;
         }
 
         .capability-block {
