@@ -227,7 +227,7 @@
     --ps-grid-mt: 40px;
 
     --card-default-w: 240px;
-    --card-expanded-w: 824px;
+    --card-expanded-w: 720px;
     --card-collapsed-w: 110px;
     --card-min-h: 480px;
     --card-radius: 16px;
@@ -321,7 +321,6 @@
     --ps-title-lh: 42px;
 
     --card-default-w: 200px;
-    --card-expanded-w: 666px;
     --card-collapsed-w: 90px;
     --card-min-h: 420px;
     --card-info-pad: 20px 12px 0px;
@@ -413,7 +412,6 @@
     --ps-title-lh: 36px;
 
     --card-default-w: 180px;
-    --card-expanded-w: 544px;
     --card-collapsed-w: 70px;
     --card-min-h: 380px;
     --card-info-pad: 16px 10px 0px;
@@ -487,14 +485,11 @@
     --eng-link-mt: 8px;
   }
 
-  @media (max-width: 1430px) {
+  /* 平铺布局（原 768 移动端样式扩展到 1365px） */
+  @media (max-width: 1365px) {
     --card-default-w: 100%;
     --card-expanded-w: 100%;
     --card-collapsed-w: 100%;
-  }
-
-  /* 平铺布局（原 768 移动端样式扩展到 1430px） */
-  @media (max-width: 1430px) {
     --ps-pad-y: 40px;
     --ps-pad-x: 24px;
     --ps-title-size: 22px;
@@ -532,7 +527,6 @@
     --ps-grid-mt: 24px;
 
     --card-default-w: 100%;
-    --card-expanded-w: 100%;
     --card-collapsed-w: 100%;
     --card-radius: 16px;
     --card-info-pad: 0;
@@ -630,7 +624,7 @@
     gap: var(--ps-grid-gap);
     pointer-events: none;
 
-    @media (max-width: 1430px) {
+    @media (max-width: 1365px) {
       flex-wrap: wrap;
     }
 
@@ -711,7 +705,7 @@
           transition: opacity 0.4s ease 0.15s;
         }
 
-        @media (max-width: 1430px) {
+        @media (max-width: 1365px) {
           position: relative;
           opacity: 1;
           visibility: visible;
@@ -792,7 +786,7 @@
         text-overflow: ellipsis;
         white-space: nowrap;
 
-        @media (max-width: 1430px) {
+        @media (max-width: 1365px) {
           max-width: none;
         }
       }
@@ -824,7 +818,7 @@
   }
 }
 
-@media (max-width: 1430px) {
+@media (max-width: 1365px) {
   .product-suite{
     .suite-grid {
       .suite-card {
@@ -888,7 +882,7 @@
   height: 100%;
   padding: var(--ai-preview-pad);
 
-  @media (max-width: 1430px) {
+  @media (max-width: 1365px) {
     gap: var(--ai-bottom-gap);
   }
 
@@ -906,7 +900,7 @@
       max-height: 220px;
     }
 
-    @media (max-width: 1430px) {
+    @media (max-width: 1365px) {
       flex-direction: column;
       flex: none;
       min-height: 300px;
@@ -995,7 +989,7 @@
       }
 
       .ai-card-link {
-        @media (max-width: 1430px) {
+        @media (max-width: 1365px) {
           margin-top: 12px;
         }
         margin-top: auto;
@@ -1053,7 +1047,7 @@
       max-height: 210px;
     }
 
-    @media (max-width: 1430px) {
+    @media (max-width: 1365px) {
       flex-direction: column;
       flex: none;
       min-height: 460px;
@@ -1069,7 +1063,7 @@
       flex-direction: column;
       overflow: hidden;
 
-      @media (max-width: 1430px) {
+      @media (max-width: 1365px) {
         min-height: 150px;
       }
 
@@ -1127,9 +1121,15 @@
         overflow-wrap: break-word;
       }
 
-      @media (max-width: 1430px) {
+      @media (max-width: 1365px) {
         .ai-card-sublink.ai-card-sublink.ai-card-sublink { 
           margin-top: 12px;
+        }
+      }
+
+      @media (max-width: 1440px) {
+        .ai-card-sublink.ai-card-sublink.ai-card-sublink { 
+          margin-top: 0;
         }
       }
 
@@ -1181,7 +1181,7 @@
   padding: var(--tmpl-preview-pad);
   align-items: stretch;
 
-  @media (max-width: 1430px) {
+  @media (max-width: 1365px) {
     flex-direction: column;
   }
 
@@ -1196,7 +1196,7 @@
     flex-direction: column;
     overflow: hidden;
 
-    @media (max-width: 1430px) {
+    @media (max-width: 1365px) {
        min-height: 180px;
        &:nth-child(1) {
          background-size: 20%, cover !important;
@@ -1275,7 +1275,7 @@
       word-break: break-all;
       overflow-wrap: break-word;
 
-      @media (max-width: 1430px) {
+      @media (max-width: 1365px) {
         width: 60%;
       }
     }
@@ -1329,7 +1329,7 @@
   min-height: var(--ui-grid-min-h);
   padding: var(--ui-preview-pad);
 
-  @media (max-width: 1430px) {
+  @media (max-width: 1365px) {
     grid-template-columns: 1fr;
   }
 
@@ -1425,7 +1425,7 @@
   }
 }
 
-@media (max-width: 1430px) {
+@media (max-width: 1365px) {
   .ai-card-light {
     background-image: none !important;
     &:nth-child(1) {
@@ -1465,9 +1465,10 @@
     flex-direction: column;
     overflow: hidden;
 
-    @media (max-width: 1430px) {
+    @media (max-width: 1365px) {
        &:nth-child(1) {
          background-size: auto 80%, contain !important;
+         background-position: right bottom !important;
        }
     }
 
@@ -1486,6 +1487,7 @@
     @media (max-width: 580px) {
        &:nth-child(1) {
          background-size: auto 35%, contain !important;
+         min-height: 200px !important;
        }
     }
 

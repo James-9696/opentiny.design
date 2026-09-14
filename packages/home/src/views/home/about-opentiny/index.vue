@@ -120,7 +120,7 @@ const basePath = isGitHub ? '/opentiny.design/' : '/'
 const isTargetDomain = location.hostname === 'opentiny.design'
 const isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1'
 
-const BREAKPOINT = 1430
+const BREAKPOINT = 1365
 const SMALL_BREAKPOINT = 478
 const isMobile = ref(false)
 const isSmallScreen = ref(false)
@@ -317,7 +317,7 @@ const getCardBgStyle = (index) => {
     }
   }
 
-  // 平铺布局（1430px 及以下）：去掉背景图，只保留渐变
+  // 平铺布局（1365px 及以下）：去掉背景图，只保留渐变
   if (isMobile.value) {
     return {
       backgroundImage: gradients[index],
@@ -367,7 +367,7 @@ const getFrontBgStyle = (index) => {
   return {
     backgroundImage: `url(${getImgFrontUrl(`front-bg-${index + 1}`)}), ${gradientFront}`,
     backgroundSize: 'auto 99%, cover',
-    backgroundPosition: 'center, center',
+    backgroundPosition: 'right bottom',
     backgroundRepeat: 'no-repeat, no-repeat'
   }
 }
