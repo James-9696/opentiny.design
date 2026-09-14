@@ -219,18 +219,11 @@ const cardOptions = [
     tag: '开箱即用、前后台分离',
     cards: [
       {
-        brand: 'TinyPro Vue',
+        brand: 'TinyPro',
         title: 'Vue 技术栈企业级开发应用模板',
         desc: '基于 TinyVue 组件库企业级中后台前端/设计解决方案',
         link: 'https://opentiny.design/vue-pro',
         icon: getIconAppUrl('tiny-pro')
-      },
-      {
-        brand: 'TinyPro Angular',
-        title: 'Angular 技术栈企业级开发应用模板',
-        desc: '基于 TinyNG 组件库企业级中后台前端/设计解决方案',
-        link: 'https://opentiny.design/ng-pro',
-        icon: getIconAppUrl('tiny-pro-ng')
       },
       {
         brand: 'TinyCLI',

@@ -147,20 +147,12 @@ const menuItems = [
         title: '场景化解决方案',
         data: [      
           {
-            name: 'TinyPro Vue',
+            name: 'TinyPro',
             url: `/vue-pro`,
             logo: tinyPro,
             desc: '中后台应用开发模板',
             hide: false,
             github: 'https://github.com/opentiny/tiny-pro'
-          },
-          {
-            name: 'TinyPro Angular',
-            url: `/ng-pro`,
-            logo: tinyProNg,
-            desc: '中后台应用开发模板',
-            hide: false,
-            github: ''
           },
           {
             name: 'TinyCLI',
@@ -270,22 +262,13 @@ const menuItems = [
         title: '场景化解决方案',
         data: [      
           {
-            name: 'TinyPro Vue',
+            name: 'TinyPro',
             url: `/vue-pro`,
             children: [],
             logo: tinyPro,
             desc: '中后台应用开发模板',
             hide: false,
             github: 'https://github.com/opentiny/tiny-pro'
-          },
-          {
-            name: 'TinyPro Angular',
-            url: `/ng-pro`,
-            children: [],
-            logo: tinyProNg,
-            desc: '中后台应用开发模板',
-            hide: false,
-            github: ''
           }
         ]
       },

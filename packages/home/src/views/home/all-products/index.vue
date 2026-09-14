@@ -185,16 +185,10 @@ const sections = [
     description: '提供可直接复用的企业应用模板',
     cards: [
       {
-        title: 'TinyPro Vue',
+        title: 'TinyPro',
         desc: '基于 TinyVue 组件库企业级中后台前端/设计解决方案',
         icon: getIconAppUrl('tiny-pro'),
         docs: 'https://opentiny.design/vue-pro'
-      },
-      {
-        title: 'TinyPro Angular',
-        desc: '基于 TinyNG 组件库企业级中后台前端/设计解决方案',
-        icon: getIconAppUrl('tiny-pro-ng'),
-        docs: 'https://opentiny.design/ng-pro'
       },
       {
         title: 'TinyCLI',
