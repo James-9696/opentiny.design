@@ -336,10 +336,10 @@ const getCardBgStyle = (index) => {
   }
 }
 
+// 'linear-gradient(135deg, rgba(255, 243, 230, 0.6) 20%, rgba(255, 243, 230, 0.6) 20%, rgba(255, 207, 207, 0.6) 100%)',
 // 每个卡片的渐变色
 const gradientsFronts = [
   'linear-gradient(135deg, rgba(238, 245, 255, 0.6) 20%, rgba(238, 245, 255, 0.6) 20%, rgba(228, 248, 230, 0.6) 90%)',
-  'linear-gradient(135deg, rgba(255, 243, 230, 0.6) 20%, rgba(255, 243, 230, 0.6) 20%, rgba(255, 207, 207, 0.6) 100%)',
   'linear-gradient(135deg, rgba(225, 236, 255, 0.6) 20%, rgba(225, 236, 255, 0.6) 20%, rgba(222, 224, 255, 0.6) 100%)'
 ]
 
