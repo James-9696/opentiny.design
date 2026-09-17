@@ -78,19 +78,45 @@ const state = reactive({
   menuCollapseActive: false
 })
 
-// 进入或离开顶级菜单，切换显示下拉面板
 let _lastHoverItem: any
+let _closeTimer: ReturnType<typeof setTimeout> | null = null
+
 function enterTopMenu(item: any) {
-  if (_lastHoverItem) {
+  if (_closeTimer) {
+    clearTimeout(_closeTimer)
+    _closeTimer = null
+  }
+  if (_lastHoverItem && _lastHoverItem !== item) {
     _lastHoverItem.active = false
   }
   item.active = true
   _lastHoverItem = item
 }
+
 function leaveTopMenu(item: any) {
-  item.active = false
-  item.collapsed = false
-  _lastHoverItem = null
+  if (_closeTimer) {
+    clearTimeout(_closeTimer)
+  }
+  _closeTimer = setTimeout(() => {
+    item.active = false
+    item.collapsed = false
+    if (_lastHoverItem === item) {
+      _lastHoverItem = null
+    }
+  }, 150)
+}
+
+function enterDropdown(item: any) {
+  if (_closeTimer) {
+    clearTimeout(_closeTimer)
+    _closeTimer = null
+  }
+  item.active = true
+  _lastHoverItem = item
+}
+
+function leaveDropdown(item: any) {
+  leaveTopMenu(item)
 }
 
 function toDocs() {
@@ -324,7 +350,8 @@ const toggleTheme = (event: MouseEvent) => {
           <path d="M10 13.75L3.75 7.5L4.62 6.62L10 12L15.37 6.62L16.25 7.5L10 13.75Z" fill="currentColor"
             fill-opacity="1" fill-rule="evenodd" />
         </svg>
-        <div v-show="level1.children?.length" class="dropdown-menu dropdown-column">
+        <div v-show="level1.children?.length" class="dropdown-menu dropdown-column"
+          @mouseenter="enterDropdown(level1)" @mouseleave="leaveDropdown(level1)">
           <a v-if="level1.linkTitle" class="app-title-link" @click="toDocs">
             {{ level1.linkTitle }}
             <svg class="app-title-link-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"
