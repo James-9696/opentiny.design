@@ -64,11 +64,11 @@ const subLogo = subLogoConfig[currApp] || null
 
 interface UserInfo { userId: string; userIcon: string }
 const state = reactive({
-   headerInfo: (props.options?.customMenus || headerInfo.filter(item => 
+   headerInfo: (props.options?.customMenus || headerInfo.filter(item =>
     item.type !== 'other'
   )).map(item => ({ ...item, active: false })),
-  
-  otherAppInfo: headerInfo.filter(item => 
+
+  otherAppInfo: headerInfo.filter(item =>
     item.type === 'other'
   ).map(item => ({ ...item, active: false })),
   allInfo: props.options?.customMenus || headerInfo,
@@ -89,7 +89,28 @@ function enterTopMenu(item: any) {
 }
 function leaveTopMenu(item: any) {
   item.active = false
+  item.collapsed = false
   _lastHoverItem = null
+}
+
+function toDocs() {
+  window.open('https://docs.opentiny.design/', '_blank')
+  window.location.reload()
+}
+
+function handleAppClick(ev: MouseEvent, item: any, level1: any) {
+  if (item.onClick) {
+    item.onClick(ev)
+  }
+
+  if (_lastHoverItem) {
+    _lastHoverItem.active = false
+    _lastHoverItem = null
+  }
+
+  level1.collapsed = true
+
+  state.mobileMenuActive = false
 }
 
 // 根据path 判断当前应该有下划线的一级菜单
@@ -200,7 +221,7 @@ function toggleMenuCollapse() {
   menuEl?.classList.toggle('active', state.menuCollapseActive)
 }
 
-// 主题切换 
+// 主题切换
 const isDark = props.options?.allowDarkTheme ? useDark() : ref(false);
 const toggleDark = useToggle(isDark)
 
@@ -290,12 +311,11 @@ const toggleTheme = (event: MouseEvent) => {
 
     <!-- 2、大屏菜单中间 -->
     <div class="nav-center flex-center">
-      <div 
-        v-for="level1 in state.otherAppInfo" 
-        class="top-menu flex-center mg-r" 
-        :key="level1.name"  
-        :class="{ active: level1.active, underlined: level1.underlined }" 
-        @mouseenter="enterTopMenu(level1)" 
+      <div
+        v-for="level1 in state.otherAppInfo"
+        class="top-menu flex-center mg-r"
+        :class="{ active: level1.active, underlined: level1.underlined, collapsed: level1.collapsed }"
+        @mouseenter="enterTopMenu(level1)"
         @mouseleave="leaveTopMenu(level1)"
       >
         <span class="top-menu-title">{{ level1.name }}</span>
@@ -305,21 +325,29 @@ const toggleTheme = (event: MouseEvent) => {
             fill-opacity="1" fill-rule="evenodd" />
         </svg>
         <div v-show="level1.children?.length" class="dropdown-menu dropdown-column">
+          <a v-if="level1.linkTitle" class="app-title-link" @click="toDocs">
+            {{ level1.linkTitle }}
+            <svg class="app-title-link-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 3.5L10.5 8L6 12.5" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
           <div class="dropdown-content flex-center dropdown-100">
             <div class="dropdown-app-part">
-              <div class="dropdown-app hand" v-for="app in level1.children.filter(lv => !lv.hide)" :key="app.title">
+              <div class="dropdown-app hand" :class="{ 'is-horizontal': level1.name === '前端智能化' }" v-for="app in level1.children.filter(lv => !lv.hide)" :key="app.title">
                 <div class="app-title"> {{ app.title }} </div>
-                <div class="app-data" v-for="item in app.data?.filter(d => !d.hide)" :key="item.name"> 
-                  <a 
-                    class="dropdown-app" 
+                <div class="app-data" v-for="item in app.data?.filter(d => !d.hide)" :key="item.name">
+                  <a
+                    class="dropdown-app"
                     :href="item.url"
                     :target="item.target || '_self'"
-                    rel="noopener noreferrer" 
-                    @click="item.onClick ? item.onClick($event) : null"
+                    rel="noopener noreferrer"
+                    @click="handleAppClick($event, item, level1)"
                   >
                     <img class="app-dropdown-logo" :src="item.logo" />
                     <div>
-                      <div class="app-title-child"> 
+                      <div class="app-title-child">
                         <div>{{ item.name }} </div>
                         <div v-if="item.new" class="app-desc-icon"><span>NEW</span></div>
                       </div>
@@ -393,7 +421,7 @@ const toggleTheme = (event: MouseEvent) => {
                   :href="item.url" 
                   :target="item.target || '_self'"
                   rel="noopener noreferrer"
-                  @click="item.onClick ? item.onClick($event) : null"
+                  @click="handleAppClick($event, item, level1)"
                 >
                   {{ item.name }}
                 </a>
